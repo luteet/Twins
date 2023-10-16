@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+
+	<div class="wrapper">
+		<header class="header container">
+			<div class="header__logo visible-on-mob">
+				<a href="index.html" class="header__logo--link">
+					<img src="img/logo.svg" alt="Logo" width="112" height="50" loading="lazy" class="header__logo--img visible-on-desktop">
+					<img src="img/logo-mob.svg" alt="Logo" width="112" height="50" loading="lazy" class="header__logo--img visible-on-mob">
+				</a>
+			</div>
+			<a href="#" class="header__icon-link visible-on-mob">
+				<svg width="24" height="24" viewBox="0 0 30 30">
+					<use xlink:href="img/sprites.svg#user"></use>
+				</svg>
+			</a>
+			<a href="#" class="header__icon-link visible-on-mob">
+				<svg width="30" height="30" viewBox="0 0 35 35">
+					<use xlink:href="img/sprites.svg#cart"></use>
+				</svg>
+			</a>
+			<a href="#search-popup" class="header__icon-link open-popup visible-on-mob">
+				<svg width="24" height="24" viewBox="0 0 20 20">
+					<use xlink:href="img/sprites.svg#search"></use>
+				</svg>
+			</a>
+			<nav class="header__nav">
+				<div class="header__nav--body">
+					<div class="header__nav--row">
+						<ul class="header__nav--list">
+							<li>
+								<a href="#">
+									Про компанію
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Оплата і Доставка
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Новини і Статті
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Акції
+								</a>
+							</li>
+						</ul>
+						<div class="header__logo visible-on-desktop">
+							<a href="index.html" class="header__logo--link">
+								<img src="img/logo.svg" alt="Logo" width="182" height="50" loading="lazy" class="header__logo--img">
+							</a>
+						</div>
+						<div class="header__add visible-on-desktop">
+							<ul class="header__add--list">
+								<li>
+									<a href="#" aria-label="Користувач">
+										<svg width="30" height="30" viewBox="0 0 30 30">
+											<use xlink:href="img/sprites.svg#user"></use>
+										</svg>
+										<span>Користувач</span>
+									</a>
+								</li>
+								<li>
+									<a href="#" aria-label="Корзина">
+										<svg width="35" height="35" viewBox="0 0 35 35">
+											<use xlink:href="img/sprites.svg#cart"></use>
+										</svg>
+										<span>Корзина</span>
+									</a>
+								</li>
+							</ul>
+							<div class="header__add--lang header__lang">
+								<button class="header__lang--target" type="button">
+									<span>UA</span>
+									<svg width="8" height="8" viewBox="0 0 8 8">
+										<use xlink:href="img/sprites.svg#drop-down-arrow"></use>
+									</svg>
+								</button>
+								<div class="header__lang--block">
+									<ul>
+										<li>
+											<a href="#">
+												EN
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												RU
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="header__nav--row">
+						<ul class="header__categories">
+							<li>
+								<a href="#">
+									Твердий парфум
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Аромати для дому
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Аромо свічки
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Колекції ароматів
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Косметика для тіла
+								</a>
+							</li>
+						</ul>
+						<form method="post" class="header__search visible-on-desktop">
+							<label>
+								<input type="search" name="search" placeholder="Пошук" required>
+							</label>
+							<button type="submit" title="Пошук">
+								<svg width="20" height="20" viewBox="0 0 20 20">
+									<use xlink:href="img/sprites.svg#search"></use>
+								</svg>
+							</button>
+						</form>
+					</div>
+					<div class="header__add--lang header__lang visible-on-mob">
+						<button class="header__lang--target" type="button">
+							<span>UA</span>
+							<svg width="8" height="8" viewBox="0 0 8 8">
+								<use xlink:href="img/sprites.svg#drop-down-arrow"></use>
+							</svg>
+						</button>
+						<div class="header__lang--block">
+							<ul>
+								<li>
+									<a href="#">
+										EN
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										RU
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</nav>
+			<button class="header__burger" type="button" aria-label="Menu">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+		</header>

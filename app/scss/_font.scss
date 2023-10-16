@@ -1,0 +1,109 @@
+
+@font-face {
+	@include font-include('Circe', 400, swap, normal, 'Circe-Regular');
+}
+
+@font-face {
+	@include font-include('Circe', 700, swap, normal, 'Circe-Bold');
+}
+
+@font-face {
+	@include font-include('Ysabeau', 400, swap, normal, 'Ysabeau-Regular');
+}
+
+@font-face {
+	@include font-include('Ysabeau', 600, swap, normal, 'Ysabeau-SemiBold');
+}
+
+@font-face {
+	@include font-include('Ysabeau', 700, swap, normal, 'Ysabeau-Bold');
+}
+
+.main-title {
+	font-family: var(--title-font);
+	font-weight: 700;
+	line-height: 115%;
+
+	font-size: 1.875rem;
+
+	@include _768 {
+		font-size: 2.5rem;
+	}
+
+	@include _992 {
+		font-size: 3.125rem;
+	}
+}
+
+.title {
+	
+	font-weight: 700;
+	line-height: 135%;
+
+	font-size: 1.5rem; // 24px
+
+	&._large {
+		font-size: 2rem; // 32px
+		line-height: 85%;
+	}
+
+	@include _550 {
+		font-size: 2rem; // 32px
+		&._large {
+			font-size: 2.5rem; // 40px
+		}
+	}
+
+	@include _768 {
+		font-size: 2.5rem; // 40px
+		&._large {
+			font-size: 3rem; // 48px
+		}
+	}
+
+	@include _992 {
+		font-size: 4rem; // 64px
+		line-height: 117%;
+		&._large {
+			line-height: 85%;
+			font-size: 4.375rem; // 70px
+		}
+	}
+
+	@include _container {
+		font-size: 4.375rem; // 70px
+		line-height: 135%;
+		
+		&._large {
+			line-height: 85%;
+			font-size: 6.25rem; // 100px
+		}
+	}
+
+}
+
+.section-title {
+
+	font-family: var(--title-font);
+	font-weight: 700;
+	line-height: 105%;
+
+	font-size: 1.25rem; // 20px
+
+	@include _550 {
+		font-size: 1.5rem; // 24px
+	}
+	
+	@include _768 {
+		font-size: 32px; // 32px
+	}
+	
+	@include _992 {
+		font-size: 3.125rem; // 50px
+	}
+
+}
+
+.txt-center {
+	text-align: center;
+}

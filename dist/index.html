@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+
+	<div class="wrapper">
+		<header class="header container">
+			<div class="header__logo visible-on-mob">
+				<a href="index.html" class="header__logo--link">
+					<img src="img/logo.svg" alt="Logo" width="112" height="50" loading="lazy" class="header__logo--img visible-on-desktop">
+					<img src="img/logo-mob.svg" alt="Logo" width="112" height="50" loading="lazy" class="header__logo--img visible-on-mob">
+				</a>
+			</div>
+			<a href="#" class="header__icon-link visible-on-mob">
+				<svg width="24" height="24" viewBox="0 0 30 30">
+					<use xlink:href="img/sprites.svg#user"></use>
+				</svg>
+			</a>
+			<a href="#" class="header__icon-link visible-on-mob">
+				<svg width="30" height="30" viewBox="0 0 35 35">
+					<use xlink:href="img/sprites.svg#cart"></use>
+				</svg>
+			</a>
+			<a href="#search-popup" class="header__icon-link open-popup visible-on-mob">
+				<svg width="24" height="24" viewBox="0 0 20 20">
+					<use xlink:href="img/sprites.svg#search"></use>
+				</svg>
+			</a>
+			<nav class="header__nav">
+				<div class="header__nav--body">
+					<div class="header__nav--row">
+						<ul class="header__nav--list">
+							<li>
+								<a href="#">
+									Про компанію
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Оплата і Доставка
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Новини і Статті
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Акції
+								</a>
+							</li>
+						</ul>
+						<div class="header__logo visible-on-desktop">
+							<a href="index.html" class="header__logo--link">
+								<img src="img/logo.svg" alt="Logo" width="182" height="50" loading="lazy" class="header__logo--img">
+							</a>
+						</div>
+						<div class="header__add visible-on-desktop">
+							<ul class="header__add--list">
+								<li>
+									<a href="#" aria-label="Користувач">
+										<svg width="30" height="30" viewBox="0 0 30 30">
+											<use xlink:href="img/sprites.svg#user"></use>
+										</svg>
+										<span>Користувач</span>
+									</a>
+								</li>
+								<li>
+									<a href="#" aria-label="Корзина">
+										<svg width="35" height="35" viewBox="0 0 35 35">
+											<use xlink:href="img/sprites.svg#cart"></use>
+										</svg>
+										<span>Корзина</span>
+									</a>
+								</li>
+							</ul>
+							<div class="header__add--lang header__lang">
+								<button class="header__lang--target" type="button">
+									<span>UA</span>
+									<svg width="8" height="8" viewBox="0 0 8 8">
+										<use xlink:href="img/sprites.svg#drop-down-arrow"></use>
+									</svg>
+								</button>
+								<div class="header__lang--block">
+									<ul>
+										<li>
+											<a href="#">
+												EN
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												RU
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="header__nav--row">
+						<ul class="header__categories">
+							<li>
+								<a href="#">
+									Твердий парфум
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Аромати для дому
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Аромо свічки
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Колекції ароматів
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Косметика для тіла
+								</a>
+							</li>
+						</ul>
+						<form method="post" class="header__search visible-on-desktop">
+							<label>
+								<input type="search" name="search" placeholder="Пошук" required>
+							</label>
+							<button type="submit" title="Пошук">
+								<svg width="20" height="20" viewBox="0 0 20 20">
+									<use xlink:href="img/sprites.svg#search"></use>
+								</svg>
+							</button>
+						</form>
+					</div>
+					<div class="header__add--lang header__lang visible-on-mob">
+						<button class="header__lang--target" type="button">
+							<span>UA</span>
+							<svg width="8" height="8" viewBox="0 0 8 8">
+								<use xlink:href="img/sprites.svg#drop-down-arrow"></use>
+							</svg>
+						</button>
+						<div class="header__lang--block">
+							<ul>
+								<li>
+									<a href="#">
+										EN
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										RU
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</nav>
+			<button class="header__burger" type="button" aria-label="Menu">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+		</header>
+
+		<main class="main">
+			<section class="hero container">
+				<div class="hero__col">
+					<div class="hero__slider splide">
+						<div class="hero__slider--track splide__track">
+							<ul class="hero__slider--list splide__list">
+								<li class="hero__slider--slide hero__slider-slide splide__slide">
+									<h3 class="hero__slider-slide--title">
+										TWINS Кашпо
+									</h3>
+									<div class="hero__slider-slide--image image-aspect-ratio">
+										<picture>
+											<source srcset="img/index/hero/index-hero-slide.avif" type="image/avif">
+											<source srcset="img/index/hero/index-hero-slide.webp" type="image/webp">
+											<img src="img/index/hero/index-hero-slide.jpg" alt="" width="734" height="644" loading="lazy">
+										</picture>
+									</div>
+									<div class="hero__slider-slide--new">
+										Новинки
+									</div>
+								</li>
+								<li class="hero__slider--slide hero__slider-slide splide__slide">
+									<h3 class="hero__slider-slide--title">
+										TWINS Кашпо
+									</h3>
+									<div class="hero__slider-slide--image image-aspect-ratio">
+										<picture>
+											<source srcset="img/index/hero/index-hero-slide.avif" type="image/avif">
+											<source srcset="img/index/hero/index-hero-slide.webp" type="image/webp">
+											<img src="img/index/hero/index-hero-slide.jpg" alt="" width="734" height="644" loading="lazy">
+										</picture>
+									</div>
+									<div class="hero__slider-slide--new">
+										Новинки
+									</div>
+								</li>
+								<li class="hero__slider--slide hero__slider-slide splide__slide">
+									<h3 class="hero__slider-slide--title">
+										TWINS Кашпо
+									</h3>
+									<div class="hero__slider-slide--image image-aspect-ratio">
+										<picture>
+											<source srcset="img/index/hero/index-hero-slide.avif" type="image/avif">
+											<source srcset="img/index/hero/index-hero-slide.webp" type="image/webp">
+											<img src="img/index/hero/index-hero-slide.jpg" alt="" width="734" height="644" loading="lazy">
+										</picture>
+									</div>
+									<div class="hero__slider-slide--new">
+										Новинки
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="hero__slider--controls splide__arrows">
+							<button class="hero__slider--arrow splide__arrow splide__arrow--prev" type="button">
+								<svg width="26" height="9" viewBox="0 0 26 9">
+									<use xlink:href="img/sprites.svg#arrow-prev"></use>
+								</svg>
+							</button>
+							<div class="hero__slider--pagination splide__pagination"></div>
+							<button class="hero__slider--arrow splide__arrow splide__arrow--next" type="button">
+								<svg width="26" height="9" viewBox="0 0 26 9">
+									<use xlink:href="img/sprites.svg#arrow-next"></use>
+								</svg>
+							</button>
+						</div>
+					</div>
+				</div>
+				<div class="hero__col">
+					<div class="hero__product">
+						<h3 class="hero__product--vertical-title">
+							Аромадифузор
+						</h3>
+						<div class="hero__product--wrapper">
+							<div class="hero__product--background" aria-hidden="true">
+								<div class="hero__product--background-text">
+									<span>Twins</span>
+								</div>
+							</div>
+							<div class="hero__product--image">
+								<div class="hero__product--image-wrapper image-aspect-ratio">
+									<picture>
+										<source srcset="img/index/hero/index-hero-product.avif" type="image/avif">
+										<source srcset="img/index/hero/index-hero-product.webp" type="image/webp">
+										<img src="img/index/hero/index-hero-product.png" alt="" width="513" height="603" loading="lazy">
+									</picture>
+								</div>
+							</div>
+							<a href="#" class="hero__product--link">
+								<i>
+									<svg width="26" height="9" viewBox="0 0 26 9">
+										<use xlink:href="img/sprites.svg#arrow-next"></use>
+									</svg>
+								</i>
+								<span>
+									Детальніше
+								</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="events container">
+				<div class="events__block is-dark">
+					<div class="events__logo">
+						<img src="img/logo.svg" width="182" height="50" loading="lazy" alt="">
+					</div>
+					<div class="events__background">
+						<svg class="visually-hidden">
+							<clipPath id="event-image-mask-1" clipPathUnits="objectBoundingBox">
+								<path d="M0,1 H1 V0 H0 V1 M0.662,0.258 C0.82,0.385,0.824,0.388,0.848,0.414 C0.894,0.463,0.915,0.514,0.915,0.573 C0.915,0.685,0.829,0.786,0.69,0.837 C0.626,0.86,0.562,0.87,0.488,0.868 C0.401,0.866,0.321,0.845,0.252,0.807 C0.083,0.712,0.041,0.54,0.157,0.416 C0.18,0.392,0.187,0.386,0.348,0.256 L0.504,0.131 L0.511,0.137 C0.515,0.14,0.583,0.194,0.662,0.258 M0.459,0.4 C0.39,0.409,0.328,0.437,0.289,0.479 C0.203,0.57,0.246,0.694,0.38,0.745 C0.506,0.794,0.663,0.76,0.73,0.67 C0.792,0.586,0.757,0.483,0.647,0.429 C0.592,0.403,0.523,0.392,0.459,0.4"></path>
+							</clipPath>
+						</svg>
+						<div class="events__background--image" style="clip-path: url(#event-image-mask-1);">
+							<picture>
+								<source srcset="img/index/events/event-image-1.avif" type="image/avif">
+								<source srcset="img/index/events/event-image-1.webp" type="image/webp">
+								<img src="img/index/events/event-image-1.jpg" alt="" width="439" height="563" loading="lazy">
+							</picture>
+						</div>
+					</div>
+					<div class="events__content">
+						<h3 class="events__title title _large">
+							October sale <br> до - 35%
+						</h3>
+						<div class="events__text">
+							<p>
+								Отримай нічну сироватку для обличчя у подарунок
+							</p>
+						</div>
+					</div>
+					<div class="events__footer">
+						<a href="#" class="events__link">
+							<i class="icon-link">
+								<svg width="26" height="9" viewBox="0 0 26 9">
+									<use xlink:href="img/sprites.svg#arrow-next"></use>
+								</svg>
+							</i>
+						</a>
+					</div>
+				</div>
+				<div class="events__block">
+					<div class="events__logo">
+						<img src="img/logo.svg" width="182" height="50" loading="lazy" alt="">
+					</div>
+					<div class="events__background">
+						<svg class="visually-hidden">
+							<clipPath id="event-image-mask-2" clipPathUnits="objectBoundingBox">
+								<path d="M0,1 H1 V0 H0 V1 M0.922,0.935 H0.078 V0.065 H0.922 V0.935 M0.372,0.257 C0.301,0.323,0.239,0.382,0.233,0.388 C0.208,0.415,0.188,0.442,0.177,0.465 C0.154,0.513,0.148,0.567,0.158,0.62 C0.185,0.76,0.332,0.864,0.5,0.864 C0.616,0.864,0.725,0.815,0.789,0.734 C0.819,0.695,0.837,0.656,0.845,0.608 C0.847,0.592,0.847,0.552,0.844,0.536 C0.836,0.482,0.816,0.444,0.775,0.397 C0.761,0.382,0.762,0.383,0.627,0.256 C0.559,0.191,0.502,0.138,0.502,0.137 C0.501,0.136,0.471,0.163,0.372,0.257 M0.529,0.4 C0.552,0.403,0.57,0.407,0.591,0.416 C0.651,0.441,0.694,0.488,0.706,0.544 C0.709,0.556,0.709,0.584,0.707,0.597 C0.695,0.669,0.634,0.726,0.552,0.744 C0.532,0.748,0.521,0.749,0.498,0.749 C0.464,0.749,0.436,0.743,0.406,0.731 C0.353,0.708,0.313,0.666,0.298,0.618 C0.292,0.598,0.29,0.571,0.293,0.551 C0.299,0.512,0.32,0.477,0.353,0.45 C0.37,0.435,0.386,0.425,0.408,0.416 C0.429,0.407,0.451,0.402,0.473,0.4 C0.484,0.398,0.517,0.399,0.529,0.4"></path>
+							</clipPath>
+						</svg>
+						<div class="events__background--image" style="clip-path: url(#event-image-mask-2);">
+							<picture>
+								<source srcset="img/index/events/event-image-2.avif" type="image/avif">
+								<source srcset="img/index/events/event-image-2.webp" type="image/webp">
+								<img src="img/index/events/event-image-2.jpg" alt="" width="439" height="563" loading="lazy">
+							</picture>
+						</div>
+					</div>
+					<div class="events__content">
+						<h3 class="events__title title">
+							Товар найменшої вартості у подарунок
+						</h3>
+						<div class="events__text">
+							<p>
+								У разі придбання трьох позицій з догляду за обличчям TWINS
+							</p>
+						</div>
+					</div>
+					<div class="events__footer">
+						<a href="#" class="events__link">
+							<i class="icon-link">
+								<svg width="26" height="9" viewBox="0 0 26 9">
+									<use xlink:href="img/sprites.svg#arrow-next"></use>
+								</svg>
+							</i>
+						</a>
+					</div>
+				</div>
+			</section>
+			<section class="blog-section container">
+				<div class="blog-section__container">
+					<h2 class="blog-section__title section-title">
+						Новини і статті
+					</h2>
+					<div class="blog-section__text">
+						<p>
+							Надихайтесь, досліджуйте та діліться своїм досвідом у першій спільноті від TWINS
+						</p>
+					</div>
+					<a href="#" class="blog-section__read-more">
+						<i class="icon-link _min">
+							<svg width="26" height="9" viewBox="0 0 26 9">
+								<use xlink:href="img/sprites.svg#arrow-next"></use>
+							</svg>
+						</i>
+						<span>
+							Дивитись більше
+						</span>
+					</a>
+					<div class="blog-section__full-article">
+						<div class="blog-section__full-article--image">
+							<div class="blog-section__full-article--image-body image-aspect-ratio">
+								<picture>
+									<source srcset="img/index/blog/blog-image-1.avif" type="image/avif">
+									<source srcset="img/index/blog/blog-image-1.webp" type="image/webp">
+									<img src="img/index/blog/blog-image-1.jpg" alt="" width="738" height="544" loading="lazy">
+								</picture>
+							</div>
+						</div>
+						<div class="blog-section__full-article--content">
+							<time class="blog-section__full-article--date" datetime="14-09-2023">14.09.2023</time>
+							<h3 class="blog-section__full-article--title section-title">
+								Трендові кольори помад сезону осінь-зима 2023-2024
+							</h3>
+							<div class="blog-section__full-article--text">
+								<p>
+									Помада – один із найпопулярніших макіяжних засобів кожної жінки. У косметичці може не бути консилера, або пудри, але декілька варіантів помад буде обов'язково!
+								</p>
+								<p>
+									І це зрозуміло, бо гарна помада - це ціле поле для експериментів!
+								</p>
+								<p>
+									Передивишись купу фото з модних показів та стрітстайлу Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi dolorem tempora nostrum. Quae molestias totam vitae assumenda a, debitis dignissimos explicabo accusamus saepe est quo, quaerat sequi modi necessitatibus. Numquam.
+								</p>
+							</div>
+							<a href="#" class="blog-section__full-article--read-more read-more-link">
+								<span>
+									Детальніше
+								</span>
+								<i>
+									<svg width="18" height="18" viewBox="0 0 18 18">
+										<use xlink:href="img/sprites.svg#arrow-up-right"></use>
+									</svg>
+								</i>
+							</a>
+						</div>
+					</div>
+					<div class="blog-section__slider splide">
+						<div class="blog-section__slider--track splide__track">
+							<ul class="blog-section__slider--list splide__list">
+								<li class="blog-section__slider--slide splide__slide blog-section__card">
+									<a href="#" class="blog-section__card--image image-aspect-ratio" aria-label="ТОП-4 аромати для осені">
+										<picture>
+											<source srcset="img/index/blog/blog-image-2.avif" type="image/avif">
+											<source srcset="img/index/blog/blog-image-2.webp" type="image/webp">
+											<img src="img/index/blog/blog-image-2.jpg" alt="" width="587" height="437" loading="lazy">
+										</picture>
+									</a>
+									<div class="blog-section__card--content">
+										<h3 class="blog-section__card--title" aria-label="ТОП-4 аромати для осені">
+											<a href="#">
+												ТОП-4 аромати для осені
+											</a>
+										</h3>
+										<div class="blog-section__card--content">
+											<p>
+												Я знаю, що смак на парфуми дуже різниться у всіх, але, можливо, саме мої рекомендації спонукатимуть вас придивитись до цих унікальних композицій Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus blanditiis dolorem quos perferendis. Amet, voluptatum. Odio sed sit ipsum saepe fuga aut accusantium perspiciatis. Labore tempore soluta sapiente ea similique?
+											</p>
+										</div>
+										<a href="#" class="blog-section__card--read-more read-more-link">
+											<span>
+												Детальніше
+											</span>
+											<i>
+												<svg width="18" height="18" viewBox="0 0 18 18">
+													<use xlink:href="img/sprites.svg#arrow-up-right"></use>
+												</svg>
+											</i>
+										</a>
+									</div>
+								</li>
+								<li class="blog-section__slider--slide splide__slide blog-section__card">
+									<a href="#" class="blog-section__card--image image-aspect-ratio" aria-label="ТОП-4 аромати для осені">
+										<picture>
+											<source srcset="img/index/blog/blog-image-2.avif" type="image/avif">
+											<source srcset="img/index/blog/blog-image-2.webp" type="image/webp">
+											<img src="img/index/blog/blog-image-2.jpg" alt="" width="587" height="437" loading="lazy">
+										</picture>
+									</a>
+									<div class="blog-section__card--content">
+										<h3 class="blog-section__card--title" aria-label="ТОП-4 аромати для осені">
+											<a href="#">
+												ТОП-4 аромати для осені
+											</a>
+										</h3>
+										<div class="blog-section__card--content">
+											<p>
+												Я знаю, що смак на парфуми дуже різниться у всіх, але, можливо, саме мої рекомендації спонукатимуть вас придивитись до цих унікальних композицій Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus blanditiis dolorem quos perferendis. Amet, voluptatum. Odio sed sit ipsum saepe fuga aut accusantium perspiciatis. Labore tempore soluta sapiente ea similique?
+											</p>
+										</div>
+										<a href="#" class="blog-section__card--read-more read-more-link">
+											<span>
+												Детальніше
+											</span>
+											<i>
+												<svg width="18" height="18" viewBox="0 0 18 18">
+													<use xlink:href="img/sprites.svg#arrow-up-right"></use>
+												</svg>
+											</i>
+										</a>
+									</div>
+								</li>
+								<li class="blog-section__slider--slide splide__slide blog-section__card">
+									<a href="#" class="blog-section__card--image image-aspect-ratio" aria-label="ТОП-4 аромати для осені">
+										<picture>
+											<source srcset="img/index/blog/blog-image-2.avif" type="image/avif">
+											<source srcset="img/index/blog/blog-image-2.webp" type="image/webp">
+											<img src="img/index/blog/blog-image-2.jpg" alt="" width="587" height="437" loading="lazy">
+										</picture>
+									</a>
+									<div class="blog-section__card--content">
+										<h3 class="blog-section__card--title" aria-label="ТОП-4 аромати для осені">
+											<a href="#">
+												ТОП-4 аромати для осені
+											</a>
+										</h3>
+										<div class="blog-section__card--content">
+											<p>
+												Я знаю, що смак на парфуми дуже різниться у всіх, але, можливо, саме мої рекомендації спонукатимуть вас придивитись до цих унікальних композицій Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus blanditiis dolorem quos perferendis. Amet, voluptatum. Odio sed sit ipsum saepe fuga aut accusantium perspiciatis. Labore tempore soluta sapiente ea similique?
+											</p>
+										</div>
+										<a href="#" class="blog-section__card--read-more read-more-link">
+											<span>
+												Детальніше
+											</span>
+											<i>
+												<svg width="18" height="18" viewBox="0 0 18 18">
+													<use xlink:href="img/sprites.svg#arrow-up-right"></use>
+												</svg>
+											</i>
+										</a>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="blog-section__slider--pagination splide__pagination"></div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer class="footer">
+			<div class="footer__wrapper container">
+				<div class="footer__logo">
+					<a href=index.html" class="footer__logo--link">
+						<img src="img/logo.svg" alt="Logo" width="112" height="50" loading="lazy" class="footer__logo--img visible-on-desktop">
+						<img src="img/logo-mob.svg" alt="Logo" width="112" height="50" loading="lazy" class="footer__logo--img visible-on-mob">
+					</a>
+				</div>
+				<nav class="footer__nav">
+					<div class="footer__nav--block">
+						<h3>
+							Інформаційні сторінки
+						</h3>
+						<ul>
+							<li>
+								<a href="#">
+									Про компанію
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Оплата і Доставка
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Новини і Статті
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Акції
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="footer__nav--block is-row">
+						<h3>
+							Категорії
+						</h3>
+						<ul>
+							<li>
+								<a href="#">
+									Твердий парфум
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Аромо свічки
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Колекції ароматів
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Аромати для дому
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Косметика для тіла
+								</a>
+							</li>
+						</ul>
+					</div>
+				</nav>
+				<div class="footer__contacts">
+					<ul>
+						<li>
+							<a href="#">
+								(097) 798 67 09
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								(063) 576 12 45
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer__lang">
+					<button class="footer__lang--target" type="button">
+						<span>UA</span>
+						<svg width="8" height="8" viewBox="0 0 8 8">
+							<use xlink:href="img/sprites.svg#drop-down-arrow"></use>
+						</svg>
+					</button>
+					<div class="footer__lang--block">
+						<ul>
+							<li>
+								<a href="#">
+									EN
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									RU
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="footer__copyright container">
+				©TWINS 2023
+			</div>
+		</footer>
+	</div>
+
+	<div class="search-popup popup" id="search-popup" style="display: none;">
+		<div class="search-popup__wrapper popup-wrapper">
+			<div class="search-popup__bg popup-bg popup-close"></div>
+			<button type="button" class="search-popup__close-btn popup-close-btn popup-close" title="Закрити">
+				<svg width="24" height="24" viewBox="0 0 47.971 47.971">
+					<use xlink:href="img/sprites.svg#close"></use>
+				</svg>
+			</button>
+			<div class="search-popup__body popup-body">
+				<form method="post" class="search-popup__form">
+					<label>
+						<input type="search" placeholder="Пошук" name="search" required>
+					</label>
+					<button type="submit" title="Пошук">
+						<svg width="24" height="24" viewBox="0 0 20 20">
+							<use xlink:href="img/sprites.svg#search"></use>
+						</svg>
+					</button>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<script src="js/libs.min.js"></script>
+	<script src="js/main.min.js"></script>
+
+</body>
+
+</html>
