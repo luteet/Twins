@@ -2816,6 +2816,7 @@ body {
     height: 100%;
     max-height: calc(var(--svh,1vh) - 90px);
     max-height: calc(100svh - 90px);
+    cursor: pointer;
     background: var(--black);
     opacity: 0
 }
@@ -2823,7 +2824,6 @@ body {
 .stories-popup__video-wrapper {
     position: relative;
     z-index: 2;
-    cursor: pointer;
     display: inline-flex;
     overflow: hidden;
     border-radius: 15px;

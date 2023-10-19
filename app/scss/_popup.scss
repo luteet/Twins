@@ -315,6 +315,8 @@ body {
 		max-height: calc(var(--svh,1vh) - 90px);
 		max-height: calc(100svh - 90px);
 
+		cursor: pointer;
+
 		@include _992 {
 			//height: 90svh; 
 			width: auto;
@@ -329,7 +331,7 @@ body {
 		&-wrapper {
 			position: relative;
 			z-index: 2;
-			cursor: pointer;
+			
 			display: inline-flex;
 			overflow: hidden;
 			border-radius: 15px;
