@@ -1,0 +1,48 @@
+.breadcrumbs {
+
+	margin-top: 17px;
+
+	font-size: 0.875rem;
+	
+	@include _768 {
+		font-size: 1rem;
+	}
+	
+	@include _992 {
+		font-size: 1.125rem;
+	}
+	line-height: 150%;
+
+	// .breadcrumbs__link
+
+	&__link {	
+		color: #202121;
+		@media (any-hover: hover) {
+			transition: color .15s ease;
+			&:hover {
+				color: var(--accent);
+			}
+
+			&:active {
+				color: var(--accent-active);
+			}
+		}
+	}
+
+	// .breadcrumbs__separator
+
+	&__separator {
+		display: inline-block;
+		margin: 0 5px;
+		position: relative;
+		&::before {
+			content: ' | ';
+		}
+	}
+
+	// .breadcrumbs__current
+
+	&__current {
+		color: #202121;
+	}
+}

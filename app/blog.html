@@ -1,0 +1,162 @@
+@@include("html/_header.html")
+
+	<main class="main">
+		<div class="breadcrumbs container" data-aos="fade-in" data-aos-delay="100">
+			<a href="index.html" class="breadcrumbs__link">Головна</a>
+			<span class="breadcrumbs__separator"></span>
+			<span class="breadcrumbs__current">Новини і статті</span>
+		</div>
+		<section class="blog container">
+			<h1 class="blog__title section-title" data-aos="fade-in" data-aos-delay="200">
+				Новини і статті
+			</h1>
+			<div class="blog__text" data-aos="fade-in" data-aos-delay="300">
+				<p>
+					Надихайтесь, досліджуйте та діліться своїм досвідом у першій спільноті від TWINS
+				</p>
+			</div>
+			<div class="blog-section__full-article" data-aos="fade-in" data-aos-delay="300" data-aos-duration="700">
+				<div class="blog-section__full-article--image">
+					<a href="#" class="blog-section__full-article--image-body image-aspect-ratio">
+						<picture>
+							<source srcset="img/index/blog/blog-image-1.avif" type="image/avif">
+							<source srcset="img/index/blog/blog-image-1.webp" type="image/webp">
+							<img src="img/index/blog/blog-image-1.jpg" alt="" width="738" height="544" loading="lazy">
+						</picture>
+					</a>
+				</div>
+				<div class="blog-section__full-article--content">
+					<time class="blog-section__full-article--date" datetime="14-09-2023">14.09.2023</time>
+					<h3 class="blog-section__full-article--title section-title">
+						<a href="#">Трендові кольори помад сезону осінь-зима 2023-2024</a>
+					</h3>
+					<div class="blog-section__full-article--text">
+						<p>
+							Помада – один із найпопулярніших макіяжних засобів кожної жінки. У косметичці може не бути консилера, або пудри, але декілька варіантів помад буде обов'язково!
+						</p>
+						<p>
+							І це зрозуміло, бо гарна помада - це ціле поле для експериментів!
+						</p>
+						<p>
+							Передивишись купу фото з модних показів та стрітстайлу Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi dolorem tempora nostrum. Quae molestias totam vitae assumenda a, debitis dignissimos explicabo accusamus saepe est quo, quaerat sequi modi necessitatibus. Numquam.
+						</p>
+					</div>
+					<a href="#" class="blog-section__full-article--read-more read-more-link">
+						<span>
+							Детальніше
+						</span>
+						<i>
+							<svg width="18" height="18" viewBox="0 0 18 18">
+								<use xlink:href="img/sprites.svg#arrow-up-right"></use>
+							</svg>
+						</i>
+					</a>
+				</div>
+			</div>
+			<div class="blog__wrapper">
+				<button class="blog__open-categories visible-on-mob" type="button">
+					<span>Категории</span>
+					<svg width="8" height="8" viewBox="0 0 8 8">
+						<use xlink:href="img/sprites.svg#drop-down-arrow"></use>
+					</svg>
+				</button>
+				<div class="blog__aside" data-aos="fade-in" data-aos-delay="200">
+					<ul class="blog__categories">
+						<li>
+							<a href="#" class="is-current" aria-label="Всі">
+								<span>Всі</span>
+								<svg width="14" height="14" viewBox="0 0 14 14">
+									<use xlink:href="img/sprites.svg#arrow-next-2"></use>
+								</svg>
+							</a>
+						</li>
+						<li>
+							<a href="#" aria-label="Новини">
+								<span>Новини</span>
+								<svg width="14" height="14" viewBox="0 0 14 14">
+									<use xlink:href="img/sprites.svg#arrow-next-2"></use>
+								</svg>
+							</a>
+						</li>
+						<li>
+							<a href="#" aria-label="Статті">
+								<span>Статті</span>
+								<svg width="14" height="14" viewBox="0 0 14 14">
+									<use xlink:href="img/sprites.svg#arrow-next-2"></use>
+								</svg>
+							</a>
+						</li>
+						<li>
+							<a href="#" aria-label="Акції">
+								<span>Акції</span>
+								<svg width="14" height="14" viewBox="0 0 14 14">
+									<use xlink:href="img/sprites.svg#arrow-next-2"></use>
+								</svg>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="blog__main" data-aos="fade-in" data-aos-delay="300">
+					<ul class="blog__list">
+						@@loop("html/_blog-card.html", [
+
+							{
+								"class": "blog__card ",
+							},
+							{
+								"class": "blog__card ",
+							},
+							{
+								"class": "blog__card ",
+							},
+
+							{
+								"class": "blog__card ",
+							},
+							{
+								"class": "blog__card ",
+							},
+							{
+								"class": "blog__card ",
+							},
+
+							{
+								"class": "blog__card ",
+							},
+							{
+								"class": "blog__card ",
+							},
+							{
+								"class": "blog__card ",
+							},
+
+						])
+					</ul>
+					<div class="blog__footer">
+						<div class="blog__pagination pagination">
+							<a href="#" class="pagination__arrow is-prev">
+								<svg width="14" height="14" viewBox="0 0 14 14">
+									<use xlink:href="img/sprites.svg#arrow-prev-2"></use>
+								</svg>
+							</a>
+							<div class="pagination__list">
+								<a href="#" class="is-current">1</a>
+								<a href="#">2</a>
+								<a href="#">3</a>
+								<a href="#">...</a>
+								<a href="#">34</a>
+							</div>
+							<a href="#" class="pagination__arrow is-next">
+								<svg width="14" height="14" viewBox="0 0 14 14">
+									<use xlink:href="img/sprites.svg#arrow-next-2"></use>
+								</svg>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		@@include("html/_mailing.html")
+	</main>
+
+@@include("html/_footer.html")

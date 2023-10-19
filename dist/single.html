@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+
+	<div class="wrapper">
+		<header class="header container" data-aos="fade-in" data-aos-delay="100">
+			<div class="header__logo visible-on-mob">
+				<a href="index.html" class="header__logo--link">
+					<img src="img/logo.svg" alt="Logo" width="112" height="50" loading="lazy" class="header__logo--img visible-on-desktop">
+					<img src="img/logo-mob.svg" alt="Logo" width="112" height="50" loading="lazy" class="header__logo--img visible-on-mob">
+				</a>
+			</div>
+			<a href="#" class="header__icon-link visible-on-mob">
+				<svg width="24" height="24" viewBox="0 0 30 30">
+					<use xlink:href="img/sprites.svg#user"></use>
+				</svg>
+			</a>
+			<a href="#" class="header__icon-link visible-on-mob">
+				<svg width="30" height="30" viewBox="0 0 35 35">
+					<use xlink:href="img/sprites.svg#cart"></use>
+				</svg>
+			</a>
+			<a href="#search-popup" class="header__icon-link open-popup visible-on-mob">
+				<svg width="24" height="24" viewBox="0 0 20 20">
+					<use xlink:href="img/sprites.svg#search"></use>
+				</svg>
+			</a>
+			<nav class="header__nav">
+				<div class="header__nav--body">
+					<div class="header__nav--row">
+						<ul class="header__nav--list">
+							<li>
+								<a href="#">
+									Про компанію
+								</a>
+							</li>
+							<li>
+								<a href="payment-and-delivery.html">
+									Оплата і Доставка
+								</a>
+							</li>
+							<li>
+								<a href="blog.html">
+									Новини і Статті
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Акції
+								</a>
+							</li>
+						</ul>
+						<div class="header__logo visible-on-desktop">
+							<a href="index.html" class="header__logo--link">
+								<img src="img/logo.svg" alt="Logo" width="182" height="50" loading="lazy" class="header__logo--img">
+							</a>
+						</div>
+						<div class="header__add visible-on-desktop">
+							<ul class="header__add--list">
+								<li>
+									<a href="#" aria-label="Користувач">
+										<svg width="30" height="30" viewBox="0 0 30 30">
+											<use xlink:href="img/sprites.svg#user"></use>
+										</svg>
+										<span>Користувач</span>
+									</a>
+								</li>
+								<li>
+									<a href="#" aria-label="Корзина">
+										<svg width="35" height="35" viewBox="0 0 35 35">
+											<use xlink:href="img/sprites.svg#cart"></use>
+										</svg>
+										<span>Корзина</span>
+									</a>
+								</li>
+							</ul>
+							<div class="header__add--lang header__lang">
+								<button class="header__lang--target" type="button">
+									<span>UA</span>
+									<svg width="8" height="8" viewBox="0 0 8 8">
+										<use xlink:href="img/sprites.svg#drop-down-arrow"></use>
+									</svg>
+								</button>
+								<div class="header__lang--block">
+									<ul>
+										<li>
+											<a href="#">
+												EN
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												RU
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="header__nav--row">
+						<ul class="header__categories">
+							<li>
+								<a href="#">
+									Твердий парфум
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Аромати для дому
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Аромо свічки
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Колекції ароматів
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Косметика для тіла
+								</a>
+							</li>
+						</ul>
+						<form method="post" class="header__search visible-on-desktop">
+							<label>
+								<input type="search" name="search" placeholder="Пошук" required>
+							</label>
+							<button type="submit" title="Пошук">
+								<svg width="20" height="20" viewBox="0 0 20 20">
+									<use xlink:href="img/sprites.svg#search"></use>
+								</svg>
+							</button>
+						</form>
+					</div>
+					<div class="header__add--lang header__lang visible-on-mob">
+						<button class="header__lang--target" type="button">
+							<span>UA</span>
+							<svg width="8" height="8" viewBox="0 0 8 8">
+								<use xlink:href="img/sprites.svg#drop-down-arrow"></use>
+							</svg>
+						</button>
+						<div class="header__lang--block">
+							<ul>
+								<li>
+									<a href="#">
+										EN
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										RU
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</nav>
+			<button class="header__burger" type="button" aria-label="Menu">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+		</header>
+
+		<main class="main">
+			<div class="breadcrumbs container" data-aos="fade-in" data-aos-delay="100">
+				<a href="index.html" class="breadcrumbs__link">Головна</a>
+				<span class="breadcrumbs__separator"></span>
+				<a href="blog.html" class="breadcrumbs__link">Новини і статті</a>
+				<span class="breadcrumbs__separator"></span>
+				<span class="breadcrumbs__current">Корейські очищувальні засоби: бюджетний спосіб рідше відвідувати косметолога</span>
+			</div>
+			<section class="single container is-min">
+				<h1 class="single__title section-title" data-aos="fade-in" data-aos-delay="200">
+					Корейські очищувальні засоби: бюджетний спосіб рідше відвідувати косметолога
+				</h1>
+				<time class="single__time" datetime="21-09-2023" data-aos="fade-in" data-aos-delay="250">
+					<svg width="21" height="21" viewBox="0 0 21 21">
+						<use xlink:href="img/sprites.svg#calendar"></use>
+					</svg>
+					<span>
+						21 вересня 2023
+					</span>
+				</time>
+				<div class="single__content" data-aos="fade-in" data-aos-delay="400">
+					<p>
+						Бум на k-beauty не вщухає вже десятиліття. Корейці змогли поєднати у своїй косметиці продуманий та безпечний склад, зручні формати та практично миттєвий результат.
+					</p>
+					<figure>
+						<picture>
+							<source srcset="img/single/single-image-1.avif" type="image/avif">
+							<source srcset="img/single/single-image-1.webp" type="image/webp">
+							<img src="img/single/single-image-1.jpg" alt="" width="1200" height="588" loading="lazy">
+						</picture>
+					</figure>
+					<p>
+						<strong>
+							Зміст:
+						</strong>
+					</p>
+					<ul class="check-list">
+						<li>
+							Швидкий ефект: Good-bye Blackhead Ciracle
+						</li>
+						<li>
+							Швидкий ефект: Good-bye Blackhead Ciracle
+						</li>
+						<li>
+							Швидкий ефект: Good-bye Blackhead Ciracle
+						</li>
+					</ul>
+					<h2>
+						Швидкий ефект: Good-bye Blackhead Ciracle
+					</h2>
+					<figure>
+						<picture>
+							<source srcset="img/single/single-image-2.avif" type="image/avif">
+							<source srcset="img/single/single-image-2.webp" type="image/webp">
+							<img src="img/single/single-image-2.jpg" alt="" width="1200" height="588" loading="lazy">
+						</picture>
+					</figure>
+					<p>
+						Про них не можуть мовчати ні блогери, ні б'юті-маніяки: гугл видає сотні відгуків на ці чудо-серветки. Впевнено можемо стверджувати: «Гуд бай блекхед» допоможуть вам забути про походи до косметолога на ультразвукову чистку. Вони справді дуже круті ‒ перевірено редакцією!
+						Тонкі серветки (є варіант у <a href="#">баночці</a> та <a href="#">в пакетику</a> для одноразової процедури) просякнуті спеціальною есенцією, яка відкриває пори та підіймає сальні пробки над поверхнею шкіри, щоб ви легко змогли їх витягти. Головне, дотримуйтесь наступного протоколу:
+					</p>
+					<ol>
+						<li>
+							Прийміть теплий душ або ванну, аби пори розкрилися. Ретельно вмийте обличчя.
+						</li>
+						<li>
+							Розподіліть серветки на шкірі (щільно притискаючи, не допускаючи утворення бульбашок) та покрийте їх харчовою плівкою.
+						</li>
+						<li>
+							Через 15 хвилин починайте поступово відкривати зони обробки, не допускаючи висихання шкіри. Для видалення сальних пробок скористайтеся <a href="#">ложкою уно</a> або <a href="#">петлею</a>.
+						</li>
+						<li>
+							Після чищення обличчя вмийтеся та нанесіть антибактеріальну маску для закриття пор.
+						</li>
+					</ol>
+					<h2>
+						Киснева дія: Neogen Code 9 Canadian Clay Pore Cleanser Special Kit
+					</h2>
+					<figure>
+						<picture>
+							<source srcset="img/single/single-image-2.avif" type="image/avif">
+							<source srcset="img/single/single-image-2.webp" type="image/webp">
+							<img src="img/single/single-image-2.jpg" alt="" width="1200" height="588" loading="lazy">
+						</picture>
+					</figure>
+					<p>
+						<a href="#">Neogen</a> пропону є боротися з недосконалостями за допомогою трьох особливостей:
+					</p>
+					<ul>
+						<li>
+							Майже невагома глиняна основа абсорбує себум, висвітлює чорні цятки та виводить токсини;
+						</li>
+						<li>
+							Капсули з киснем насичують клітини шкіри: покращується її колір та текстура;
+						</li>
+						<li>
+							Щіточка з м'якими щетинками додатково очищає та забезпечує делікатний масаж, що сприяє покращенню тонусу.
+						</li>
+					</ul>
+					<p>
+						Користуватися маскою не тільки просто, а й приємно. Нанесіть суфле та ніжно масажуйте шкіру протягом 5 хвилин – капсули почнуть лускатись, вивільняючи кисень. Потім змочіть обличчя водою та попрацюйте щіточкою до утворення піни. Вуаля! Ваша шкіра бездоганна. Рекомендуємо проводити маніпуляцію двічі на тиждень. <br>
+						Ці три продукти заслужили на визнання б'юті-спільноти та мають рівну цінність. Який вибрати? Ми рекомендуємо мати в арсеналі всю трійцю – разом вони переможуть чорні цятки, прищики, неестетичний блиск і навіть витіснять із вашої косметички всі щільні тональні основи.
+					</p>
+				</div>
+			</section>
+		</main>
+
+		<footer class="footer">
+			<div class="footer__wrapper container">
+				<div class="footer__logo">
+					<a href=index.html" class="footer__logo--link">
+						<img src="img/logo.svg" alt="Logo" width="112" height="50" loading="lazy" class="footer__logo--img visible-on-desktop">
+						<img src="img/logo-mob.svg" alt="Logo" width="112" height="50" loading="lazy" class="footer__logo--img visible-on-mob">
+					</a>
+				</div>
+				<nav class="footer__nav">
+					<div class="footer__nav--block">
+						<h3>
+							Інформаційні сторінки
+						</h3>
+						<ul>
+							<li>
+								<a href="#">
+									Про компанію
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Оплата і Доставка
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Новини і Статті
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Акції
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="footer__nav--block is-row">
+						<h3>
+							Категорії
+						</h3>
+						<ul>
+							<li>
+								<a href="#">
+									Твердий парфум
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Аромо свічки
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Колекції ароматів
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Аромати для дому
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Косметика для тіла
+								</a>
+							</li>
+						</ul>
+					</div>
+				</nav>
+				<div class="footer__contacts">
+					<ul>
+						<li>
+							<a href="#">
+								(097) 798 67 09
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								(063) 576 12 45
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer__lang">
+					<button class="footer__lang--target" type="button">
+						<span>UA</span>
+						<svg width="8" height="8" viewBox="0 0 8 8">
+							<use xlink:href="img/sprites.svg#drop-down-arrow"></use>
+						</svg>
+					</button>
+					<div class="footer__lang--block">
+						<ul>
+							<li>
+								<a href="#">
+									EN
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									RU
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="footer__copyright container">
+				©TWINS 2023
+			</div>
+		</footer>
+	</div>
+
+	<div class="search-popup popup" id="search-popup" style="display: none;">
+		<div class="search-popup__wrapper popup-wrapper">
+			<div class="search-popup__bg popup-bg popup-close"></div>
+			<button type="button" class="search-popup__close-btn popup-close-btn popup-close" title="Закрити">
+				<svg width="24" height="24" viewBox="0 0 47.971 47.971">
+					<use xlink:href="img/sprites.svg#close"></use>
+				</svg>
+			</button>
+			<div class="search-popup__body popup-body">
+				<form method="post" class="search-popup__form">
+					<label>
+						<input type="search" placeholder="Пошук" name="search" required>
+					</label>
+					<button type="submit" title="Пошук">
+						<svg width="24" height="24" viewBox="0 0 20 20">
+							<use xlink:href="img/sprites.svg#search"></use>
+						</svg>
+					</button>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<div class="stories-popup popup" id="stories-popup" style="display: none;">
+		<div class="stories-popup__wrapper popup-wrapper">
+			<div class="stories-popup__bg popup-bg popup-close"></div>
+			<button type="button" class="stories-popup__volume" title="Включить/Выключить громкость" data-volume-active-icon="img/sprites.svg#volume-active" data-volume-none-icon="img/sprites.svg#volume-none">
+				<svg width="30" height="30" viewBox="0 0 24 24">
+					<use xlink:href="img/sprites.svg#volume-active"></use>
+				</svg>
+			</button>
+			<button type="button" class="stories-popup__close-btn popup-close-btn popup-close" title="Закрыть">
+				<svg width="24" height="24" viewBox="0 0 47.971 47.971">
+					<use xlink:href="img/sprites.svg#close"></use>
+				</svg>
+			</button>
+			<div class="stories-popup__body popup-body">
+				<div class="stories-popup__slider splide">
+					<div class="stories-popup__track splide__track">
+						<ul class="stories-popup__list splide__list">
+							<li class="stories-popup__slide splide__slide">
+								<div class="stories-popup__video-wrapper">
+									<video src="video/stories-video-example.mp4" playsinline class="stories-popup__video"></video>
+									<div class="stories-popup__video-preview">
+										<picture>
+											<source srcset="img/video-preview.avif" type="image/avif">
+											<source srcset="img/video-preview.webp" type="image/webp">
+											<img src="img/video-preview.jpg" alt="" width="0" height="0" loading="lazy">
+										</picture>
+									</div>
+									<div class="stories-popup__video-progress"></div>
+									<div class="stories-popup__text">
+										<a href="product-page.html">
+											Якесь посилання для прикладу
+										</a>
+										і ще трохи тексту
+									</div>
+								</div>
+								<div class="stories-popup__loader"></div>
+							</li>
+							<li class="stories-popup__slide splide__slide">
+								<div class="stories-popup__video-wrapper">
+									<video src="video/stories-video-example.mp4" playsinline class="stories-popup__video"></video>
+									<div class="stories-popup__video-preview">
+										<picture>
+											<source srcset="img/video-preview.avif" type="image/avif">
+											<source srcset="img/video-preview.webp" type="image/webp">
+											<img src="img/video-preview.jpg" alt="" width="0" height="0" loading="lazy">
+										</picture>
+									</div>
+									<div class="stories-popup__video-progress"></div>
+								</div>
+								<div class="stories-popup__loader"></div>
+							</li>
+							<li class="stories-popup__slide splide__slide">
+								<div class="stories-popup__video-wrapper">
+									<video src="video/stories-video-example.mp4" playsinline class="stories-popup__video"></video>
+									<div class="stories-popup__video-preview">
+										<picture>
+											<source srcset="img/video-preview.avif" type="image/avif">
+											<source srcset="img/video-preview.webp" type="image/webp">
+											<img src="img/video-preview.jpg" alt="" width="0" height="0" loading="lazy">
+										</picture>
+									</div>
+									<div class="stories-popup__video-progress"></div>
+								</div>
+								<div class="stories-popup__loader"></div>
+							</li>
+							<li class="stories-popup__slide splide__slide">
+								<div class="stories-popup__video-wrapper">
+									<video src="video/stories-video-example.mp4" playsinline class="stories-popup__video"></video>
+									<div class="stories-popup__video-preview">
+										<picture>
+											<source srcset="img/video-preview.avif" type="image/avif">
+											<source srcset="img/video-preview.webp" type="image/webp">
+											<img src="img/video-preview.jpg" alt="" width="0" height="0" loading="lazy">
+										</picture>
+									</div>
+									<div class="stories-popup__video-progress"></div>
+								</div>
+								<div class="stories-popup__loader"></div>
+							</li>
+							<li class="stories-popup__slide splide__slide">
+								<div class="stories-popup__video-wrapper">
+									<video src="video/stories-video-example.mp4" playsinline class="stories-popup__video"></video>
+									<div class="stories-popup__video-preview">
+										<picture>
+											<source srcset="img/video-preview.avif" type="image/avif">
+											<source srcset="img/video-preview.webp" type="image/webp">
+											<img src="img/video-preview.jpg" alt="" width="0" height="0" loading="lazy">
+										</picture>
+									</div>
+									<div class="stories-popup__video-progress"></div>
+								</div>
+								<div class="stories-popup__loader"></div>
+							</li>
+						</ul>
+					</div>
+					<div class="stories-popup__controls splide__arrows">
+						<button class="stories-popup__arrow splide__arrow splide__arrow--prev" type="button"></button>
+						<button class="stories-popup__arrow splide__arrow splide__arrow--next" type="button"></button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="js/libs.min.js"></script>
+	<script src="js/main.min.js"></script>
+
+</body>
+
+</html>

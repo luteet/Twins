@@ -8,11 +8,23 @@
 @import 'popup';
 
 @import 'components/header';
+@import 'components/product-card';
+@import 'components/breadcrumbs';
+@import 'components/pagination';
 
 @import 'pages/index/hero';
+@import 'pages/index/stories';
 @import 'pages/index/events';
 @import 'pages/index/blog-section';
+@import 'pages/index/products-grid';
+@import 'components/mailing';
 
-//@import 'pages';
+@import 'pages/products/main';
+
+@import 'pages/product/main';
+
+@import 'pages/blog/main';
+
+@import 'pages/payment-delivery/main';
 
 @import 'components/footer';

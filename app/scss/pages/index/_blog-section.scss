@@ -61,6 +61,7 @@
 			@include _992 {
 				font-size: 1.375rem;
 			}
+
 			line-height: 190.909091%;
 			color: var(--accent);
 
@@ -88,17 +89,16 @@
 		@media (min-width: 1200px) {
 			grid-template-columns: 1.318fr 2fr;
 		}
-		
 
 		// .blog-section__full-article--image
 
 		&--image {
-
 		}
 
 		// .blog-section__full-article--image-body
 
 		&--image-body {
+			display: block;
 		}
 
 		// .blog-section__full-article--content
@@ -121,24 +121,29 @@
 
 			font-size: 0.875rem;
 			line-height: 150%;
+			color: #373737;
 
 			@include _768 {
 				font-size: 1rem;
-				min-height: 50px;
-				line-height: 222.222222%;
+				min-height: 45px;
+				line-height: 150%;
 			}
 
 			@include _992 {
 				font-size: 1.125rem;
 			}
-			color: #373737;
 			
 		}
 
 		// .blog-section__full-article--title
 
 		&--title {
+			max-width: 795px;
 			padding-top: 20px;
+
+			a {
+				color: var(--text-color);
+			}
 		}
 
 		// .blog-section__full-article--text
@@ -201,7 +206,7 @@
 		// .blog-section__slider--track
 
 		&--track {
-			padding-bottom: 30px;
+			//padding-bottom: 30px;
 		}
 
 		// .blog-section__slider--list
@@ -236,6 +241,56 @@
 		}
 	}
 
+	&__slider--slide &__card {
+		.read-more-link {
+			font-size: 1rem;
+	
+			@include _768 {
+				font-size: 1.125rem;
+			}
+			
+			@include _992 {
+				font-size: 1.35rem;
+			}
+
+			@include _container {
+				font-size: 1.5rem;
+			}
+		}
+		&--title {
+			font-size: 1.125rem;
+
+			@include _550 {
+				font-size: 1.25rem;
+			}
+			
+			@include _768 {
+				font-size: 1.5rem;
+			}
+			
+			@include _992 {
+				font-size: 1.875rem;
+				padding-top: 10px;
+			}
+		}
+
+		&--content {
+			font-size: 1rem;
+			
+			@include _768 {
+				font-size: 1.175rem;
+			}
+			
+			@include _992 {
+				font-size: 1.375rem;
+			}
+		}
+
+		&--read-more {
+			
+		}
+	}
+
 	// .blog-section__card
 
 	&__card {
@@ -253,11 +308,11 @@
 			font-size: 1rem;
 			
 			@include _768 {
-				font-size: 1.175rem;
+				font-size: 1.125rem;
 			}
 			
 			@include _992 {
-				font-size: 1.375rem;
+				font-size: 1.125rem;
 			}
 
 			line-height: 154.545455%;
@@ -281,16 +336,16 @@
 			font-size: 1.125rem;
 
 			@include _550 {
-				font-size: 1.25rem;
+				font-size: 1.125rem;
 			}
 			
 			@include _768 {
-				font-size: 1.5rem;
+				font-size: 1.35rem;
 			}
 			
 			@include _992 {
-				font-size: 1.875rem;
 				padding-top: 10px;
+				font-size: 1.625rem;
 			}
 
 			line-height: 130%;
@@ -314,6 +369,22 @@
 				-webkit-box-orient: vertical;
 				line-clamp: 2;
 				box-orient: vertical;
+			}
+		}
+
+		.read-more-link {
+			font-size: 1rem;
+	
+			@include _768 {
+				font-size: 1rem;
+			}
+			
+			@include _992 {
+				font-size: 1.125rem;
+			}
+
+			@include _container {
+				font-size: 1.25rem;
 			}
 		}
 

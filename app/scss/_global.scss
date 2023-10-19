@@ -1,6 +1,8 @@
 @use 'sass:math';
 
 :root {
+	accent-color: #A78F7A;
+
 	--title-font: 'Ysabeau', sans-serif;
 	--main-font: 'Circe', sans-serif;
 	
@@ -13,6 +15,8 @@
 	--white: #FFF;
 	--black: #000;
 	--text-color: #202121;
+
+	--gold: #F0B811;
 
 	--mob-container-padding: 20px;
 	--container-padding: 60px;
@@ -32,8 +36,6 @@ body {
 
 	display: flex;
 	flex-direction: column;
-
-	//padding-right: var(--popup-padding);
 
 	&._mob-menu-active {
 		overflow: hidden;
@@ -75,16 +77,37 @@ section {
 	flex: 1 0 auto;
 	position: relative;
 
-	padding-bottom: 30px;
+	padding-bottom: 100px;
 }
 
 .container {
 	padding-left: var(--mob-container-padding);
 	padding-right: var(--mob-container-padding);
 	
-	@media(min-width: #{$container - 150}px) {
+	@media(min-width: #{$containerMin}px) {
 		padding-left: max(var(--container-padding), calc(50% - #{math.div($container, 2)}px));
 		padding-right: max(var(--container-padding), calc(50% - #{math.div($container, 2)}px));
+
+		&.is-min {
+			padding-left: max(var(--container-padding), calc(50% - #{math.div($containerMin, 2)}px));
+			padding-right: max(var(--container-padding), calc(50% - #{math.div($containerMin, 2)}px));
+		}
+	}
+
+	
+}
+
+@media (any-hover: hover) {
+	.active-hover:hover .icon-link{
+		background: var(--white);
+		color: var(--accent);
+		&::before {
+			border-color: var(--accent);
+		}
+	}
+
+	.active-hover:active .icon-link {
+		box-shadow: -5px 5px 25px -5px rgba(167, 143, 122,0.7);
 	}
 }
 
@@ -111,10 +134,28 @@ section {
 		width: calc(100% - 12px); height: calc(100% - 12px);
 		border-radius: 50%;
 		border: 1px dashed rgba(255,255,255,0.5);
+
+		transition: border-color .2s ease;
 	}
 
 	transform: rotate(-30deg);
 	box-shadow: -15px 15px 25px -5px rgba(167, 143, 122,0.5);
+
+	transition: background .3s ease, box-shadow .3s ease, color .3s ease;
+
+	@media (any-hover: hover) {
+		&.active-hover:hover {
+			background: var(--white);
+			color: var(--accent);
+			&::before {
+				border-color: var(--accent);
+			}
+		}
+
+		&.active-hover:active {
+			box-shadow: -5px 5px 25px -5px rgba(167, 143, 122,0.7);
+		}
+	}
 
 	svg {
 		width: 35%; height: auto;
@@ -126,12 +167,40 @@ section {
 	display: inline-block;
 	text-align: center;
 	
-	padding: 7px 15px;
+	padding: 28px 35px;
+	&.is-min {
+		padding: 20px 35px;
+	}
 
 	background: var(--accent);
 	color: var(--white);
 
-	border-radius: 15px;
+	border-radius: 0;
+
+	font-size: 1rem;
+
+	@include _550 {
+		font-size: 1.175rem;
+		&.is-min {
+			font-size: 1.125rem;
+		}
+	}
+	
+	@include _768 {
+		font-size: 1.25rem;
+		&.is-min {
+			font-size: 1.125rem;
+		}
+	}
+	
+	@include _992 {
+		font-size: 1.375rem;
+		&.is-min {
+			font-size: 1.125rem;
+		}
+	}
+	line-height: 118%;
+	font-weight: 700;
 
 	transition: background .3s ease;
 }
@@ -188,6 +257,7 @@ section {
 	@include _container {
 		font-size: 1.5rem;
 	}
+
 	line-height: 175%;
 	font-weight: 700;
 	color: var(--accent);
@@ -220,9 +290,76 @@ section {
 
 		margin-left: 12px;
 
+		transition: background .2s ease, color .2s ease;
+
 		svg {
 			width: 40%; height: auto;
 			transform: rotate(5deg);
+		}
+	}
+
+	@media (any-hover: hover) {
+		&:hover i {
+			background: var(--accent);
+			color: var(--white);
+		}
+		
+		&:active i {
+			background: var(--accent-active);
+			color: var(--white);
+		}
+	}
+}
+
+.splide__track--nav>.splide__list>.splide__slide {
+	border: 0;
+}
+
+.splide__track--nav>.splide__list>.splide__slide.is-active {
+	border: 0;
+}
+
+.slider-arrow-btn {
+	position: static;
+	width: 35px; height: 35px;
+	@include _992 {
+		width: 55px; height: 55px;
+	}
+
+	svg {
+		width: 25%; height: auto;
+	}
+
+	border: 1px solid var(--accent);
+	color: var(--accent);
+
+	&.splide__arrow--prev {
+		margin-right: 10px;
+	}
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	transform: none;
+	border-radius: 0;
+	background: var(--white);
+
+	transition: opacity .3s ease;
+	&:disabled {
+		pointer-events: none;
+	}
+
+	@media (any-hover: hover) {
+		transition: background .3s ease, color .3s ease, opacity .3s ease;
+		&:not([disabled]):hover {
+			background: var(--accent);
+			color: var(--white);
+		}
+		
+		&:not([disabled]):active {
+			background: var(--accent-active);
+			color: var(--white);
 		}
 	}
 }

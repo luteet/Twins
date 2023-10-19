@@ -1,3 +1,6 @@
+@font-face {
+	@include font-include('Circe', 350, swap, normal, 'Circe-Thin');
+}
 
 @font-face {
 	@include font-include('Circe', 400, swap, normal, 'Circe-Regular');
@@ -88,14 +91,10 @@
 	font-weight: 700;
 	line-height: 105%;
 
-	font-size: 1.25rem; // 20px
-
-	@include _550 {
-		font-size: 1.5rem; // 24px
-	}
+	font-size: 1.5rem; // 24px
 	
 	@include _768 {
-		font-size: 32px; // 32px
+		font-size: 2rem; // 32px
 	}
 	
 	@include _992 {

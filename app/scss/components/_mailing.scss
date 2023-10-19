@@ -1,0 +1,175 @@
+.mailing {
+
+	padding-top: 50px;
+
+	@include _992 {
+		padding-top: 100px;
+	}
+
+	// .mailing__body
+
+	&__body {
+		padding-top: 35px; padding-bottom: 35px;
+		@include _992 {
+			padding-top: 43px; padding-bottom: 63px;
+		}
+		border-top: 1px solid #262626; border-bottom: 1px solid #262626;
+
+		display: grid;
+		grid-template-columns: 100%;
+		@include _768 {
+			grid-template-columns: auto 230px;
+		}
+		@media (min-width: 1400px) {
+			grid-template-columns: 2fr 2fr 230px;
+		}
+
+		align-items: center;
+
+		gap: 30px 0;
+	}
+
+	// .mailing__hero
+
+	&__hero {
+		
+		text-align: center;
+
+		@include _768 {
+			padding-right: 30px;
+
+			text-align: start;
+			grid-column: 2 span;
+		}
+
+		@media (min-width: 1400px) {
+			grid-column: 1;
+		}
+	}
+
+	// .mailing__title
+
+	&__title {
+		color: #202121;
+		font-family: var(--title-font);
+		font-size: 1.5rem;
+		@include _550 {
+			font-size: 2.25rem;
+		}
+		
+		@include _992 {
+			font-size: 3.4375rem;
+		}
+		font-weight: 700;
+		line-height: 118.182%;
+		text-transform: uppercase;
+	}
+
+	// .mailing__text
+
+	&__text {
+		color: #515151;
+		padding-top: 10px;
+		
+		font-size: 1.125rem;
+		font-weight: 400;
+		line-height: 144.444%;
+	}
+
+	// .mailing__form
+
+	&__form {
+		display: flex;
+		flex-direction: column;
+		@include _550 {
+			flex-direction: row;
+		}
+		@include _768 {
+			padding-right: 40px;
+		}
+
+		label {
+			flex: 1 1 auto;
+			@include _550 {
+				padding-right: 20px;
+			}
+			min-height: 58px;
+			display: flex;
+
+			input {
+				width: 100%; min-height: 100%;
+
+				@include _550 {
+					
+				}
+				@include _992 {
+					padding: 19px 30px;
+					font-size: 1.125rem;
+				}
+				padding: 10px 25px;
+				&::placeholder {
+					color: #565656;
+				}
+				color: #3B3B3B;
+				-webkit-text-stroke-width: 0.5px;
+				font-size: 1rem;
+				font-weight: 350;
+				line-height: 188.889%;
+
+				background: #F7F7F7;
+				border-radius: 5px;
+			}
+		}
+
+		.btn {
+			border-radius: 5px;
+			margin-top: 20px;
+			@include _550 {
+				margin-top: 0;
+				min-width: 190px;
+			}
+
+			//font-size: 1.125rem;
+		}
+	}
+
+	// .mailing__social
+
+	&__social {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 10px;
+		
+		justify-content: center;
+		@include _768 {
+			padding-top: 10px;
+
+			justify-content: stretch;
+		}
+
+		a {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			width: 50px; height: 50px;
+			border-radius: 50%;
+
+			background: #EFEFEF;
+			color: #3B3B3B;
+
+			@media (any-hover: hover) {
+				transition: background .2s ease, color .2s ease;
+				&:hover {
+					color: var(--white);
+					background: var(--accent);
+				}
+				
+				&:active {
+					color: var(--white);
+					background: var(--accent-active);
+				}
+			}
+		}
+	}
+}

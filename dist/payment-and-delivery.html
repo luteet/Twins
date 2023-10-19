@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+
+	<div class="wrapper">
+		<header class="header container" data-aos="fade-in" data-aos-delay="100">
+			<div class="header__logo visible-on-mob">
+				<a href="index.html" class="header__logo--link">
+					<img src="img/logo.svg" alt="Logo" width="112" height="50" loading="lazy" class="header__logo--img visible-on-desktop">
+					<img src="img/logo-mob.svg" alt="Logo" width="112" height="50" loading="lazy" class="header__logo--img visible-on-mob">
+				</a>
+			</div>
+			<a href="#" class="header__icon-link visible-on-mob">
+				<svg width="24" height="24" viewBox="0 0 30 30">
+					<use xlink:href="img/sprites.svg#user"></use>
+				</svg>
+			</a>
+			<a href="#" class="header__icon-link visible-on-mob">
+				<svg width="30" height="30" viewBox="0 0 35 35">
+					<use xlink:href="img/sprites.svg#cart"></use>
+				</svg>
+			</a>
+			<a href="#search-popup" class="header__icon-link open-popup visible-on-mob">
+				<svg width="24" height="24" viewBox="0 0 20 20">
+					<use xlink:href="img/sprites.svg#search"></use>
+				</svg>
+			</a>
+			<nav class="header__nav">
+				<div class="header__nav--body">
+					<div class="header__nav--row">
+						<ul class="header__nav--list">
+							<li>
+								<a href="#">
+									Про компанію
+								</a>
+							</li>
+							<li>
+								<a href="payment-and-delivery.html">
+									Оплата і Доставка
+								</a>
+							</li>
+							<li>
+								<a href="blog.html">
+									Новини і Статті
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Акції
+								</a>
+							</li>
+						</ul>
+						<div class="header__logo visible-on-desktop">
+							<a href="index.html" class="header__logo--link">
+								<img src="img/logo.svg" alt="Logo" width="182" height="50" loading="lazy" class="header__logo--img">
+							</a>
+						</div>
+						<div class="header__add visible-on-desktop">
+							<ul class="header__add--list">
+								<li>
+									<a href="#" aria-label="Користувач">
+										<svg width="30" height="30" viewBox="0 0 30 30">
+											<use xlink:href="img/sprites.svg#user"></use>
+										</svg>
+										<span>Користувач</span>
+									</a>
+								</li>
+								<li>
+									<a href="#" aria-label="Корзина">
+										<svg width="35" height="35" viewBox="0 0 35 35">
+											<use xlink:href="img/sprites.svg#cart"></use>
+										</svg>
+										<span>Корзина</span>
+									</a>
+								</li>
+							</ul>
+							<div class="header__add--lang header__lang">
+								<button class="header__lang--target" type="button">
+									<span>UA</span>
+									<svg width="8" height="8" viewBox="0 0 8 8">
+										<use xlink:href="img/sprites.svg#drop-down-arrow"></use>
+									</svg>
+								</button>
+								<div class="header__lang--block">
+									<ul>
+										<li>
+											<a href="#">
+												EN
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												RU
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="header__nav--row">
+						<ul class="header__categories">
+							<li>
+								<a href="#">
+									Твердий парфум
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Аромати для дому
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Аромо свічки
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Колекції ароматів
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Косметика для тіла
+								</a>
+							</li>
+						</ul>
+						<form method="post" class="header__search visible-on-desktop">
+							<label>
+								<input type="search" name="search" placeholder="Пошук" required>
+							</label>
+							<button type="submit" title="Пошук">
+								<svg width="20" height="20" viewBox="0 0 20 20">
+									<use xlink:href="img/sprites.svg#search"></use>
+								</svg>
+							</button>
+						</form>
+					</div>
+					<div class="header__add--lang header__lang visible-on-mob">
+						<button class="header__lang--target" type="button">
+							<span>UA</span>
+							<svg width="8" height="8" viewBox="0 0 8 8">
+								<use xlink:href="img/sprites.svg#drop-down-arrow"></use>
+							</svg>
+						</button>
+						<div class="header__lang--block">
+							<ul>
+								<li>
+									<a href="#">
+										EN
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										RU
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</nav>
+			<button class="header__burger" type="button" aria-label="Menu">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+		</header>
+
+		<main class="main">
+			<div class="breadcrumbs container" data-aos="fade-in" data-aos-delay="100">
+				<a href="index.html" class="breadcrumbs__link">Головна</a>
+				<span class="breadcrumbs__separator"></span>
+				<span class="breadcrumbs__current">Оплата і доставка</span>
+			</div>
+			<section class="payment-delivery container">
+				<h1 class="payment-delivery__title section-title" data-aos="fade-in" data-aos-delay="200">
+					Оплата і доставка
+				</h1>
+				<div class="payment-delivery__wrapper">
+					<div class="payment-delivery__block">
+						<div class="payment-delivery__content" data-aos="fade-in" data-aos-delay="300">
+							<h2>
+								Вартість доставки
+							</h2>
+							<ul>
+								<li>
+									<i>
+										<img src="img/payment-delivery/new-post-icon.svg" width="44" height="44" loading="lazy" alt="">
+									</i>
+									<span>
+										Доставка на відділення або поштомат НП - за рахунок компанії при покупці
+										від 750 грн.
+									</span>
+								</li>
+								<li>
+									<i>
+										<img src="img/payment-delivery/payment-delivery-icon-1.svg" width="32" height="32" loading="lazy" alt="">
+									</i>
+									<span>
+										Адресна доставка кур'єром НП - за рахунок компанії при покупці від 2500 грн. Тільки за умови повної передоплати замовлення.
+									</span>
+								</li>
+								<li>
+									<i>
+										<img src="img/payment-delivery/payment-delivery-icon-2.svg" width="32" height="32" loading="lazy" alt="">
+									</i>
+									<span>
+										Замовлення до 550 грн післяплатою не відправляють.
+									</span>
+								</li>
+								<li>
+									<i>
+										<img src="img/payment-delivery/payment-delivery-icon-3.svg" width="32" height="32" loading="lazy" alt="">
+									</i>
+									<span>
+										До вартості доставки післяплатою, згідно з правилами нової пошти, додаються 20 грн + 2% від суми замовлення (грошовий переказ).
+									</span>
+								</li>
+								<li>
+									<i>
+										<img src="img/payment-delivery/payment-delivery-icon-4.svg" width="32" height="32" loading="lazy" alt="">
+									</i>
+									<span>
+										Послугу післяплати оплачує клієнт незалежно від суми замовлення.
+									</span>
+								</li>
+							</ul>
+						</div>
+						<div class="payment-delivery__image" data-aos="fade-in" data-aos-delay="200">
+							<div class="payment-delivery__image--wrapper image-aspect-ratio">
+								<picture>
+									<source srcset="img/payment-delivery/payment-delivery-image-1.avif" type="image/avif">
+									<source srcset="img/payment-delivery/payment-delivery-image-1.webp" type="image/webp">
+									<img src="img/payment-delivery/payment-delivery-image-1.jpg" alt="" width="892" height="496" loading="lazy">
+								</picture>
+							</div>
+						</div>
+					</div>
+					<div class="payment-delivery__block">
+						<div class="payment-delivery__content" data-aos="fade-in" data-aos-delay="300">
+							<h2>
+								Оплата
+							</h2>
+							<ul>
+								<li>
+									<i>
+										<img src="img/payment-delivery/payment-delivery-icon-5.svg" width="32" height="32" loading="lazy" alt="">
+									</i>
+									<span>
+										Ви можете вибрати будь-який зручний для вас спосіб оплати.
+									</span>
+								</li>
+								<li>
+									<i>
+										<img src="img/payment-delivery/payment-delivery-icon-6.svg" width="32" height="32" loading="lazy" alt="">
+									</i>
+									<span>
+										Оплата готівкою здійснюється при отриманні замовлення у відділенні Нової Пошти (післяплата).
+									</span>
+								</li>
+								<li>
+									<i>
+										<img src="img/payment-delivery/payment-delivery-icon-7.svg" width="32" height="32" loading="lazy" alt="">
+									</i>
+									<span>
+										Оплату карткою можна зробити прямо на сайті (Visa / Mastercard / Privat 24 (Liqpay).
+									</span>
+								</li>
+							</ul>
+							<h3>
+								ПЛАТІЖНИЙ СЕРВІС LIQPAY МАЄ СЕРТИФІКАТ PCI DSS.
+							</h3>
+							<p>
+								Він підтверджує повну відповідність системи обробки даних платіжних банківських карт стандартам безпеки міжнародних платіжних систем Mastercard і Visa.
+							</p>
+						</div>
+						<div class="payment-delivery__image" data-aos="fade-in" data-aos-delay="200">
+							<div class="payment-delivery__image--wrapper image-aspect-ratio">
+								<picture>
+									<source srcset="img/payment-delivery/payment-delivery-image-2.avif" type="image/avif">
+									<source srcset="img/payment-delivery/payment-delivery-image-2.webp" type="image/webp">
+									<img src="img/payment-delivery/payment-delivery-image-2.jpg" alt="" width="892" height="496" loading="lazy">
+								</picture>
+							</div>
+						</div>
+					</div>
+					<div class="payment-delivery__block">
+						<div class="payment-delivery__content" data-aos="fade-in" data-aos-delay="300">
+							<h2>
+								Географія доставки
+							</h2>
+							<ul>
+								<li>
+									<i>
+										<img src="img/payment-delivery/new-post-icon.svg" width="44" height="44" loading="lazy" alt="">
+									</i>
+									<span>
+										Доставка в відділення або поштомат "Нової пошти" здійснюється по всій території України.
+									</span>
+								</li>
+								<li>
+									<i>
+										<img src="img/payment-delivery/new-post-icon.svg" width="44" height="44" loading="lazy" alt="">
+									</i>
+									<span>
+										Ви можете уточнити перелік відділень, перейшовши за посиланням: https://novaposhta.ua/office/list
+									</span>
+								</li>
+								<li>
+									<i>
+										<img src="img/payment-delivery/new-post-icon.svg" width="44" height="44" loading="lazy" alt="">
+									</i>
+									<span>
+										Доставка в відділення або поштомат "Нової пошти" здійснюється по всій території України.
+									</span>
+								</li>
+								<li>
+									<i>
+										<img src="img/payment-delivery/new-post-icon.svg" width="44" height="44" loading="lazy" alt="">
+									</i>
+									<span>
+										Ви можете уточнити перелік відділень, перейшовши за посиланням: https://novaposhta.ua/office/list
+									</span>
+								</li>
+							</ul>
+						</div>
+						<div class="payment-delivery__image" data-aos="fade-in" data-aos-delay="200">
+							<div class="payment-delivery__image--wrapper image-aspect-ratio">
+								<picture>
+									<source srcset="img/payment-delivery/payment-delivery-image-3.avif" type="image/avif">
+									<source srcset="img/payment-delivery/payment-delivery-image-3.webp" type="image/webp">
+									<img src="img/payment-delivery/payment-delivery-image-3.jpg" alt="" width="892" height="496" loading="lazy">
+								</picture>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="mailing container" data-aos="fade-in" data-aos-delay="100">
+				<div class="mailing__body">
+					<div class="mailing__hero">
+						<h2 class="mailing__title">
+							Дізнавайтесь першим
+						</h2>
+						<div class="mailing__text">
+							<p>
+								про акції і новинки!
+							</p>
+						</div>
+					</div>
+					<form method="post" class="mailing__form">
+						<label>
+							<input type="email" name="email" placeholder="Електронна пошта" required>
+						</label>
+						<button class="btn is-min" type="submit">Підписатися</button>
+					</form>
+					<ul class="mailing__social">
+						<li>
+							<a href="#" title="">
+								<svg width="20" height="20" viewBox="0 0 20 20">
+									<use xlink:href="img/sprites.svg#facebook"></use>
+								</svg>
+							</a>
+						</li>
+						<li>
+							<a href="#" title="YouTube">
+								<svg width="19" height="19" viewBox="0 0 19 19">
+									<use xlink:href="img/sprites.svg#youtube"></use>
+								</svg>
+							</a>
+						</li>
+						<li>
+							<a href="#" title="Twitter">
+								<svg width="19" height="19" viewBox="0 0 19 19">
+									<use xlink:href="img/sprites.svg#twitter"></use>
+								</svg>
+							</a>
+						</li>
+						<li>
+							<a href="#" title="Instagram">
+								<svg width="20" height="20" viewBox="0 0 20 20">
+									<use xlink:href="img/sprites.svg#instagram"></use>
+								</svg>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</section>
+		</main>
+
+		<footer class="footer">
+			<div class="footer__wrapper container">
+				<div class="footer__logo">
+					<a href=index.html" class="footer__logo--link">
+						<img src="img/logo.svg" alt="Logo" width="112" height="50" loading="lazy" class="footer__logo--img visible-on-desktop">
+						<img src="img/logo-mob.svg" alt="Logo" width="112" height="50" loading="lazy" class="footer__logo--img visible-on-mob">
+					</a>
+				</div>
+				<nav class="footer__nav">
+					<div class="footer__nav--block">
+						<h3>
+							Інформаційні сторінки
+						</h3>
+						<ul>
+							<li>
+								<a href="#">
+									Про компанію
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Оплата і Доставка
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Новини і Статті
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Акції
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="footer__nav--block is-row">
+						<h3>
+							Категорії
+						</h3>
+						<ul>
+							<li>
+								<a href="#">
+									Твердий парфум
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Аромо свічки
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Колекції ароматів
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Аромати для дому
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Косметика для тіла
+								</a>
+							</li>
+						</ul>
+					</div>
+				</nav>
+				<div class="footer__contacts">
+					<ul>
+						<li>
+							<a href="#">
+								(097) 798 67 09
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								(063) 576 12 45
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer__lang">
+					<button class="footer__lang--target" type="button">
+						<span>UA</span>
+						<svg width="8" height="8" viewBox="0 0 8 8">
+							<use xlink:href="img/sprites.svg#drop-down-arrow"></use>
+						</svg>
+					</button>
+					<div class="footer__lang--block">
+						<ul>
+							<li>
+								<a href="#">
+									EN
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									RU
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="footer__copyright container">
+				©TWINS 2023
+			</div>
+		</footer>
+	</div>
+
+	<div class="search-popup popup" id="search-popup" style="display: none;">
+		<div class="search-popup__wrapper popup-wrapper">
+			<div class="search-popup__bg popup-bg popup-close"></div>
+			<button type="button" class="search-popup__close-btn popup-close-btn popup-close" title="Закрити">
+				<svg width="24" height="24" viewBox="0 0 47.971 47.971">
+					<use xlink:href="img/sprites.svg#close"></use>
+				</svg>
+			</button>
+			<div class="search-popup__body popup-body">
+				<form method="post" class="search-popup__form">
+					<label>
+						<input type="search" placeholder="Пошук" name="search" required>
+					</label>
+					<button type="submit" title="Пошук">
+						<svg width="24" height="24" viewBox="0 0 20 20">
+							<use xlink:href="img/sprites.svg#search"></use>
+						</svg>
+					</button>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<div class="stories-popup popup" id="stories-popup" style="display: none;">
+		<div class="stories-popup__wrapper popup-wrapper">
+			<div class="stories-popup__bg popup-bg popup-close"></div>
+			<button type="button" class="stories-popup__volume" title="Включить/Выключить громкость" data-volume-active-icon="img/sprites.svg#volume-active" data-volume-none-icon="img/sprites.svg#volume-none">
+				<svg width="30" height="30" viewBox="0 0 24 24">
+					<use xlink:href="img/sprites.svg#volume-active"></use>
+				</svg>
+			</button>
+			<button type="button" class="stories-popup__close-btn popup-close-btn popup-close" title="Закрыть">
+				<svg width="24" height="24" viewBox="0 0 47.971 47.971">
+					<use xlink:href="img/sprites.svg#close"></use>
+				</svg>
+			</button>
+			<div class="stories-popup__body popup-body">
+				<div class="stories-popup__slider splide">
+					<div class="stories-popup__track splide__track">
+						<ul class="stories-popup__list splide__list">
+							<li class="stories-popup__slide splide__slide">
+								<div class="stories-popup__video-wrapper">
+									<video src="video/stories-video-example.mp4" playsinline class="stories-popup__video"></video>
+									<div class="stories-popup__video-preview">
+										<picture>
+											<source srcset="img/video-preview.avif" type="image/avif">
+											<source srcset="img/video-preview.webp" type="image/webp">
+											<img src="img/video-preview.jpg" alt="" width="0" height="0" loading="lazy">
+										</picture>
+									</div>
+									<div class="stories-popup__video-progress"></div>
+									<div class="stories-popup__text">
+										<a href="product-page.html">
+											Якесь посилання для прикладу
+										</a>
+										і ще трохи тексту
+									</div>
+								</div>
+								<div class="stories-popup__loader"></div>
+							</li>
+							<li class="stories-popup__slide splide__slide">
+								<div class="stories-popup__video-wrapper">
+									<video src="video/stories-video-example.mp4" playsinline class="stories-popup__video"></video>
+									<div class="stories-popup__video-preview">
+										<picture>
+											<source srcset="img/video-preview.avif" type="image/avif">
+											<source srcset="img/video-preview.webp" type="image/webp">
+											<img src="img/video-preview.jpg" alt="" width="0" height="0" loading="lazy">
+										</picture>
+									</div>
+									<div class="stories-popup__video-progress"></div>
+								</div>
+								<div class="stories-popup__loader"></div>
+							</li>
+							<li class="stories-popup__slide splide__slide">
+								<div class="stories-popup__video-wrapper">
+									<video src="video/stories-video-example.mp4" playsinline class="stories-popup__video"></video>
+									<div class="stories-popup__video-preview">
+										<picture>
+											<source srcset="img/video-preview.avif" type="image/avif">
+											<source srcset="img/video-preview.webp" type="image/webp">
+											<img src="img/video-preview.jpg" alt="" width="0" height="0" loading="lazy">
+										</picture>
+									</div>
+									<div class="stories-popup__video-progress"></div>
+								</div>
+								<div class="stories-popup__loader"></div>
+							</li>
+							<li class="stories-popup__slide splide__slide">
+								<div class="stories-popup__video-wrapper">
+									<video src="video/stories-video-example.mp4" playsinline class="stories-popup__video"></video>
+									<div class="stories-popup__video-preview">
+										<picture>
+											<source srcset="img/video-preview.avif" type="image/avif">
+											<source srcset="img/video-preview.webp" type="image/webp">
+											<img src="img/video-preview.jpg" alt="" width="0" height="0" loading="lazy">
+										</picture>
+									</div>
+									<div class="stories-popup__video-progress"></div>
+								</div>
+								<div class="stories-popup__loader"></div>
+							</li>
+							<li class="stories-popup__slide splide__slide">
+								<div class="stories-popup__video-wrapper">
+									<video src="video/stories-video-example.mp4" playsinline class="stories-popup__video"></video>
+									<div class="stories-popup__video-preview">
+										<picture>
+											<source srcset="img/video-preview.avif" type="image/avif">
+											<source srcset="img/video-preview.webp" type="image/webp">
+											<img src="img/video-preview.jpg" alt="" width="0" height="0" loading="lazy">
+										</picture>
+									</div>
+									<div class="stories-popup__video-progress"></div>
+								</div>
+								<div class="stories-popup__loader"></div>
+							</li>
+						</ul>
+					</div>
+					<div class="stories-popup__controls splide__arrows">
+						<button class="stories-popup__arrow splide__arrow splide__arrow--prev" type="button"></button>
+						<button class="stories-popup__arrow splide__arrow splide__arrow--next" type="button"></button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="js/libs.min.js"></script>
+	<script src="js/main.min.js"></script>
+
+</body>
+
+</html>

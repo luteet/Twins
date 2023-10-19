@@ -1,0 +1,50 @@
+.similar-products {
+
+	padding-top: 45px;
+	
+	@include _992 {
+		padding-top: 95px;
+	}
+
+	// .similar-products__slider
+
+	&__slider {
+	}
+
+	// .similar-products__header
+
+	&__header {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	// .similar-products__title
+
+	&__title {
+	}
+
+	// .similar-products__controls
+
+	&__controls {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	// .similar-products__arrow
+
+	&__arrow {
+	}
+
+	// .similar-products__track
+
+	&__track {
+		margin-top: 50px;
+	}
+
+	// .similar-products__list
+
+	&__list {
+	}
+}
+

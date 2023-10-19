@@ -2,6 +2,7 @@
 	@include _992 {
 		position: static;
 		background: transparent;
+		overflow-x: hidden; overflow-y: visible;
 	}
 	position: sticky;
 	left: 0; top: 0;
@@ -58,6 +59,7 @@
 			overflow: visible;
 
 			opacity: 1; visibility: visible;
+			
 
 			width: 100%;
 			

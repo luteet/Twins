@@ -1,0 +1,158 @@
+.payment-delivery {
+
+	padding-top: 30px;
+
+	@include _992 {
+		padding-top: 50px;
+	}
+
+	// .payment-delivery__title
+
+	&__title {
+	}
+
+	// .payment-delivery__wrapper
+
+	&__wrapper {
+		
+	}
+
+	// .payment-delivery__block
+
+	&__block {
+		margin-top: 30px;
+
+		border: 4px solid #F4F4F4;
+		@include _992 {
+			margin-top: 60px;
+			border: 8px solid #F4F4F4;
+		}
+		background: #FFF;
+
+		display: flex;
+		flex-wrap: wrap;
+
+		flex-direction: column-reverse;
+
+		@include _992 {
+			flex-direction: row;
+			&:nth-child(even) {
+				flex-direction: row-reverse;
+			}
+		}
+	}
+
+	// .payment-delivery__content
+
+	&__content {
+		flex: 1 1 100%;
+
+		padding: 16px;
+		@include _992 {
+			flex: 0 1 50%;
+			padding: 30px 35px;
+		}
+
+		h2 {
+			color: #202121;
+			font-family: var(--title-font);
+
+			font-size: 1.25rem;
+
+			@include _550 {
+				font-size: 1.75rem;
+			}
+			
+			@include _992 {
+				font-size: 2.1875rem;
+			}
+
+			font-weight: 700;
+			line-height: 114.286%;
+		}
+
+		ul {
+			padding-top: 18px;
+		}
+
+		li {
+			display: flex;
+			align-items: center;
+
+			color: #333;
+			font-size: 0.875rem;
+			@include _550 {
+				font-size: 1rem;
+			}
+			
+			@include _992 {
+				font-size: 1.125rem;
+			}
+			line-height: 144.444%;
+
+			i {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+				width: 55px; height: 55px; flex: 0 0 55px;
+				margin-right: 16px;
+
+				background: #F4F4F4;
+			}
+
+			&:not(:first-child) {
+				margin-top: 16px;
+			}
+		}
+
+		h3 {
+			padding-top: 16px;
+
+			color: #202121;
+			font-family: var(--title-font);
+			font-size: 1rem;
+			@include _550 {
+				font-size: 1.125rem;
+			}
+			
+			@include _992 {
+				font-size: 1.25rem;
+			}
+			font-weight: 700;
+			line-height: 150%;
+		}
+
+		p {
+			padding-top: 5px;
+
+			color: #333;
+			font-size: 0.875rem;
+			@include _550 {
+				font-size: 1rem;
+			}
+			
+			@include _992 {
+				font-size: 1.125rem;
+			}
+			line-height: 150%;
+		}
+	}
+
+	// .payment-delivery__image
+
+	&__image {
+
+		width: 100%;
+
+		@include _992 {
+			flex: 0 1 50%; width: 50%;
+		}
+
+		// .payment-delivery__image--wrapper
+
+		&--wrapper {
+			min-height: 100%;
+		}
+	}
+}

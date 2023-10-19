@@ -1,0 +1,133 @@
+
+.stories {
+
+	margin: 30px 0;
+	width: 100%;
+
+	
+
+	&__slider {
+		width: 100%;
+		//overflow: visible;
+	}
+
+	&__track {
+		&.splide__track {
+			overflow: visible;
+		}
+	}
+
+	&__slider.splide.is-initialized:not(.is-active) .splide__list {
+		@include _992 {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+	}
+
+	// .stories__list
+
+	&__list {
+		
+	}
+
+	// .stories__item
+
+	&__item {
+
+		@include _992 {
+			margin: 14px;
+		}
+
+		// .stories__item--body
+
+		&--body {
+			display: flex;
+			flex-direction: column;
+
+			border-radius: 90px;
+			border: 2px solid #EBEAEA;
+
+			background: #FFF;
+
+			
+
+			i {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+				width: 35px; height: 35px;
+				margin-bottom: -17.5px; margin-top: 12.5px;
+				align-self: center;
+
+				border: 1px solid var(--accent);
+				border-radius: 50%;
+				background: var(--white);
+				color: var(--accent);
+
+				transition: color .2s ease, background .2s ease;
+
+				svg {
+					width: 45%; height: auto;
+					transform: rotate(15deg);
+				}
+			}
+		}
+
+		@media (any-hover: hover) {
+			&--body:hover &--image img {
+				transform: scale(1.2);
+			}
+
+			&--body:hover i {
+				background: var(--accent);
+				color: var(--white);
+			}
+
+			&--body:active &--image img {
+				transform: scale(1.15);
+			}
+
+			&--body:active i {
+				background: var(--accent-active);
+			}
+		}
+
+		// .stories__item--image
+
+		&--image {
+			margin: 2px;
+			position: relative;
+			width: 116px; height: 116px;
+			@include _550 {
+				width: 156px; height: 156px;
+			}
+			border: 2px dashed var(--accent);
+			border-radius: 50%;
+			overflow: hidden;
+
+			img {
+				position: absolute;
+				left: 0; top: 0;
+				width: 100%; height: 100%;
+				border-radius: 50%;
+				transition: transform .3s ease;
+				
+				object-fit: cover;
+			}
+		}
+
+		// .stories__item--text
+
+		&--text {
+			display: block;
+			padding-top: 7px;
+
+			text-align: center;
+			font-size: 0.875rem;
+			line-height: 142.857%;
+			color: var(--text-color);
+		}
+	}
+}

@@ -1,0 +1,139 @@
+.pagination {
+
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+
+	@include _550 {
+		justify-content: stretch;
+	}
+
+	// .pagination__arrow
+
+	&__arrow {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		&.is-prev {
+			order: 2;
+			margin-right: 5px;
+		}
+
+		&.is-next {
+			order: 3;
+			margin-left: 5px;
+		}
+
+		@include _550 {
+			&.is-prev {
+				order: 1;
+				margin-right: 0;
+			}
+
+			&.is-next {
+				order: 3;
+				margin-left: 0;
+			}
+		}
+
+		width: 35px; height: 35px; flex: 0 0 35px;
+		@include _992 {
+			width: 60px; height: 60px; flex: 0 0 60px;
+		}
+		border-radius: 50%;
+
+		color: var(--white);
+		background: #292929;
+
+		transition: background .3s ease;
+		@media (any-hover: hover) {
+			&:hover {
+				background: #383838;
+			}
+			
+			&:active {
+				background: #101010;
+			}
+		}
+	}
+
+	// .pagination__list
+
+	&__list {
+		
+
+		order: 1;
+		flex: 1 1 100%;
+
+		@include _550 {
+			margin: 0 15px;
+
+			order: 2;
+			flex: 0 1 auto;
+			justify-content: stretch;
+		}
+
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+
+		> * {
+			margin: 5px;
+
+			width: 35px; height: 35px; flex: 0 0 35px;
+			@include _992 {
+				width: 60px; height: 60px; flex: 0 0 60px;
+			}
+			border: 1px solid #767676;
+			border-radius: 50%;
+
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			padding-top: 3px;
+
+			font-size: 0.875rem;
+			color: #767676;
+
+			@include _550 {
+				font-size: 1rem;
+			}
+			
+			@include _768 {
+				font-size: 1.175rem;
+			}
+			
+			@include _992 {
+				font-size: 1.375rem;
+			}
+			line-height: 109%;
+
+			&.is-current {
+				color: var(--white);
+				border-color: var(--accent);
+				background: var(--accent);
+
+				font-weight: 700;
+			}
+
+			&:is(a):not(.is-current) {
+				@media (any-hover: hover) {
+					transition: color .2s ease, border-color .2s ease, background .2s ease;
+					&:hover {
+						border-color: var(--accent-active);
+						color: var(--accent-active);
+					}
+					
+					&:active {
+						border-color: var(--accent-active);
+						color: var(--accent-active);
+					}
+				}
+			}
+		}
+
+
+	}
+}

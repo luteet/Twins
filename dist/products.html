@@ -1,0 +1,2012 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+
+	<div class="wrapper">
+		<header class="header container" data-aos="fade-in" data-aos-delay="100">
+			<div class="header__logo visible-on-mob">
+				<a href="index.html" class="header__logo--link">
+					<img src="img/logo.svg" alt="Logo" width="112" height="50" loading="lazy" class="header__logo--img visible-on-desktop">
+					<img src="img/logo-mob.svg" alt="Logo" width="112" height="50" loading="lazy" class="header__logo--img visible-on-mob">
+				</a>
+			</div>
+			<a href="#" class="header__icon-link visible-on-mob">
+				<svg width="24" height="24" viewBox="0 0 30 30">
+					<use xlink:href="img/sprites.svg#user"></use>
+				</svg>
+			</a>
+			<a href="#" class="header__icon-link visible-on-mob">
+				<svg width="30" height="30" viewBox="0 0 35 35">
+					<use xlink:href="img/sprites.svg#cart"></use>
+				</svg>
+			</a>
+			<a href="#search-popup" class="header__icon-link open-popup visible-on-mob">
+				<svg width="24" height="24" viewBox="0 0 20 20">
+					<use xlink:href="img/sprites.svg#search"></use>
+				</svg>
+			</a>
+			<nav class="header__nav">
+				<div class="header__nav--body">
+					<div class="header__nav--row">
+						<ul class="header__nav--list">
+							<li>
+								<a href="#">
+									Про компанію
+								</a>
+							</li>
+							<li>
+								<a href="payment-and-delivery.html">
+									Оплата і Доставка
+								</a>
+							</li>
+							<li>
+								<a href="blog.html">
+									Новини і Статті
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Акції
+								</a>
+							</li>
+						</ul>
+						<div class="header__logo visible-on-desktop">
+							<a href="index.html" class="header__logo--link">
+								<img src="img/logo.svg" alt="Logo" width="182" height="50" loading="lazy" class="header__logo--img">
+							</a>
+						</div>
+						<div class="header__add visible-on-desktop">
+							<ul class="header__add--list">
+								<li>
+									<a href="#" aria-label="Користувач">
+										<svg width="30" height="30" viewBox="0 0 30 30">
+											<use xlink:href="img/sprites.svg#user"></use>
+										</svg>
+										<span>Користувач</span>
+									</a>
+								</li>
+								<li>
+									<a href="#" aria-label="Корзина">
+										<svg width="35" height="35" viewBox="0 0 35 35">
+											<use xlink:href="img/sprites.svg#cart"></use>
+										</svg>
+										<span>Корзина</span>
+									</a>
+								</li>
+							</ul>
+							<div class="header__add--lang header__lang">
+								<button class="header__lang--target" type="button">
+									<span>UA</span>
+									<svg width="8" height="8" viewBox="0 0 8 8">
+										<use xlink:href="img/sprites.svg#drop-down-arrow"></use>
+									</svg>
+								</button>
+								<div class="header__lang--block">
+									<ul>
+										<li>
+											<a href="#">
+												EN
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												RU
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="header__nav--row">
+						<ul class="header__categories">
+							<li>
+								<a href="#">
+									Твердий парфум
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Аромати для дому
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Аромо свічки
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Колекції ароматів
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Косметика для тіла
+								</a>
+							</li>
+						</ul>
+						<form method="post" class="header__search visible-on-desktop">
+							<label>
+								<input type="search" name="search" placeholder="Пошук" required>
+							</label>
+							<button type="submit" title="Пошук">
+								<svg width="20" height="20" viewBox="0 0 20 20">
+									<use xlink:href="img/sprites.svg#search"></use>
+								</svg>
+							</button>
+						</form>
+					</div>
+					<div class="header__add--lang header__lang visible-on-mob">
+						<button class="header__lang--target" type="button">
+							<span>UA</span>
+							<svg width="8" height="8" viewBox="0 0 8 8">
+								<use xlink:href="img/sprites.svg#drop-down-arrow"></use>
+							</svg>
+						</button>
+						<div class="header__lang--block">
+							<ul>
+								<li>
+									<a href="#">
+										EN
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										RU
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</nav>
+			<button class="header__burger" type="button" aria-label="Menu">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+		</header>
+
+		<main class="main">
+			<div class="breadcrumbs container" data-aos="fade-in" data-aos-delay="100">
+				<a href="#" class="breadcrumbs__link">Головна</a>
+				<span class="breadcrumbs__separator"></span>
+				<span class="breadcrumbs__current">Твердий парфум</span>
+			</div>
+			<section class="products container">
+				<button class="products__open-filter visible-on-mob btn" type="button">
+					Фильтр
+				</button>
+				<div class="products__filter products-filter" data-aos="fade-in" data-aos-delay="200" data-aos-anchor=".products">
+					<div class="products-filter__background"></div>
+					<button class="products-filter__close" type="button"></button>
+					<div class="products-filter__body">
+						<div class="products-filter__group">
+							<button class="products-filter__group-target" type="button">
+								<h2 class="products-filter__group-name">Група товару</h2>
+								<i class="products-filter__group-arrow">
+									<svg width="10" height="10" viewBox="0 0 8 8">
+										<use xlink:href="img/sprites.svg#drop-down-arrow"></use>
+									</svg>
+								</i>
+							</button>
+							<div class="products-filter__group-block">
+								<div>
+									<div class="products-filter__group-block--wrapper" data-simplebar>
+										<ul class="products-filter__group-list">
+											<li>
+												<label class="products-filter__checkbox checkbox">
+													<input type="checkbox" name="product-param" value="1" class="checkbox__input">
+													<span class="checkbox__element">
+														<svg width="9" height="9" viewBox="0 0 9 9">
+															<use xlink:href="img/sprites.svg#check"></use>
+														</svg>
+													</span>
+													<span class="checkbox__text">Твердий парфум</span>
+												</label>
+											</li>
+											<li>
+												<label class="products-filter__checkbox checkbox">
+													<input type="checkbox" name="product-param" value="1" class="checkbox__input">
+													<span class="checkbox__element">
+														<svg width="9" height="9" viewBox="0 0 9 9">
+															<use xlink:href="img/sprites.svg#check"></use>
+														</svg>
+													</span>
+													<span class="checkbox__text">Аромати для дому</span>
+												</label>
+											</li>
+											<li>
+												<label class="products-filter__checkbox checkbox">
+													<input type="checkbox" name="product-param" value="1" class="checkbox__input">
+													<span class="checkbox__element">
+														<svg width="9" height="9" viewBox="0 0 9 9">
+															<use xlink:href="img/sprites.svg#check"></use>
+														</svg>
+													</span>
+													<span class="checkbox__text">Аромо свічки</span>
+												</label>
+											</li>
+											<li>
+												<label class="products-filter__checkbox checkbox">
+													<input type="checkbox" name="product-param" value="1" class="checkbox__input">
+													<span class="checkbox__element">
+														<svg width="9" height="9" viewBox="0 0 9 9">
+															<use xlink:href="img/sprites.svg#check"></use>
+														</svg>
+													</span>
+													<span class="checkbox__text">Колекції ароматів</span>
+												</label>
+											</li>
+											<li>
+												<label class="products-filter__checkbox checkbox">
+													<input type="checkbox" name="product-param" value="1" class="checkbox__input">
+													<span class="checkbox__element">
+														<svg width="9" height="9" viewBox="0 0 9 9">
+															<use xlink:href="img/sprites.svg#check"></use>
+														</svg>
+													</span>
+													<span class="checkbox__text">Косметика для тіла</span>
+												</label>
+											</li>
+											<li>
+												<label class="products-filter__checkbox checkbox">
+													<input type="checkbox" name="product-param" value="1" class="checkbox__input">
+													<span class="checkbox__element">
+														<svg width="9" height="9" viewBox="0 0 9 9">
+															<use xlink:href="img/sprites.svg#check"></use>
+														</svg>
+													</span>
+													<span class="checkbox__text">Твердий парфум</span>
+												</label>
+											</li>
+											<li>
+												<label class="products-filter__checkbox checkbox">
+													<input type="checkbox" name="product-param" value="1" class="checkbox__input">
+													<span class="checkbox__element">
+														<svg width="9" height="9" viewBox="0 0 9 9">
+															<use xlink:href="img/sprites.svg#check"></use>
+														</svg>
+													</span>
+													<span class="checkbox__text">Аромати для дому</span>
+												</label>
+											</li>
+											<li>
+												<label class="products-filter__checkbox checkbox">
+													<input type="checkbox" name="product-param" value="1" class="checkbox__input">
+													<span class="checkbox__element">
+														<svg width="9" height="9" viewBox="0 0 9 9">
+															<use xlink:href="img/sprites.svg#check"></use>
+														</svg>
+													</span>
+													<span class="checkbox__text">Аромо свічки</span>
+												</label>
+											</li>
+											<li>
+												<label class="products-filter__checkbox checkbox">
+													<input type="checkbox" name="product-param" value="1" class="checkbox__input">
+													<span class="checkbox__element">
+														<svg width="9" height="9" viewBox="0 0 9 9">
+															<use xlink:href="img/sprites.svg#check"></use>
+														</svg>
+													</span>
+													<span class="checkbox__text">Колекції ароматів</span>
+												</label>
+											</li>
+											<li>
+												<label class="products-filter__checkbox checkbox">
+													<input type="checkbox" name="product-param" value="1" class="checkbox__input">
+													<span class="checkbox__element">
+														<svg width="9" height="9" viewBox="0 0 9 9">
+															<use xlink:href="img/sprites.svg#check"></use>
+														</svg>
+													</span>
+													<span class="checkbox__text">Косметика для тіла</span>
+												</label>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="products-filter__group">
+							<button class="products-filter__group-target" type="button">
+								<h2 class="products-filter__group-name">Вартість</h2>
+								<i class="products-filter__group-arrow">
+									<svg width="10" height="10" viewBox="0 0 8 8">
+										<use xlink:href="img/sprites.svg#drop-down-arrow"></use>
+									</svg>
+								</i>
+							</button>
+							<div class="products-filter__group-block">
+								<div>
+									<div class="products-filter__group-block--wrapper">
+										<div class="products-filter__range">
+											<div class="products-filter__range--header">
+												<div class="products-filter__range--input-item">
+													<span>Від</span>
+													<input type="tel" name="min-price" data-is-min value="20" placeholder="0">
+												</div>
+												<div class="products-filter__range--input-item">
+													<span>До</span>
+													<input type="tel" name="min-price" data-is-max value="5 487" placeholder="0">
+												</div>
+												<b>₴</b>
+											</div>
+											<div class="products-filter__range--element" data-min="1000" data-max="15000" data-min-value="2000" data-max-value="7500"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="products-filter__group">
+							<button class="products-filter__group-target" type="button">
+								<h2 class="products-filter__group-name">Призначення</h2>
+								<i class="products-filter__group-arrow">
+									<svg width="10" height="10" viewBox="0 0 8 8">
+										<use xlink:href="img/sprites.svg#drop-down-arrow"></use>
+									</svg>
+								</i>
+							</button>
+							<div class="products-filter__group-block">
+								<div>
+									<div class="products-filter__group-block--wrapper" data-simplebar>
+										<ul class="products-filter__group-list">
+											<li>
+												<label class="products-filter__checkbox checkbox">
+													<input type="checkbox" name="product-param" value="1" class="checkbox__input">
+													<span class="checkbox__element">
+														<svg width="9" height="9" viewBox="0 0 9 9">
+															<use xlink:href="img/sprites.svg#check"></use>
+														</svg>
+													</span>
+													<span class="checkbox__text">Твердий парфум</span>
+												</label>
+											</li>
+											<li>
+												<label class="products-filter__checkbox checkbox">
+													<input type="checkbox" name="product-param" value="1" class="checkbox__input">
+													<span class="checkbox__element">
+														<svg width="9" height="9" viewBox="0 0 9 9">
+															<use xlink:href="img/sprites.svg#check"></use>
+														</svg>
+													</span>
+													<span class="checkbox__text">Аромати для дому</span>
+												</label>
+											</li>
+											<li>
+												<label class="products-filter__checkbox checkbox">
+													<input type="checkbox" name="product-param" value="1" class="checkbox__input">
+													<span class="checkbox__element">
+														<svg width="9" height="9" viewBox="0 0 9 9">
+															<use xlink:href="img/sprites.svg#check"></use>
+														</svg>
+													</span>
+													<span class="checkbox__text">Аромо свічки</span>
+												</label>
+											</li>
+											<li>
+												<label class="products-filter__checkbox checkbox">
+													<input type="checkbox" name="product-param" value="1" class="checkbox__input">
+													<span class="checkbox__element">
+														<svg width="9" height="9" viewBox="0 0 9 9">
+															<use xlink:href="img/sprites.svg#check"></use>
+														</svg>
+													</span>
+													<span class="checkbox__text">Колекції ароматів</span>
+												</label>
+											</li>
+											<li>
+												<label class="products-filter__checkbox checkbox">
+													<input type="checkbox" name="product-param" value="1" class="checkbox__input">
+													<span class="checkbox__element">
+														<svg width="9" height="9" viewBox="0 0 9 9">
+															<use xlink:href="img/sprites.svg#check"></use>
+														</svg>
+													</span>
+													<span class="checkbox__text">Косметика для тіла</span>
+												</label>
+											</li>
+											<li>
+												<label class="products-filter__checkbox checkbox">
+													<input type="checkbox" name="product-param" value="1" class="checkbox__input">
+													<span class="checkbox__element">
+														<svg width="9" height="9" viewBox="0 0 9 9">
+															<use xlink:href="img/sprites.svg#check"></use>
+														</svg>
+													</span>
+													<span class="checkbox__text">Твердий парфум</span>
+												</label>
+											</li>
+											<li>
+												<label class="products-filter__checkbox checkbox">
+													<input type="checkbox" name="product-param" value="1" class="checkbox__input">
+													<span class="checkbox__element">
+														<svg width="9" height="9" viewBox="0 0 9 9">
+															<use xlink:href="img/sprites.svg#check"></use>
+														</svg>
+													</span>
+													<span class="checkbox__text">Аромати для дому</span>
+												</label>
+											</li>
+											<li>
+												<label class="products-filter__checkbox checkbox">
+													<input type="checkbox" name="product-param" value="1" class="checkbox__input">
+													<span class="checkbox__element">
+														<svg width="9" height="9" viewBox="0 0 9 9">
+															<use xlink:href="img/sprites.svg#check"></use>
+														</svg>
+													</span>
+													<span class="checkbox__text">Аромо свічки</span>
+												</label>
+											</li>
+											<li>
+												<label class="products-filter__checkbox checkbox">
+													<input type="checkbox" name="product-param" value="1" class="checkbox__input">
+													<span class="checkbox__element">
+														<svg width="9" height="9" viewBox="0 0 9 9">
+															<use xlink:href="img/sprites.svg#check"></use>
+														</svg>
+													</span>
+													<span class="checkbox__text">Колекції ароматів</span>
+												</label>
+											</li>
+											<li>
+												<label class="products-filter__checkbox checkbox">
+													<input type="checkbox" name="product-param" value="1" class="checkbox__input">
+													<span class="checkbox__element">
+														<svg width="9" height="9" viewBox="0 0 9 9">
+															<use xlink:href="img/sprites.svg#check"></use>
+														</svg>
+													</span>
+													<span class="checkbox__text">Косметика для тіла</span>
+												</label>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="products-filter__group">
+							<button class="products-filter__group-target" type="button">
+								<h2 class="products-filter__group-name">Інгредієнти</h2>
+								<i class="products-filter__group-arrow">
+									<svg width="10" height="10" viewBox="0 0 8 8">
+										<use xlink:href="img/sprites.svg#drop-down-arrow"></use>
+									</svg>
+								</i>
+							</button>
+							<div class="products-filter__group-block">
+								<div>
+									<div class="products-filter__group-block--wrapper" data-simplebar>
+										<ul class="products-filter__group-list">
+											<li>
+												<label class="products-filter__checkbox checkbox">
+													<input type="checkbox" name="product-param" value="1" class="checkbox__input">
+													<span class="checkbox__element">
+														<svg width="9" height="9" viewBox="0 0 9 9">
+															<use xlink:href="img/sprites.svg#check"></use>
+														</svg>
+													</span>
+													<span class="checkbox__text">Твердий парфум</span>
+												</label>
+											</li>
+											<li>
+												<label class="products-filter__checkbox checkbox">
+													<input type="checkbox" name="product-param" value="1" class="checkbox__input">
+													<span class="checkbox__element">
+														<svg width="9" height="9" viewBox="0 0 9 9">
+															<use xlink:href="img/sprites.svg#check"></use>
+														</svg>
+													</span>
+													<span class="checkbox__text">Аромати для дому</span>
+												</label>
+											</li>
+											<li>
+												<label class="products-filter__checkbox checkbox">
+													<input type="checkbox" name="product-param" value="1" class="checkbox__input">
+													<span class="checkbox__element">
+														<svg width="9" height="9" viewBox="0 0 9 9">
+															<use xlink:href="img/sprites.svg#check"></use>
+														</svg>
+													</span>
+													<span class="checkbox__text">Аромо свічки</span>
+												</label>
+											</li>
+											<li>
+												<label class="products-filter__checkbox checkbox">
+													<input type="checkbox" name="product-param" value="1" class="checkbox__input">
+													<span class="checkbox__element">
+														<svg width="9" height="9" viewBox="0 0 9 9">
+															<use xlink:href="img/sprites.svg#check"></use>
+														</svg>
+													</span>
+													<span class="checkbox__text">Колекції ароматів</span>
+												</label>
+											</li>
+											<li>
+												<label class="products-filter__checkbox checkbox">
+													<input type="checkbox" name="product-param" value="1" class="checkbox__input">
+													<span class="checkbox__element">
+														<svg width="9" height="9" viewBox="0 0 9 9">
+															<use xlink:href="img/sprites.svg#check"></use>
+														</svg>
+													</span>
+													<span class="checkbox__text">Косметика для тіла</span>
+												</label>
+											</li>
+											<li>
+												<label class="products-filter__checkbox checkbox">
+													<input type="checkbox" name="product-param" value="1" class="checkbox__input">
+													<span class="checkbox__element">
+														<svg width="9" height="9" viewBox="0 0 9 9">
+															<use xlink:href="img/sprites.svg#check"></use>
+														</svg>
+													</span>
+													<span class="checkbox__text">Твердий парфум</span>
+												</label>
+											</li>
+											<li>
+												<label class="products-filter__checkbox checkbox">
+													<input type="checkbox" name="product-param" value="1" class="checkbox__input">
+													<span class="checkbox__element">
+														<svg width="9" height="9" viewBox="0 0 9 9">
+															<use xlink:href="img/sprites.svg#check"></use>
+														</svg>
+													</span>
+													<span class="checkbox__text">Аромати для дому</span>
+												</label>
+											</li>
+											<li>
+												<label class="products-filter__checkbox checkbox">
+													<input type="checkbox" name="product-param" value="1" class="checkbox__input">
+													<span class="checkbox__element">
+														<svg width="9" height="9" viewBox="0 0 9 9">
+															<use xlink:href="img/sprites.svg#check"></use>
+														</svg>
+													</span>
+													<span class="checkbox__text">Аромо свічки</span>
+												</label>
+											</li>
+											<li>
+												<label class="products-filter__checkbox checkbox">
+													<input type="checkbox" name="product-param" value="1" class="checkbox__input">
+													<span class="checkbox__element">
+														<svg width="9" height="9" viewBox="0 0 9 9">
+															<use xlink:href="img/sprites.svg#check"></use>
+														</svg>
+													</span>
+													<span class="checkbox__text">Колекції ароматів</span>
+												</label>
+											</li>
+											<li>
+												<label class="products-filter__checkbox checkbox">
+													<input type="checkbox" name="product-param" value="1" class="checkbox__input">
+													<span class="checkbox__element">
+														<svg width="9" height="9" viewBox="0 0 9 9">
+															<use xlink:href="img/sprites.svg#check"></use>
+														</svg>
+													</span>
+													<span class="checkbox__text">Косметика для тіла</span>
+												</label>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="products__main" data-aos="fade-in" data-aos-delay="300" data-aos-anchor=".products">
+					<h1 class="products__title section-title">
+						Твердий парфум
+					</h1>
+					<form class="products__header">
+						<span class="products__length">
+							Виведено 15 із 156 товарів
+						</span>
+						<div class="products__sort">
+							<span class="products__sort--text">Сортувати по:</span>
+							<div class="products__sort--select">
+								<select name="sort">
+									<option value="Популярні">Популярні</option>
+									<option value="За зростанням">За зростанням</option>
+									<option value="За спаданням">За спаданням</option>
+								</select>
+								<i>
+									<svg width="12" height="12" viewBox="0 0 12 12">
+										<use xlink:href="img/sprites.svg#drop-down-arrow-2"></use>
+									</svg>
+								</i>
+							</div>
+						</div>
+					</form>
+					<div class="products__result">
+						<ul class="products__list">
+							<li class="product-card" data-aos="fade-in" data-aos-delay="100">
+								<a href="product-page.html" class="product-card__body">
+									<div class="product-card__image">
+										<ul class="product-card__labels">
+											<li class="product-card__labels--item is-new">
+												New
+											</li>
+										</ul>
+										<div class="product-card__image--body image-aspect-ratio">
+											<picture>
+												<source srcset="img/product/product-image.avif" type="image/avif">
+												<source srcset="img/product/product-image.webp" type="image/webp">
+												<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
+											</picture>
+										</div>
+									</div>
+									<div class="product-card__content">
+										<div class="product-card__rating">
+											<ul>
+												<li>
+													<svg width="16" height="16" viewBox="0 0 16 16">
+														<use xlink:href="img/sprites.svg#star"></use>
+													</svg>
+												</li>
+												<li>
+													<svg width="16" height="16" viewBox="0 0 16 16">
+														<use xlink:href="img/sprites.svg#star"></use>
+													</svg>
+												</li>
+												<li>
+													<svg width="16" height="16" viewBox="0 0 16 16">
+														<use xlink:href="img/sprites.svg#star"></use>
+													</svg>
+												</li>
+												<li>
+													<svg width="16" height="16" viewBox="0 0 16 16">
+														<use xlink:href="img/sprites.svg#star"></use>
+													</svg>
+												</li>
+												<li>
+													<svg width="16" height="16" viewBox="0 0 16 16">
+														<use xlink:href="img/sprites.svg#star"></use>
+													</svg>
+												</li>
+											</ul>
+											<span>
+												(55)
+											</span>
+										</div>
+										<div class="product-card__info">
+											<h3 class="product-card__name">
+												TWINS Кашпо
+											</h3>
+											<div class="product-card__details">
+												<p>
+													Діаметр: 87 мм..
+												</p>
+											</div>
+											<div class="product-card__price">
+												<del>907 ₴</del>
+												<ins>677 ₴</ins>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="product-card" data-aos="fade-in" data-aos-delay="100">
+								<a href="product-page.html" class="product-card__body">
+									<div class="product-card__image">
+										<ul class="product-card__labels">
+											<li class="product-card__labels--item is-new">
+												New
+											</li>
+										</ul>
+										<div class="product-card__image--body image-aspect-ratio">
+											<picture>
+												<source srcset="img/product/product-image.avif" type="image/avif">
+												<source srcset="img/product/product-image.webp" type="image/webp">
+												<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
+											</picture>
+										</div>
+									</div>
+									<div class="product-card__content">
+										<div class="product-card__rating">
+											<ul>
+												<li>
+													<svg width="16" height="16" viewBox="0 0 16 16">
+														<use xlink:href="img/sprites.svg#star"></use>
+													</svg>
+												</li>
+												<li>
+													<svg width="16" height="16" viewBox="0 0 16 16">
+														<use xlink:href="img/sprites.svg#star"></use>
+													</svg>
+												</li>
+												<li>
+													<svg width="16" height="16" viewBox="0 0 16 16">
+														<use xlink:href="img/sprites.svg#star"></use>
+													</svg>
+												</li>
+												<li>
+													<svg width="16" height="16" viewBox="0 0 16 16">
+														<use xlink:href="img/sprites.svg#star"></use>
+													</svg>
+												</li>
+												<li>
+													<svg width="16" height="16" viewBox="0 0 16 16">
+														<use xlink:href="img/sprites.svg#star"></use>
+													</svg>
+												</li>
+											</ul>
+											<span>
+												(55)
+											</span>
+										</div>
+										<div class="product-card__info">
+											<h3 class="product-card__name">
+												TWINS Кашпо
+											</h3>
+											<div class="product-card__details">
+												<p>
+													Діаметр: 87 мм..
+												</p>
+											</div>
+											<div class="product-card__price">
+												<del>907 ₴</del>
+												<ins>677 ₴</ins>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="product-card" data-aos="fade-in" data-aos-delay="100">
+								<a href="product-page.html" class="product-card__body">
+									<div class="product-card__image">
+										<ul class="product-card__labels">
+											<li class="product-card__labels--item is-new">
+												New
+											</li>
+										</ul>
+										<div class="product-card__image--body image-aspect-ratio">
+											<picture>
+												<source srcset="img/product/product-image.avif" type="image/avif">
+												<source srcset="img/product/product-image.webp" type="image/webp">
+												<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
+											</picture>
+										</div>
+									</div>
+									<div class="product-card__content">
+										<div class="product-card__rating">
+											<ul>
+												<li>
+													<svg width="16" height="16" viewBox="0 0 16 16">
+														<use xlink:href="img/sprites.svg#star"></use>
+													</svg>
+												</li>
+												<li>
+													<svg width="16" height="16" viewBox="0 0 16 16">
+														<use xlink:href="img/sprites.svg#star"></use>
+													</svg>
+												</li>
+												<li>
+													<svg width="16" height="16" viewBox="0 0 16 16">
+														<use xlink:href="img/sprites.svg#star"></use>
+													</svg>
+												</li>
+												<li>
+													<svg width="16" height="16" viewBox="0 0 16 16">
+														<use xlink:href="img/sprites.svg#star"></use>
+													</svg>
+												</li>
+												<li>
+													<svg width="16" height="16" viewBox="0 0 16 16">
+														<use xlink:href="img/sprites.svg#star"></use>
+													</svg>
+												</li>
+											</ul>
+											<span>
+												(55)
+											</span>
+										</div>
+										<div class="product-card__info">
+											<h3 class="product-card__name">
+												TWINS Кашпо
+											</h3>
+											<div class="product-card__details">
+												<p>
+													Діаметр: 87 мм..
+												</p>
+											</div>
+											<div class="product-card__price">
+												<del>907 ₴</del>
+												<ins>677 ₴</ins>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="product-card" data-aos="fade-in" data-aos-delay="100">
+								<a href="product-page.html" class="product-card__body">
+									<div class="product-card__image">
+										<ul class="product-card__labels">
+											<li class="product-card__labels--item is-new">
+												New
+											</li>
+										</ul>
+										<div class="product-card__image--body image-aspect-ratio">
+											<picture>
+												<source srcset="img/product/product-image.avif" type="image/avif">
+												<source srcset="img/product/product-image.webp" type="image/webp">
+												<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
+											</picture>
+										</div>
+									</div>
+									<div class="product-card__content">
+										<div class="product-card__rating">
+											<ul>
+												<li>
+													<svg width="16" height="16" viewBox="0 0 16 16">
+														<use xlink:href="img/sprites.svg#star"></use>
+													</svg>
+												</li>
+												<li>
+													<svg width="16" height="16" viewBox="0 0 16 16">
+														<use xlink:href="img/sprites.svg#star"></use>
+													</svg>
+												</li>
+												<li>
+													<svg width="16" height="16" viewBox="0 0 16 16">
+														<use xlink:href="img/sprites.svg#star"></use>
+													</svg>
+												</li>
+												<li>
+													<svg width="16" height="16" viewBox="0 0 16 16">
+														<use xlink:href="img/sprites.svg#star"></use>
+													</svg>
+												</li>
+												<li>
+													<svg width="16" height="16" viewBox="0 0 16 16">
+														<use xlink:href="img/sprites.svg#star"></use>
+													</svg>
+												</li>
+											</ul>
+											<span>
+												(55)
+											</span>
+										</div>
+										<div class="product-card__info">
+											<h3 class="product-card__name">
+												TWINS Кашпо
+											</h3>
+											<div class="product-card__details">
+												<p>
+													Діаметр: 87 мм..
+												</p>
+											</div>
+											<div class="product-card__price">
+												<del>907 ₴</del>
+												<ins>677 ₴</ins>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="product-card" data-aos="fade-in" data-aos-delay="100">
+								<a href="product-page.html" class="product-card__body">
+									<div class="product-card__image">
+										<ul class="product-card__labels">
+											<li class="product-card__labels--item is-new">
+												New
+											</li>
+										</ul>
+										<div class="product-card__image--body image-aspect-ratio">
+											<picture>
+												<source srcset="img/product/product-image.avif" type="image/avif">
+												<source srcset="img/product/product-image.webp" type="image/webp">
+												<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
+											</picture>
+										</div>
+									</div>
+									<div class="product-card__content">
+										<div class="product-card__rating">
+											<ul>
+												<li>
+													<svg width="16" height="16" viewBox="0 0 16 16">
+														<use xlink:href="img/sprites.svg#star"></use>
+													</svg>
+												</li>
+												<li>
+													<svg width="16" height="16" viewBox="0 0 16 16">
+														<use xlink:href="img/sprites.svg#star"></use>
+													</svg>
+												</li>
+												<li>
+													<svg width="16" height="16" viewBox="0 0 16 16">
+														<use xlink:href="img/sprites.svg#star"></use>
+													</svg>
+												</li>
+												<li>
+													<svg width="16" height="16" viewBox="0 0 16 16">
+														<use xlink:href="img/sprites.svg#star"></use>
+													</svg>
+												</li>
+												<li>
+													<svg width="16" height="16" viewBox="0 0 16 16">
+														<use xlink:href="img/sprites.svg#star"></use>
+													</svg>
+												</li>
+											</ul>
+											<span>
+												(55)
+											</span>
+										</div>
+										<div class="product-card__info">
+											<h3 class="product-card__name">
+												TWINS Кашпо
+											</h3>
+											<div class="product-card__details">
+												<p>
+													Діаметр: 87 мм..
+												</p>
+											</div>
+											<div class="product-card__price">
+												<del>907 ₴</del>
+												<ins>677 ₴</ins>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="product-card" data-aos="fade-in" data-aos-delay="100">
+								<a href="product-page.html" class="product-card__body">
+									<div class="product-card__image">
+										<ul class="product-card__labels">
+											<li class="product-card__labels--item is-new">
+												New
+											</li>
+										</ul>
+										<div class="product-card__image--body image-aspect-ratio">
+											<picture>
+												<source srcset="img/product/product-image.avif" type="image/avif">
+												<source srcset="img/product/product-image.webp" type="image/webp">
+												<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
+											</picture>
+										</div>
+									</div>
+									<div class="product-card__content">
+										<div class="product-card__rating">
+											<ul>
+												<li>
+													<svg width="16" height="16" viewBox="0 0 16 16">
+														<use xlink:href="img/sprites.svg#star"></use>
+													</svg>
+												</li>
+												<li>
+													<svg width="16" height="16" viewBox="0 0 16 16">
+														<use xlink:href="img/sprites.svg#star"></use>
+													</svg>
+												</li>
+												<li>
+													<svg width="16" height="16" viewBox="0 0 16 16">
+														<use xlink:href="img/sprites.svg#star"></use>
+													</svg>
+												</li>
+												<li>
+													<svg width="16" height="16" viewBox="0 0 16 16">
+														<use xlink:href="img/sprites.svg#star"></use>
+													</svg>
+												</li>
+												<li>
+													<svg width="16" height="16" viewBox="0 0 16 16">
+														<use xlink:href="img/sprites.svg#star"></use>
+													</svg>
+												</li>
+											</ul>
+											<span>
+												(55)
+											</span>
+										</div>
+										<div class="product-card__info">
+											<h3 class="product-card__name">
+												TWINS Кашпо
+											</h3>
+											<div class="product-card__details">
+												<p>
+													Діаметр: 87 мм..
+												</p>
+											</div>
+											<div class="product-card__price">
+												<del>907 ₴</del>
+												<ins>677 ₴</ins>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="product-card" data-aos="fade-in" data-aos-delay="100">
+								<a href="product-page.html" class="product-card__body">
+									<div class="product-card__image">
+										<ul class="product-card__labels">
+											<li class="product-card__labels--item is-new">
+												New
+											</li>
+										</ul>
+										<div class="product-card__image--body image-aspect-ratio">
+											<picture>
+												<source srcset="img/product/product-image.avif" type="image/avif">
+												<source srcset="img/product/product-image.webp" type="image/webp">
+												<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
+											</picture>
+										</div>
+									</div>
+									<div class="product-card__content">
+										<div class="product-card__rating">
+											<ul>
+												<li>
+													<svg width="16" height="16" viewBox="0 0 16 16">
+														<use xlink:href="img/sprites.svg#star"></use>
+													</svg>
+												</li>
+												<li>
+													<svg width="16" height="16" viewBox="0 0 16 16">
+														<use xlink:href="img/sprites.svg#star"></use>
+													</svg>
+												</li>
+												<li>
+													<svg width="16" height="16" viewBox="0 0 16 16">
+														<use xlink:href="img/sprites.svg#star"></use>
+													</svg>
+												</li>
+												<li>
+													<svg width="16" height="16" viewBox="0 0 16 16">
+														<use xlink:href="img/sprites.svg#star"></use>
+													</svg>
+												</li>
+												<li>
+													<svg width="16" height="16" viewBox="0 0 16 16">
+														<use xlink:href="img/sprites.svg#star"></use>
+													</svg>
+												</li>
+											</ul>
+											<span>
+												(55)
+											</span>
+										</div>
+										<div class="product-card__info">
+											<h3 class="product-card__name">
+												TWINS Кашпо
+											</h3>
+											<div class="product-card__details">
+												<p>
+													Діаметр: 87 мм..
+												</p>
+											</div>
+											<div class="product-card__price">
+												<del>907 ₴</del>
+												<ins>677 ₴</ins>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="product-card" data-aos="fade-in" data-aos-delay="100">
+								<a href="product-page.html" class="product-card__body">
+									<div class="product-card__image">
+										<ul class="product-card__labels">
+											<li class="product-card__labels--item is-new">
+												New
+											</li>
+										</ul>
+										<div class="product-card__image--body image-aspect-ratio">
+											<picture>
+												<source srcset="img/product/product-image.avif" type="image/avif">
+												<source srcset="img/product/product-image.webp" type="image/webp">
+												<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
+											</picture>
+										</div>
+									</div>
+									<div class="product-card__content">
+										<div class="product-card__rating">
+											<ul>
+												<li>
+													<svg width="16" height="16" viewBox="0 0 16 16">
+														<use xlink:href="img/sprites.svg#star"></use>
+													</svg>
+												</li>
+												<li>
+													<svg width="16" height="16" viewBox="0 0 16 16">
+														<use xlink:href="img/sprites.svg#star"></use>
+													</svg>
+												</li>
+												<li>
+													<svg width="16" height="16" viewBox="0 0 16 16">
+														<use xlink:href="img/sprites.svg#star"></use>
+													</svg>
+												</li>
+												<li>
+													<svg width="16" height="16" viewBox="0 0 16 16">
+														<use xlink:href="img/sprites.svg#star"></use>
+													</svg>
+												</li>
+												<li>
+													<svg width="16" height="16" viewBox="0 0 16 16">
+														<use xlink:href="img/sprites.svg#star"></use>
+													</svg>
+												</li>
+											</ul>
+											<span>
+												(55)
+											</span>
+										</div>
+										<div class="product-card__info">
+											<h3 class="product-card__name">
+												TWINS Кашпо
+											</h3>
+											<div class="product-card__details">
+												<p>
+													Діаметр: 87 мм..
+												</p>
+											</div>
+											<div class="product-card__price">
+												<del>907 ₴</del>
+												<ins>677 ₴</ins>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="product-card" data-aos="fade-in" data-aos-delay="100">
+								<a href="product-page.html" class="product-card__body">
+									<div class="product-card__image">
+										<ul class="product-card__labels">
+											<li class="product-card__labels--item is-new">
+												New
+											</li>
+										</ul>
+										<div class="product-card__image--body image-aspect-ratio">
+											<picture>
+												<source srcset="img/product/product-image.avif" type="image/avif">
+												<source srcset="img/product/product-image.webp" type="image/webp">
+												<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
+											</picture>
+										</div>
+									</div>
+									<div class="product-card__content">
+										<div class="product-card__rating">
+											<ul>
+												<li>
+													<svg width="16" height="16" viewBox="0 0 16 16">
+														<use xlink:href="img/sprites.svg#star"></use>
+													</svg>
+												</li>
+												<li>
+													<svg width="16" height="16" viewBox="0 0 16 16">
+														<use xlink:href="img/sprites.svg#star"></use>
+													</svg>
+												</li>
+												<li>
+													<svg width="16" height="16" viewBox="0 0 16 16">
+														<use xlink:href="img/sprites.svg#star"></use>
+													</svg>
+												</li>
+												<li>
+													<svg width="16" height="16" viewBox="0 0 16 16">
+														<use xlink:href="img/sprites.svg#star"></use>
+													</svg>
+												</li>
+												<li>
+													<svg width="16" height="16" viewBox="0 0 16 16">
+														<use xlink:href="img/sprites.svg#star"></use>
+													</svg>
+												</li>
+											</ul>
+											<span>
+												(55)
+											</span>
+										</div>
+										<div class="product-card__info">
+											<h3 class="product-card__name">
+												TWINS Кашпо
+											</h3>
+											<div class="product-card__details">
+												<p>
+													Діаметр: 87 мм..
+												</p>
+											</div>
+											<div class="product-card__price">
+												<del>907 ₴</del>
+												<ins>677 ₴</ins>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="product-card" data-aos="fade-in" data-aos-delay="100">
+								<a href="product-page.html" class="product-card__body">
+									<div class="product-card__image">
+										<ul class="product-card__labels">
+											<li class="product-card__labels--item is-new">
+												New
+											</li>
+										</ul>
+										<div class="product-card__image--body image-aspect-ratio">
+											<picture>
+												<source srcset="img/product/product-image.avif" type="image/avif">
+												<source srcset="img/product/product-image.webp" type="image/webp">
+												<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
+											</picture>
+										</div>
+									</div>
+									<div class="product-card__content">
+										<div class="product-card__rating">
+											<ul>
+												<li>
+													<svg width="16" height="16" viewBox="0 0 16 16">
+														<use xlink:href="img/sprites.svg#star"></use>
+													</svg>
+												</li>
+												<li>
+													<svg width="16" height="16" viewBox="0 0 16 16">
+														<use xlink:href="img/sprites.svg#star"></use>
+													</svg>
+												</li>
+												<li>
+													<svg width="16" height="16" viewBox="0 0 16 16">
+														<use xlink:href="img/sprites.svg#star"></use>
+													</svg>
+												</li>
+												<li>
+													<svg width="16" height="16" viewBox="0 0 16 16">
+														<use xlink:href="img/sprites.svg#star"></use>
+													</svg>
+												</li>
+												<li>
+													<svg width="16" height="16" viewBox="0 0 16 16">
+														<use xlink:href="img/sprites.svg#star"></use>
+													</svg>
+												</li>
+											</ul>
+											<span>
+												(55)
+											</span>
+										</div>
+										<div class="product-card__info">
+											<h3 class="product-card__name">
+												TWINS Кашпо
+											</h3>
+											<div class="product-card__details">
+												<p>
+													Діаметр: 87 мм..
+												</p>
+											</div>
+											<div class="product-card__price">
+												<del>907 ₴</del>
+												<ins>677 ₴</ins>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="product-card" data-aos="fade-in" data-aos-delay="100">
+								<a href="product-page.html" class="product-card__body">
+									<div class="product-card__image">
+										<ul class="product-card__labels">
+											<li class="product-card__labels--item is-new">
+												New
+											</li>
+										</ul>
+										<div class="product-card__image--body image-aspect-ratio">
+											<picture>
+												<source srcset="img/product/product-image.avif" type="image/avif">
+												<source srcset="img/product/product-image.webp" type="image/webp">
+												<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
+											</picture>
+										</div>
+									</div>
+									<div class="product-card__content">
+										<div class="product-card__rating">
+											<ul>
+												<li>
+													<svg width="16" height="16" viewBox="0 0 16 16">
+														<use xlink:href="img/sprites.svg#star"></use>
+													</svg>
+												</li>
+												<li>
+													<svg width="16" height="16" viewBox="0 0 16 16">
+														<use xlink:href="img/sprites.svg#star"></use>
+													</svg>
+												</li>
+												<li>
+													<svg width="16" height="16" viewBox="0 0 16 16">
+														<use xlink:href="img/sprites.svg#star"></use>
+													</svg>
+												</li>
+												<li>
+													<svg width="16" height="16" viewBox="0 0 16 16">
+														<use xlink:href="img/sprites.svg#star"></use>
+													</svg>
+												</li>
+												<li>
+													<svg width="16" height="16" viewBox="0 0 16 16">
+														<use xlink:href="img/sprites.svg#star"></use>
+													</svg>
+												</li>
+											</ul>
+											<span>
+												(55)
+											</span>
+										</div>
+										<div class="product-card__info">
+											<h3 class="product-card__name">
+												TWINS Кашпо
+											</h3>
+											<div class="product-card__details">
+												<p>
+													Діаметр: 87 мм..
+												</p>
+											</div>
+											<div class="product-card__price">
+												<del>907 ₴</del>
+												<ins>677 ₴</ins>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="product-card" data-aos="fade-in" data-aos-delay="100">
+								<a href="product-page.html" class="product-card__body">
+									<div class="product-card__image">
+										<ul class="product-card__labels">
+											<li class="product-card__labels--item is-new">
+												New
+											</li>
+										</ul>
+										<div class="product-card__image--body image-aspect-ratio">
+											<picture>
+												<source srcset="img/product/product-image.avif" type="image/avif">
+												<source srcset="img/product/product-image.webp" type="image/webp">
+												<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
+											</picture>
+										</div>
+									</div>
+									<div class="product-card__content">
+										<div class="product-card__rating">
+											<ul>
+												<li>
+													<svg width="16" height="16" viewBox="0 0 16 16">
+														<use xlink:href="img/sprites.svg#star"></use>
+													</svg>
+												</li>
+												<li>
+													<svg width="16" height="16" viewBox="0 0 16 16">
+														<use xlink:href="img/sprites.svg#star"></use>
+													</svg>
+												</li>
+												<li>
+													<svg width="16" height="16" viewBox="0 0 16 16">
+														<use xlink:href="img/sprites.svg#star"></use>
+													</svg>
+												</li>
+												<li>
+													<svg width="16" height="16" viewBox="0 0 16 16">
+														<use xlink:href="img/sprites.svg#star"></use>
+													</svg>
+												</li>
+												<li>
+													<svg width="16" height="16" viewBox="0 0 16 16">
+														<use xlink:href="img/sprites.svg#star"></use>
+													</svg>
+												</li>
+											</ul>
+											<span>
+												(55)
+											</span>
+										</div>
+										<div class="product-card__info">
+											<h3 class="product-card__name">
+												TWINS Кашпо
+											</h3>
+											<div class="product-card__details">
+												<p>
+													Діаметр: 87 мм..
+												</p>
+											</div>
+											<div class="product-card__price">
+												<del>907 ₴</del>
+												<ins>677 ₴</ins>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="product-card" data-aos="fade-in" data-aos-delay="100">
+								<a href="product-page.html" class="product-card__body">
+									<div class="product-card__image">
+										<ul class="product-card__labels">
+											<li class="product-card__labels--item is-new">
+												New
+											</li>
+										</ul>
+										<div class="product-card__image--body image-aspect-ratio">
+											<picture>
+												<source srcset="img/product/product-image.avif" type="image/avif">
+												<source srcset="img/product/product-image.webp" type="image/webp">
+												<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
+											</picture>
+										</div>
+									</div>
+									<div class="product-card__content">
+										<div class="product-card__rating">
+											<ul>
+												<li>
+													<svg width="16" height="16" viewBox="0 0 16 16">
+														<use xlink:href="img/sprites.svg#star"></use>
+													</svg>
+												</li>
+												<li>
+													<svg width="16" height="16" viewBox="0 0 16 16">
+														<use xlink:href="img/sprites.svg#star"></use>
+													</svg>
+												</li>
+												<li>
+													<svg width="16" height="16" viewBox="0 0 16 16">
+														<use xlink:href="img/sprites.svg#star"></use>
+													</svg>
+												</li>
+												<li>
+													<svg width="16" height="16" viewBox="0 0 16 16">
+														<use xlink:href="img/sprites.svg#star"></use>
+													</svg>
+												</li>
+												<li>
+													<svg width="16" height="16" viewBox="0 0 16 16">
+														<use xlink:href="img/sprites.svg#star"></use>
+													</svg>
+												</li>
+											</ul>
+											<span>
+												(55)
+											</span>
+										</div>
+										<div class="product-card__info">
+											<h3 class="product-card__name">
+												TWINS Кашпо
+											</h3>
+											<div class="product-card__details">
+												<p>
+													Діаметр: 87 мм..
+												</p>
+											</div>
+											<div class="product-card__price">
+												<del>907 ₴</del>
+												<ins>677 ₴</ins>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="product-card" data-aos="fade-in" data-aos-delay="100">
+								<a href="product-page.html" class="product-card__body">
+									<div class="product-card__image">
+										<ul class="product-card__labels">
+											<li class="product-card__labels--item is-new">
+												New
+											</li>
+										</ul>
+										<div class="product-card__image--body image-aspect-ratio">
+											<picture>
+												<source srcset="img/product/product-image.avif" type="image/avif">
+												<source srcset="img/product/product-image.webp" type="image/webp">
+												<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
+											</picture>
+										</div>
+									</div>
+									<div class="product-card__content">
+										<div class="product-card__rating">
+											<ul>
+												<li>
+													<svg width="16" height="16" viewBox="0 0 16 16">
+														<use xlink:href="img/sprites.svg#star"></use>
+													</svg>
+												</li>
+												<li>
+													<svg width="16" height="16" viewBox="0 0 16 16">
+														<use xlink:href="img/sprites.svg#star"></use>
+													</svg>
+												</li>
+												<li>
+													<svg width="16" height="16" viewBox="0 0 16 16">
+														<use xlink:href="img/sprites.svg#star"></use>
+													</svg>
+												</li>
+												<li>
+													<svg width="16" height="16" viewBox="0 0 16 16">
+														<use xlink:href="img/sprites.svg#star"></use>
+													</svg>
+												</li>
+												<li>
+													<svg width="16" height="16" viewBox="0 0 16 16">
+														<use xlink:href="img/sprites.svg#star"></use>
+													</svg>
+												</li>
+											</ul>
+											<span>
+												(55)
+											</span>
+										</div>
+										<div class="product-card__info">
+											<h3 class="product-card__name">
+												TWINS Кашпо
+											</h3>
+											<div class="product-card__details">
+												<p>
+													Діаметр: 87 мм..
+												</p>
+											</div>
+											<div class="product-card__price">
+												<del>907 ₴</del>
+												<ins>677 ₴</ins>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="product-card" data-aos="fade-in" data-aos-delay="100">
+								<a href="product-page.html" class="product-card__body">
+									<div class="product-card__image">
+										<ul class="product-card__labels">
+											<li class="product-card__labels--item is-new">
+												New
+											</li>
+										</ul>
+										<div class="product-card__image--body image-aspect-ratio">
+											<picture>
+												<source srcset="img/product/product-image.avif" type="image/avif">
+												<source srcset="img/product/product-image.webp" type="image/webp">
+												<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
+											</picture>
+										</div>
+									</div>
+									<div class="product-card__content">
+										<div class="product-card__rating">
+											<ul>
+												<li>
+													<svg width="16" height="16" viewBox="0 0 16 16">
+														<use xlink:href="img/sprites.svg#star"></use>
+													</svg>
+												</li>
+												<li>
+													<svg width="16" height="16" viewBox="0 0 16 16">
+														<use xlink:href="img/sprites.svg#star"></use>
+													</svg>
+												</li>
+												<li>
+													<svg width="16" height="16" viewBox="0 0 16 16">
+														<use xlink:href="img/sprites.svg#star"></use>
+													</svg>
+												</li>
+												<li>
+													<svg width="16" height="16" viewBox="0 0 16 16">
+														<use xlink:href="img/sprites.svg#star"></use>
+													</svg>
+												</li>
+												<li>
+													<svg width="16" height="16" viewBox="0 0 16 16">
+														<use xlink:href="img/sprites.svg#star"></use>
+													</svg>
+												</li>
+											</ul>
+											<span>
+												(55)
+											</span>
+										</div>
+										<div class="product-card__info">
+											<h3 class="product-card__name">
+												TWINS Кашпо
+											</h3>
+											<div class="product-card__details">
+												<p>
+													Діаметр: 87 мм..
+												</p>
+											</div>
+											<div class="product-card__price">
+												<del>907 ₴</del>
+												<ins>677 ₴</ins>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="product-card" data-aos="fade-in" data-aos-delay="100">
+								<a href="product-page.html" class="product-card__body">
+									<div class="product-card__image">
+										<ul class="product-card__labels">
+											<li class="product-card__labels--item is-new">
+												New
+											</li>
+										</ul>
+										<div class="product-card__image--body image-aspect-ratio">
+											<picture>
+												<source srcset="img/product/product-image.avif" type="image/avif">
+												<source srcset="img/product/product-image.webp" type="image/webp">
+												<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
+											</picture>
+										</div>
+									</div>
+									<div class="product-card__content">
+										<div class="product-card__rating">
+											<ul>
+												<li>
+													<svg width="16" height="16" viewBox="0 0 16 16">
+														<use xlink:href="img/sprites.svg#star"></use>
+													</svg>
+												</li>
+												<li>
+													<svg width="16" height="16" viewBox="0 0 16 16">
+														<use xlink:href="img/sprites.svg#star"></use>
+													</svg>
+												</li>
+												<li>
+													<svg width="16" height="16" viewBox="0 0 16 16">
+														<use xlink:href="img/sprites.svg#star"></use>
+													</svg>
+												</li>
+												<li>
+													<svg width="16" height="16" viewBox="0 0 16 16">
+														<use xlink:href="img/sprites.svg#star"></use>
+													</svg>
+												</li>
+												<li>
+													<svg width="16" height="16" viewBox="0 0 16 16">
+														<use xlink:href="img/sprites.svg#star"></use>
+													</svg>
+												</li>
+											</ul>
+											<span>
+												(55)
+											</span>
+										</div>
+										<div class="product-card__info">
+											<h3 class="product-card__name">
+												TWINS Кашпо
+											</h3>
+											<div class="product-card__details">
+												<p>
+													Діаметр: 87 мм..
+												</p>
+											</div>
+											<div class="product-card__price">
+												<del>907 ₴</del>
+												<ins>677 ₴</ins>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="products__footer" data-aos="fade-in" data-aos-delay="100">
+						<div class="products__pagination pagination">
+							<a href="#" class="pagination__arrow is-prev">
+								<svg width="14" height="14" viewBox="0 0 14 14">
+									<use xlink:href="img/sprites.svg#arrow-prev-2"></use>
+								</svg>
+							</a>
+							<div class="pagination__list">
+								<a href="#" class="is-current">1</a>
+								<a href="#">2</a>
+								<a href="#">3</a>
+								<a href="#">...</a>
+								<a href="#">34</a>
+							</div>
+							<a href="#" class="pagination__arrow is-next">
+								<svg width="14" height="14" viewBox="0 0 14 14">
+									<use xlink:href="img/sprites.svg#arrow-next-2"></use>
+								</svg>
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="mailing container" data-aos="fade-in" data-aos-delay="100">
+				<div class="mailing__body">
+					<div class="mailing__hero">
+						<h2 class="mailing__title">
+							Дізнавайтесь першим
+						</h2>
+						<div class="mailing__text">
+							<p>
+								про акції і новинки!
+							</p>
+						</div>
+					</div>
+					<form method="post" class="mailing__form">
+						<label>
+							<input type="email" name="email" placeholder="Електронна пошта" required>
+						</label>
+						<button class="btn is-min" type="submit">Підписатися</button>
+					</form>
+					<ul class="mailing__social">
+						<li>
+							<a href="#" title="">
+								<svg width="20" height="20" viewBox="0 0 20 20">
+									<use xlink:href="img/sprites.svg#facebook"></use>
+								</svg>
+							</a>
+						</li>
+						<li>
+							<a href="#" title="YouTube">
+								<svg width="19" height="19" viewBox="0 0 19 19">
+									<use xlink:href="img/sprites.svg#youtube"></use>
+								</svg>
+							</a>
+						</li>
+						<li>
+							<a href="#" title="Twitter">
+								<svg width="19" height="19" viewBox="0 0 19 19">
+									<use xlink:href="img/sprites.svg#twitter"></use>
+								</svg>
+							</a>
+						</li>
+						<li>
+							<a href="#" title="Instagram">
+								<svg width="20" height="20" viewBox="0 0 20 20">
+									<use xlink:href="img/sprites.svg#instagram"></use>
+								</svg>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</section>
+		</main>
+
+		<footer class="footer">
+			<div class="footer__wrapper container">
+				<div class="footer__logo">
+					<a href=index.html" class="footer__logo--link">
+						<img src="img/logo.svg" alt="Logo" width="112" height="50" loading="lazy" class="footer__logo--img visible-on-desktop">
+						<img src="img/logo-mob.svg" alt="Logo" width="112" height="50" loading="lazy" class="footer__logo--img visible-on-mob">
+					</a>
+				</div>
+				<nav class="footer__nav">
+					<div class="footer__nav--block">
+						<h3>
+							Інформаційні сторінки
+						</h3>
+						<ul>
+							<li>
+								<a href="#">
+									Про компанію
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Оплата і Доставка
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Новини і Статті
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Акції
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="footer__nav--block is-row">
+						<h3>
+							Категорії
+						</h3>
+						<ul>
+							<li>
+								<a href="#">
+									Твердий парфум
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Аромо свічки
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Колекції ароматів
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Аромати для дому
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Косметика для тіла
+								</a>
+							</li>
+						</ul>
+					</div>
+				</nav>
+				<div class="footer__contacts">
+					<ul>
+						<li>
+							<a href="#">
+								(097) 798 67 09
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								(063) 576 12 45
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer__lang">
+					<button class="footer__lang--target" type="button">
+						<span>UA</span>
+						<svg width="8" height="8" viewBox="0 0 8 8">
+							<use xlink:href="img/sprites.svg#drop-down-arrow"></use>
+						</svg>
+					</button>
+					<div class="footer__lang--block">
+						<ul>
+							<li>
+								<a href="#">
+									EN
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									RU
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="footer__copyright container">
+				©TWINS 2023
+			</div>
+		</footer>
+	</div>
+
+	<div class="search-popup popup" id="search-popup" style="display: none;">
+		<div class="search-popup__wrapper popup-wrapper">
+			<div class="search-popup__bg popup-bg popup-close"></div>
+			<button type="button" class="search-popup__close-btn popup-close-btn popup-close" title="Закрити">
+				<svg width="24" height="24" viewBox="0 0 47.971 47.971">
+					<use xlink:href="img/sprites.svg#close"></use>
+				</svg>
+			</button>
+			<div class="search-popup__body popup-body">
+				<form method="post" class="search-popup__form">
+					<label>
+						<input type="search" placeholder="Пошук" name="search" required>
+					</label>
+					<button type="submit" title="Пошук">
+						<svg width="24" height="24" viewBox="0 0 20 20">
+							<use xlink:href="img/sprites.svg#search"></use>
+						</svg>
+					</button>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<div class="stories-popup popup" id="stories-popup" style="display: none;">
+		<div class="stories-popup__wrapper popup-wrapper">
+			<div class="stories-popup__bg popup-bg popup-close"></div>
+			<button type="button" class="stories-popup__volume" title="Включить/Выключить громкость" data-volume-active-icon="img/sprites.svg#volume-active" data-volume-none-icon="img/sprites.svg#volume-none">
+				<svg width="30" height="30" viewBox="0 0 24 24">
+					<use xlink:href="img/sprites.svg#volume-active"></use>
+				</svg>
+			</button>
+			<button type="button" class="stories-popup__close-btn popup-close-btn popup-close" title="Закрыть">
+				<svg width="24" height="24" viewBox="0 0 47.971 47.971">
+					<use xlink:href="img/sprites.svg#close"></use>
+				</svg>
+			</button>
+			<div class="stories-popup__body popup-body">
+				<div class="stories-popup__slider splide">
+					<div class="stories-popup__track splide__track">
+						<ul class="stories-popup__list splide__list">
+							<li class="stories-popup__slide splide__slide">
+								<div class="stories-popup__video-wrapper">
+									<video src="video/stories-video-example.mp4" playsinline class="stories-popup__video"></video>
+									<div class="stories-popup__video-preview">
+										<picture>
+											<source srcset="img/video-preview.avif" type="image/avif">
+											<source srcset="img/video-preview.webp" type="image/webp">
+											<img src="img/video-preview.jpg" alt="" width="0" height="0" loading="lazy">
+										</picture>
+									</div>
+									<div class="stories-popup__video-progress"></div>
+									<div class="stories-popup__text">
+										<a href="product-page.html">
+											Якесь посилання для прикладу
+										</a>
+										і ще трохи тексту
+									</div>
+								</div>
+								<div class="stories-popup__loader"></div>
+							</li>
+							<li class="stories-popup__slide splide__slide">
+								<div class="stories-popup__video-wrapper">
+									<video src="video/stories-video-example.mp4" playsinline class="stories-popup__video"></video>
+									<div class="stories-popup__video-preview">
+										<picture>
+											<source srcset="img/video-preview.avif" type="image/avif">
+											<source srcset="img/video-preview.webp" type="image/webp">
+											<img src="img/video-preview.jpg" alt="" width="0" height="0" loading="lazy">
+										</picture>
+									</div>
+									<div class="stories-popup__video-progress"></div>
+								</div>
+								<div class="stories-popup__loader"></div>
+							</li>
+							<li class="stories-popup__slide splide__slide">
+								<div class="stories-popup__video-wrapper">
+									<video src="video/stories-video-example.mp4" playsinline class="stories-popup__video"></video>
+									<div class="stories-popup__video-preview">
+										<picture>
+											<source srcset="img/video-preview.avif" type="image/avif">
+											<source srcset="img/video-preview.webp" type="image/webp">
+											<img src="img/video-preview.jpg" alt="" width="0" height="0" loading="lazy">
+										</picture>
+									</div>
+									<div class="stories-popup__video-progress"></div>
+								</div>
+								<div class="stories-popup__loader"></div>
+							</li>
+							<li class="stories-popup__slide splide__slide">
+								<div class="stories-popup__video-wrapper">
+									<video src="video/stories-video-example.mp4" playsinline class="stories-popup__video"></video>
+									<div class="stories-popup__video-preview">
+										<picture>
+											<source srcset="img/video-preview.avif" type="image/avif">
+											<source srcset="img/video-preview.webp" type="image/webp">
+											<img src="img/video-preview.jpg" alt="" width="0" height="0" loading="lazy">
+										</picture>
+									</div>
+									<div class="stories-popup__video-progress"></div>
+								</div>
+								<div class="stories-popup__loader"></div>
+							</li>
+							<li class="stories-popup__slide splide__slide">
+								<div class="stories-popup__video-wrapper">
+									<video src="video/stories-video-example.mp4" playsinline class="stories-popup__video"></video>
+									<div class="stories-popup__video-preview">
+										<picture>
+											<source srcset="img/video-preview.avif" type="image/avif">
+											<source srcset="img/video-preview.webp" type="image/webp">
+											<img src="img/video-preview.jpg" alt="" width="0" height="0" loading="lazy">
+										</picture>
+									</div>
+									<div class="stories-popup__video-progress"></div>
+								</div>
+								<div class="stories-popup__loader"></div>
+							</li>
+						</ul>
+					</div>
+					<div class="stories-popup__controls splide__arrows">
+						<button class="stories-popup__arrow splide__arrow splide__arrow--prev" type="button"></button>
+						<button class="stories-popup__arrow splide__arrow splide__arrow--next" type="button"></button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="js/libs.min.js"></script>
+	<script src="js/main.min.js"></script>
+
+</body>
+
+</html>
