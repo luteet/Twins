@@ -2800,12 +2800,12 @@ body {
     z-index: auto
 }
 
-.stories-popup__slide.is-active .stories-popup__video-preview {
+.stories-popup__slide.is-active-video .stories-popup__video-preview {
     opacity: 0;
     visibility: hidden
 }
 
-.stories-popup__slide.is-active .stories-popup__video {
+.stories-popup__slide.is-active-video .stories-popup__video {
     opacity: 1
 }
 

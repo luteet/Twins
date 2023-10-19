@@ -707,6 +707,7 @@ document.querySelectorAll('.stories-popup__slider').forEach(sliderElement => {
 			const video = slides[prevIndex].querySelector('.stories-popup__video');
 		
 			video.pause();
+			slides[prevIndex].classList.remove('is-active-video');
 			video.classList.remove('is-playing');
 			video.currentTime = 0;
 		}
@@ -725,16 +726,18 @@ document.querySelectorAll('.stories-popup__slider').forEach(sliderElement => {
 					loader.classList.remove('is-active');
 					setTimeout(() => {
 						if(video.closest('.splide__slide.is-active')) {
+							slide.slide.classList.add('is-active-video');
 							video.classList.add('is-playing');
 							video.play();
 						}
-					},300)
+					},1000)
 				},1000)
 			});
 
 			loader.classList.add('is-active');
 			
 			video.load();
+			//video.style.opacity = 0;
 		}
 	})
 

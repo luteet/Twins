@@ -299,11 +299,11 @@ body {
 		text-align: center;
 	}
 
-	&__slide.is-active &__video-preview {
+	&__slide.is-active-video &__video-preview {
 		opacity: 0; visibility: hidden;
 	}
 
-	&__slide.is-active &__video {
+	&__slide.is-active-video &__video {
 		opacity: 1;
 	}
 
