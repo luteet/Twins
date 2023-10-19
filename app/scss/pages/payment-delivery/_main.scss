@@ -80,10 +80,7 @@
 			align-items: center;
 
 			color: #333;
-			font-size: 0.875rem;
-			@include _550 {
-				font-size: 1rem;
-			}
+			font-size: 1rem;
 			
 			@include _992 {
 				font-size: 1.125rem;
@@ -127,10 +124,7 @@
 			padding-top: 5px;
 
 			color: #333;
-			font-size: 0.875rem;
-			@include _550 {
-				font-size: 1rem;
-			}
+			font-size: 1rem;
 			
 			@include _992 {
 				font-size: 1.125rem;

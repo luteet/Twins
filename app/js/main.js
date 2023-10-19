@@ -342,6 +342,7 @@ body.addEventListener('click', function (event) {
 	if(productsFilterOpen) {
 	
 		document.querySelector('.products-filter').classList.add('is-active');
+		body.classList.add('is-overflow-hidden');
 	
 	}
 	
@@ -349,6 +350,7 @@ body.addEventListener('click', function (event) {
 	if(productsFilterClose) {
 	
 		document.querySelector('.products-filter').classList.remove('is-active');
+		body.classList.remove('is-overflow-hidden');
 	
 	}
 
@@ -356,6 +358,7 @@ body.addEventListener('click', function (event) {
 	if(productsFilterBackground) {
 	
 		document.querySelector('.products-filter').classList.remove('is-active');
+		body.classList.remove('is-overflow-hidden');
 	
 	}
 	
@@ -737,7 +740,6 @@ document.querySelectorAll('.stories-popup__slider').forEach(sliderElement => {
 			loader.classList.add('is-active');
 			
 			video.load();
-			//video.style.opacity = 0;
 		}
 	})
 
@@ -779,10 +781,44 @@ function rangeSlider() {
 		maxInput = range.querySelector('[data-is-max]'),
 		rangeElement = range.querySelector('.products-filter__range--element');
 
-		let tooltip_1 = rangeElement.querySelectorAll('.wrunner__valueNote')[0],
-		tooltip_2 = rangeElement.querySelectorAll('.wrunner__valueNote')[1];
+		const rangeEl = new window.JSR.JSR({
+			modules: [
+			  new window.JSR.ModuleLimit({
+				min: Number(rangeElement.dataset.min),
+				max: Number(rangeElement.dataset.max),
+			  }),
+			  new window.JSR.ModuleRail(),
+			  new window.JSR.ModuleSlider(),
+			  new window.JSR.ModuleBar(),
+			  new window.JSR.ModuleLabel(),
+			],
+			
+			config: {
+				min: Number(rangeElement.dataset.min),
+				max: Number(rangeElement.dataset.max),
+				step: 1,
+				initialValues: [Number(rangeElement.dataset.minValue), Number(rangeElement.dataset.maxValue)],
+				container: document.querySelector('.products-filter__range--element div'),
+			}
+		});
+		
+		rangeEl.onValueChange(function (ValueChangeHandler) {
+			if(ValueChangeHandler['index'] == 0) {
+				minInput.value = ValueChangeHandler['real'];
+			} else if(ValueChangeHandler['index'] == 1) {
+				maxInput.value = ValueChangeHandler['real'];
+			}
+		})
 
-		var setting = {
+		//console.log(jsr)
+		/* jsr.addEventListener('update', (input, value) => {
+			console.log(input)
+		}); */
+
+		/* let tooltip_1 = rangeElement.querySelectorAll('.wrunner__valueNote')[0],
+		tooltip_2 = rangeElement.querySelectorAll('.wrunner__valueNote')[1]; */
+
+		/* var setting = {
 			roots: rangeElement,
 			type: 'range',
 			limits : {
@@ -811,12 +847,9 @@ function rangeSlider() {
 				minInput.value = values['minValue'];
 				maxInput.value = values['maxValue'];
 			},
-			/* onLimitsUpdate: function(limits){
-				console.log("Limits: "+ limits)
-			} */
 		}
 
-		var slider = wRunner(setting);
+		var slider = wRunner(setting); */
 
 		
 	

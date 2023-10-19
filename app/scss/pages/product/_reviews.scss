@@ -154,7 +154,10 @@
 	// .reviews__footer
 
 	&__footer {
-		margin-top: 35px;
+		margin-top: 15px;
+		@include _992 {
+			margin-top: 35px;
+		}
 
 		display: flex;
 		align-items: center;

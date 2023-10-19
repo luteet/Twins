@@ -107,7 +107,8 @@ function scriptsLib() {
 		//'node_modules/sticky-js/dist/sticky.min.js' // Sticky | npm i sticky-js --save-dev | https://www.npmjs.com/package/sticky-js
 		'node_modules/nouislider/dist/nouislider.min.js', // Кастомный input[range] | npm i nouislider --save-dev | https://www.npmjs.com/package/nouislider
 		'node_modules/simplebar/dist/simplebar.min.js', // Кастомный скролбар | npm i simplebar --save-dev | https://www.npmjs.com/package/simplebar
-		'app/js/wrunner-native.js',
+		'node_modules/mm-jsr/build/index.js', // Кастомный скролбар | npm i simplebar --save-dev | https://www.npmjs.com/package/simplebar
+		//'app/js/wrunner-native.js',
 		//'node_modules/fslightbox/index.js', // Галерея | npm i fslightbox --save-dev | https://www.npmjs.com/package/fslightbox
 		//'node_modules/chart.js/dist/chart.min.js', // График | npm i chart.js --save-dev | https://www.npmjs.com/package/chart.js
 		//'node_modules/swiper/swiper-bundle.min.js', // Слайдер

@@ -176,7 +176,7 @@
 			margin-top: 12px;
 
 			color: #525252;
-			font-size: 0.875rem;
+			font-size: 1rem;
 			
 			@include _768 {
 				font-size: 1rem;
@@ -403,7 +403,11 @@
 		&--text {
 			color: #525252;
 			
-			font-size: 1.125rem;
+			font-size: 1rem;
+			
+			@include _992 {
+				font-size: 1.125rem;
+			}
 			line-height: 144.444%;
 		}
 	}
