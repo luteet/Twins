@@ -1992,6 +1992,10 @@ summary {
     display: table
 }
 
+.header__burger::before,.header__categories li:not(:last-child)::before,.header__nav--body::before,.icon-link::before,.simplebar-scrollbar:before,.stories-popup__video-progress::before {
+    content: ""
+}
+
 .simplebar-placeholder {
     max-height: 100%;
     max-width: 100%;
@@ -2063,7 +2067,6 @@ summary {
 
 .simplebar-scrollbar:before {
     position: absolute;
-    content: "";
     background: #000;
     border-radius: 7px;
     opacity: 0;
@@ -2263,6 +2266,10 @@ body {
     flex-direction: column
 }
 
+.btn,.main-title,.read-more-link,.section-title,.title {
+    font-weight: 700
+}
+
 .image-aspect-ratio {
     width: 100%;
     position: relative;
@@ -2318,7 +2325,6 @@ section {
 }
 
 .icon-link::before {
-    content: "";
     position: absolute;
     left: 6px;
     top: 6px;
@@ -2347,8 +2353,7 @@ section {
     color: var(--white);
     border-radius: 0;
     font-size: 1rem;
-    line-height: 118%;
-    font-weight: 700
+    line-height: 118%
 }
 
 .btn.is-min {
@@ -2385,7 +2390,6 @@ section {
     align-items: center;
     font-size: 1rem;
     line-height: 175%;
-    font-weight: 700;
     color: var(--accent)
 }
 
@@ -2478,13 +2482,11 @@ section {
 
 .main-title {
     font-family: var(--title-font);
-    font-weight: 700;
     line-height: 115%;
     font-size: 1.875rem
 }
 
 .title {
-    font-weight: 700;
     line-height: 135%;
     font-size: 1.5rem
 }
@@ -2496,7 +2498,6 @@ section {
 
 .section-title {
     font-family: var(--title-font);
-    font-weight: 700;
     line-height: 105%;
     font-size: 1.5rem
 }
@@ -2829,6 +2830,7 @@ body {
     margin-top: 40px;
     margin-left: 5px;
     margin-right: 5px;
+    min-height: calc(100% - 40px);
     background: var(--black)
 }
 
@@ -2881,7 +2883,6 @@ body {
 }
 
 .stories-popup__video-progress::before {
-    content: "";
     position: absolute;
     left: 0;
     top: 0;
@@ -2962,7 +2963,6 @@ body {
 }
 
 .header__nav--body::before {
-    content: "";
     position: fixed;
     width: 100%;
     height: var(--height-header);
@@ -3126,7 +3126,6 @@ body {
 }
 
 .header__categories li:not(:last-child)::before {
-    content: "";
     position: absolute;
     right: 0;
     top: 50%;
@@ -3193,7 +3192,6 @@ body {
 }
 
 .header__burger::before {
-    content: "";
     position: absolute;
     left: 50%;
     top: 50%;
