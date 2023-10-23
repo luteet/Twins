@@ -96,7 +96,11 @@
 			transform: translate(-50%,-50%);
 			//background: var(--white);
 
-			width: 20.833333vw; height: auto;
+			@include _768 {
+				width: 20.833333vw; 
+			}
+			width: 29vw;
+			height: auto;
 			@include _container {
 				width: 500px;
 			}

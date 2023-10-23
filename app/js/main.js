@@ -236,6 +236,15 @@ setTimeout(() => {
 	updatePrice()
 },0)
 
+const productLengthInput = document.querySelectorAll('.product-length__input');
+productLengthInput.forEach(input => {
+	input.addEventListener('blur', function (event) {
+		setTimeout(() => {
+			updatePrice();
+		},0)
+	})
+})
+
 // =-=-=-=-=-=-=-=-=-=- <image-aspect-ratio> -=-=-=-=-=-=-=-=-=-=-
 
 const imageAspectRatio = document.querySelectorAll('.image-aspect-ratio, figure');

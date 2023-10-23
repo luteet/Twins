@@ -252,14 +252,14 @@
 		right: 0; top: var(--height-header,0px);
 		transform: translate(-20px,15px);
 		width: 30px; height: 30px;
-		background: var(--white);
+		background: transparent;
 
 		&::before, &::after {
 			content: '';
 			position: absolute;
 			left: 50%; top: 50%;
 			width: 75%; height: 3px;
-			background: var(--text-color);
+			background: var(--white);
 			border-radius: 5px;
 			translate: -50% -50%;
 		}
