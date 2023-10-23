@@ -1,11 +1,11 @@
 .products {
 
-	margin-top: 30px; padding-bottom: 30px;
+	padding-bottom: 30px;
 
 	display: grid;
 	@include _992 {
 		grid-template-columns: 283px auto;
-		margin-top: 0;
+		
 	}
 	gap: 19px;
 
@@ -21,10 +21,7 @@
 	// .products__main
 
 	&__main {
-		margin-top: 30px;
-		@include _992 {
-			margin-top: 50px;
-		}
+		
 	}
 
 	// .products__title
@@ -211,7 +208,7 @@
 	padding: calc(60px + var(--height-header,0px)) 20px 15px;
 	
 	@include _992 {
-		margin-top: 63px;
+		margin-top: 13px;
 		padding: 0;
 		position: static;
 

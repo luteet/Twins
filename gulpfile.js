@@ -108,7 +108,11 @@ function scriptsLib() {
 		'node_modules/nouislider/dist/nouislider.min.js', // Кастомный input[range] | npm i nouislider --save-dev | https://www.npmjs.com/package/nouislider
 		'node_modules/simplebar/dist/simplebar.min.js', // Кастомный скролбар | npm i simplebar --save-dev | https://www.npmjs.com/package/simplebar
 		'node_modules/mm-jsr/build/index.js', // Кастомный скролбар | npm i simplebar --save-dev | https://www.npmjs.com/package/simplebar
-		//'app/js/wrunner-native.js',
+		
+		'node_modules/vanillajs-datepicker/dist/js/datepicker.min.js', // Datepicker
+		
+		'app/js/slide.js',
+		'app/js/tel-constructor.js',
 		//'node_modules/fslightbox/index.js', // Галерея | npm i fslightbox --save-dev | https://www.npmjs.com/package/fslightbox
 		//'node_modules/chart.js/dist/chart.min.js', // График | npm i chart.js --save-dev | https://www.npmjs.com/package/chart.js
 		//'node_modules/swiper/swiper-bundle.min.js', // Слайдер
@@ -192,7 +196,7 @@ function stylesLib() {
 		'node_modules/aos/dist/aos.css', // Анимация
 		'node_modules/nouislider/dist/nouislider.css', // Кастомный input[range]
 		'node_modules/simplebar/dist/simplebar.min.css', // Кастомный скролбар
-		'node_modules/simplebar/dist/simplebar.min.css', // Кастомный скролбар
+		'node_modules/vanillajs-datepicker/dist/css/datepicker.min.css', // Datepicker
 	])
 	.pipe(concat('_libs.scss'))
 	.pipe(dest('app/scss'))

@@ -1,0 +1,48 @@
+@@include("html/_header.html")
+
+	<main class="main">
+		<div class="breadcrumbs container" data-aos="fade-in" data-aos-delay="100">
+			<a href="index.html" class="breadcrumbs__link">Головна</a>
+			<span class="breadcrumbs__separator"></span>
+			<span class="breadcrumbs__current">Особистий кабінет</span>
+		</div>
+		<section class="account container">
+			@@include("html/_account-aside.html")
+			<div class="account__main" data-aos="fade-in" data-aos-delay="300">
+				<h1 class="account__title section-title">
+					Користувач
+				</h1>
+				<div class="account__user account-user">
+					<ul class="account-user__list">
+						<li class="account-user__param">
+							<h2>Ваше ім’я*</h2>
+							<b>Іван</b>
+						</li>
+						<li class="account-user__param">
+							<h2>Прізвище</h2>
+							<b>Іванов</b>
+						</li>
+						<li class="account-user__param">
+							<h2>E-mail / Login</h2>
+							<b>@gmail.com</b>
+						</li>
+						<li class="account-user__param">
+							<h2>Дата народження</h2>
+							<b>06.04.1994</b>
+						</li>
+						<li class="account-user__param">
+							<h2>E-mail / Login</h2>
+							<b>@gmail.com</b>
+						</li>
+						<li class="account-user__param">
+							<h2>Телефон</h2>
+							<b>+38 (097) 465-56-72</b>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		@@include("html/_mailing.html")
+	</main>
+
+@@include("html/_footer.html")

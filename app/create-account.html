@@ -1,0 +1,62 @@
+@@include("html/_header.html")
+
+	<main class="main">
+		<section class="login container">
+			<h1 class="login__title section-title" data-aos="fade-in" data-aos-delay="200">
+				Вхід
+			</h1>
+			<form method="post" class="login__form" data-aos="fade-in" data-aos-delay="300">
+				<div class="login__form--background" aria-hidden="true">
+					<img src="img/logo-mob.svg" width="0" height="0" loading="lazy" alt="">
+				</div>
+				<label class="login__label">
+					<input type="text" name="first-name" placeholder="Ваше ім’я*" required class="login__input input">
+				</label>
+				<label class="login__label">
+					<input type="text" name="last-name" placeholder="Ваше прізвище*" required class="login__input input">
+				</label>
+				<label class="login__label">
+					<input type="text" name="date-birth" placeholder="Дата народження" required class="login__input input date-input" readonly>
+				</label>
+				<label class="login__label">
+					<input type="tel" name="tel" placeholder="Телефон*" required class="login__input input">
+				</label>
+				<label class="login__label">
+					<input type="email" name="email" placeholder="E-mail" required class="login__input input">
+				</label>
+				<label class="login__checkbox checkbox is-alternative">
+					<input type="checkbox" name="get-notifications" class="checkbox__input">
+					<span class="checkbox__element">
+						<svg width="9" height="9" viewBox="0 0 9 9">
+							<use xlink:href="img/sprites.svg#check"></use>
+						</svg>
+					</span>
+					<span class="checkbox__text">Отримувати повідомлення про новинки, знижки, акції</span>
+				</label>
+				<label class="login__label">
+					<input type="password" name="password" placeholder="Пароль" required class="login__input input">
+				</label>
+				<label class="login__label">
+					<input type="password" name="repeat-password" placeholder="Пароль" required class="login__input input">
+				</label>
+				<div class="login__form-item is-end">
+					<a href="#">
+						Забули пароль?
+					</a>
+				</div>
+				<div class="login__form--footer">
+					<button class="login__submit btn is-min" type="submit">
+						Зареєструватися
+					</button>
+					<p>
+						Вже є аккаунт?
+					</p>
+					<a href="login.html">
+						Натисніть, щоб увійти
+					</a>	
+				</div>
+			</form>
+		</section>
+	</main>
+
+@@include("html/_footer.html")

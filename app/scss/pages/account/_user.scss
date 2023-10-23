@@ -1,0 +1,42 @@
+.account-user {
+
+	// .account-user__list
+
+	&__list {
+		display: grid;
+		@media (min-width: 360px) {
+			grid-template-columns: 1fr 1fr;
+		}
+		grid-template-columns: 100%;
+		gap: 50px 20px;
+		@include _550 {
+			gap: 50px;
+		}
+	}
+
+	// .account-user__param
+
+	&__param {
+		h2 {
+			font-weight: 350;
+			font-size: 1rem;
+			@include _550 {
+				font-size: 1.125rem;
+			}
+			line-height: 125%;
+			-webkit-text-stroke-width: 0.5px;
+		}
+
+		b {
+			margin-top: 10px;
+			display: block;
+			color: #393939;
+			font-size: 1rem;
+			@include _550 {
+				font-size: 1.125rem;
+			}
+			line-height: 125%;
+			font-weight: 400;
+		}
+	}
+}

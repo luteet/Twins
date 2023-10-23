@@ -1,0 +1,51 @@
+@@include("html/_header.html")
+
+	<main class="main">
+		<div class="breadcrumbs container" data-aos="fade-in" data-aos-delay="100">
+			<a href="index.html" class="breadcrumbs__link">Головна</a>
+			<span class="breadcrumbs__separator"></span>
+			<span class="breadcrumbs__current">Особистий кабінет</span>
+		</div>
+		<section class="account container">
+			@@include("html/_account-aside.html")
+			<div class="account__main" data-aos="fade-in" data-aos-delay="300">
+				<h1 class="account__title section-title">
+					Зміна даних користувача
+				</h1>
+				<form method="post" class="account__change-data account-change-data">
+					<label class="account-change-data__label">
+						<span>Ваше ім’я*</span>
+						<input type="text" name="first-name" required placeholder="Ваше ім‘я" value="Іван" class="input">
+					</label>
+					<label class="account-change-data__label">
+						<span>Прізвище</span>
+						<input type="text" name="last-name" required placeholder="Ваше прізвище" value="Іванов" class="input">
+					</label>
+					<label class="account-change-data__label">
+						<span>E-mail / Login</span>
+						<input type="email" name="email-1" required placeholder="Ваш email" value="@gmail.com" class="input">
+					</label>
+					<label class="account-change-data__label">
+						<span>Дата народження</span>
+						<input type="text" name="date-of-birth" required placeholder="Ваша дата народження" value="06.04.1994" readonly class="input date-input">
+					</label>
+					<label class="account-change-data__label">
+						<span>E-mail / Login</span>
+						<input type="email" name="email-2" required placeholder="Ваш email" value="@gmail.com" class="input">
+					</label>
+					<label class="account-change-data__label">
+						<span>Телефон</span>
+						<input type="tel" name="tel" required placeholder="Ваш номер телефону" value="+38 (097) 465-56-72" class="input">
+					</label>
+					<div class="account-change-data__footer">
+						<button class="account-change-data__submit btn is-alternative is-min" type="submit">
+							Зберегти
+						</button>
+					</div>
+				</form>
+			</div>
+		</section>
+		@@include("html/_mailing.html")
+	</main>
+
+@@include("html/_footer.html")

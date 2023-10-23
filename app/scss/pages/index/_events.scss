@@ -152,6 +152,7 @@
 		margin-top: 20px;
 
 		font-size: 1rem;
+		line-height: 126.923077%;
 
 		@include _550 {
 			font-size: 1.125rem;
@@ -164,7 +165,6 @@
 		@include _992 {
 			font-size: 1.625rem;
 		}
-		line-height: 126.923077%;
 
 	}
 

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+
+	<div class="wrapper">
+		<header class="header container is-simple" data-aos="fade-in" data-aos-delay="100">
+			<div class="header__logo">
+				<a href="index.html" class="header__logo--link">
+					<img src="img/logo.svg" alt="Logo" width="182" height="50" loading="lazy" class="header__logo--img visible-on-desktop">
+					<img src="img/logo-mob.svg" alt="Logo" width="182" height="50" loading="lazy" class="header__logo--img visible-on-mob">
+				</a>
+			</div>
+			<div class="header__contacts">
+				<ul>
+					<li>
+						<a href="tel:0635761245">
+							(097) 798 67 09
+						</a>
+					</li>
+					<li>
+						<a href="tel:0635761245">
+							(063) 576 12 45
+						</a>
+					</li>
+				</ul>
+			</div>
+		</header>
+
+		<main class="main">
+			<section class="checkout container">
+				<h1 class="checkout__title section-title">
+					Оформлення замовлення
+				</h1>
+				<form class="checkout__body">
+					<div class="checkout__aside">
+						<div class="checkout__cart checkout-cart">
+							<h2 class="checkout-cart__title">
+								Ваше замовлення
+							</h2>
+							<ul class="checkout-cart__list">
+								<li class="checkout-cart__item">
+									<div class="checkout-cart__item--body">
+										<div class="checkout-cart__item--image">
+											<picture>
+												<source srcset="img/product/product-image.avif" type="image/avif">
+												<source srcset="img/product/product-image.webp" type="image/webp">
+												<img src="img/product/product-image.jpg" alt="" width="100" height="100" loading="lazy">
+											</picture>
+										</div>
+										<div class="checkout-cart__item--info">
+											<h3 class="checkout-cart__item--name">TWINS Кашпо</h3>
+											<div class="checkout-cart__item--price">
+												<ins>677 ₴</ins>
+												<del>907 ₴</del>
+												<!-- <strong></strong> -->
+											</div>
+											<div class="checkout-cart__item--length product-length">
+												<button class="product-length__btn to-minus" type="button" title="-"></button>
+												<input type="number" name="product-length" value="1" min="1" data-price="677" class="product-length__input">
+												<button class="product-length__btn to-plus" type="button" title="+"></button>
+											</div>
+										</div>
+										<button class="checkout-cart__item--remove" type="button">
+											<svg width="28" height="28" viewBox="0 0 28 28">
+												<use xlink:href="img/sprites.svg#trash"></use>
+											</svg>
+										</button>
+									</div>
+								</li>
+								<li class="checkout-cart__item">
+									<div class="checkout-cart__item--body">
+										<div class="checkout-cart__item--image">
+											<picture>
+												<source srcset="img/product/product-image.avif" type="image/avif">
+												<source srcset="img/product/product-image.webp" type="image/webp">
+												<img src="img/product/product-image.jpg" alt="" width="100" height="100" loading="lazy">
+											</picture>
+										</div>
+										<div class="checkout-cart__item--info">
+											<h3 class="checkout-cart__item--name">TWINS Кашпо</h3>
+											<div class="checkout-cart__item--price">
+												<ins>677 ₴</ins>
+												<del>907 ₴</del>
+												<!-- <strong></strong> -->
+											</div>
+											<div class="checkout-cart__item--length product-length">
+												<button class="product-length__btn to-minus" type="button" title="-"></button>
+												<input type="number" name="product-length" value="1" min="1" data-price="677" class="product-length__input">
+												<button class="product-length__btn to-plus" type="button" title="+"></button>
+											</div>
+										</div>
+										<button class="checkout-cart__item--remove" type="button">
+											<svg width="28" height="28" viewBox="0 0 28 28">
+												<use xlink:href="img/sprites.svg#trash"></use>
+											</svg>
+										</button>
+									</div>
+								</li>
+							</ul>
+							<div class="checkout-cart__result">
+								<div class="checkout-cart__result--param">
+									<span>Підсумок</span>
+									<b data-currency="₴"></b>
+								</div>
+								<div class="checkout-cart__result--param">
+									<span>Вартість доставки</span>
+									<b data-add-price="50">0 ₴ </b>
+								</div>
+							</div>
+							<div class="checkout-cart__total">
+								<input type="hidden" name="price" data-result-price-input value="0" required class="visually-hidden">
+								<b>Разом</b>
+								<strong data-result-price data-result-currency="₴"></strong>
+							</div>
+							<button class="checkout-cart__submit btn" type="submit">
+								Оформлення замовлення
+							</button>
+						</div>
+						<label class="checkout__privacy checkbox">
+							<input type="checkbox" name="privacy" required class="checkbox__input">
+							<span class="checkbox__element">
+								<svg width="9" height="9" viewBox="0 0 9 9">
+									<use xlink:href="img/sprites.svg#check"></use>
+								</svg>
+							</span>
+							<p class="checkbox__text">
+								Подтверждая заказ, я принимаю условия <a href="#">пользовательского соглашения</a>
+							</p>
+						</label>
+					</div>
+					<div class="checkout__main">
+						<div class="checkout__block">
+							<div class="checkout__block--header">
+								<div class="checkout__block--number"></div>
+								<h2 class="checkout__block--title">
+									Контактна інформація
+								</h2>
+							</div>
+							<div class="checkout__block--form">
+								<label>
+									<span>Ім’я</span>
+									<input type="text" class="input" name="first-name" placeholder="Напишіть Ваше ім’я" required>
+								</label>
+								<label>
+									<span>Номер телефона</span>
+									<input type="tel" class="input tel-constructor-input" data-tc-sample=" (xxx) xxx-xx-xx" data-tc-country-code="38" name="phone" placeholder="+38 (___)-___-__-__" required>
+								</label>
+								<label>
+									<span>E-mail</span>
+									<input type="email" class="input" name="email" placeholder="Ваш e-mail" required>
+								</label>
+							</div>
+						</div>
+						<div class="checkout__block">
+							<div class="checkout__block--header">
+								<div class="checkout__block--number"></div>
+								<h2 class="checkout__block--title">
+									Виберіть спосіб доставки
+								</h2>
+							</div>
+							<div class="checkout__block--form">
+								<div class="checkout__block--select">
+									<span>Ваше місто</span>
+									<div class="checkout__block--select-body">
+										<select name="city" required class="select">
+											<option value="" disabled selected>Оберіть місто</option>
+											<option value="city-1">Київ</option>
+											<option value="city-2">Львів</option>
+											<option value="city-3">Харків</option>
+										</select>
+										<svg width="14" height="14" viewBox="0 0 9 9">
+											<use xlink:href="img/sprites.svg#drop-down-arrow"></use>
+										</svg>
+									</div>
+								</div>
+								<ul class="checkout__block--radio-list checkout__radio-list">
+									<li>
+										<label class="checkout__radio-item">
+											<input type="radio" name="delivery" value="1" required class="checkout__radio-item--input">
+											<span class="checkout__radio-item--border"></span>
+											<span class="checkout__radio-item--element"></span>
+											<i class="checkout__radio-item--icon">
+												<img src="img/payment-delivery/payment-delivery-icon-1.svg" width="25" height="25" loading="lazy" alt="">
+											</i>
+											<span class="checkout__radio-item--info">
+												<h3>Самовивіз із магазину</h3>
+												<p>23 жовтня</p>
+											</span>
+											<b class="checkout__radio-item--price is-free">
+												Безоплатно
+											</b>
+										</label>
+									</li>
+									<li>
+										<label class="checkout__radio-item">
+											<input type="radio" name="delivery" value="1" required class="checkout__radio-item--input">
+											<span class="checkout__radio-item--border"></span>
+											<span class="checkout__radio-item--element"></span>
+											<i class="checkout__radio-item--icon">
+												<img src="img/payment-delivery/new-post-icon.svg" width="38" height="38" loading="lazy" alt="">
+											</i>
+											<span class="checkout__radio-item--info">
+												<h3>У відділення Нової Пошти</h3>
+												<p>23 жовтня</p>
+											</span>
+											<b class="checkout__radio-item--price">
+												60 ₴
+											</b>
+										</label>
+									</li>
+									<li>
+										<label class="checkout__radio-item">
+											<input type="radio" name="delivery" value="1" required class="checkout__radio-item--input">
+											<span class="checkout__radio-item--border"></span>
+											<span class="checkout__radio-item--element"></span>
+											<i class="checkout__radio-item--icon">
+												<img src="img/payment-delivery/new-post-icon.svg" width="38" height="38" loading="lazy" alt="">
+											</i>
+											<span class="checkout__radio-item--info">
+												<h3>Кур'єр Нова Пошта</h3>
+												<p>23 жовтня</p>
+											</span>
+											<b class="checkout__radio-item--price">
+												758 ₴
+											</b>
+										</label>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="checkout__block">
+							<div class="checkout__block--header">
+								<div class="checkout__block--number"></div>
+								<h2 class="checkout__block--title">
+									Вибір способу оплати
+								</h2>
+							</div>
+							<div class="checkout__block--form">
+								<ul class="checkout__block--radio-list checkout__radio-list">
+									<li>
+										<label class="checkout__radio-item">
+											<input type="radio" name="delivery" value="1" required class="checkout__radio-item--input">
+											<span class="checkout__radio-item--border"></span>
+											<span class="checkout__radio-item--element"></span>
+											<i class="checkout__radio-item--icon">
+												<img src="img/payment-delivery/payment-delivery-icon-5.svg" width="25" height="25" loading="lazy" alt="">
+											</i>
+											<span class="checkout__radio-item--info">
+												<h3>Оплата при отриманні</h3>
+											</span>
+										</label>
+									</li>
+									<li>
+										<label class="checkout__radio-item">
+											<input type="radio" name="delivery" value="1" required class="checkout__radio-item--input">
+											<span class="checkout__radio-item--border"></span>
+											<span class="checkout__radio-item--element"></span>
+											<i class="checkout__radio-item--icon">
+												<img src="img/payment-delivery/payment-delivery-icon-7.svg" width="25" height="25" loading="lazy" alt="">
+											</i>
+											<span class="checkout__radio-item--info">
+												<h3>Оплата онлайн</h3>
+												<p>Visa / MasterCard</p>
+											</span>
+										</label>
+									</li>
+									<li>
+										<label class="checkout__radio-item">
+											<input type="radio" name="delivery" value="1" required class="checkout__radio-item--input">
+											<span class="checkout__radio-item--border"></span>
+											<span class="checkout__radio-item--element"></span>
+											<i class="checkout__radio-item--icon">
+												<img src="img/checkout/apple-pay.svg" width="22" height="22" loading="lazy" alt="">
+											</i>
+											<span class="checkout__radio-item--info">
+												<h3>Apple Pay</h3>
+												<p>Онлайн-оплата</p>
+											</span>
+										</label>
+									</li>
+									<li>
+										<label class="checkout__radio-item">
+											<input type="radio" name="delivery" value="1" required class="checkout__radio-item--input">
+											<span class="checkout__radio-item--border"></span>
+											<span class="checkout__radio-item--element"></span>
+											<i class="checkout__radio-item--icon">
+												<img src="img/checkout/google-pay.svg" width="22" height="22" loading="lazy" alt="">
+											</i>
+											<span class="checkout__radio-item--info">
+												<h3>Google Pay</h3>
+												<p>Онлайн-оплата</p>
+											</span>
+										</label>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</form>
+			</section>
+		</main>
+
+
+		<script src="js/libs.min.js"></script>
+		<script src="js/main.js"></script>
+
+</body>
+
+</html>

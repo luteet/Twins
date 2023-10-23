@@ -1,0 +1,41 @@
+.shares {
+
+	// .shares__title
+
+	&__title {
+		text-align: center
+	}
+
+	// .shares__list
+
+	&__list {
+		margin-top: 40px;
+
+		display: grid;
+		@include _768 {
+			grid-template-columns: repeat(12,1fr);
+		}
+		//grid-auto-rows: min-content;
+		gap: 40px 20px;
+	}
+
+	// .shares__item
+
+	&__item {
+	}
+}
+
+.shares-product-card {
+
+	@include _768 {
+		grid-column: 6 span;
+	}
+
+	@include _992 {
+		grid-column: 4 span;
+	}
+}
+
+@import "card";
+@import "large-block";
+@import "timer";

@@ -1,0 +1,298 @@
+.account-history-orders {
+
+	// .account-history-orders__list
+
+	&__list {
+	}
+
+	// .account-history-orders__item
+
+	&__item {
+		&:not(:first-child) {
+			margin-top: 20px;
+		}
+		border: 1px solid #E7E7E7;
+	}
+
+	// .account-history-orders__item-header
+
+	&__item-header {
+		padding: 7px;
+
+		color: #4C4C4C;
+		text-align: start;
+
+		background: transparent;
+
+		display: flex;
+		justify-content: space-between;
+
+		@include _992 {
+			display: grid;
+			grid-template-columns: 150px 1.2fr 1fr 1fr 44px;
+		}
+
+		@media (min-width: 1400px) {
+			grid-template-columns: 200px 1fr 1fr 1fr 44px;
+		}
+		gap: 0 10px;
+		width: 100%;
+		align-items: center;
+	}
+
+	&__item-header.is-active & {
+		&__arrow svg {
+			transform: scaleY(-1);
+		}
+	}
+
+	// .account-history-orders__status
+
+	&__status {
+		padding-left: 10px;
+
+		display: inline-flex;
+		align-items: center;
+		justify-self: start;
+
+		i {
+			flex: 0 0 23px; width: 23px; height: 23px;
+			margin-right: 8px;
+
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			background: #f1f1f1;
+			color: var(--black);
+		}
+
+		&.is-done {
+			i {
+				background: #89C179;
+				color: var(--white);
+			}
+		}
+
+		&.is-waiting {
+			i {
+				background: #E0C04D;
+				color: var(--white);
+			}
+		}
+	}
+
+	// .account-history-orders__number
+
+	&__number {
+		font-size: 1rem;
+		@media (min-width: 1400px) {
+			font-size: 1.125rem;
+		}
+		justify-self: start;
+	}
+
+	// .account-history-orders__date
+
+	&__date {
+		font-size: 1rem;
+		@media (min-width: 1400px) {
+			font-size: 1.125rem;
+		}
+		justify-self: start;
+	}
+
+	// .account-history-orders__min-info
+
+	&__min-info {
+		font-size: 1rem;
+		@media (min-width: 1400px) {
+			font-size: 1.125rem;
+		}
+		justify-self: start;
+	}
+
+	// .account-history-orders__arrow
+
+	&__arrow {
+		width: 44px; height: 44px; flex: 0 0 44px;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		color: #A78F7A;
+		background: #F4F4F4;
+
+		svg {
+			width: 15px; height: auto;
+			transition: transform .3s ease;
+		}
+	}
+
+	&__item-header.is-active + &__block {
+		grid-template-rows: 1fr;
+	}
+
+	// .account-history-orders__block
+
+	&__block {
+		padding: 0 18px;
+
+		display: grid;
+		grid-template-rows: 0fr;
+
+		transition: grid-template-rows .4s ease;
+
+		> * {
+			overflow: hidden;
+		}
+	}
+
+	// .account-history-orders__list-orders
+
+	&__list-orders {
+		padding-top: 10px;
+
+		display: grid;
+		@include _768 {
+			grid-template-columns: 1fr 1fr;
+		}
+		gap: 30px;
+
+		@include _992 {
+			display: block;
+		}
+	}
+
+	// .account-history-orders__order
+
+	&__order {
+
+		display: flex;
+		flex-direction: column;
+
+		gap: 10px;
+		@include _768 {
+			gap: 20px;
+		}
+
+		@include _992 {
+			gap: 0 10px;
+
+			&:not(:first-child) {
+				margin-top: 20px;
+			}
+
+			display: grid;
+			align-items: center;
+			grid-template-columns: 138px 1.2fr 1fr 1fr 30px;
+		}
+
+		@media (min-width: 1400px) {
+			grid-template-columns: 188px 1fr 1fr 1fr 30px;
+		}
+
+		color: #2C2C2C;
+
+		font-size: 1rem;
+		@media (min-width: 1400px) {
+			font-size: 1.125rem;
+		}
+
+		// .account-history-orders__order--image
+
+		&--image {
+			img {
+				object-fit: cover;
+			}
+		}
+
+		// .account-history-orders__order--info
+
+		&--info {
+			
+		}
+
+		// .account-history-orders__order--name
+
+		&--name {
+		}
+
+		// .account-history-orders__order--price
+
+		&--price {
+			display: block;
+			@include _992 {
+				padding-top: 5px;
+			}
+
+			strong, ins {
+				text-decoration: none;
+				font-weight: 400;
+				line-height: 133%;
+
+				padding-right: 5px;
+			}
+
+			del {
+				color: #979797;
+				line-height: 133%;
+			}
+		}
+
+		// .account-history-orders__order--param
+
+		&--param {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			flex-wrap: wrap;
+
+			.visible-on-mob {
+				color: #979797;
+				padding-right: 5px;
+			}
+
+			@include _992 {
+				display: block;
+				padding-bottom: 2ch;
+			}
+		}
+	}
+
+	// .account-history-orders__footer
+
+	&__footer {
+
+		color: #414141;
+
+		line-height: 150%;
+		font-size: 1rem;
+		@include _550 {
+			font-size: 1.125rem;
+		}
+
+		margin-top: 30px; padding-top: 21px; padding-bottom: 12px;
+		border-top: 1px solid #E7E7E7;
+
+		hr {
+			margin-top: 20px; margin-bottom: 10px;
+			background: #E7E7E7;
+			height: 1px;
+		}
+
+		// .account-history-orders__footer--param
+
+		&--param {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding: 1px 0;
+
+			> *:first-child {
+				font-weight: 700;
+			}
+		}
+	}
+}

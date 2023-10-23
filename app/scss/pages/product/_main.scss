@@ -4,16 +4,11 @@
 	@include _992 {
 		grid-template-columns: 0.9fr 1.1fr;
 		gap: 0 51px;
-
-		margin-top: 50px;
-
 	}
 
 	@media (min-width: 1600px) {
 		grid-template-columns: 0.79fr 1.21fr;
 	}
-
-	margin-top: 30px;
 	
 	gap: 30px 0;
 

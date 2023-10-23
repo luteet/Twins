@@ -1,0 +1,72 @@
+.thanks {
+
+	text-align: center;
+	padding-top: 70px;
+	@include _768 {
+		padding-top: 100px;
+		padding-bottom: 77px;
+	}
+
+	// .thanks__icon
+
+	&__icon {
+		display: inline-block;
+	}
+
+	// .thanks__body
+
+	&__body {
+		max-width: 889px;
+		margin: 30px auto 0;
+		border: 1.5px solid #202121;
+		overflow: hidden;
+
+		padding: 20px;
+		@include _550 {
+			padding: 54px 25px max(54px, 10%);
+		}
+
+		position: relative;
+		img {
+			position: absolute;
+			left: 0; bottom: 0;
+			width: 100%; height: auto;
+			z-index: -1;
+			opacity: .05;
+		}
+	}
+
+	// .thanks__background
+
+	&__background {
+	}
+
+	// .thanks__title
+
+	&__title {
+	}
+
+	// .thanks__text
+
+	&__text {
+		margin-top: 20px;
+		
+		text-align: center;
+		color: #565656;
+		line-height: 140%;
+		font-size: 1rem;
+		@include _550 {
+			font-size: 1.125rem;
+		}
+		
+		@include _992 {
+			font-size: 1.25rem;
+		}
+	}
+
+	// .thanks__btn
+
+	&__btn {
+		margin-top: 30px;
+	}
+}

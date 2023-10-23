@@ -6,64 +6,6 @@ const
 	burger = document.querySelector('.header__burger'),
 	header = document.querySelector('.header');
 
-
-function slideUp (target, duration=300) {
-	target.style.transitionProperty = 'height, margin, padding';
-	target.style.transitionDuration = duration + 'ms';
-	target.style.boxSizing = 'border-box';
-	target.style.height = target.offsetHeight + 'px';
-	target.offsetHeight;
-	target.style.overflow = 'hidden';
-	target.style.height = 0;
-	target.style.paddingTop = 0;
-	target.style.paddingBottom = 0;
-	target.style.marginTop = 0;
-	target.style.marginBottom = 0;
-	window.setTimeout( () => {
-		target.style.display = 'none';
-		target.style.removeProperty('height');
-		target.style.removeProperty('padding-top');
-		target.style.removeProperty('padding-bottom');
-		target.style.removeProperty('margin-top');
-		target.style.removeProperty('margin-bottom');
-		target.style.removeProperty('overflow');
-		target.style.removeProperty('transition-duration');
-		target.style.removeProperty('transition-property');
-	}, duration);
-}
-
-function slideDown (target, duration=300) {
-	target.style.removeProperty('display');
-	let display = window.getComputedStyle(target).display;
-
-	if (display === 'none')
-		display = 'block';
-
-	target.style.display = display;
-	let height = target.offsetHeight;
-	target.style.overflow = 'hidden';
-	target.style.height = 0;
-	target.style.paddingTop = 0;
-	target.style.paddingBottom = 0;
-	target.style.marginTop = 0;
-	target.style.marginBottom = 0;
-	target.offsetHeight;
-	target.style.boxSizing = 'border-box';
-	target.style.transitionProperty = "height, margin, padding";
-	target.style.transitionDuration = duration + 'ms';
-	target.style.height = height + 'px';
-	target.style.removeProperty('padding-top');
-	target.style.removeProperty('padding-bottom');
-	target.style.removeProperty('margin-top');
-	target.style.removeProperty('margin-bottom');
-	window.setTimeout( () => {
-		target.style.removeProperty('height');
-		target.style.removeProperty('overflow');
-		target.style.removeProperty('transition-duration');
-		target.style.removeProperty('transition-property');
-	}, duration);
-}
-
 function Popup(arg) {
 
 	let body = document.querySelector('body'),
@@ -180,7 +122,6 @@ function Popup(arg) {
 
 					popupCheckClose = true;
 					popup.style.display = 'none';
-					popup.removeEventListener('transitionend', closeFunc)
 
 					if(popup.classList.contains('stories-popup')) {
 						const video = popup.querySelector('.splide__slide.is-active .stories-popup__video');
@@ -193,9 +134,12 @@ function Popup(arg) {
 					}
 				}
 
-				popup.addEventListener('transitionend', closeFunc)
+				setTimeout(() => {
+					closeFunc()
+				},300)
+				
 
-			}, 0)
+			}, 50)
 
 		}
 	}
@@ -253,6 +197,44 @@ function Popup(arg) {
 const popup = new Popup();
 
 popup.init();
+
+
+function updatePrice() {
+	const prices = document.querySelectorAll('[data-price]'),
+	addPrices = document.querySelectorAll('[data-add-price]'),
+	resultPriceInput = document.querySelectorAll('[data-result-price-input]'),
+	resultPriceSum = document.querySelectorAll('[data-result-price-sum]'),
+	resultPrice = document.querySelectorAll('[data-result-price]');
+
+	let result = 0, resultAdd = 0;
+
+	prices.forEach(price => {
+		if(price.value > 0) {
+			result += Number(price.dataset.price) * price.value;
+		}
+	})
+
+	addPrices.forEach(price => {
+		if(prices.length) resultAdd += Number(price.dataset.addPrice);
+	})
+
+	resultPrice.forEach(resultPrice => {
+		resultPrice.textContent = (resultAdd + result).toLocaleString() + ' ' + resultPrice.dataset.resultCurrency;
+	})
+	
+	resultPriceInput.forEach(resultPriceInput => {
+		resultPriceInput.value = result + resultAdd;
+	})
+
+	resultPriceSum.forEach(resultPriceSum => {
+		resultPriceSum.textContent = result.toLocaleString() + ' ' + resultPriceSum.dataset.resultCurrency;
+	})
+	
+}
+
+setTimeout(() => {
+	updatePrice()
+},0)
 
 // =-=-=-=-=-=-=-=-=-=- <image-aspect-ratio> -=-=-=-=-=-=-=-=-=-=-
 
@@ -390,6 +372,77 @@ body.addEventListener('click', function (event) {
 	// =-=-=-=-=-=-=-=-=-=-=-=- </blog-categories> -=-=-=-=-=-=-=-=-=-=-=-=
 
 
+
+	// =-=-=-=-=-=-=-=-=-=-=-=- <account-history-orders> -=-=-=-=-=-=-=-=-=-=-=-=
+	
+	const accountHistoryOrdersItemHeader = $(".account-history-orders__item-header")
+	if(accountHistoryOrdersItemHeader) {
+	
+		accountHistoryOrdersItemHeader.classList.toggle('is-active')
+	
+	}
+	
+	// =-=-=-=-=-=-=-=-=-=-=-=- </account-history-orders> -=-=-=-=-=-=-=-=-=-=-=-=
+
+
+
+	// =-=-=-=-=-=-=-=-=-=-=-=- <cart> -=-=-=-=-=-=-=-=-=-=-=-=
+	
+	const cartItemLengthBtn = $(".product-length__btn")
+	if(cartItemLengthBtn) {
+
+		const input = cartItemLengthBtn.parentElement.querySelector('input');
+	
+		if(cartItemLengthBtn.classList.contains('to-minus')) {
+			if(input.value <= 1) {
+				input.value = input.getAttribute('min');
+			} else {
+				input.value--;
+			}
+		}
+
+		if(cartItemLengthBtn.classList.contains('to-plus')) {
+			input.value++
+		}
+
+		updatePrice();
+	
+	}
+
+	const cartItemRemove = $(".cart-item__remove")
+	if(cartItemRemove) {
+
+		const cart = cartItemRemove.closest('.cart-item');
+		cart.classList.add('is-removing');
+		setTimeout(() => {
+			cart.remove();
+
+			setTimeout(() => {
+				updatePrice();
+			},0)
+		},400)
+	
+	}
+
+	const checkoutCartItemRemove = $(".checkout-cart__item--remove")
+	if(checkoutCartItemRemove) {
+	
+		const item = checkoutCartItemRemove.closest('.checkout-cart__item');
+		item.classList.add('is-removing');
+		if(item) {
+			setTimeout(() => {
+				item.remove()
+				setTimeout(() => {
+					updatePrice();
+				},0)
+			},300)
+		}
+	
+	}
+	
+	// =-=-=-=-=-=-=-=-=-=-=-=- </cart> -=-=-=-=-=-=-=-=-=-=-=-=
+
+
 })
 
 // =-=-=-=-=-=-=-=-=-=- </click events> -=-=-=-=-=-=-=-=-=-=-
@@ -400,11 +453,13 @@ body.addEventListener('click', function (event) {
 
 let windowSize = 0;
 
-const heroProductBackground = document.querySelector('.hero__product--background');
+const heroProductBackground = document.querySelector('.hero__product--background'),
+aboutCompanyBackground = document.querySelector('.about-company__background');
 
 function resize() {
 
 	if(heroProductBackground) heroProductBackground.style.setProperty('--height', heroProductBackground.offsetHeight + 'px');
+	if(aboutCompanyBackground) aboutCompanyBackground.style.setProperty('--height', aboutCompanyBackground.offsetHeight + 'px');
 
 	html.style.setProperty("--height-header", header.offsetHeight + "px");
 	html.style.setProperty("--vh", window.innerHeight * 0.01 + "px");
@@ -808,51 +863,7 @@ function rangeSlider() {
 			} else if(ValueChangeHandler['index'] == 1) {
 				maxInput.value = ValueChangeHandler['real'];
 			}
-		})
-
-		//console.log(jsr)
-		/* jsr.addEventListener('update', (input, value) => {
-			console.log(input)
-		}); */
-
-		/* let tooltip_1 = rangeElement.querySelectorAll('.wrunner__valueNote')[0],
-		tooltip_2 = rangeElement.querySelectorAll('.wrunner__valueNote')[1]; */
-
-		/* var setting = {
-			roots: rangeElement,
-			type: 'range',
-			limits : {
-				minLimit: Number(rangeElement.dataset.min),
-				maxLimit: Number(rangeElement.dataset.max)
-			},
-			rangeValue: {
-				minValue: Number(rangeElement.dataset.minValue),
-				maxValue: Number(rangeElement.dataset.maxValue),
-			},
-			step: 1,
-			onValueUpdate: function (values) {
-				if(!tooltip_1) tooltip_1 = rangeElement.querySelectorAll('.wrunner__valueNote')[0];
-				if(!tooltip_2) tooltip_2 = rangeElement.querySelectorAll('.wrunner__valueNote')[1];
-
-				if(minInput.value != values['minValue'] && tooltip_1 && tooltip_2) {
-					tooltip_1.style.zIndex = 2;
-					tooltip_2.style.removeProperty('z-index');
-				}
-
-				if(maxInput.value != values['maxValue'] && tooltip_1 && tooltip_2) {
-					tooltip_2.style.zIndex = 2;
-					tooltip_1.style.removeProperty('z-index');
-				}
-
-				minInput.value = values['minValue'];
-				maxInput.value = values['maxValue'];
-			},
-		}
-
-		var slider = wRunner(setting); */
-
-		
-	
+		})	
 	})
 }
 
@@ -870,3 +881,104 @@ AOS.init({
 });
 
 // =-=-=-=-=-=-=-=-=-=-=-=- </animation> -=-=-=-=-=-=-=-=-=-=-=-=
+
+
+
+// =-=-=-=-=-=-=-=-=-=-=-=- <timer> -=-=-=-=-=-=-=-=-=-=-=-=
+/*
+<div class="timer" data-timer-year="" data-timer-month="" data-timer-day="" data-timer-hour="" data-timer-minute="">
+	<span class="timer-days"><span class="timer-days-value"></span></d>
+	<span class="timer-hours"><span class="timer-hours-value"></span></span>
+	<span class="timer-minutes"><span class="timer-minutes-value"></span></span>
+	<span class="timer-seconds"><span class="timer-seconds-value"></span></span>
+</div>
+*/
+
+function timerSetString(result, value) {
+	if(value <= 9) {
+		result[0].textContent = "0";
+		result[1].textContent = value.toString();
+	} else {
+		result[0].textContent = value.toString().split('')[0];
+		result[1].textContent = value.toString().split('')[1];
+	}
+}
+
+function timer() {
+	const timerElems = document.querySelectorAll('.shares-timer');
+
+	let deadline;
+
+	timerElems.forEach(thisTimerElem => {
+
+		let timerData = thisTimerElem.dataset.timer;
+		if(timerData) timerData = timerData.split('-');
+		
+
+		deadline = new Date(
+
+		timerData[0],
+		Number(timerData[1] - 1),
+		timerData[2],
+		0,
+		0);
+
+		const
+		day = thisTimerElem.querySelectorAll('.shares-timer__days span'),
+		hour = thisTimerElem.querySelectorAll('.shares-timer__hours span'),
+		minute = thisTimerElem.querySelectorAll('.shares-timer__minutes span'),
+		second = thisTimerElem.querySelectorAll('.shares-timer__seconds span');
+
+		const diff = deadline - new Date(),
+		days = diff > 0 ? Math.floor(diff / 1000 / 60 / 60 / 24) : 0,
+		hours = diff > 0 ? Math.floor(diff / 1000 / 60 / 60) % 24 : 0,
+		minutes = diff > 0 ? Math.floor(diff / 1000 / 60) % 60 : 0,
+		seconds = diff > 0 ? Math.floor(diff / 1000) % 60 : 0;
+
+		timerSetString(day, days);
+		timerSetString(hour, hours);
+		timerSetString(minute, minutes);
+		
+		/* hour.textContent = hours.toString();
+		minute.textContent = minutes.toString();
+		second.textContent = seconds.toString(); */
+		//console.log(hours.toString().split(''))
+
+	});
+
+}
+
+timer();
+
+setInterval(() => {
+	timer();
+},1000)
+
+// =-=-=-=-=-=-=-=-=-=-=-=- </timer> -=-=-=-=-=-=-=-=-=-=-=-=
+
+
+
+// =-=-=-=-=-=-=-=-=-=-=-=- <datepicker> -=-=-=-=-=-=-=-=-=-=-=-=
+
+Datepicker.locales.uk = {
+    days: ["Неділя", "Понеділок", "Вівторок", "Середа", "Четвер", "П'ятниця", "Субота"],
+	daysShort: ["Нед", "Пнд", "Втр", "Срд", "Чтв", "Птн", "Суб"],
+	daysMin: ["Нд", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"],
+	months: ["Січень", "Лютий", "Березень", "Квітень", "Травень", "Червень", "Липень", "Серпень", "Вересень", "Жовтень", "Листопад", "Грудень"],
+	monthsShort: ["Січ", "Лют", "Бер", "Кві", "Тра", "Чер", "Лип", "Сер", "Вер", "Жов", "Лис", "Гру"],
+	today: "Сьогодні",
+	clear: "Очистити",
+	format: "dd.mm.yyyy",
+	weekStart: 1
+};
+  
+
+const datesInputs = document.querySelectorAll('.date-input');
+datesInputs.forEach(input => {
+	const datepicker = new window.Datepicker(input, {
+		language:"uk"
+	  }); 
+})
+
+
+// =-=-=-=-=-=-=-=-=-=-=-=- </datepicker> -=-=-=-=-=-=-=-=-=-=-=-=

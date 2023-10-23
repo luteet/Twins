@@ -1,0 +1,136 @@
+.shares-timer {
+
+	text-align: center;
+
+	margin-top: 15px;
+
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+
+	@media (min-width: 1300px) {
+		&.is-row {
+			margin-top: 0px;
+	
+			flex-direction: row;
+			align-items: flex-start;
+		}
+	
+		&.is-row & {
+			&__text {
+				padding-right: 11px; padding-top: 15px;
+			}
+			&__main {
+				margin-top: 0;
+			}
+		}
+	}
+
+	
+
+	// .shares-timer__text
+
+	&__text {
+		color: #202121;
+		line-height: 120%;
+		font-size: 1rem;
+		strong {
+			font-size: 1.175rem;
+		}
+		@include _550 {
+			font-size: 1.25rem;
+			strong {
+				font-size: 1.5rem;
+			}
+		}
+		
+		@include _992 {
+			font-size: 1.5625rem;
+			strong {
+				font-size: 1.875rem;
+			}
+		}
+	}
+
+	// .shares-timer__main
+
+	&__main {
+		margin-top: 11px;
+
+		display: flex;
+		align-items: center;
+	}
+
+	// .shares-timer__param
+
+	&__param {
+		display: grid;
+		grid-template-columns: 30px 30px;
+		@include _550 {
+			grid-template-columns: 44px 44px;
+		}
+		gap: 2px;
+
+		> span {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			width: 30px; height: 40px;
+			@include _550 {
+				width: 44px; height: 58px;
+			}
+			
+			background: #F4F4F4;
+			border-radius: 5px;
+
+			color: var(--accent);
+			text-align: center;
+			font-weight: 700;
+			line-height: 100%;
+			font-size: 1rem;
+			@include _550 {
+				font-size: 1.25rem;
+			}
+			
+			@include _992 {
+				font-size: 1.875rem;
+			}
+			
+		}
+		
+	}
+
+	// .shares-timer__hours
+
+	&__hours {
+	}
+
+	// .shares-timer__separator
+
+	&__separator {
+		padding: 0 11px;
+		color: var(--accent);
+		text-align: center;
+		font-weight: 700;
+		line-height: 100%;
+		font-size: 1rem;
+		@include _550 {
+			font-size: 1.25rem;
+		}
+		
+		@include _992 {
+			font-size: 1.875rem;
+		}
+	}
+
+	// .shares-timer__minutes
+
+	&__minutes {
+	}
+
+	// .shares-timer__seconds
+
+	&__seconds {
+	}
+}

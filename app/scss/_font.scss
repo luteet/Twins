@@ -50,8 +50,15 @@
 		line-height: 85%;
 	}
 
+	&._min {
+		font-size: 1.25rem; // 20px
+	}
+
 	@include _550 {
 		font-size: 2rem; // 32px
+		&._min {
+			font-size: 1.375rem; // 22px
+		}
 		&._large {
 			font-size: 2.5rem; // 40px
 		}
@@ -59,6 +66,9 @@
 
 	@include _768 {
 		font-size: 2.5rem; // 40px
+		&._min {
+			font-size: 1.625rem; // 26px
+		}
 		&._large {
 			font-size: 3rem; // 48px
 		}
@@ -67,6 +77,9 @@
 	@include _992 {
 		font-size: 4rem; // 64px
 		line-height: 117%;
+		&._min {
+			font-size: 2rem; // 32px
+		}
 		&._large {
 			line-height: 85%;
 			font-size: 4.375rem; // 70px
@@ -75,8 +88,10 @@
 
 	@include _container {
 		font-size: 4.375rem; // 70px
-		line-height: 135%;
-		
+		line-height: 105%;
+		&._min {
+			font-size: 2.8125rem; // 45px
+		}
 		&._large {
 			line-height: 85%;
 			font-size: 6.25rem; // 100px

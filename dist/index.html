@@ -18,12 +18,12 @@
 					<img src="img/logo-mob.svg" alt="Logo" width="112" height="50" loading="lazy" class="header__logo--img visible-on-mob">
 				</a>
 			</div>
-			<a href="#" class="header__icon-link visible-on-mob">
+			<a href="login.html" class="header__icon-link visible-on-mob">
 				<svg width="24" height="24" viewBox="0 0 30 30">
 					<use xlink:href="img/sprites.svg#user"></use>
 				</svg>
 			</a>
-			<a href="#" class="header__icon-link visible-on-mob">
+			<a href="#cart-popup" class="header__icon-link visible-on-mob open-popup">
 				<svg width="30" height="30" viewBox="0 0 35 35">
 					<use xlink:href="img/sprites.svg#cart"></use>
 				</svg>
@@ -38,7 +38,7 @@
 					<div class="header__nav--row">
 						<ul class="header__nav--list">
 							<li>
-								<a href="#">
+								<a href="about-company.html">
 									Про компанію
 								</a>
 							</li>
@@ -66,7 +66,7 @@
 						<div class="header__add visible-on-desktop">
 							<ul class="header__add--list">
 								<li>
-									<a href="#" aria-label="Користувач">
+									<a href="login.html" aria-label="Користувач">
 										<svg width="30" height="30" viewBox="0 0 30 30">
 											<use xlink:href="img/sprites.svg#user"></use>
 										</svg>
@@ -74,7 +74,7 @@
 									</a>
 								</li>
 								<li>
-									<a href="#" aria-label="Корзина">
+									<a href="#cart-popup" class="open-popup" aria-label="Корзина">
 										<svg width="35" height="35" viewBox="0 0 35 35">
 											<use xlink:href="img/sprites.svg#cart"></use>
 										</svg>
@@ -1613,6 +1613,128 @@
 						<button class="stories-popup__arrow splide__arrow splide__arrow--next" type="button"></button>
 					</div>
 				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="cart-popup popup" id="cart-popup" style="display: none;">
+		<div class="cart-popup__wrapper popup-wrapper">
+			<div class="cart-popup__bg popup-bg popup-close"></div>
+			<div class="cart-popup__body popup-body">
+				<button type="button" class="cart-popup__close-btn popup-close-btn popup-close" title="Закрыть">
+					<svg width="30" height="30" viewBox="0 0 30 30">
+						<use xlink:href="img/sprites.svg#close-2"></use>
+					</svg>
+				</button>
+				<form method="post" class="cart-popup__container">
+					<h1 class="cart-popup__title section-title _min">
+						Товар додан у корзину
+					</h1>
+					<ul class="cart-popup__list">
+						<li class="cart-popup__item cart-item">
+							<div class="cart-item__body">
+								<div class="cart-item__image">
+									<picture>
+										<source srcset="img/product/product-image.avif" type="image/avif">
+										<source srcset="img/product/product-image.webp" type="image/webp">
+										<img src="img/product/product-image.jpg" alt="" width="100" height="100" loading="lazy">
+									</picture>
+								</div>
+								<div class="cart-item__param">
+									<span class="visible-on-mob">Назва</span>
+									<h2 class="cart-item__name">
+										TWINS Кашпо
+									</h2>
+								</div>
+								<div class="cart-item__param">
+									<span class="visible-on-mob">Кількість</span>
+									<div class="cart-item__price visible-on-desktop">
+										<ins>677 ₴</ins>
+										<del>907 ₴</del>
+										<!-- <strong></strong> -->
+									</div>
+									<div class="cart-item__length product-length">
+										<button class="product-length__btn to-minus" type="button" title="-"></button>
+										<input type="number" name="product-length" data-price="677" value="1" min="1" class="product-length__input">
+										<button class="product-length__btn to-plus" type="button" title="+"></button>
+									</div>
+								</div>
+								<div class="cart-item__param visible-on-mob">
+									<span class="visible-on-mob">Ціна</span>
+									<div class="cart-item__price">
+										<ins>677 ₴</ins>
+										<del>907 ₴</del>
+										<!-- <strong></strong> -->
+									</div>
+								</div>
+								<button class="cart-item__remove" type="button" title="Видалити товар з кошика">
+									<svg width="28" height="28" viewBox="0 0 28 28">
+										<use xlink:href="img/sprites.svg#trash"></use>
+									</svg>
+								</button>
+							</div>
+						</li>
+						<li class="cart-popup__item cart-item">
+							<div class="cart-item__body">
+								<div class="cart-item__image">
+									<picture>
+										<source srcset="img/product/product-image.avif" type="image/avif">
+										<source srcset="img/product/product-image.webp" type="image/webp">
+										<img src="img/product/product-image.jpg" alt="" width="100" height="100" loading="lazy">
+									</picture>
+								</div>
+								<div class="cart-item__param">
+									<span class="visible-on-mob">Назва</span>
+									<h2 class="cart-item__name">
+										TWINS Кашпо
+									</h2>
+								</div>
+								<div class="cart-item__param">
+									<span class="visible-on-mob">Кількість</span>
+									<div class="cart-item__price visible-on-desktop">
+										<ins>677 ₴</ins>
+										<del>907 ₴</del>
+										<!-- <strong></strong> -->
+									</div>
+									<div class="cart-item__length product-length">
+										<button class="product-length__btn to-minus" type="button" title="-"></button>
+										<input type="number" name="product-length" data-price="677" value="1" min="1" class="product-length__input">
+										<button class="product-length__btn to-plus" type="button" title="+"></button>
+									</div>
+								</div>
+								<div class="cart-item__param visible-on-mob">
+									<span class="visible-on-mob">Ціна</span>
+									<div class="cart-item__price">
+										<ins>677 ₴</ins>
+										<del>907 ₴</del>
+										<!-- <strong></strong> -->
+									</div>
+								</div>
+								<button class="cart-item__remove" type="button" title="Видалити товар з кошика">
+									<svg width="28" height="28" viewBox="0 0 28 28">
+										<use xlink:href="img/sprites.svg#trash"></use>
+									</svg>
+								</button>
+							</div>
+						</li>
+					</ul>
+					<div class="cart-popup__footer">
+						<div class="cart-popup__price">
+							<span class="cart-popup__price--name">2 товара на сумму</span>
+							<b class="cart-popup__price--value" data-result-price-sum data-result-currency="₴">1 344 ₴</b>
+						</div>
+						<hr>
+						<div class="cart-popup__result" data-add-price="50">
+							<span class="cart-popup__result--name">Разом</span>
+							<strong class="cart-popup__result--value" data-result-price data-result-currency="₴">1 400 ₴</strong>
+						</div>
+					</div>
+					<div class="cart-popup__buttons">
+						<button class="cart-popup__btn btn is-alternative" type="submit">
+							Оформити замовлення
+						</button>
+					</div>
+				</form>
 			</div>
 		</div>
 	</div>

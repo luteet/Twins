@@ -1,0 +1,130 @@
+.not-found {
+
+	flex: 1 1 auto;
+
+	display: flex;
+	
+
+	// .not-found__body
+
+	&__body {
+		padding-top: 100px; padding-bottom: 100px;
+		@include _992 {
+			padding-bottom: 170px;
+		}
+
+		position: relative;
+		min-height: 100%;
+		width: 100%;
+
+		text-align: center;
+	}
+
+	// .not-found__background
+
+	&__background {
+		position: absolute;
+		left: 0; top: 0;
+		width: 100%; height: 100%;
+		z-index: -1;
+
+		display: flex;
+		align-items: flex-end;
+
+		img {
+			width: 100%; height: auto;
+			opacity: .05;
+			transform: translate(0,5%);
+		}
+	}
+
+	// .not-found__title
+
+	&__title {
+		
+		color: #202121;
+		text-align: center;
+		font-family: var(--title-font);
+		font-weight: 700;
+		line-height: 114.286%;
+		font-size: 1.25rem;
+		@include _550 {
+			font-size: 1.5rem;
+		}
+		
+		@include _992 {
+			font-size: 2.1875rem;
+		}
+	}
+
+	// .not-found__code
+
+	&__code {
+		margin-top: 30px;
+		font-size: 39.473684vw;
+		letter-spacing: 2.631579vw;
+		line-height: 10%;
+		padding-bottom: 18.421053vw;
+		@include _768 {
+			font-size: 36.458333vw;
+			letter-spacing: 2.604167vw;
+			padding-bottom: 20.833333vw;
+		}
+		font-family: var(--title-font);
+		font-weight: 700;
+
+		text-align: center;
+		position: relative;
+
+		&::before {
+			content: '';
+			position: absolute;
+			left: 50%; top: 0;
+			width: 26.041667vw; height: 100%;
+			background: var(--white);
+			transform: translate(-50%,0);
+			@include _container {
+				width: 400px;
+			}
+		}
+
+		img {
+			position: absolute;
+			left: 50%; top: 50%;
+			transform: translate(-50%,-50%);
+			//background: var(--white);
+
+			width: 20.833333vw; height: auto;
+			@include _container {
+				width: 500px;
+			}
+		}
+		@include _container {
+			font-size: 43.75rem;
+			letter-spacing: 50px;
+			padding-bottom: 400px;
+		}
+	}
+
+	// .not-found__text
+
+	&__text {
+		padding-top: 50px;
+		max-width: 795px; margin: 0 auto;
+
+		color: #565656;
+		text-align: center;
+		line-height: 155.556%;
+		font-size: 1rem;
+		
+		@include _992 {
+			font-size: 1.125rem;
+		}
+	}
+
+	// .not-found__btn
+
+	&__btn {
+		margin-top: 30px;
+	}
+}

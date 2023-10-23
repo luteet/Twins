@@ -1,0 +1,118 @@
+.account {
+
+	display: grid;
+	@include _992 {
+		grid-template-columns: 200px auto;
+		gap: 0 32px;
+		padding-bottom: 0;
+	}
+
+	@media (min-width: 1200px) {
+		grid-template-columns: 283px auto;
+	}
+	
+	@media (min-width: 1400px) {
+		gap: 0 82px;
+	}
+
+	gap: 50px 0;
+	padding-bottom: 40px;
+
+	// .account__aside
+
+	&__aside {
+	}
+
+	// .account__nav
+
+	&__nav {
+		border: 1px solid #202121;
+		padding: 0 12px;
+		@media (min-width: 1200px) {
+			padding: 0 21px;
+		}
+
+		li:not(:last-child) a {
+			border-bottom: 1px solid #202121;
+		}
+
+		a {
+			display: flex;
+			align-items: center;
+
+			padding: 19px 8px;
+
+			@include _550 {
+				padding: 29px 8px;
+				font-size: 1.125rem;
+			}
+
+			@media (min-width: 1200px) {
+				font-size: 1.25rem;
+			}
+
+			color: #202121;
+			font-size: 1rem;
+			line-height: 100%;
+
+			&.is-current {
+				pointer-events: none;
+				color: var(--accent);
+			}
+
+			@media (any-hover: hover) {
+				transition: color .2s ease;
+				&:not(.is-current):hover {
+					color: var(--accent);
+				}
+				
+				&:not(.is-current):active {
+					color: var(--accent-active);
+				}
+			}
+
+			i {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+				flex: 0 0 25px;
+
+				margin-right: 8px; margin-top: -2px;
+				@media (min-width: 1200px) {
+					margin-right: 16px;
+				}
+			}
+		}
+	}
+
+	// .account__main
+
+	&__main {
+	}
+
+	// .account__title
+
+	&__title {
+		margin-bottom: 40px;
+	}
+
+	// .account__user
+
+	&__user {
+	}
+
+	// .account__history-orders
+
+	&__history-orders {
+	}
+
+	// .account__change-data
+
+	&__change-data {
+	}
+}
+
+@import "user";
+@import "history-orders";
+@import "change-data";

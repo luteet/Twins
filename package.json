@@ -36,6 +36,7 @@
     "normalize.css": "^8.0.1",
     "nouislider": "^15.7.1",
     "sass": "^1.45.0",
-    "simplebar": "^6.2.5"
+    "simplebar": "^6.2.5",
+    "vanillajs-datepicker": "^1.3.4"
   }
 }

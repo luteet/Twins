@@ -1,0 +1,52 @@
+.account-change-data {
+
+	display: grid;
+	gap: 20px 0;
+	
+	@include _550 {
+		grid-template-columns: 1fr 1fr;
+		gap: 42px 32px;
+	}
+	
+
+	// .account-change-data__label
+
+	&__label {
+		display: flex;
+		flex-direction: column;
+
+		> span:first-child {
+			display: block;
+			padding-bottom: 11px;
+			color: #4C4C4C;
+			line-height: 133%;
+			font-weight: 350;
+			-webkit-text-stroke-width: 0.5px;
+			font-size: 1rem;
+			@include _550 {
+				font-size: 1.125rem;
+			}
+		}
+
+		.input {
+			font-weight: 350;
+			-webkit-text-stroke-width: 1px;
+		}
+	}
+
+	// .account-change-data__footer
+
+	&__footer {
+		
+		@include _550 {
+			grid-column: 2 span;
+		}
+
+		text-align: end;
+	}
+
+	// .account-change-data__submit
+
+	&__submit {
+	}
+}

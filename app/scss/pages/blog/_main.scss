@@ -1,11 +1,5 @@
 .blog {
 
-	@include _992 {
-		padding-top: 50px;
-	}
-
-	padding-top: 30px;
-
 	// .blog__title
 
 	&__title {

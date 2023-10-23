@@ -1,0 +1,38 @@
+@@include("html/_header.html")
+
+	<main class="main">
+		<section class="login container">
+			<h1 class="login__title section-title" data-aos="fade-in" data-aos-delay="200">
+				Вхід
+			</h1>
+			<form method="post" class="login__form" data-aos="fade-in" data-aos-delay="300">
+				<div class="login__form--background" aria-hidden="true">
+					<img src="img/logo-mob.svg" width="0" height="0" loading="lazy" alt="">
+				</div>
+				<label class="login__label">
+					<input type="email" name="email" placeholder="E-mail" required class="login__input input">
+				</label>
+				<label class="login__label">
+					<input type="password" name="password" placeholder="Пароль" required class="login__input input">
+				</label>
+				<div class="login__form-item is-end">
+					<a href="#">
+						Забули пароль?
+					</a>
+				</div>
+				<div class="login__form--footer">
+					<button class="login__submit btn is-min" type="submit">
+						Увійти
+					</button>
+					<p>
+						Ще не зареєструвались?
+					</p>
+					<a href="create-account.html">
+						Натисніть, щоб створити акаунт
+					</a>	
+				</div>
+			</form>
+		</section>
+	</main>
+
+@@include("html/_footer.html")
