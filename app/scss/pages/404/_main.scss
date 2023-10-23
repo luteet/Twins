@@ -65,6 +65,8 @@
 		letter-spacing: 2.631579vw;
 		line-height: 10%;
 		padding-bottom: 18.421053vw;
+		user-select: none;
+		pointer-events: none;
 		@include _768 {
 			font-size: 36.458333vw;
 			letter-spacing: 2.604167vw;

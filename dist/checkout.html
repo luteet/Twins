@@ -36,11 +36,11 @@
 
 		<main class="main">
 			<section class="checkout container">
-				<h1 class="checkout__title section-title">
+				<h1 class="checkout__title section-title" data-aos="fade-in" data-aos-delay="100">
 					Оформлення замовлення
 				</h1>
 				<form class="checkout__body">
-					<div class="checkout__aside">
+					<div class="checkout__aside" data-aos="fade-in" data-aos-delay="300">
 						<div class="checkout__cart checkout-cart">
 							<h2 class="checkout-cart__title">
 								Ваше замовлення
@@ -108,11 +108,11 @@
 							<div class="checkout-cart__result">
 								<div class="checkout-cart__result--param">
 									<span>Підсумок</span>
-									<b data-currency="₴"></b>
+									<b data-result-currency="₴" data-result-price-sum></b>
 								</div>
 								<div class="checkout-cart__result--param">
 									<span>Вартість доставки</span>
-									<b data-add-price="50">0 ₴ </b>
+									<b data-add-price="50">50 ₴ </b>
 								</div>
 							</div>
 							<div class="checkout-cart__total">
@@ -136,7 +136,7 @@
 							</p>
 						</label>
 					</div>
-					<div class="checkout__main">
+					<div class="checkout__main" data-aos="fade-in" data-aos-delay="200">
 						<div class="checkout__block">
 							<div class="checkout__block--header">
 								<div class="checkout__block--number"></div>
