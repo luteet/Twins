@@ -150,8 +150,8 @@
 			padding: var(--height-header) 0;
 			background: var(--white);
 			width: 300px; 
-			height: calc(var(--vh, 1svh) * 100);
-			height: 100svh;
+			//height: calc(var(--vh, 1svh) * 100);
+			height: calc(var(--vh, 1vh) * 100);
 
 			transition: transform .4s ease;
 			transform: translate(-100%,0);

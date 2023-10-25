@@ -6,6 +6,10 @@ progress,sub,sup {
     vertical-align: baseline
 }
 
+.datepicker-controls .next-button.disabled,.datepicker-controls .prev-button.disabled,.popup,.simplebar-dummy-scrollbar-size,.simplebar-hide-scrollbar,.splide {
+    visibility: hidden
+}
+
 .splide,.splide__container,.splide__slide,sub,sup {
     position: relative
 }
@@ -175,10 +179,6 @@ summary {
 
 .splide__progress__bar {
     width: 0
-}
-
-.splide {
-    visibility: hidden
 }
 
 .splide.is-initialized,.splide.is-rendered {
@@ -961,16 +961,6 @@ summary {
     align-items: flex-start
 }
 
-.simplebar-mask,.simplebar-offset {
-    position: absolute;
-    padding: 0;
-    margin: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    top: 0
-}
-
 .simplebar-wrapper {
     overflow: hidden;
     width: inherit;
@@ -981,7 +971,14 @@ summary {
 
 .simplebar-mask {
     direction: inherit;
+    position: absolute;
     overflow: hidden;
+    padding: 0;
+    margin: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
     width: auto!important;
     height: auto!important;
     z-index: 0
@@ -991,6 +988,13 @@ summary {
     direction: inherit!important;
     box-sizing: inherit!important;
     resize: none!important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 0;
+    margin: 0;
     -webkit-overflow-scrolling: touch
 }
 
@@ -1143,7 +1147,6 @@ summary {
     direction: rtl;
     position: fixed;
     opacity: 0;
-    visibility: hidden;
     height: 500px;
     width: 500px;
     overflow-y: hidden;
@@ -1160,14 +1163,9 @@ summary {
 .simplebar-hide-scrollbar {
     position: fixed;
     left: 0;
-    visibility: hidden;
     overflow-y: scroll;
     scrollbar-width: none;
     -ms-overflow-style: none
-}
-
-.checkbox__input,.jsr_lockscreen,.main,.visually-hidden,body._mob-menu-active,body._popup-active,body.is-overflow-hidden {
-    overflow: hidden
 }
 
 .datepicker {
@@ -1307,10 +1305,6 @@ summary {
 
 *,fieldset {
     padding: 0
-}
-
-.datepicker-controls .next-button.disabled,.datepicker-controls .prev-button.disabled {
-    visibility: hidden
 }
 
 .datepicker-grid,.datepicker-view {
@@ -1644,9 +1638,12 @@ body {
 }
 
 .blog-section__read-more span,.read-more-link span,.reviews-card__answer,.stories-popup__text a {
-    -webkit-text-decoration-skip: none;
     text-decoration-skip: none;
     text-underline-offset: 3px
+}
+
+body._mob-menu-active,body._popup-active,body.is-overflow-hidden {
+    overflow: hidden
 }
 
 .image-aspect-ratio {
@@ -1675,6 +1672,7 @@ body {
 }
 
 .main {
+    overflow: hidden;
     flex: 1 0 auto;
     padding-bottom: 100px
 }
@@ -1794,7 +1792,8 @@ body {
     white-space: nowrap;
     -webkit-clip-path: inset(100%);
     clip-path: inset(100%);
-    clip: rect(0 0 0 0)
+    clip: rect(0 0 0 0);
+    overflow: hidden
 }
 
 .splide__arrow--prev svg {
@@ -1820,6 +1819,7 @@ body {
 
 .read-more-link span {
     text-decoration: underline;
+    -webkit-text-decoration-skip: none;
     padding-right: 10px
 }
 
@@ -1950,9 +1950,9 @@ body {
 
 .favorite-btn {
     display: grid;
-    width: 45px;
+    width: 44px;
     height: 45px;
-    flex: 0 0 45px;
+    flex: 0 0 44px;
     background: rgba(0,0,0,0);
     color: var(--accent)
 }
@@ -2039,11 +2039,6 @@ body {
     font-size: 2rem
 }
 
-.checkbox__text,.input,.textarea {
-    font-weight: 350;
-    -webkit-text-stroke-width: .5px
-}
-
 .txt-center {
     text-align: center
 }
@@ -2115,7 +2110,8 @@ input:focus::placeholder,textarea:focus::placeholder {
     padding: 0;
     border: 0;
     clip-path: inset(100%);
-    clip: rect(0 0 0 0)
+    clip: rect(0 0 0 0);
+    overflow: hidden
 }
 
 .checkbox__input:checked+.checkbox__element svg {
@@ -2144,7 +2140,9 @@ input:focus::placeholder,textarea:focus::placeholder {
     user-select: none;
     color: #4f4f4f;
     font-size: 1rem;
-    line-height: 133.333%
+    line-height: 133.333%;
+    font-weight: 350;
+    -webkit-text-stroke-width: .5px
 }
 
 .input,.select,.textarea {
@@ -2158,6 +2156,8 @@ input:focus::placeholder,textarea:focus::placeholder {
 
 .input,.textarea {
     border: 1px solid #e7e7e7;
+    font-weight: 350;
+    -webkit-text-stroke-width: .5px;
     color: #393939
 }
 
@@ -2244,6 +2244,11 @@ input:focus::placeholder,textarea:focus::placeholder {
     -khtml-user-select: none
 }
 
+.jsr_slider,.jsr_slider::before {
+    position: absolute;
+    -webkit-transform: translate(-50%,-50%)
+}
+
 .jsr.is-disabled {
     background: gray
 }
@@ -2254,10 +2259,8 @@ input:focus::placeholder,textarea:focus::placeholder {
 }
 
 .jsr_slider {
-    position: absolute;
     top: 12.5px;
     left: 0;
-    -webkit-transform: translate(-50%,-50%);
     transform: translate(-50%,-50%);
     width: 25px;
     height: 25px;
@@ -2266,27 +2269,23 @@ input:focus::placeholder,textarea:focus::placeholder {
     z-index: 3
 }
 
+.jsr_slider::after,.jsr_slider::before {
+    left: 50%;
+    content: ""
+}
+
 .jsr_slider:focus {
     z-index: 4
 }
 
 .jsr_slider::before {
-    content: "";
     width: 20px;
     height: 20px;
-    position: absolute;
     top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%,-50%);
     transform: translate(-50%,-50%);
     background: var(--white);
     border: 1px solid var(--accent);
     border-radius: 50%
-}
-
-.header__burger::before,.jsr_slider::after {
-    -webkit-transform: translate(-50%,-50%);
-    content: ""
 }
 
 .jsr_slider::after {
@@ -2294,10 +2293,15 @@ input:focus::placeholder,textarea:focus::placeholder {
     height: 7px;
     position: absolute;
     top: 50%;
-    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
     transform: translate(-50%,-50%);
     background: var(--accent);
     border-radius: 50%
+}
+
+.jsr_bar,.jsr_limit {
+    position: absolute;
+    height: 5px
 }
 
 .jsr_label {
@@ -2314,12 +2318,6 @@ input:focus::placeholder,textarea:focus::placeholder {
     opacity: 1
 }
 
-.jsr_bar,.jsr_limit {
-    position: absolute;
-    height: 5px;
-    top: 10px
-}
-
 .jsr_label.is-hidden {
     opacity: 0;
     pointer-events: none
@@ -2327,16 +2325,20 @@ input:focus::placeholder,textarea:focus::placeholder {
 
 .jsr_bar {
     background: #a78f7a;
-    cursor: move
+    cursor: move;
+    top: 10px
 }
 
 .jsr_limit {
     z-index: 1;
     pointer-events: none;
+    top: 10px;
     background-color: #efefef
 }
 
-.jsr_lockscreen,.popup,.popup-bg {
+.popup,.popup-bg {
+    left: 0;
+    top: 0;
     height: 100%;
     width: 100%
 }
@@ -2346,19 +2348,22 @@ input:focus::placeholder,textarea:focus::placeholder {
     width: 100%
 }
 
+.jsr_lockscreen {
+    overflow: hidden;
+    height: 100%;
+    width: 100%
+}
+
 body {
     padding-right: var(--popup-padding)
 }
 
 .popup {
     position: fixed;
-    left: 0;
-    top: 0;
     min-width: 320px;
     padding: 10px;
     z-index: 6;
     opacity: 0;
-    visibility: hidden;
     transition: opacity .4s ease,visibility .4s ease;
     will-change: opacity,visibility
 }
@@ -2382,8 +2387,6 @@ body {
 
 .popup-bg {
     position: absolute;
-    left: 0;
-    top: 0;
     background: rgba(0,0,0,.71)
 }
 
@@ -2634,7 +2637,8 @@ body {
 
 .stories-popup__text a {
     color: var(--white);
-    text-decoration: underline
+    text-decoration: underline;
+    -webkit-text-decoration-skip: none
 }
 
 .stories-popup__video-progress {
@@ -2702,8 +2706,7 @@ body {
     overflow-y: auto;
     padding: 0;
     max-height: none;
-    height: calc(var(--svh,1vh) *100);
-    height: 100svh;
+    height: calc(var(--vh,1vh) *100);
     margin: 0 0 0 auto;
     background: var(--white);
     -webkit-transform: translate(100%,0);
@@ -2810,6 +2813,10 @@ body {
     font-size: 1rem
 }
 
+.cart-item__param,.header {
+    justify-content: space-between
+}
+
 .cart-item {
     display: grid;
     grid-template-rows: 1fr;
@@ -2840,7 +2847,6 @@ body {
 .cart-item__param {
     grid-column: 2 span;
     display: flex;
-    justify-content: space-between;
     flex-direction: column
 }
 
@@ -3000,6 +3006,10 @@ body {
     overflow: hidden
 }
 
+.header,.leave-review__block label input {
+    width: 100%
+}
+
 .leave-review__block {
     margin-top: 24px;
     display: grid;
@@ -3044,8 +3054,10 @@ body {
     user-select: none
 }
 
-.leave-review__block label input {
-    width: 100%
+.header,.header__nav {
+    top: 0;
+    left: 0;
+    display: flex
 }
 
 .leave-review__block label input.hide-placeholder::-webkit-input-placeholder {
@@ -3130,12 +3142,7 @@ body {
 
 .header {
     position: sticky;
-    left: 0;
-    top: 0;
-    width: 100%;
     z-index: 3;
-    display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
     background: var(--white)
@@ -3174,13 +3181,10 @@ body {
 
 .header__nav {
     position: fixed;
-    left: 0;
-    top: 0;
     width: max(320px,100%);
     height: calc(var(--vh,1svh) *100);
     overflow-y: auto;
     overflow-x: hidden;
-    display: flex;
     transition: visibility .4s ease,opacity .4s ease;
     opacity: 0;
     visibility: hidden
@@ -3210,8 +3214,7 @@ body {
     padding: var(--height-header) 0;
     background: var(--white);
     width: 300px;
-    height: calc(var(--vh,1svh) *100);
-    height: 100svh;
+    height: calc(var(--vh,1vh) *100);
     transition: -webkit-transform .4s ease;
     transition: transform .4s ease;
     transition: transform .4s ease,-webkit-transform .4s ease;
@@ -3493,11 +3496,13 @@ body {
 }
 
 .header__burger::before {
+    content: "";
     position: absolute;
     left: 50%;
     top: 50%;
     width: 150%;
     height: 150%;
+    -webkit-transform: translate(-50%,-50%);
     transform: translate(-50%,-50%)
 }
 
@@ -3662,6 +3667,22 @@ body {
     transition: opacity .3s ease,visibility .3s ease
 }
 
+.product-card__add-to-cart-mob {
+    width: 45px;
+    height: 45px;
+    flex: 0 0 45px;
+    background: rgba(0,0,0,0);
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.product-card__name,.product-card__name a {
+    color: #2c2c2c;
+    transition: color .15s ease
+}
+
 .blog-section__full-article--text p:nth-child(3),.product-card__details {
     display: -webkit-box;
     text-overflow: ellipsis;
@@ -3670,22 +3691,8 @@ body {
     -webkit-box-orient: vertical
 }
 
-.product-card__add-to-cart-mob {
-    width: 45px;
-    height: 45px;
-    flex: 0 0 45px;
-    padding-top: 7px;
-    background: rgba(0,0,0,0);
-    color: var(--accent)
-}
-
-.product-card__name,.product-card__name a {
-    color: #2c2c2c;
-    transition: color .15s ease
-}
-
 .product-card__add-to-cart-mob svg {
-    width: 55%;
+    width: 50%;
     height: auto
 }
 
@@ -4282,7 +4289,8 @@ body {
     font-size: 1rem;
     line-height: 190.909091%;
     color: var(--accent);
-    text-decoration: underline
+    text-decoration: underline;
+    -webkit-text-decoration-skip: none
 }
 
 .blog-section__full-article {
@@ -5302,6 +5310,7 @@ body {
     margin-top: 7px;
     color: var(--accent);
     text-decoration: underline;
+    -webkit-text-decoration-skip: none;
     font-weight: 700
 }
 

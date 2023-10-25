@@ -495,8 +495,8 @@ body {
 		overflow-y: auto;
 		padding: 0;
 		max-height: none;
-		height: calc(var(--svh,1vh) * 100);
-		height: 100svh;
+		//height: calc(var(--svh,1vh) * 100);
+		height: calc(var(--vh,1vh) * 100);
 		margin: 0 0 0 auto;
 		background: var(--white);
 
