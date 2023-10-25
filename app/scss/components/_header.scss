@@ -9,12 +9,6 @@
 	left: 0; top: 0;
 	width: 100%;
 
-	//padding-right: var(--popup-padding) !important;
-
-	//transform: translate(0, var(--pos));
-
-	//transition: transform .2s ease;
-
 	z-index: 3;
 
 	display: flex;
@@ -96,27 +90,55 @@
 		left: 0; top: 0;
 		width: max(320px,100%); height: calc(var(--vh, 1svh) * 100);
 
-		background: var(--white);
-
 		overflow-y: auto; overflow-x: hidden;
+		visibility: hidden;
 
+		display: flex;
+		justify-content: flex-end;
+
+		transition: visibility .4s ease, opacity .4s ease;
 		opacity: 0; visibility: hidden;
 
 		&._mob-menu-active {
 			opacity: 1; visibility: visible;
 		}
 
-		transition: opacity .3s ease, visibility .3s ease;
+		&._mob-menu-active & {
+
+			&--body {
+				transform: translate(0,0);	
+			}
+
+			/* &--background {
+				opacity: 1; visibility: visible;
+			} */
+			
+		}
+
+		&--background {
+			position: fixed;
+			left: 0; top: var(--height-header);
+			width: 100vw; height: calc(100vh - var(--height-header,0px));
+			background: rgba(0, 0, 0, 0.71);
+
+			/* transition: opacity .3s ease, visibility .3s ease;
+			opacity: 0; visibility: hidden; */
+
+			@include _992 {
+				display: none;
+			}
+		}
 
 		@include _992 {
 			position: static;
-			height: auto;
+			height: auto; width: auto;
 			background-color: transparent;
 			padding: 0;
 			overflow: visible;
+			display: block;
 
 			opacity: 1; visibility: visible;
-			
+			transform: translate(0,0);
 
 			width: 100%;
 			
@@ -127,6 +149,16 @@
 		&--body {
 			position: relative;
 			padding: var(--height-header) 0;
+			background: var(--white);
+			width: 320px; 
+			height: calc(var(--vh, 1svh) * 100);
+			height: 100svh;
+
+			transition: transform .4s ease;
+			transform: translate(100%,0);
+
+			overflow-y: auto; overflow-x: hidden;
+
 			&::before {
 				content: '';
 				position: fixed;
@@ -136,8 +168,16 @@
 				z-index: 2;
 			}
 
+			display: flex;
+			flex-direction: column;
+
 			@include _992 {
 				padding: 0;
+				transform: translate(0,0);
+				display: block;
+				width: auto; height: auto;
+				overflow-y: visible; overflow-x: visible;
+				background: transparent;
 				&::before {
 					display: none;
 				}
@@ -147,12 +187,20 @@
 		&--row {
 
 			width: 100%;
+			@include _992 {
+				width: auto;
+			}
 
 			&:nth-child(1) {
+
+				order: 2;
+				border-top: 1px solid rgba(99, 99, 99, 0.2);
+				border-bottom: 1px solid rgba(99, 99, 99, 0.2);
 				
 				@include _992 {
 					padding: 30px 0 25px;
-
+					border-top: 0;
+					
 					display: grid;
 					grid-template-columns: 1fr 190px 1fr;
 					> * {
@@ -164,8 +212,7 @@
 
 			&:nth-child(2) {
 
-				border-top: 1px solid rgba(99, 99, 99, 0.2);
-				border-bottom: 1px solid rgba(99, 99, 99, 0.2);
+				order: 1;
 				
 				@include _992 {
 					border-top: 0;
@@ -229,16 +276,20 @@
 			padding: 5px 15px;
 			display: block;
 
-			transition: color .2s ease;
+			transition: color .15s ease;
+
+			&.is-accent {
+				color: var(--accent-2);
+			}
 
 			@media (any-hover: hover) {
 				
 				&:hover {
-					color: var(--accent-2);
+					color: var(--accent);
 				}
 				
 				&:active {
-					color: var(--accent-2-active);
+					color: var(--accent-active);
 				}
 			}
 
@@ -305,8 +356,34 @@
 			}
 
 			a {
+				position: relative;
 				display: flex;
 				align-items: center;
+
+				i[data-counter] {
+					position: relative;
+					display: block;
+					&::before {
+						content: attr(data-counter);
+						position: absolute;
+						right: 0; top: -5px;
+						width: 15px; height: 15px;
+						border-radius: 50%;
+						color: var(--white);
+						background: var(--accent);
+
+						display: flex;
+						align-items: center;
+						justify-content: center;
+
+						font-size: 0.75rem;
+						line-height: 100%;
+						font-family: var(--title-font);
+						font-style: normal;
+
+						padding-bottom: 4px;
+					}
+				}
 
 				color: var(--text-color);
 				@media (any-hover: hover) {
@@ -350,6 +427,8 @@
 	// .header__lang
 
 	&__lang {
+
+		order: 3;
 
 		width: 100%;
 
@@ -463,7 +542,7 @@
 	&__categories {
 		display: flex;
 		flex-wrap: wrap;
-		//flex-direction: column;
+		flex-direction: column;
 
 		padding-top: 15px; padding-bottom: 15px;
 		
@@ -479,9 +558,10 @@
 		}
 
 		li {
-			text-align: left;
+			text-align: center;
 			min-width: 50%;
 			@include _992 {
+				text-align: left;
 				min-width: auto;
 			}
 		}
@@ -489,7 +569,7 @@
 		a {
 			
 			color: var(--text-color);
-			text-align: left;
+			text-align: center;
 
 			font-size: 1.125rem;
 

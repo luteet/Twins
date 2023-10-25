@@ -23,7 +23,7 @@
 					<use xlink:href="img/sprites.svg#user"></use>
 				</svg>
 			</a>
-			<a href="#cart-popup" class="header__icon-link visible-on-mob open-popup">
+			<a href="#cart-popup" class="header__icon-link visible-on-mob open-popup" data-counter="1">
 				<svg width="30" height="30" viewBox="0 0 35 35">
 					<use xlink:href="img/sprites.svg#cart"></use>
 				</svg>
@@ -34,6 +34,7 @@
 				</svg>
 			</a>
 			<nav class="header__nav">
+				<div class="header__nav--background"></div>
 				<div class="header__nav--body">
 					<div class="header__nav--row">
 						<ul class="header__nav--list">
@@ -53,7 +54,7 @@
 								</a>
 							</li>
 							<li>
-								<a href="shares.html">
+								<a href="shares.html" class="is-accent">
 									Акції
 								</a>
 							</li>
@@ -75,9 +76,11 @@
 								</li>
 								<li>
 									<a href="#cart-popup" class="open-popup" aria-label="Корзина">
-										<svg width="35" height="35" viewBox="0 0 35 35">
-											<use xlink:href="img/sprites.svg#cart"></use>
-										</svg>
+										<i data-counter="1">
+											<svg width="35" height="35" viewBox="0 0 35 35">
+												<use xlink:href="img/sprites.svg#cart"></use>
+											</svg>
+										</i>
 										<span>Корзина</span>
 									</a>
 								</li>
@@ -635,21 +638,54 @@
 					<div class="products__result">
 						<ul class="products__list">
 							<li class="product-card" data-aos="fade-in" data-aos-delay="100">
-								<a href="product-page.html" class="product-card__body">
-									<div class="product-card__image">
+								<div class="product-card__body">
+									<a href="product-page.html" class="product-card__image">
 										<ul class="product-card__labels">
 											<li class="product-card__labels--item is-new">
 												New
 											</li>
 										</ul>
-										<div class="product-card__image--body image-aspect-ratio">
-											<picture>
-												<source srcset="img/product/product-image.avif" type="image/avif">
-												<source srcset="img/product/product-image.webp" type="image/webp">
-												<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
-											</picture>
+										<div class="product-card__image-gallery splide">
+											<div class="splide__track">
+												<ul class="splide__list">
+													<li class="splide__slide">
+														<div class="product-card__image--body image-aspect-ratio">
+															<picture>
+																<source srcset="img/product/product-image.avif" type="image/avif">
+																<source srcset="img/product/product-image.webp" type="image/webp">
+																<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
+															</picture>
+														</div>
+													</li>
+													<li class="splide__slide">
+														<div class="product-card__image--body image-aspect-ratio">
+															<picture>
+																<source srcset="https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&q=80&w=3387&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" type="image/avif">
+																<source srcset="img/product/product-image.webp" type="image/webp">
+																<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
+															</picture>
+														</div>
+													</li>
+													<li class="splide__slide">
+														<div class="product-card__image--body image-aspect-ratio">
+															<picture>
+																<source srcset="https://images.unsplash.com/photo-1511556820780-d912e42b4980?auto=format&fit=crop&q=80&w=3387&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" type="image/avif">
+																<source srcset="img/product/product-image.webp" type="image/webp">
+																<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
+															</picture>
+														</div>
+													</li>
+												</ul>
+											</div>
 										</div>
-									</div>
+										<!-- <div class="product-card__image--body image-aspect-ratio">
+				<picture>
+					<source srcset="img/product/product-image.avif" type="image/avif">
+					<source srcset="img/product/product-image.webp" type="image/webp">
+					<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
+				</picture>
+			</div> -->
+									</a>
 									<div class="product-card__content">
 										<div class="product-card__rating">
 											<ul>
@@ -684,38 +720,91 @@
 											</span>
 										</div>
 										<div class="product-card__info">
-											<h3 class="product-card__name">
-												TWINS Кашпо
-											</h3>
-											<div class="product-card__details">
-												<p>
-													Діаметр: 87 мм..
-												</p>
+											<div class="product-card__info--col">
+												<h3 class="product-card__name">
+													<a href="product-page.html">TWINS Кашпо</a>
+												</h3>
+												<div class="product-card__details">
+													<p>
+														Діаметр: 87 мм..
+													</p>
+												</div>
+												<div class="product-card__price">
+													<del>907 ₴</del>
+													<ins>677 ₴</ins>
+												</div>
 											</div>
-											<div class="product-card__price">
-												<del>907 ₴</del>
-												<ins>677 ₴</ins>
+											<div class="product-card__info--col">
+												<button class="product-card__favorite favorite-btn" type="button">
+													<svg width="24" height="24" viewBox="0 0 24 24">
+														<use xlink:href="img/sprites.svg#favorite"></use>
+													</svg>
+													<svg width="24" height="24" viewBox="0 0 24 24">
+														<use xlink:href="img/sprites.svg#favorite-active"></use>
+													</svg>
+												</button>
+												<button class="product-card__add-to-cart btn is-min-2" type="button">
+													<svg width="25" height="25" viewBox="0 0 35 35">
+														<use xlink:href="img/sprites.svg#cart"></use>
+													</svg>
+													<span>
+														Add to card
+													</span>
+												</button>
 											</div>
 										</div>
 									</div>
-								</a>
+								</div>
 							</li>
 							<li class="product-card" data-aos="fade-in" data-aos-delay="100">
-								<a href="product-page.html" class="product-card__body">
-									<div class="product-card__image">
+								<div class="product-card__body">
+									<a href="product-page.html" class="product-card__image">
 										<ul class="product-card__labels">
 											<li class="product-card__labels--item is-new">
 												New
 											</li>
 										</ul>
-										<div class="product-card__image--body image-aspect-ratio">
-											<picture>
-												<source srcset="img/product/product-image.avif" type="image/avif">
-												<source srcset="img/product/product-image.webp" type="image/webp">
-												<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
-											</picture>
+										<div class="product-card__image-gallery splide">
+											<div class="splide__track">
+												<ul class="splide__list">
+													<li class="splide__slide">
+														<div class="product-card__image--body image-aspect-ratio">
+															<picture>
+																<source srcset="img/product/product-image.avif" type="image/avif">
+																<source srcset="img/product/product-image.webp" type="image/webp">
+																<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
+															</picture>
+														</div>
+													</li>
+													<li class="splide__slide">
+														<div class="product-card__image--body image-aspect-ratio">
+															<picture>
+																<source srcset="https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&q=80&w=3387&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" type="image/avif">
+																<source srcset="img/product/product-image.webp" type="image/webp">
+																<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
+															</picture>
+														</div>
+													</li>
+													<li class="splide__slide">
+														<div class="product-card__image--body image-aspect-ratio">
+															<picture>
+																<source srcset="https://images.unsplash.com/photo-1511556820780-d912e42b4980?auto=format&fit=crop&q=80&w=3387&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" type="image/avif">
+																<source srcset="img/product/product-image.webp" type="image/webp">
+																<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
+															</picture>
+														</div>
+													</li>
+												</ul>
+											</div>
 										</div>
-									</div>
+										<!-- <div class="product-card__image--body image-aspect-ratio">
+				<picture>
+					<source srcset="img/product/product-image.avif" type="image/avif">
+					<source srcset="img/product/product-image.webp" type="image/webp">
+					<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
+				</picture>
+			</div> -->
+									</a>
 									<div class="product-card__content">
 										<div class="product-card__rating">
 											<ul>
@@ -750,38 +839,91 @@
 											</span>
 										</div>
 										<div class="product-card__info">
-											<h3 class="product-card__name">
-												TWINS Кашпо
-											</h3>
-											<div class="product-card__details">
-												<p>
-													Діаметр: 87 мм..
-												</p>
+											<div class="product-card__info--col">
+												<h3 class="product-card__name">
+													<a href="product-page.html">TWINS Кашпо</a>
+												</h3>
+												<div class="product-card__details">
+													<p>
+														Діаметр: 87 мм..
+													</p>
+												</div>
+												<div class="product-card__price">
+													<del>907 ₴</del>
+													<ins>677 ₴</ins>
+												</div>
 											</div>
-											<div class="product-card__price">
-												<del>907 ₴</del>
-												<ins>677 ₴</ins>
+											<div class="product-card__info--col">
+												<button class="product-card__favorite favorite-btn" type="button">
+													<svg width="24" height="24" viewBox="0 0 24 24">
+														<use xlink:href="img/sprites.svg#favorite"></use>
+													</svg>
+													<svg width="24" height="24" viewBox="0 0 24 24">
+														<use xlink:href="img/sprites.svg#favorite-active"></use>
+													</svg>
+												</button>
+												<button class="product-card__add-to-cart btn is-min-2" type="button">
+													<svg width="25" height="25" viewBox="0 0 35 35">
+														<use xlink:href="img/sprites.svg#cart"></use>
+													</svg>
+													<span>
+														Add to card
+													</span>
+												</button>
 											</div>
 										</div>
 									</div>
-								</a>
+								</div>
 							</li>
 							<li class="product-card" data-aos="fade-in" data-aos-delay="100">
-								<a href="product-page.html" class="product-card__body">
-									<div class="product-card__image">
+								<div class="product-card__body">
+									<a href="product-page.html" class="product-card__image">
 										<ul class="product-card__labels">
 											<li class="product-card__labels--item is-new">
 												New
 											</li>
 										</ul>
-										<div class="product-card__image--body image-aspect-ratio">
-											<picture>
-												<source srcset="img/product/product-image.avif" type="image/avif">
-												<source srcset="img/product/product-image.webp" type="image/webp">
-												<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
-											</picture>
+										<div class="product-card__image-gallery splide">
+											<div class="splide__track">
+												<ul class="splide__list">
+													<li class="splide__slide">
+														<div class="product-card__image--body image-aspect-ratio">
+															<picture>
+																<source srcset="img/product/product-image.avif" type="image/avif">
+																<source srcset="img/product/product-image.webp" type="image/webp">
+																<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
+															</picture>
+														</div>
+													</li>
+													<li class="splide__slide">
+														<div class="product-card__image--body image-aspect-ratio">
+															<picture>
+																<source srcset="https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&q=80&w=3387&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" type="image/avif">
+																<source srcset="img/product/product-image.webp" type="image/webp">
+																<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
+															</picture>
+														</div>
+													</li>
+													<li class="splide__slide">
+														<div class="product-card__image--body image-aspect-ratio">
+															<picture>
+																<source srcset="https://images.unsplash.com/photo-1511556820780-d912e42b4980?auto=format&fit=crop&q=80&w=3387&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" type="image/avif">
+																<source srcset="img/product/product-image.webp" type="image/webp">
+																<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
+															</picture>
+														</div>
+													</li>
+												</ul>
+											</div>
 										</div>
-									</div>
+										<!-- <div class="product-card__image--body image-aspect-ratio">
+				<picture>
+					<source srcset="img/product/product-image.avif" type="image/avif">
+					<source srcset="img/product/product-image.webp" type="image/webp">
+					<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
+				</picture>
+			</div> -->
+									</a>
 									<div class="product-card__content">
 										<div class="product-card__rating">
 											<ul>
@@ -816,38 +958,91 @@
 											</span>
 										</div>
 										<div class="product-card__info">
-											<h3 class="product-card__name">
-												TWINS Кашпо
-											</h3>
-											<div class="product-card__details">
-												<p>
-													Діаметр: 87 мм..
-												</p>
+											<div class="product-card__info--col">
+												<h3 class="product-card__name">
+													<a href="product-page.html">TWINS Кашпо</a>
+												</h3>
+												<div class="product-card__details">
+													<p>
+														Діаметр: 87 мм..
+													</p>
+												</div>
+												<div class="product-card__price">
+													<del>907 ₴</del>
+													<ins>677 ₴</ins>
+												</div>
 											</div>
-											<div class="product-card__price">
-												<del>907 ₴</del>
-												<ins>677 ₴</ins>
+											<div class="product-card__info--col">
+												<button class="product-card__favorite favorite-btn" type="button">
+													<svg width="24" height="24" viewBox="0 0 24 24">
+														<use xlink:href="img/sprites.svg#favorite"></use>
+													</svg>
+													<svg width="24" height="24" viewBox="0 0 24 24">
+														<use xlink:href="img/sprites.svg#favorite-active"></use>
+													</svg>
+												</button>
+												<button class="product-card__add-to-cart btn is-min-2" type="button">
+													<svg width="25" height="25" viewBox="0 0 35 35">
+														<use xlink:href="img/sprites.svg#cart"></use>
+													</svg>
+													<span>
+														Add to card
+													</span>
+												</button>
 											</div>
 										</div>
 									</div>
-								</a>
+								</div>
 							</li>
 							<li class="product-card" data-aos="fade-in" data-aos-delay="100">
-								<a href="product-page.html" class="product-card__body">
-									<div class="product-card__image">
+								<div class="product-card__body">
+									<a href="product-page.html" class="product-card__image">
 										<ul class="product-card__labels">
 											<li class="product-card__labels--item is-new">
 												New
 											</li>
 										</ul>
-										<div class="product-card__image--body image-aspect-ratio">
-											<picture>
-												<source srcset="img/product/product-image.avif" type="image/avif">
-												<source srcset="img/product/product-image.webp" type="image/webp">
-												<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
-											</picture>
+										<div class="product-card__image-gallery splide">
+											<div class="splide__track">
+												<ul class="splide__list">
+													<li class="splide__slide">
+														<div class="product-card__image--body image-aspect-ratio">
+															<picture>
+																<source srcset="img/product/product-image.avif" type="image/avif">
+																<source srcset="img/product/product-image.webp" type="image/webp">
+																<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
+															</picture>
+														</div>
+													</li>
+													<li class="splide__slide">
+														<div class="product-card__image--body image-aspect-ratio">
+															<picture>
+																<source srcset="https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&q=80&w=3387&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" type="image/avif">
+																<source srcset="img/product/product-image.webp" type="image/webp">
+																<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
+															</picture>
+														</div>
+													</li>
+													<li class="splide__slide">
+														<div class="product-card__image--body image-aspect-ratio">
+															<picture>
+																<source srcset="https://images.unsplash.com/photo-1511556820780-d912e42b4980?auto=format&fit=crop&q=80&w=3387&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" type="image/avif">
+																<source srcset="img/product/product-image.webp" type="image/webp">
+																<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
+															</picture>
+														</div>
+													</li>
+												</ul>
+											</div>
 										</div>
-									</div>
+										<!-- <div class="product-card__image--body image-aspect-ratio">
+				<picture>
+					<source srcset="img/product/product-image.avif" type="image/avif">
+					<source srcset="img/product/product-image.webp" type="image/webp">
+					<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
+				</picture>
+			</div> -->
+									</a>
 									<div class="product-card__content">
 										<div class="product-card__rating">
 											<ul>
@@ -882,38 +1077,91 @@
 											</span>
 										</div>
 										<div class="product-card__info">
-											<h3 class="product-card__name">
-												TWINS Кашпо
-											</h3>
-											<div class="product-card__details">
-												<p>
-													Діаметр: 87 мм..
-												</p>
+											<div class="product-card__info--col">
+												<h3 class="product-card__name">
+													<a href="product-page.html">TWINS Кашпо</a>
+												</h3>
+												<div class="product-card__details">
+													<p>
+														Діаметр: 87 мм..
+													</p>
+												</div>
+												<div class="product-card__price">
+													<del>907 ₴</del>
+													<ins>677 ₴</ins>
+												</div>
 											</div>
-											<div class="product-card__price">
-												<del>907 ₴</del>
-												<ins>677 ₴</ins>
+											<div class="product-card__info--col">
+												<button class="product-card__favorite favorite-btn" type="button">
+													<svg width="24" height="24" viewBox="0 0 24 24">
+														<use xlink:href="img/sprites.svg#favorite"></use>
+													</svg>
+													<svg width="24" height="24" viewBox="0 0 24 24">
+														<use xlink:href="img/sprites.svg#favorite-active"></use>
+													</svg>
+												</button>
+												<button class="product-card__add-to-cart btn is-min-2" type="button">
+													<svg width="25" height="25" viewBox="0 0 35 35">
+														<use xlink:href="img/sprites.svg#cart"></use>
+													</svg>
+													<span>
+														Add to card
+													</span>
+												</button>
 											</div>
 										</div>
 									</div>
-								</a>
+								</div>
 							</li>
 							<li class="product-card" data-aos="fade-in" data-aos-delay="100">
-								<a href="product-page.html" class="product-card__body">
-									<div class="product-card__image">
+								<div class="product-card__body">
+									<a href="product-page.html" class="product-card__image">
 										<ul class="product-card__labels">
 											<li class="product-card__labels--item is-new">
 												New
 											</li>
 										</ul>
-										<div class="product-card__image--body image-aspect-ratio">
-											<picture>
-												<source srcset="img/product/product-image.avif" type="image/avif">
-												<source srcset="img/product/product-image.webp" type="image/webp">
-												<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
-											</picture>
+										<div class="product-card__image-gallery splide">
+											<div class="splide__track">
+												<ul class="splide__list">
+													<li class="splide__slide">
+														<div class="product-card__image--body image-aspect-ratio">
+															<picture>
+																<source srcset="img/product/product-image.avif" type="image/avif">
+																<source srcset="img/product/product-image.webp" type="image/webp">
+																<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
+															</picture>
+														</div>
+													</li>
+													<li class="splide__slide">
+														<div class="product-card__image--body image-aspect-ratio">
+															<picture>
+																<source srcset="https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&q=80&w=3387&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" type="image/avif">
+																<source srcset="img/product/product-image.webp" type="image/webp">
+																<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
+															</picture>
+														</div>
+													</li>
+													<li class="splide__slide">
+														<div class="product-card__image--body image-aspect-ratio">
+															<picture>
+																<source srcset="https://images.unsplash.com/photo-1511556820780-d912e42b4980?auto=format&fit=crop&q=80&w=3387&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" type="image/avif">
+																<source srcset="img/product/product-image.webp" type="image/webp">
+																<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
+															</picture>
+														</div>
+													</li>
+												</ul>
+											</div>
 										</div>
-									</div>
+										<!-- <div class="product-card__image--body image-aspect-ratio">
+				<picture>
+					<source srcset="img/product/product-image.avif" type="image/avif">
+					<source srcset="img/product/product-image.webp" type="image/webp">
+					<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
+				</picture>
+			</div> -->
+									</a>
 									<div class="product-card__content">
 										<div class="product-card__rating">
 											<ul>
@@ -948,38 +1196,91 @@
 											</span>
 										</div>
 										<div class="product-card__info">
-											<h3 class="product-card__name">
-												TWINS Кашпо
-											</h3>
-											<div class="product-card__details">
-												<p>
-													Діаметр: 87 мм..
-												</p>
+											<div class="product-card__info--col">
+												<h3 class="product-card__name">
+													<a href="product-page.html">TWINS Кашпо</a>
+												</h3>
+												<div class="product-card__details">
+													<p>
+														Діаметр: 87 мм..
+													</p>
+												</div>
+												<div class="product-card__price">
+													<del>907 ₴</del>
+													<ins>677 ₴</ins>
+												</div>
 											</div>
-											<div class="product-card__price">
-												<del>907 ₴</del>
-												<ins>677 ₴</ins>
+											<div class="product-card__info--col">
+												<button class="product-card__favorite favorite-btn" type="button">
+													<svg width="24" height="24" viewBox="0 0 24 24">
+														<use xlink:href="img/sprites.svg#favorite"></use>
+													</svg>
+													<svg width="24" height="24" viewBox="0 0 24 24">
+														<use xlink:href="img/sprites.svg#favorite-active"></use>
+													</svg>
+												</button>
+												<button class="product-card__add-to-cart btn is-min-2" type="button">
+													<svg width="25" height="25" viewBox="0 0 35 35">
+														<use xlink:href="img/sprites.svg#cart"></use>
+													</svg>
+													<span>
+														Add to card
+													</span>
+												</button>
 											</div>
 										</div>
 									</div>
-								</a>
+								</div>
 							</li>
 							<li class="product-card" data-aos="fade-in" data-aos-delay="100">
-								<a href="product-page.html" class="product-card__body">
-									<div class="product-card__image">
+								<div class="product-card__body">
+									<a href="product-page.html" class="product-card__image">
 										<ul class="product-card__labels">
 											<li class="product-card__labels--item is-new">
 												New
 											</li>
 										</ul>
-										<div class="product-card__image--body image-aspect-ratio">
-											<picture>
-												<source srcset="img/product/product-image.avif" type="image/avif">
-												<source srcset="img/product/product-image.webp" type="image/webp">
-												<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
-											</picture>
+										<div class="product-card__image-gallery splide">
+											<div class="splide__track">
+												<ul class="splide__list">
+													<li class="splide__slide">
+														<div class="product-card__image--body image-aspect-ratio">
+															<picture>
+																<source srcset="img/product/product-image.avif" type="image/avif">
+																<source srcset="img/product/product-image.webp" type="image/webp">
+																<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
+															</picture>
+														</div>
+													</li>
+													<li class="splide__slide">
+														<div class="product-card__image--body image-aspect-ratio">
+															<picture>
+																<source srcset="https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&q=80&w=3387&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" type="image/avif">
+																<source srcset="img/product/product-image.webp" type="image/webp">
+																<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
+															</picture>
+														</div>
+													</li>
+													<li class="splide__slide">
+														<div class="product-card__image--body image-aspect-ratio">
+															<picture>
+																<source srcset="https://images.unsplash.com/photo-1511556820780-d912e42b4980?auto=format&fit=crop&q=80&w=3387&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" type="image/avif">
+																<source srcset="img/product/product-image.webp" type="image/webp">
+																<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
+															</picture>
+														</div>
+													</li>
+												</ul>
+											</div>
 										</div>
-									</div>
+										<!-- <div class="product-card__image--body image-aspect-ratio">
+				<picture>
+					<source srcset="img/product/product-image.avif" type="image/avif">
+					<source srcset="img/product/product-image.webp" type="image/webp">
+					<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
+				</picture>
+			</div> -->
+									</a>
 									<div class="product-card__content">
 										<div class="product-card__rating">
 											<ul>
@@ -1014,38 +1315,91 @@
 											</span>
 										</div>
 										<div class="product-card__info">
-											<h3 class="product-card__name">
-												TWINS Кашпо
-											</h3>
-											<div class="product-card__details">
-												<p>
-													Діаметр: 87 мм..
-												</p>
+											<div class="product-card__info--col">
+												<h3 class="product-card__name">
+													<a href="product-page.html">TWINS Кашпо</a>
+												</h3>
+												<div class="product-card__details">
+													<p>
+														Діаметр: 87 мм..
+													</p>
+												</div>
+												<div class="product-card__price">
+													<del>907 ₴</del>
+													<ins>677 ₴</ins>
+												</div>
 											</div>
-											<div class="product-card__price">
-												<del>907 ₴</del>
-												<ins>677 ₴</ins>
+											<div class="product-card__info--col">
+												<button class="product-card__favorite favorite-btn" type="button">
+													<svg width="24" height="24" viewBox="0 0 24 24">
+														<use xlink:href="img/sprites.svg#favorite"></use>
+													</svg>
+													<svg width="24" height="24" viewBox="0 0 24 24">
+														<use xlink:href="img/sprites.svg#favorite-active"></use>
+													</svg>
+												</button>
+												<button class="product-card__add-to-cart btn is-min-2" type="button">
+													<svg width="25" height="25" viewBox="0 0 35 35">
+														<use xlink:href="img/sprites.svg#cart"></use>
+													</svg>
+													<span>
+														Add to card
+													</span>
+												</button>
 											</div>
 										</div>
 									</div>
-								</a>
+								</div>
 							</li>
 							<li class="product-card" data-aos="fade-in" data-aos-delay="100">
-								<a href="product-page.html" class="product-card__body">
-									<div class="product-card__image">
+								<div class="product-card__body">
+									<a href="product-page.html" class="product-card__image">
 										<ul class="product-card__labels">
 											<li class="product-card__labels--item is-new">
 												New
 											</li>
 										</ul>
-										<div class="product-card__image--body image-aspect-ratio">
-											<picture>
-												<source srcset="img/product/product-image.avif" type="image/avif">
-												<source srcset="img/product/product-image.webp" type="image/webp">
-												<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
-											</picture>
+										<div class="product-card__image-gallery splide">
+											<div class="splide__track">
+												<ul class="splide__list">
+													<li class="splide__slide">
+														<div class="product-card__image--body image-aspect-ratio">
+															<picture>
+																<source srcset="img/product/product-image.avif" type="image/avif">
+																<source srcset="img/product/product-image.webp" type="image/webp">
+																<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
+															</picture>
+														</div>
+													</li>
+													<li class="splide__slide">
+														<div class="product-card__image--body image-aspect-ratio">
+															<picture>
+																<source srcset="https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&q=80&w=3387&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" type="image/avif">
+																<source srcset="img/product/product-image.webp" type="image/webp">
+																<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
+															</picture>
+														</div>
+													</li>
+													<li class="splide__slide">
+														<div class="product-card__image--body image-aspect-ratio">
+															<picture>
+																<source srcset="https://images.unsplash.com/photo-1511556820780-d912e42b4980?auto=format&fit=crop&q=80&w=3387&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" type="image/avif">
+																<source srcset="img/product/product-image.webp" type="image/webp">
+																<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
+															</picture>
+														</div>
+													</li>
+												</ul>
+											</div>
 										</div>
-									</div>
+										<!-- <div class="product-card__image--body image-aspect-ratio">
+				<picture>
+					<source srcset="img/product/product-image.avif" type="image/avif">
+					<source srcset="img/product/product-image.webp" type="image/webp">
+					<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
+				</picture>
+			</div> -->
+									</a>
 									<div class="product-card__content">
 										<div class="product-card__rating">
 											<ul>
@@ -1080,38 +1434,91 @@
 											</span>
 										</div>
 										<div class="product-card__info">
-											<h3 class="product-card__name">
-												TWINS Кашпо
-											</h3>
-											<div class="product-card__details">
-												<p>
-													Діаметр: 87 мм..
-												</p>
+											<div class="product-card__info--col">
+												<h3 class="product-card__name">
+													<a href="product-page.html">TWINS Кашпо</a>
+												</h3>
+												<div class="product-card__details">
+													<p>
+														Діаметр: 87 мм..
+													</p>
+												</div>
+												<div class="product-card__price">
+													<del>907 ₴</del>
+													<ins>677 ₴</ins>
+												</div>
 											</div>
-											<div class="product-card__price">
-												<del>907 ₴</del>
-												<ins>677 ₴</ins>
+											<div class="product-card__info--col">
+												<button class="product-card__favorite favorite-btn" type="button">
+													<svg width="24" height="24" viewBox="0 0 24 24">
+														<use xlink:href="img/sprites.svg#favorite"></use>
+													</svg>
+													<svg width="24" height="24" viewBox="0 0 24 24">
+														<use xlink:href="img/sprites.svg#favorite-active"></use>
+													</svg>
+												</button>
+												<button class="product-card__add-to-cart btn is-min-2" type="button">
+													<svg width="25" height="25" viewBox="0 0 35 35">
+														<use xlink:href="img/sprites.svg#cart"></use>
+													</svg>
+													<span>
+														Add to card
+													</span>
+												</button>
 											</div>
 										</div>
 									</div>
-								</a>
+								</div>
 							</li>
 							<li class="product-card" data-aos="fade-in" data-aos-delay="100">
-								<a href="product-page.html" class="product-card__body">
-									<div class="product-card__image">
+								<div class="product-card__body">
+									<a href="product-page.html" class="product-card__image">
 										<ul class="product-card__labels">
 											<li class="product-card__labels--item is-new">
 												New
 											</li>
 										</ul>
-										<div class="product-card__image--body image-aspect-ratio">
-											<picture>
-												<source srcset="img/product/product-image.avif" type="image/avif">
-												<source srcset="img/product/product-image.webp" type="image/webp">
-												<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
-											</picture>
+										<div class="product-card__image-gallery splide">
+											<div class="splide__track">
+												<ul class="splide__list">
+													<li class="splide__slide">
+														<div class="product-card__image--body image-aspect-ratio">
+															<picture>
+																<source srcset="img/product/product-image.avif" type="image/avif">
+																<source srcset="img/product/product-image.webp" type="image/webp">
+																<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
+															</picture>
+														</div>
+													</li>
+													<li class="splide__slide">
+														<div class="product-card__image--body image-aspect-ratio">
+															<picture>
+																<source srcset="https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&q=80&w=3387&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" type="image/avif">
+																<source srcset="img/product/product-image.webp" type="image/webp">
+																<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
+															</picture>
+														</div>
+													</li>
+													<li class="splide__slide">
+														<div class="product-card__image--body image-aspect-ratio">
+															<picture>
+																<source srcset="https://images.unsplash.com/photo-1511556820780-d912e42b4980?auto=format&fit=crop&q=80&w=3387&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" type="image/avif">
+																<source srcset="img/product/product-image.webp" type="image/webp">
+																<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
+															</picture>
+														</div>
+													</li>
+												</ul>
+											</div>
 										</div>
-									</div>
+										<!-- <div class="product-card__image--body image-aspect-ratio">
+				<picture>
+					<source srcset="img/product/product-image.avif" type="image/avif">
+					<source srcset="img/product/product-image.webp" type="image/webp">
+					<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
+				</picture>
+			</div> -->
+									</a>
 									<div class="product-card__content">
 										<div class="product-card__rating">
 											<ul>
@@ -1146,38 +1553,91 @@
 											</span>
 										</div>
 										<div class="product-card__info">
-											<h3 class="product-card__name">
-												TWINS Кашпо
-											</h3>
-											<div class="product-card__details">
-												<p>
-													Діаметр: 87 мм..
-												</p>
+											<div class="product-card__info--col">
+												<h3 class="product-card__name">
+													<a href="product-page.html">TWINS Кашпо</a>
+												</h3>
+												<div class="product-card__details">
+													<p>
+														Діаметр: 87 мм..
+													</p>
+												</div>
+												<div class="product-card__price">
+													<del>907 ₴</del>
+													<ins>677 ₴</ins>
+												</div>
 											</div>
-											<div class="product-card__price">
-												<del>907 ₴</del>
-												<ins>677 ₴</ins>
+											<div class="product-card__info--col">
+												<button class="product-card__favorite favorite-btn" type="button">
+													<svg width="24" height="24" viewBox="0 0 24 24">
+														<use xlink:href="img/sprites.svg#favorite"></use>
+													</svg>
+													<svg width="24" height="24" viewBox="0 0 24 24">
+														<use xlink:href="img/sprites.svg#favorite-active"></use>
+													</svg>
+												</button>
+												<button class="product-card__add-to-cart btn is-min-2" type="button">
+													<svg width="25" height="25" viewBox="0 0 35 35">
+														<use xlink:href="img/sprites.svg#cart"></use>
+													</svg>
+													<span>
+														Add to card
+													</span>
+												</button>
 											</div>
 										</div>
 									</div>
-								</a>
+								</div>
 							</li>
 							<li class="product-card" data-aos="fade-in" data-aos-delay="100">
-								<a href="product-page.html" class="product-card__body">
-									<div class="product-card__image">
+								<div class="product-card__body">
+									<a href="product-page.html" class="product-card__image">
 										<ul class="product-card__labels">
 											<li class="product-card__labels--item is-new">
 												New
 											</li>
 										</ul>
-										<div class="product-card__image--body image-aspect-ratio">
-											<picture>
-												<source srcset="img/product/product-image.avif" type="image/avif">
-												<source srcset="img/product/product-image.webp" type="image/webp">
-												<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
-											</picture>
+										<div class="product-card__image-gallery splide">
+											<div class="splide__track">
+												<ul class="splide__list">
+													<li class="splide__slide">
+														<div class="product-card__image--body image-aspect-ratio">
+															<picture>
+																<source srcset="img/product/product-image.avif" type="image/avif">
+																<source srcset="img/product/product-image.webp" type="image/webp">
+																<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
+															</picture>
+														</div>
+													</li>
+													<li class="splide__slide">
+														<div class="product-card__image--body image-aspect-ratio">
+															<picture>
+																<source srcset="https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&q=80&w=3387&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" type="image/avif">
+																<source srcset="img/product/product-image.webp" type="image/webp">
+																<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
+															</picture>
+														</div>
+													</li>
+													<li class="splide__slide">
+														<div class="product-card__image--body image-aspect-ratio">
+															<picture>
+																<source srcset="https://images.unsplash.com/photo-1511556820780-d912e42b4980?auto=format&fit=crop&q=80&w=3387&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" type="image/avif">
+																<source srcset="img/product/product-image.webp" type="image/webp">
+																<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
+															</picture>
+														</div>
+													</li>
+												</ul>
+											</div>
 										</div>
-									</div>
+										<!-- <div class="product-card__image--body image-aspect-ratio">
+				<picture>
+					<source srcset="img/product/product-image.avif" type="image/avif">
+					<source srcset="img/product/product-image.webp" type="image/webp">
+					<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
+				</picture>
+			</div> -->
+									</a>
 									<div class="product-card__content">
 										<div class="product-card__rating">
 											<ul>
@@ -1212,38 +1672,91 @@
 											</span>
 										</div>
 										<div class="product-card__info">
-											<h3 class="product-card__name">
-												TWINS Кашпо
-											</h3>
-											<div class="product-card__details">
-												<p>
-													Діаметр: 87 мм..
-												</p>
+											<div class="product-card__info--col">
+												<h3 class="product-card__name">
+													<a href="product-page.html">TWINS Кашпо</a>
+												</h3>
+												<div class="product-card__details">
+													<p>
+														Діаметр: 87 мм..
+													</p>
+												</div>
+												<div class="product-card__price">
+													<del>907 ₴</del>
+													<ins>677 ₴</ins>
+												</div>
 											</div>
-											<div class="product-card__price">
-												<del>907 ₴</del>
-												<ins>677 ₴</ins>
+											<div class="product-card__info--col">
+												<button class="product-card__favorite favorite-btn" type="button">
+													<svg width="24" height="24" viewBox="0 0 24 24">
+														<use xlink:href="img/sprites.svg#favorite"></use>
+													</svg>
+													<svg width="24" height="24" viewBox="0 0 24 24">
+														<use xlink:href="img/sprites.svg#favorite-active"></use>
+													</svg>
+												</button>
+												<button class="product-card__add-to-cart btn is-min-2" type="button">
+													<svg width="25" height="25" viewBox="0 0 35 35">
+														<use xlink:href="img/sprites.svg#cart"></use>
+													</svg>
+													<span>
+														Add to card
+													</span>
+												</button>
 											</div>
 										</div>
 									</div>
-								</a>
+								</div>
 							</li>
 							<li class="product-card" data-aos="fade-in" data-aos-delay="100">
-								<a href="product-page.html" class="product-card__body">
-									<div class="product-card__image">
+								<div class="product-card__body">
+									<a href="product-page.html" class="product-card__image">
 										<ul class="product-card__labels">
 											<li class="product-card__labels--item is-new">
 												New
 											</li>
 										</ul>
-										<div class="product-card__image--body image-aspect-ratio">
-											<picture>
-												<source srcset="img/product/product-image.avif" type="image/avif">
-												<source srcset="img/product/product-image.webp" type="image/webp">
-												<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
-											</picture>
+										<div class="product-card__image-gallery splide">
+											<div class="splide__track">
+												<ul class="splide__list">
+													<li class="splide__slide">
+														<div class="product-card__image--body image-aspect-ratio">
+															<picture>
+																<source srcset="img/product/product-image.avif" type="image/avif">
+																<source srcset="img/product/product-image.webp" type="image/webp">
+																<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
+															</picture>
+														</div>
+													</li>
+													<li class="splide__slide">
+														<div class="product-card__image--body image-aspect-ratio">
+															<picture>
+																<source srcset="https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&q=80&w=3387&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" type="image/avif">
+																<source srcset="img/product/product-image.webp" type="image/webp">
+																<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
+															</picture>
+														</div>
+													</li>
+													<li class="splide__slide">
+														<div class="product-card__image--body image-aspect-ratio">
+															<picture>
+																<source srcset="https://images.unsplash.com/photo-1511556820780-d912e42b4980?auto=format&fit=crop&q=80&w=3387&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" type="image/avif">
+																<source srcset="img/product/product-image.webp" type="image/webp">
+																<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
+															</picture>
+														</div>
+													</li>
+												</ul>
+											</div>
 										</div>
-									</div>
+										<!-- <div class="product-card__image--body image-aspect-ratio">
+				<picture>
+					<source srcset="img/product/product-image.avif" type="image/avif">
+					<source srcset="img/product/product-image.webp" type="image/webp">
+					<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
+				</picture>
+			</div> -->
+									</a>
 									<div class="product-card__content">
 										<div class="product-card__rating">
 											<ul>
@@ -1278,38 +1791,91 @@
 											</span>
 										</div>
 										<div class="product-card__info">
-											<h3 class="product-card__name">
-												TWINS Кашпо
-											</h3>
-											<div class="product-card__details">
-												<p>
-													Діаметр: 87 мм..
-												</p>
+											<div class="product-card__info--col">
+												<h3 class="product-card__name">
+													<a href="product-page.html">TWINS Кашпо</a>
+												</h3>
+												<div class="product-card__details">
+													<p>
+														Діаметр: 87 мм..
+													</p>
+												</div>
+												<div class="product-card__price">
+													<del>907 ₴</del>
+													<ins>677 ₴</ins>
+												</div>
 											</div>
-											<div class="product-card__price">
-												<del>907 ₴</del>
-												<ins>677 ₴</ins>
+											<div class="product-card__info--col">
+												<button class="product-card__favorite favorite-btn" type="button">
+													<svg width="24" height="24" viewBox="0 0 24 24">
+														<use xlink:href="img/sprites.svg#favorite"></use>
+													</svg>
+													<svg width="24" height="24" viewBox="0 0 24 24">
+														<use xlink:href="img/sprites.svg#favorite-active"></use>
+													</svg>
+												</button>
+												<button class="product-card__add-to-cart btn is-min-2" type="button">
+													<svg width="25" height="25" viewBox="0 0 35 35">
+														<use xlink:href="img/sprites.svg#cart"></use>
+													</svg>
+													<span>
+														Add to card
+													</span>
+												</button>
 											</div>
 										</div>
 									</div>
-								</a>
+								</div>
 							</li>
 							<li class="product-card" data-aos="fade-in" data-aos-delay="100">
-								<a href="product-page.html" class="product-card__body">
-									<div class="product-card__image">
+								<div class="product-card__body">
+									<a href="product-page.html" class="product-card__image">
 										<ul class="product-card__labels">
 											<li class="product-card__labels--item is-new">
 												New
 											</li>
 										</ul>
-										<div class="product-card__image--body image-aspect-ratio">
-											<picture>
-												<source srcset="img/product/product-image.avif" type="image/avif">
-												<source srcset="img/product/product-image.webp" type="image/webp">
-												<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
-											</picture>
+										<div class="product-card__image-gallery splide">
+											<div class="splide__track">
+												<ul class="splide__list">
+													<li class="splide__slide">
+														<div class="product-card__image--body image-aspect-ratio">
+															<picture>
+																<source srcset="img/product/product-image.avif" type="image/avif">
+																<source srcset="img/product/product-image.webp" type="image/webp">
+																<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
+															</picture>
+														</div>
+													</li>
+													<li class="splide__slide">
+														<div class="product-card__image--body image-aspect-ratio">
+															<picture>
+																<source srcset="https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&q=80&w=3387&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" type="image/avif">
+																<source srcset="img/product/product-image.webp" type="image/webp">
+																<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
+															</picture>
+														</div>
+													</li>
+													<li class="splide__slide">
+														<div class="product-card__image--body image-aspect-ratio">
+															<picture>
+																<source srcset="https://images.unsplash.com/photo-1511556820780-d912e42b4980?auto=format&fit=crop&q=80&w=3387&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" type="image/avif">
+																<source srcset="img/product/product-image.webp" type="image/webp">
+																<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
+															</picture>
+														</div>
+													</li>
+												</ul>
+											</div>
 										</div>
-									</div>
+										<!-- <div class="product-card__image--body image-aspect-ratio">
+				<picture>
+					<source srcset="img/product/product-image.avif" type="image/avif">
+					<source srcset="img/product/product-image.webp" type="image/webp">
+					<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
+				</picture>
+			</div> -->
+									</a>
 									<div class="product-card__content">
 										<div class="product-card__rating">
 											<ul>
@@ -1344,38 +1910,91 @@
 											</span>
 										</div>
 										<div class="product-card__info">
-											<h3 class="product-card__name">
-												TWINS Кашпо
-											</h3>
-											<div class="product-card__details">
-												<p>
-													Діаметр: 87 мм..
-												</p>
+											<div class="product-card__info--col">
+												<h3 class="product-card__name">
+													<a href="product-page.html">TWINS Кашпо</a>
+												</h3>
+												<div class="product-card__details">
+													<p>
+														Діаметр: 87 мм..
+													</p>
+												</div>
+												<div class="product-card__price">
+													<del>907 ₴</del>
+													<ins>677 ₴</ins>
+												</div>
 											</div>
-											<div class="product-card__price">
-												<del>907 ₴</del>
-												<ins>677 ₴</ins>
+											<div class="product-card__info--col">
+												<button class="product-card__favorite favorite-btn" type="button">
+													<svg width="24" height="24" viewBox="0 0 24 24">
+														<use xlink:href="img/sprites.svg#favorite"></use>
+													</svg>
+													<svg width="24" height="24" viewBox="0 0 24 24">
+														<use xlink:href="img/sprites.svg#favorite-active"></use>
+													</svg>
+												</button>
+												<button class="product-card__add-to-cart btn is-min-2" type="button">
+													<svg width="25" height="25" viewBox="0 0 35 35">
+														<use xlink:href="img/sprites.svg#cart"></use>
+													</svg>
+													<span>
+														Add to card
+													</span>
+												</button>
 											</div>
 										</div>
 									</div>
-								</a>
+								</div>
 							</li>
 							<li class="product-card" data-aos="fade-in" data-aos-delay="100">
-								<a href="product-page.html" class="product-card__body">
-									<div class="product-card__image">
+								<div class="product-card__body">
+									<a href="product-page.html" class="product-card__image">
 										<ul class="product-card__labels">
 											<li class="product-card__labels--item is-new">
 												New
 											</li>
 										</ul>
-										<div class="product-card__image--body image-aspect-ratio">
-											<picture>
-												<source srcset="img/product/product-image.avif" type="image/avif">
-												<source srcset="img/product/product-image.webp" type="image/webp">
-												<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
-											</picture>
+										<div class="product-card__image-gallery splide">
+											<div class="splide__track">
+												<ul class="splide__list">
+													<li class="splide__slide">
+														<div class="product-card__image--body image-aspect-ratio">
+															<picture>
+																<source srcset="img/product/product-image.avif" type="image/avif">
+																<source srcset="img/product/product-image.webp" type="image/webp">
+																<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
+															</picture>
+														</div>
+													</li>
+													<li class="splide__slide">
+														<div class="product-card__image--body image-aspect-ratio">
+															<picture>
+																<source srcset="https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&q=80&w=3387&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" type="image/avif">
+																<source srcset="img/product/product-image.webp" type="image/webp">
+																<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
+															</picture>
+														</div>
+													</li>
+													<li class="splide__slide">
+														<div class="product-card__image--body image-aspect-ratio">
+															<picture>
+																<source srcset="https://images.unsplash.com/photo-1511556820780-d912e42b4980?auto=format&fit=crop&q=80&w=3387&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" type="image/avif">
+																<source srcset="img/product/product-image.webp" type="image/webp">
+																<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
+															</picture>
+														</div>
+													</li>
+												</ul>
+											</div>
 										</div>
-									</div>
+										<!-- <div class="product-card__image--body image-aspect-ratio">
+				<picture>
+					<source srcset="img/product/product-image.avif" type="image/avif">
+					<source srcset="img/product/product-image.webp" type="image/webp">
+					<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
+				</picture>
+			</div> -->
+									</a>
 									<div class="product-card__content">
 										<div class="product-card__rating">
 											<ul>
@@ -1410,38 +2029,91 @@
 											</span>
 										</div>
 										<div class="product-card__info">
-											<h3 class="product-card__name">
-												TWINS Кашпо
-											</h3>
-											<div class="product-card__details">
-												<p>
-													Діаметр: 87 мм..
-												</p>
+											<div class="product-card__info--col">
+												<h3 class="product-card__name">
+													<a href="product-page.html">TWINS Кашпо</a>
+												</h3>
+												<div class="product-card__details">
+													<p>
+														Діаметр: 87 мм..
+													</p>
+												</div>
+												<div class="product-card__price">
+													<del>907 ₴</del>
+													<ins>677 ₴</ins>
+												</div>
 											</div>
-											<div class="product-card__price">
-												<del>907 ₴</del>
-												<ins>677 ₴</ins>
+											<div class="product-card__info--col">
+												<button class="product-card__favorite favorite-btn" type="button">
+													<svg width="24" height="24" viewBox="0 0 24 24">
+														<use xlink:href="img/sprites.svg#favorite"></use>
+													</svg>
+													<svg width="24" height="24" viewBox="0 0 24 24">
+														<use xlink:href="img/sprites.svg#favorite-active"></use>
+													</svg>
+												</button>
+												<button class="product-card__add-to-cart btn is-min-2" type="button">
+													<svg width="25" height="25" viewBox="0 0 35 35">
+														<use xlink:href="img/sprites.svg#cart"></use>
+													</svg>
+													<span>
+														Add to card
+													</span>
+												</button>
 											</div>
 										</div>
 									</div>
-								</a>
+								</div>
 							</li>
 							<li class="product-card" data-aos="fade-in" data-aos-delay="100">
-								<a href="product-page.html" class="product-card__body">
-									<div class="product-card__image">
+								<div class="product-card__body">
+									<a href="product-page.html" class="product-card__image">
 										<ul class="product-card__labels">
 											<li class="product-card__labels--item is-new">
 												New
 											</li>
 										</ul>
-										<div class="product-card__image--body image-aspect-ratio">
-											<picture>
-												<source srcset="img/product/product-image.avif" type="image/avif">
-												<source srcset="img/product/product-image.webp" type="image/webp">
-												<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
-											</picture>
+										<div class="product-card__image-gallery splide">
+											<div class="splide__track">
+												<ul class="splide__list">
+													<li class="splide__slide">
+														<div class="product-card__image--body image-aspect-ratio">
+															<picture>
+																<source srcset="img/product/product-image.avif" type="image/avif">
+																<source srcset="img/product/product-image.webp" type="image/webp">
+																<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
+															</picture>
+														</div>
+													</li>
+													<li class="splide__slide">
+														<div class="product-card__image--body image-aspect-ratio">
+															<picture>
+																<source srcset="https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&q=80&w=3387&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" type="image/avif">
+																<source srcset="img/product/product-image.webp" type="image/webp">
+																<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
+															</picture>
+														</div>
+													</li>
+													<li class="splide__slide">
+														<div class="product-card__image--body image-aspect-ratio">
+															<picture>
+																<source srcset="https://images.unsplash.com/photo-1511556820780-d912e42b4980?auto=format&fit=crop&q=80&w=3387&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" type="image/avif">
+																<source srcset="img/product/product-image.webp" type="image/webp">
+																<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
+															</picture>
+														</div>
+													</li>
+												</ul>
+											</div>
 										</div>
-									</div>
+										<!-- <div class="product-card__image--body image-aspect-ratio">
+				<picture>
+					<source srcset="img/product/product-image.avif" type="image/avif">
+					<source srcset="img/product/product-image.webp" type="image/webp">
+					<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
+				</picture>
+			</div> -->
+									</a>
 									<div class="product-card__content">
 										<div class="product-card__rating">
 											<ul>
@@ -1476,38 +2148,91 @@
 											</span>
 										</div>
 										<div class="product-card__info">
-											<h3 class="product-card__name">
-												TWINS Кашпо
-											</h3>
-											<div class="product-card__details">
-												<p>
-													Діаметр: 87 мм..
-												</p>
+											<div class="product-card__info--col">
+												<h3 class="product-card__name">
+													<a href="product-page.html">TWINS Кашпо</a>
+												</h3>
+												<div class="product-card__details">
+													<p>
+														Діаметр: 87 мм..
+													</p>
+												</div>
+												<div class="product-card__price">
+													<del>907 ₴</del>
+													<ins>677 ₴</ins>
+												</div>
 											</div>
-											<div class="product-card__price">
-												<del>907 ₴</del>
-												<ins>677 ₴</ins>
+											<div class="product-card__info--col">
+												<button class="product-card__favorite favorite-btn" type="button">
+													<svg width="24" height="24" viewBox="0 0 24 24">
+														<use xlink:href="img/sprites.svg#favorite"></use>
+													</svg>
+													<svg width="24" height="24" viewBox="0 0 24 24">
+														<use xlink:href="img/sprites.svg#favorite-active"></use>
+													</svg>
+												</button>
+												<button class="product-card__add-to-cart btn is-min-2" type="button">
+													<svg width="25" height="25" viewBox="0 0 35 35">
+														<use xlink:href="img/sprites.svg#cart"></use>
+													</svg>
+													<span>
+														Add to card
+													</span>
+												</button>
 											</div>
 										</div>
 									</div>
-								</a>
+								</div>
 							</li>
 							<li class="product-card" data-aos="fade-in" data-aos-delay="100">
-								<a href="product-page.html" class="product-card__body">
-									<div class="product-card__image">
+								<div class="product-card__body">
+									<a href="product-page.html" class="product-card__image">
 										<ul class="product-card__labels">
 											<li class="product-card__labels--item is-new">
 												New
 											</li>
 										</ul>
-										<div class="product-card__image--body image-aspect-ratio">
-											<picture>
-												<source srcset="img/product/product-image.avif" type="image/avif">
-												<source srcset="img/product/product-image.webp" type="image/webp">
-												<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
-											</picture>
+										<div class="product-card__image-gallery splide">
+											<div class="splide__track">
+												<ul class="splide__list">
+													<li class="splide__slide">
+														<div class="product-card__image--body image-aspect-ratio">
+															<picture>
+																<source srcset="img/product/product-image.avif" type="image/avif">
+																<source srcset="img/product/product-image.webp" type="image/webp">
+																<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
+															</picture>
+														</div>
+													</li>
+													<li class="splide__slide">
+														<div class="product-card__image--body image-aspect-ratio">
+															<picture>
+																<source srcset="https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&q=80&w=3387&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" type="image/avif">
+																<source srcset="img/product/product-image.webp" type="image/webp">
+																<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
+															</picture>
+														</div>
+													</li>
+													<li class="splide__slide">
+														<div class="product-card__image--body image-aspect-ratio">
+															<picture>
+																<source srcset="https://images.unsplash.com/photo-1511556820780-d912e42b4980?auto=format&fit=crop&q=80&w=3387&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" type="image/avif">
+																<source srcset="img/product/product-image.webp" type="image/webp">
+																<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
+															</picture>
+														</div>
+													</li>
+												</ul>
+											</div>
 										</div>
-									</div>
+										<!-- <div class="product-card__image--body image-aspect-ratio">
+				<picture>
+					<source srcset="img/product/product-image.avif" type="image/avif">
+					<source srcset="img/product/product-image.webp" type="image/webp">
+					<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
+				</picture>
+			</div> -->
+									</a>
 									<div class="product-card__content">
 										<div class="product-card__rating">
 											<ul>
@@ -1542,38 +2267,91 @@
 											</span>
 										</div>
 										<div class="product-card__info">
-											<h3 class="product-card__name">
-												TWINS Кашпо
-											</h3>
-											<div class="product-card__details">
-												<p>
-													Діаметр: 87 мм..
-												</p>
+											<div class="product-card__info--col">
+												<h3 class="product-card__name">
+													<a href="product-page.html">TWINS Кашпо</a>
+												</h3>
+												<div class="product-card__details">
+													<p>
+														Діаметр: 87 мм..
+													</p>
+												</div>
+												<div class="product-card__price">
+													<del>907 ₴</del>
+													<ins>677 ₴</ins>
+												</div>
 											</div>
-											<div class="product-card__price">
-												<del>907 ₴</del>
-												<ins>677 ₴</ins>
+											<div class="product-card__info--col">
+												<button class="product-card__favorite favorite-btn" type="button">
+													<svg width="24" height="24" viewBox="0 0 24 24">
+														<use xlink:href="img/sprites.svg#favorite"></use>
+													</svg>
+													<svg width="24" height="24" viewBox="0 0 24 24">
+														<use xlink:href="img/sprites.svg#favorite-active"></use>
+													</svg>
+												</button>
+												<button class="product-card__add-to-cart btn is-min-2" type="button">
+													<svg width="25" height="25" viewBox="0 0 35 35">
+														<use xlink:href="img/sprites.svg#cart"></use>
+													</svg>
+													<span>
+														Add to card
+													</span>
+												</button>
 											</div>
 										</div>
 									</div>
-								</a>
+								</div>
 							</li>
 							<li class="product-card" data-aos="fade-in" data-aos-delay="100">
-								<a href="product-page.html" class="product-card__body">
-									<div class="product-card__image">
+								<div class="product-card__body">
+									<a href="product-page.html" class="product-card__image">
 										<ul class="product-card__labels">
 											<li class="product-card__labels--item is-new">
 												New
 											</li>
 										</ul>
-										<div class="product-card__image--body image-aspect-ratio">
-											<picture>
-												<source srcset="img/product/product-image.avif" type="image/avif">
-												<source srcset="img/product/product-image.webp" type="image/webp">
-												<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
-											</picture>
+										<div class="product-card__image-gallery splide">
+											<div class="splide__track">
+												<ul class="splide__list">
+													<li class="splide__slide">
+														<div class="product-card__image--body image-aspect-ratio">
+															<picture>
+																<source srcset="img/product/product-image.avif" type="image/avif">
+																<source srcset="img/product/product-image.webp" type="image/webp">
+																<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
+															</picture>
+														</div>
+													</li>
+													<li class="splide__slide">
+														<div class="product-card__image--body image-aspect-ratio">
+															<picture>
+																<source srcset="https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&q=80&w=3387&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" type="image/avif">
+																<source srcset="img/product/product-image.webp" type="image/webp">
+																<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
+															</picture>
+														</div>
+													</li>
+													<li class="splide__slide">
+														<div class="product-card__image--body image-aspect-ratio">
+															<picture>
+																<source srcset="https://images.unsplash.com/photo-1511556820780-d912e42b4980?auto=format&fit=crop&q=80&w=3387&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" type="image/avif">
+																<source srcset="img/product/product-image.webp" type="image/webp">
+																<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
+															</picture>
+														</div>
+													</li>
+												</ul>
+											</div>
 										</div>
-									</div>
+										<!-- <div class="product-card__image--body image-aspect-ratio">
+				<picture>
+					<source srcset="img/product/product-image.avif" type="image/avif">
+					<source srcset="img/product/product-image.webp" type="image/webp">
+					<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
+				</picture>
+			</div> -->
+									</a>
 									<div class="product-card__content">
 										<div class="product-card__rating">
 											<ul>
@@ -1608,38 +2386,91 @@
 											</span>
 										</div>
 										<div class="product-card__info">
-											<h3 class="product-card__name">
-												TWINS Кашпо
-											</h3>
-											<div class="product-card__details">
-												<p>
-													Діаметр: 87 мм..
-												</p>
+											<div class="product-card__info--col">
+												<h3 class="product-card__name">
+													<a href="product-page.html">TWINS Кашпо</a>
+												</h3>
+												<div class="product-card__details">
+													<p>
+														Діаметр: 87 мм..
+													</p>
+												</div>
+												<div class="product-card__price">
+													<del>907 ₴</del>
+													<ins>677 ₴</ins>
+												</div>
 											</div>
-											<div class="product-card__price">
-												<del>907 ₴</del>
-												<ins>677 ₴</ins>
+											<div class="product-card__info--col">
+												<button class="product-card__favorite favorite-btn" type="button">
+													<svg width="24" height="24" viewBox="0 0 24 24">
+														<use xlink:href="img/sprites.svg#favorite"></use>
+													</svg>
+													<svg width="24" height="24" viewBox="0 0 24 24">
+														<use xlink:href="img/sprites.svg#favorite-active"></use>
+													</svg>
+												</button>
+												<button class="product-card__add-to-cart btn is-min-2" type="button">
+													<svg width="25" height="25" viewBox="0 0 35 35">
+														<use xlink:href="img/sprites.svg#cart"></use>
+													</svg>
+													<span>
+														Add to card
+													</span>
+												</button>
 											</div>
 										</div>
 									</div>
-								</a>
+								</div>
 							</li>
 							<li class="product-card" data-aos="fade-in" data-aos-delay="100">
-								<a href="product-page.html" class="product-card__body">
-									<div class="product-card__image">
+								<div class="product-card__body">
+									<a href="product-page.html" class="product-card__image">
 										<ul class="product-card__labels">
 											<li class="product-card__labels--item is-new">
 												New
 											</li>
 										</ul>
-										<div class="product-card__image--body image-aspect-ratio">
-											<picture>
-												<source srcset="img/product/product-image.avif" type="image/avif">
-												<source srcset="img/product/product-image.webp" type="image/webp">
-												<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
-											</picture>
+										<div class="product-card__image-gallery splide">
+											<div class="splide__track">
+												<ul class="splide__list">
+													<li class="splide__slide">
+														<div class="product-card__image--body image-aspect-ratio">
+															<picture>
+																<source srcset="img/product/product-image.avif" type="image/avif">
+																<source srcset="img/product/product-image.webp" type="image/webp">
+																<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
+															</picture>
+														</div>
+													</li>
+													<li class="splide__slide">
+														<div class="product-card__image--body image-aspect-ratio">
+															<picture>
+																<source srcset="https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&q=80&w=3387&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" type="image/avif">
+																<source srcset="img/product/product-image.webp" type="image/webp">
+																<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
+															</picture>
+														</div>
+													</li>
+													<li class="splide__slide">
+														<div class="product-card__image--body image-aspect-ratio">
+															<picture>
+																<source srcset="https://images.unsplash.com/photo-1511556820780-d912e42b4980?auto=format&fit=crop&q=80&w=3387&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" type="image/avif">
+																<source srcset="img/product/product-image.webp" type="image/webp">
+																<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
+															</picture>
+														</div>
+													</li>
+												</ul>
+											</div>
 										</div>
-									</div>
+										<!-- <div class="product-card__image--body image-aspect-ratio">
+				<picture>
+					<source srcset="img/product/product-image.avif" type="image/avif">
+					<source srcset="img/product/product-image.webp" type="image/webp">
+					<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
+				</picture>
+			</div> -->
+									</a>
 									<div class="product-card__content">
 										<div class="product-card__rating">
 											<ul>
@@ -1674,21 +2505,41 @@
 											</span>
 										</div>
 										<div class="product-card__info">
-											<h3 class="product-card__name">
-												TWINS Кашпо
-											</h3>
-											<div class="product-card__details">
-												<p>
-													Діаметр: 87 мм..
-												</p>
+											<div class="product-card__info--col">
+												<h3 class="product-card__name">
+													<a href="product-page.html">TWINS Кашпо</a>
+												</h3>
+												<div class="product-card__details">
+													<p>
+														Діаметр: 87 мм..
+													</p>
+												</div>
+												<div class="product-card__price">
+													<del>907 ₴</del>
+													<ins>677 ₴</ins>
+												</div>
 											</div>
-											<div class="product-card__price">
-												<del>907 ₴</del>
-												<ins>677 ₴</ins>
+											<div class="product-card__info--col">
+												<button class="product-card__favorite favorite-btn" type="button">
+													<svg width="24" height="24" viewBox="0 0 24 24">
+														<use xlink:href="img/sprites.svg#favorite"></use>
+													</svg>
+													<svg width="24" height="24" viewBox="0 0 24 24">
+														<use xlink:href="img/sprites.svg#favorite-active"></use>
+													</svg>
+												</button>
+												<button class="product-card__add-to-cart btn is-min-2" type="button">
+													<svg width="25" height="25" viewBox="0 0 35 35">
+														<use xlink:href="img/sprites.svg#cart"></use>
+													</svg>
+													<span>
+														Add to card
+													</span>
+												</button>
 											</div>
 										</div>
 									</div>
-								</a>
+								</div>
 							</li>
 						</ul>
 					</div>
@@ -1837,6 +2688,9 @@
 					</div>
 				</nav>
 				<div class="footer__contacts">
+					<h3>
+						Контакти
+					</h3>
 					<ul>
 						<li>
 							<a href="#">
@@ -1847,6 +2701,31 @@
 							<a href="#">
 								(063) 576 12 45
 							</a>
+						</li>
+					</ul>
+					<a href="#feedback-popup" class="footer__contacts--link open-popup">
+						Зворотній зв’язок
+					</a>
+				</div>
+				<div class="footer__info">
+					<ul>
+						<li>
+							<i>
+								<svg width="16" height="16" viewBox="0 0 16 16">
+									<use xlink:href="img/sprites.svg#time-2"></use>
+								</svg>
+							</i>
+							<span>Пн-Нд 09:00 - 20:00</span>
+						</li>
+						<li>
+							<i>
+								<svg width="16" height="16" viewBox="0 0 16 16">
+									<use xlink:href="img/sprites.svg#email-2"></use>
+								</svg>
+							</i>
+							<span>
+								cooperation@twinsparfum.ua
+							</span>
 						</li>
 					</ul>
 				</div>
@@ -1882,7 +2761,7 @@
 	<div class="search-popup popup" id="search-popup" style="display: none;">
 		<div class="search-popup__wrapper popup-wrapper">
 			<div class="search-popup__bg popup-bg popup-close"></div>
-			<button type="button" class="search-popup__close-btn popup-close-btn popup-close" title="Закрити">
+			<button type="button" class="search-popup__close-btn popup-close-btn popup-close" title="Закрити попап">
 				<svg width="24" height="24" viewBox="0 0 47.971 47.971">
 					<use xlink:href="img/sprites.svg#close"></use>
 				</svg>
@@ -1905,12 +2784,12 @@
 	<div class="stories-popup popup" id="stories-popup" style="display: none;">
 		<div class="stories-popup__wrapper popup-wrapper">
 			<div class="stories-popup__bg popup-bg popup-close"></div>
-			<button type="button" class="stories-popup__volume" title="Включить/Выключить громкость" data-volume-active-icon="img/sprites.svg#volume-active" data-volume-none-icon="img/sprites.svg#volume-none">
+			<button type="button" class="stories-popup__volume" title="Увімкнути/Вимкнути гучність" data-volume-active-icon="img/sprites.svg#volume-active" data-volume-none-icon="img/sprites.svg#volume-none">
 				<svg width="30" height="30" viewBox="0 0 24 24">
 					<use xlink:href="img/sprites.svg#volume-active"></use>
 				</svg>
 			</button>
-			<button type="button" class="stories-popup__close-btn popup-close-btn popup-close" title="Закрыть">
+			<button type="button" class="stories-popup__close-btn popup-close-btn popup-close" title="Закрити попап">
 				<svg width="24" height="24" viewBox="0 0 47.971 47.971">
 					<use xlink:href="img/sprites.svg#close"></use>
 				</svg>
@@ -2010,14 +2889,14 @@
 		<div class="cart-popup__wrapper popup-wrapper">
 			<div class="cart-popup__bg popup-bg popup-close"></div>
 			<div class="cart-popup__body popup-body">
-				<button type="button" class="cart-popup__close-btn popup-close-btn popup-close" title="Закрыть">
+				<button type="button" class="cart-popup__close-btn popup-close-btn popup-close" title="Закрити попап">
 					<svg width="30" height="30" viewBox="0 0 30 30">
 						<use xlink:href="img/sprites.svg#close-2"></use>
 					</svg>
 				</button>
 				<form method="post" class="cart-popup__container">
 					<h1 class="cart-popup__title section-title _min">
-						Товар додан у корзину
+						Кошик
 					</h1>
 					<ul class="cart-popup__list">
 						<li class="cart-popup__item cart-item">
@@ -2122,9 +3001,65 @@
 						<button class="cart-popup__btn btn is-alternative" type="submit">
 							Оформити замовлення
 						</button>
+						<button class="cart-popup__btn btn popup-close" type="button">
+							Продовжити покупки
+						</button>
 					</div>
 				</form>
 			</div>
+		</div>
+	</div>
+
+	<div class="cookies container">
+		<div class="cookies__body">
+			<div class="cookies__content">
+				<p>
+					This site uses files, cookies and services for collecting technical data from visitors (IP address data, location, etc.) to ensure functionality and improve the quality of service. By continuing to use our site, you automatically agree to the use of these technologies.
+				</p>
+			</div>
+			<div class="cookies__footer">
+				<button class="cookies__btn btn is-min cookies-agree" type="button">
+					Agree
+				</button>
+				<a href="#" class="cookies__btn btn is-alternative is-min" type="button">
+					Privacy Policy
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="leave-review popup" id="feedback-popup" style="display: none;">
+		<div class="leave-review__wrapper popup-wrapper">
+			<div class="leave-review__bg popup-bg popup-close"></div>
+			<form method="post" class="leave-review__body popup-body is-min">
+				<button type="button" class="leave-review__close-btn popup-close-btn popup-close" title="Закрити попап">
+					<svg width="30" height="30" viewBox="0 0 30 30">
+						<use xlink:href="img/sprites.svg#close"></use>
+					</svg>
+				</button>
+				<h1 class="leave-review__title">
+					Зворотній зв’язок
+				</h1>
+				<div class="leave-review__block">
+					<label>
+						<span>Ваше ім’я*</span>
+						<input type="text" name="name" class="input" placeholder="Введіть Ваше ім‘я" required>
+					</label>
+					<label>
+						<span>Номер телефона*</span>
+						<input type="text" name="phone" class="input tel-constructor-input" data-tc-sample=" (xxx) xxx-xx-xx" data-tc-country-code="38" placeholder="+38 (___)-___-__-__" required>
+					</label>
+					<label class="is-full">
+						<span>Ви можете залишити відгук або поставити питання</span>
+						<textarea name="message" class="textarea" placeholder="Текст повідомлення"></textarea>
+					</label>
+				</div>
+				<div class="leave-review__footer is-center">
+					<button class="leave-review__submit btn is-min" type="submit">
+						Надіслати
+					</button>
+				</div>
+			</form>
 		</div>
 	</div>
 

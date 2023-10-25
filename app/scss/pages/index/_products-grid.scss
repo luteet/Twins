@@ -1,12 +1,12 @@
 .products-grid {
 
 	padding-top: 30px; 
-	& + .products-grid {
+	& + .products-grid, & + .products-slider {
 		padding-top: 50px;
 	}
 	@include _550 {
 		padding-top: 50px;
-		& + .products-grid {
+		& + .products-grid, & + .products-slider {
 			padding-top: 90px;
 		}
 	}
@@ -28,20 +28,28 @@
 		@include _550 {
 			padding-top: 30px;
 		}
-		display: grid;
+
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
 		//grid-template-columns: repeat(2, 1fr);
 		@include _992 {
-			grid-template-columns: repeat(6, 1fr);
+			//grid-template-columns: repeat(6, 1fr);
 		}
+
 		gap: 20px 19px;
 	}
 
 	// .products-grid__card
 
 	&__card {
-		
+		flex: 1 1 100%;
+		@include _768 {
+			flex: 0 1 calc(50% - 19px);
+		}
+
 		@include _992 {
-			grid-column: 2 span;
+			flex: 0 1 calc(33.333% - 19px);
 		}
 	}
 }
@@ -108,8 +116,9 @@
 	}
 
 	&.is-row, &.is-large {
+		flex: 1 1 100%;
 		@include _992 {
-			grid-column: 3 span;
+			flex: 0 1 calc(50% - 19px);
 		}
 	}
 }

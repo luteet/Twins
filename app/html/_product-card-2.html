@@ -1,19 +1,52 @@
 <li class="product-card@@class" data-aos="fade-in" data-aos-delay="100">
-	<a href="product-page.html" class="product-card__body">
-		<div class="product-card__image">
+	<div class="product-card__body">
+		<a href="product-page.html" class="product-card__image">
 			<ul class="product-card__labels">
 				<li class="product-card__labels--item">
 					Акція
 				</li>
 			</ul>
-			<div class="product-card__image--body image-aspect-ratio">
+			<div class="product-card__image-gallery splide">
+				<div class="splide__track">
+					<ul class="splide__list">
+						<li class="splide__slide">
+							<div class="product-card__image--body image-aspect-ratio">
+								<picture>
+									<source srcset="img/product/product-image.avif" type="image/avif">
+									<source srcset="img/product/product-image.webp" type="image/webp">
+									<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
+								</picture>
+							</div>
+						</li>
+						<li class="splide__slide">
+							<div class="product-card__image--body image-aspect-ratio">
+								<picture>
+									<source srcset="https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&q=80&w=3387&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" type="image/avif">
+									<source srcset="img/product/product-image.webp" type="image/webp">
+									<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
+								</picture>
+							</div>
+						</li>
+						<li class="splide__slide">
+							<div class="product-card__image--body image-aspect-ratio">
+								<picture>
+									<source srcset="https://images.unsplash.com/photo-1511556820780-d912e42b4980?auto=format&fit=crop&q=80&w=3387&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" type="image/avif">
+									<source srcset="img/product/product-image.webp" type="image/webp">
+									<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
+								</picture>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- <div class="product-card__image--body image-aspect-ratio">
 				<picture>
 					<source srcset="img/product/product-image.avif" type="image/avif">
 					<source srcset="img/product/product-image.webp" type="image/webp">
 					<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
 				</picture>
-			</div>
-		</div>
+			</div> -->
+		</a>
 		<div class="product-card__content">
 			<div class="product-card__rating">
 				<ul>
@@ -48,19 +81,39 @@
 				</span>
 			</div>
 			<div class="product-card__info">
-				<h3 class="product-card__name">
-					TWINS Кашпо
-				</h3>
-				<div class="product-card__details">
-					<p>
-						Діаметр: 87 мм..
-					</p>
+				<div class="product-card__info--col">
+					<h3 class="product-card__name">
+						<a href="product-page.html">TWINS Кашпо</a>
+					</h3>
+					<div class="product-card__details">
+						<p>
+							Діаметр: 87 мм..
+						</p>
+					</div>
+					<div class="product-card__price">
+						<del>907 ₴</del>
+						<ins>677 ₴</ins>
+					</div>
 				</div>
-				<div class="product-card__price">
-					<del>907 ₴</del>
-					<ins>677 ₴</ins>
+				<div class="product-card__info--col">
+					<button class="product-card__favorite favorite-btn" type="button">
+						<svg width="24" height="24" viewBox="0 0 24 24">
+							<use xlink:href="img/sprites.svg#favorite"></use>
+						</svg>
+						<svg width="24" height="24" viewBox="0 0 24 24">
+							<use xlink:href="img/sprites.svg#favorite-active"></use>
+						</svg>
+					</button>
+					<button class="product-card__add-to-cart btn is-min-2" type="button">
+						<svg width="25" height="25" viewBox="0 0 35 35">
+							<use xlink:href="img/sprites.svg#cart"></use>
+						</svg>
+						<span>
+							Add to card
+						</span>
+					</button>
 				</div>
 			</div>
 		</div>
-	</a>
+	</div>
 </li>

@@ -1,0 +1,55 @@
+.cookies {
+
+	position: fixed;
+	left: 0; bottom: 30px;
+	width: 100%;
+
+	z-index: 2;
+
+	opacity: 0; visibility: hidden;
+
+	// .cookies__body
+
+	&__body {
+		background: var(--white);
+		padding: 14px 20px;
+		@include _992 {
+			padding: 34px 40px;
+		}
+		border: 1px solid #202121;
+	}
+
+	// .cookies__content
+
+	&__content {
+		color: #525252;
+		line-height: 154.545%;
+		font-size: 1rem;
+		@include _550 {
+			font-size: 1.175rem;
+		}
+		
+		@include _992 {
+			font-size: 1.375rem;
+		}
+	}
+
+	// .cookies__footer
+
+	&__footer {
+		margin-top: 15px;
+
+		display: flex;
+		flex-wrap: wrap;
+		gap: 10px;
+		@include _550 {
+			gap: 20px;
+			margin-top: 25px;
+		}
+	}
+
+	// .cookies__btn
+
+	&__btn {
+	}
+}

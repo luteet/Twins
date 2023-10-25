@@ -111,9 +111,14 @@
 					<ins>677 ₴</ins>
 					<!-- <strong></strong> -->
 				</div>
-				<a href="#" class="product__to-card btn">
-					До кошика
-				</a>
+				<div class="product__row-buttons">
+					<a href="#" class="product__to-card btn">
+						До кошика
+					</a>
+					<a href="#" class="product__buy btn is-alternative">
+						Купити в один клік
+					</a>
+				</div>
 				<div class="product__info">
 					<div class="product__info-item">
 						<button class="product__info-item--target" type="button">
@@ -207,7 +212,7 @@
 						</ul>
 						<span>(5)</span>
 					</div>
-					<a href="#" class="reviews__leave-btn">
+					<a href="#leave-review-popup" class="reviews__leave-btn open-popup">
 						<svg width="21" height="22" viewBox="0 0 21 22">
 							<use xlink:href="img/sprites.svg#message"></use>
 						</svg>
@@ -306,6 +311,147 @@
 			</div>
 		</section>
 		@@include("html/_mailing.html")
+
+		<div class="leave-review popup" id="leave-review-popup" style="display: none;">
+			<div class="leave-review__wrapper popup-wrapper">
+				<div class="leave-review__bg popup-bg popup-close"></div>
+				<form method="post" class="leave-review__body popup-body">
+					<button type="button" class="leave-review__close-btn popup-close-btn popup-close" title="Закрити попап">
+						<svg width="30" height="30" viewBox="0 0 30 30">
+							<use xlink:href="img/sprites.svg#close"></use>
+						</svg>
+					</button>
+					<h1 class="leave-review__title">
+						Гіалуронова відновлювана сироватка- концетрат для освітленого або меліруваного волосся та сухої шкіри голови - Kerastase Blond Absolu 2% Pure Hyaluronic Acid Serum
+					</h1>
+					<div class="leave-review__rating">
+						<span>Ваша оцінка</span>
+						<div class="leave-review__rating--list">
+							<label>
+								<input type="radio" name="rating" value="5" required>
+								<span>
+									<svg width="16" height="16" viewBox="0 0 16 16">
+										<use xlink:href="img/sprites.svg#star"></use>
+									</svg>
+								</span>
+							</label>
+							<label>
+								<input type="radio" name="rating" value="4" required>
+								<span>
+									<svg width="16" height="16" viewBox="0 0 16 16">
+										<use xlink:href="img/sprites.svg#star"></use>
+									</svg>
+								</span>
+							</label>
+							<label>
+								<input type="radio" name="rating" value="3" required>
+								<span>
+									<svg width="16" height="16" viewBox="0 0 16 16">
+										<use xlink:href="img/sprites.svg#star"></use>
+									</svg>
+								</span>
+							</label>
+							<label>
+								<input type="radio" name="rating" value="2" required>
+								<span>
+									<svg width="16" height="16" viewBox="0 0 16 16">
+										<use xlink:href="img/sprites.svg#star"></use>
+									</svg>
+								</span>
+							</label>
+							<label>
+								<input type="radio" name="rating" value="1" required>
+								<span>
+									<svg width="16" height="16" viewBox="0 0 16 16">
+										<use xlink:href="img/sprites.svg#star"></use>
+									</svg>
+								</span>
+							</label>
+						</div>
+					</div>
+					<div class="leave-review__block">
+						<label>
+							<span>Ваше ім’я*</span>
+							<input type="text" name="name" class="input" placeholder="Введіть Ваше ім‘я" required>
+						</label>
+						<label>
+							<span>Номер телефона*</span>
+							<input type="text" name="phone" class="input tel-constructor-input" data-tc-sample=" (xxx) xxx-xx-xx" data-tc-country-code="38" placeholder="+38 (___)-___-__-__" required>
+						</label>
+						<label class="is-full">
+							<span>Ви можете залишити відгук або поставити питання</span>
+							<textarea name="message" class="textarea" placeholder="Текст повідомлення"></textarea>
+						</label>
+					</div>
+					<div class="leave-review__footer">
+						<label class="leave-review__file">
+							<input type="file" name="images">
+							<span>
+								<i>
+									<svg width="20" height="20" viewBox="0 0 20 20">
+										<use xlink:href="img/sprites.svg#file"></use>
+									</svg>
+								</i>
+								<span>
+									Додати зображення
+								</span>
+							</span>
+						</label>
+						<button class="leave-review__submit btn is-min" type="submit">
+							Додати повідомлення
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	
+		<div class="leave-review popup" id="leave-answer-popup" style="display: none;">
+			<div class="leave-review__wrapper popup-wrapper">
+				<div class="leave-review__bg popup-bg popup-close"></div>
+				<form method="post" class="leave-review__body popup-body is-min">
+					<button type="button" class="leave-review__close-btn popup-close-btn popup-close" title="Закрити попап">
+						<svg width="30" height="30" viewBox="0 0 30 30">
+							<use xlink:href="img/sprites.svg#close"></use>
+						</svg>
+					</button>
+					<h1 class="leave-review__title">
+						Відповісти на коментар від користувача "Ірина"
+					</h1>
+					<div class="leave-review__block">
+						<label>
+							<span>Ваше ім’я*</span>
+							<input type="text" name="name" class="input" placeholder="Введіть Ваше ім‘я" required>
+						</label>
+						<label>
+							<span>Номер телефона*</span>
+							<input type="text" name="phone" class="input tel-constructor-input" data-tc-sample=" (xxx) xxx-xx-xx" data-tc-country-code="38" placeholder="+38 (___)-___-__-__" required>
+						</label>
+						<label class="is-full">
+							<span>Ви можете залишити відгук або поставити питання</span>
+							<textarea name="message" class="textarea" placeholder="Текст повідомлення"></textarea>
+						</label>
+					</div>
+					<div class="leave-review__footer">
+						<label class="leave-review__file">
+							<input type="file" name="images">
+							<span>
+								<i>
+									<svg width="20" height="20" viewBox="0 0 20 20">
+										<use xlink:href="img/sprites.svg#file"></use>
+									</svg>
+								</i>
+								<span>
+									Додати зображення
+								</span>
+							</span>
+						</label>
+						<button class="leave-review__submit btn is-min" type="submit">
+							Відповісти
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
 	</main>
 
 @@include("html/_footer.html")

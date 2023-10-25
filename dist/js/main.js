@@ -272,7 +272,7 @@ body.addEventListener('click', function (event) {
 
 	// =-=-=-=-=-=-=-=-=-=- <open menu in header> -=-=-=-=-=-=-=-=-=-=-
 
-	if ($('.header__burger')) {
+	if ($('.header__burger') || $('.header__nav--background')) {
 		menu.forEach(element => {
 			element.classList.toggle('_mob-menu-active')
 		})
@@ -450,6 +450,54 @@ body.addEventListener('click', function (event) {
 	}
 	
 	// =-=-=-=-=-=-=-=-=-=-=-=- </cart> -=-=-=-=-=-=-=-=-=-=-=-=
+
+
+
+	// =-=-=-=-=-=-=-=-=-=-=-=- <favorite-btn> -=-=-=-=-=-=-=-=-=-=-=-=
+	
+	const favoriteBtn = $(".favorite-btn")
+	if(favoriteBtn) {
+	
+		favoriteBtn.classList.toggle('is-active');
+	
+	}
+	
+	// =-=-=-=-=-=-=-=-=-=-=-=- </favorite-btn> -=-=-=-=-=-=-=-=-=-=-=-=
+
+
+	// =-=-=-=-=-=-=-=-=-=-=-=- <cookies> -=-=-=-=-=-=-=-=-=-=-=-=
+	
+	const cookiesAgree = $(".cookies-agree")
+	if(cookiesAgree) {
+	
+		const cookies = cookiesAgree.closest('.cookies');
+		cookies.classList.add('fade-out');
+
+		setTimeout(() => {
+			cookies.remove();
+			localStorage.setItem('twins-cookies', "true")
+		},400)
+	
+	}
+	
+	// =-=-=-=-=-=-=-=-=-=-=-=- </cookies> -=-=-=-=-=-=-=-=-=-=-=-=
+
+
+	// =-=-=-=-=-=-=-=-=-=-=-=- <account-favorited> -=-=-=-=-=-=-=-=-=-=-=-=
+	
+	const accountFavoritedRemove = $(".account-favorited__remove")
+	if(accountFavoritedRemove) {
+	
+		const accountFavoritedItem = accountFavoritedRemove.closest('.account-favorited__item');
+		accountFavoritedItem.classList.add('is-removing');
+
+		setTimeout(() => {
+			accountFavoritedItem.remove();
+		},500)
+	
+	}
+	
+	// =-=-=-=-=-=-=-=-=-=-=-=- </account-favorited> -=-=-=-=-=-=-=-=-=-=-=-=
 
 
 })
@@ -670,11 +718,15 @@ document.querySelectorAll('.similar-products__slider').forEach(sliderElement => 
 		pagination: false,
 
 		breakpoints: {
-			992: {
+			1400: {
 				perPage: 3,
 			},
 
-			550: {
+			992: {
+				perPage: 2,
+			},
+
+			768: {
 				perPage: 1,
 			}
 		}
@@ -825,6 +877,78 @@ document.querySelectorAll('.stories-popup__slider').forEach(sliderElement => {
 
 })
 
+document.querySelectorAll('.products-slider__body').forEach(sliderElement => {
+
+	const slider = new Splide(sliderElement, {
+
+		type: "loop",
+		perPage: 3,
+		gap: 20,
+		speed: 700,
+		easing: "ease",
+		perMove: 1,
+		pagination: false,
+
+		breakpoints: {
+			992: {
+				perPage: 2,
+			},
+
+			550: {
+				perPage: 1,
+			}
+		}
+
+	});
+
+	slider.mount();
+
+})
+
+document.querySelectorAll('.product-card__image-gallery').forEach(sliderElement => {
+
+	const slider = new Splide(sliderElement, {
+
+		type: "fade",
+		
+		rewind: true,
+		speed: 700,
+		easing: "ease",
+		arrows: false,
+		pagination: false,
+		//drag: false,
+		/* autoScroll: {
+			speed: 0.5,
+		}, */
+
+	});
+	
+	let isHovered = false;
+	let autoplayTimeout;
+
+	function startAutoplay() {
+		if (!isHovered) {
+			slider.go('>');
+		  autoplayTimeout = setInterval(() => {
+			slider.go('>');
+		  }, 2000);
+		}
+	  }
+
+	slider.mount();
+
+	sliderElement.addEventListener('pointerenter', function () {
+		isHovered = false;
+		startAutoplay();
+	})
+
+	sliderElement.addEventListener('pointerleave', function () {
+		isHovered = true;
+		slider.go(0)
+		clearInterval(autoplayTimeout);
+	})
+
+})
 
 // =-=-=-=-=-=-=-=-=-=-=-=- </slider> -=-=-=-=-=-=-=-=-=-=-=-=
 
@@ -883,11 +1007,45 @@ rangeSlider();
 
 // =-=-=-=-=-=-=-=-=-=-=-=- <animation> -=-=-=-=-=-=-=-=-=-=-=-=
 
-AOS.init({
+/* AOS.init({
 	disable: "mobile",
 	once: true,
 	//duration: 1500,
-});
+}); */
+
+document.querySelectorAll('.leave-review__file').forEach(file => {	
+	if(file.querySelector('input')) {
+		file.querySelector('input').addEventListener('change', function (event) {
+			let text = '';
+			Array.from(event.target.files).forEach((fileEl, index) => {
+				if(index != 0) {
+					text = ', ' + fileEl.name;
+				} else {
+					text = fileEl.name;
+				}
+				
+			})
+
+			file.querySelector('span').querySelector('span').textContent = text;
+		})
+	}
+})
+
+document.querySelectorAll('.leave-review__rating--list input').forEach(input => {
+	input.addEventListener('change', function (event) {
+		if(input.checked) {
+			const label = input.closest('label'),
+			list = input.closest('.leave-review__rating--list');
+
+			if(list.querySelector('label.is-active')) {
+				list.querySelector('label.is-active').classList.remove('is-active');
+			}
+
+			label.classList.add('is-active');
+
+		}
+	})
+})
 
 // =-=-=-=-=-=-=-=-=-=-=-=- </animation> -=-=-=-=-=-=-=-=-=-=-=-=
 
@@ -905,11 +1063,14 @@ AOS.init({
 
 function timerSetString(result, value) {
 	if(value <= 9) {
-		result[0].textContent = "0";
-		result[1].textContent = value.toString();
+		result.innerHTML = `<span>0</span><span>${value.toString()}</span>`;
 	} else {
-		result[0].textContent = value.toString().split('')[0];
-		result[1].textContent = value.toString().split('')[1];
+		result.innerHTML = '';
+		Array.from(value.toString().split('')).forEach(value => {
+			//console.log(result)
+			result.insertAdjacentHTML("beforeend", `<span>${value}</span>`);
+			//console.log(result[0])
+		})
 	}
 }
 
@@ -933,20 +1094,22 @@ function timer() {
 		0);
 
 		const
-		day = thisTimerElem.querySelectorAll('.shares-timer__days span'),
-		hour = thisTimerElem.querySelectorAll('.shares-timer__hours span'),
-		minute = thisTimerElem.querySelectorAll('.shares-timer__minutes span'),
-		second = thisTimerElem.querySelectorAll('.shares-timer__seconds span');
+		//day = thisTimerElem.querySelectorAll('.shares-timer__days span'),
+		hour = thisTimerElem.querySelector('.shares-timer__hours'),
+		minute = thisTimerElem.querySelector('.shares-timer__minutes'),
+		second = thisTimerElem.querySelector('.shares-timer__seconds');
 
 		const diff = deadline - new Date(),
 		days = diff > 0 ? Math.floor(diff / 1000 / 60 / 60 / 24) : 0,
-		hours = diff > 0 ? Math.floor(diff / 1000 / 60 / 60) % 24 : 0,
+		//hours = diff > 0 ? Math.floor(diff / 1000 / 60 / 60) % 24 : 0,
+		hours = diff > 0 ? Math.floor(diff / 1000 / 60 / 60) : 0,
 		minutes = diff > 0 ? Math.floor(diff / 1000 / 60) % 60 : 0,
 		seconds = diff > 0 ? Math.floor(diff / 1000) % 60 : 0;
 
-		timerSetString(day, days);
+		//console.log(Math.floor(diff / 1000 / 60 / 60))
 		timerSetString(hour, hours);
 		timerSetString(minute, minutes);
+		timerSetString(second, seconds);
 		
 		/* hour.textContent = hours.toString();
 		minute.textContent = minutes.toString();
@@ -991,3 +1154,17 @@ datesInputs.forEach(input => {
 
 
 // =-=-=-=-=-=-=-=-=-=-=-=- </datepicker> -=-=-=-=-=-=-=-=-=-=-=-=
+
+const cookies = document.querySelector('.cookies');
+
+setTimeout(() => {
+
+	if(cookies) {
+		if(localStorage.getItem('twins-cookies') != "true") {
+			cookies.classList.add('fade-in');
+		} else {
+			cookies.remove();
+		}
+	}
+	
+},3000)

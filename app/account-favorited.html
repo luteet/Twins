@@ -1,0 +1,30 @@
+@@include("html/_header.html")
+
+	<main class="main">
+		<div class="breadcrumbs container" data-aos="fade-in" data-aos-delay="100">
+			<a href="index.html" class="breadcrumbs__link">Головна</a>
+			<span class="breadcrumbs__separator"></span>
+			<span class="breadcrumbs__current">Історія заказів</span>
+		</div>
+		<section class="account container">
+			@@include("html/_account-aside.html")
+			<div class="account__main" data-aos="fade-in" data-aos-delay="300">
+				<h1 class="account__title section-title">
+					Обрані товари
+				</h1>
+				<div class="account__favorited account-favorited">
+					<ul class="account-favorited__list">
+						@@loop("html/_favorited-item.html", [
+							{},
+							{},
+							{},
+							{},
+						])
+					</ul>
+				</div>
+			</div>
+		</section>
+		@@include("html/_mailing.html")
+	</main>
+
+@@include("html/_footer.html")

@@ -270,12 +270,33 @@
 		}
 	}
 
+	
+
 	// .product__to-card
 
 	&__to-card {
+		//max-width: 492px; width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__btn {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	// .product__row-buttons
+
+	&__row-buttons {
 		margin-top: 36px;
 
-		max-width: 492px; width: 100%;
+		display: grid;
+		@include _550 {
+			grid-template-columns: 1fr 1fr;
+		}
+		gap: 25px;
 	}
 
 	// .product__info
@@ -285,6 +306,8 @@
 		@include _992 {
 			padding-top: 8px;
 		}
+
+		
 	}
 
 	// .product__info-item

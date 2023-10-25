@@ -21,7 +21,7 @@
 					<use xlink:href="img/sprites.svg#user"></use>
 				</svg>
 			</a>
-			<a href="#cart-popup" class="header__icon-link visible-on-mob open-popup">
+			<a href="#cart-popup" class="header__icon-link visible-on-mob open-popup" data-counter="1">
 				<svg width="30" height="30" viewBox="0 0 35 35">
 					<use xlink:href="img/sprites.svg#cart"></use>
 				</svg>
@@ -32,6 +32,7 @@
 				</svg>
 			</a>
 			<nav class="header__nav">
+				<div class="header__nav--background"></div>
 				<div class="header__nav--body">
 					<div class="header__nav--row">
 						<ul class="header__nav--list">
@@ -51,7 +52,7 @@
 								</a>
 							</li>
 							<li>
-								<a href="shares.html">
+								<a href="shares.html" class="is-accent">
 									Акції
 								</a>
 							</li>
@@ -73,9 +74,11 @@
 								</li>
 								<li>
 									<a href="#cart-popup" class="open-popup" aria-label="Корзина">
-										<svg width="35" height="35" viewBox="0 0 35 35">
-											<use xlink:href="img/sprites.svg#cart"></use>
-										</svg>
+										<i data-counter="1">
+											<svg width="35" height="35" viewBox="0 0 35 35">
+												<use xlink:href="img/sprites.svg#cart"></use>
+											</svg>
+										</i>
 										<span>Корзина</span>
 									</a>
 								</li>

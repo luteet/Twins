@@ -81,7 +81,7 @@ input, textarea {
 	}
 }
 
-.input {
+.input, .textarea {
 	padding: 12px 20px;
 	background: #F6F6F6;
 	border: 1px solid #E7E7E7;
@@ -105,6 +105,7 @@ input, textarea {
 	@include _992 {
 		font-size: 1.125rem;
 	}
+
 	font-size: 1rem;
 	line-height: 130%;
 	font-weight: 350;
@@ -119,6 +120,11 @@ input, textarea {
 	}
 
 	transition: color .2s ease, border-color .2s ease;
+}
+
+.textarea {
+	height: 205px;
+	resize: none;
 }
 
 .select {

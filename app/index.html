@@ -172,29 +172,45 @@
 				])
 			</ul>
 		</section>
-		<section class="products-grid container">
-			<h2 class="products-grid__title section-title" data-aos="fade-in" data-aos-delay="100">
-				Акційні товари
-			</h2>
-			<ul class="products-grid__list">
-				@@loop("html/_product-card-2.html", [
-					{
-						"class": " products-grid__card",
-					},
-					{
-						"class": " products-grid__card",
-					},
-					{
-						"class": " products-grid__card",
-					},
-					{
-						"class": " products-grid__card is-large",
-					},
-					{
-						"class": " products-grid__card is-large",
-					},
-				])
-			</ul>
+		<section class="products-slider container">
+			<div class="products-slider__body splide">
+				<h2 class="products-slider__title section-title" data-aos="fade-in" data-aos-delay="100">
+					Акційні товари
+				</h2>
+				<div class="products-slider__track splide__track">
+					<ul class="products-slider__list splide__list">
+						@@loop("html/_product-card-2.html", [
+							{
+								"class": " products-slider__card splide__slide",
+							},
+							{
+								"class": " products-slider__card splide__slide",
+							},
+							{
+								"class": " products-slider__card splide__slide",
+							},
+							{
+								"class": " products-slider__card splide__slide",
+							},
+							{
+								"class": " products-slider__card splide__slide",
+							},
+						])
+					</ul>
+				</div>
+				<div class="products-slider__controls splide__arrows">
+					<button class="products-slider__slider-arrow slider-arrow splide__arrow splide__arrow--prev" type="button">
+						<svg width="14" height="14" viewBox="0 0 14 14">
+							<use xlink:href="img/sprites.svg#arrow-prev-2"></use>
+						</svg>
+					</button>
+					<button class="products-slider__slider-arrow slider-arrow splide__arrow splide__arrow--next" type="button">
+						<svg width="14" height="14" viewBox="0 0 14 14">
+							<use xlink:href="img/sprites.svg#arrow-next-2"></use>
+						</svg>
+					</button>
+				</div>
+			</div>
 		</section>
 		<section class="events container">
 			<div class="events__block is-dark">
