@@ -170,11 +170,11 @@
 			grid-template-columns: repeat(2,1fr);
 		}
 
-		@media (min-width: 1100px) {
+		@media (min-width: 1250px) {
 			grid-template-columns: repeat(3,1fr);
 		}
 
-		@media (min-width: 1300px) {
+		@media (min-width: 1550px) {
 			grid-template-columns: repeat(4,1fr);
 		}
 		gap: 19px;
