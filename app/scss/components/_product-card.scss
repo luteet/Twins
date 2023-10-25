@@ -29,6 +29,10 @@
 		flex-direction: column;
 	}
 
+	&__body:hover &__info--col:last-child {
+		opacity: 1; visibility: visible;
+	}
+
 	@media (any-hover: hover) {
 		&__body:hover &__name {
 			color: var(--accent);
@@ -66,7 +70,6 @@
 
 		img {
 			background: #DDD;
-			
 		}
 
 		// .product-card__image--body
@@ -203,12 +206,12 @@
 					gap: 12px;
 				}
 
-				/* transition: opacity .3s ease, visibility .3s ease;
+				transition: opacity .3s ease, visibility .3s ease;
 				@media (any-hover: hover) {
 					@include _992 {
 						opacity: 0; visibility: hidden;
 					}
-				} */
+				}
 			}
 		}
 	}
