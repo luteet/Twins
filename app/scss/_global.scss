@@ -236,7 +236,6 @@ section {
 		padding: 7px 5px;
 		white-space: nowrap;
 		@include _550 {
-			
 			padding: 12px 25px;
 		}
 		line-height: 95%;
@@ -258,6 +257,10 @@ section {
 		color: var(--accent);
 		&.is-min {
 			padding: 18px 33px;
+		}
+
+		&.is-min-2 {
+			padding: 11px 33px;
 		}
 		
 		@media (any-hover: hover) {
@@ -616,7 +619,7 @@ section {
 .favorite-btn {
 	display: grid;
 
-	width: 35px; height: 35px; flex: 0 0 35px;
+	width: 45px; height: 45px; flex: 0 0 45px;
 	svg {
 		width: 50%; height: auto;
 	}
