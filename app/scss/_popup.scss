@@ -261,14 +261,43 @@ body {
 	&__arrow {
 		height: 100%;
 		border-radius: 0;
-		width: 0px;
+		width: 50px;
+		color: var(--white);
+		z-index: 2;
+		background: transparent;
+		&.splide__arrow--prev {
+			left: 0;
+		}
+
+		&.splide__arrow--next {
+			right: 0;
+		}
+
+		transition: opacity .3s ease;
+
+		svg {
+			width: 50%; height: auto;
+		}
 		@include _992 {
 			width: 30vw;
-		}
-		opacity: 0;
-		&:not(:disabled):hover {
+			svg {
+				opacity: 0;
+			}
 			opacity: 0;
+
+			&:not(:disabled):hover {
+				opacity: 0;
+			}
+
+			&:not(:disabled) {
+				opacity: 0;
+			}
 		}
+
+		&:not(:disabled) {
+			opacity: 1;
+		}
+		
 
 		&:disabled {
 			opacity: 0;

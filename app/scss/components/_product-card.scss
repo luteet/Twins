@@ -194,15 +194,12 @@
 			&:last-child {
 				display: flex;
 				flex-wrap: wrap;
-				justify-content: flex-end;
+				justify-content: center;
 				width: 100%;
 				@include _992 {
 					width: auto;
-				}
-
-				gap: 5px;
-				
-				@include _550 {
+					flex: 1 1 auto;
+					justify-content: flex-end;
 					gap: 12px;
 				}
 
@@ -218,6 +215,18 @@
 	
 	&__favorite {
 		
+	}
+
+	&__add-to-cart-mob {
+		width: 35px; height: 35px; flex: 0 0 35px;
+		background: transparent;
+		color: var(--accent);
+		svg {
+			width: 55%; height: auto;
+		}
+		@include _550 {
+			width: 50px; height: 50px; flex: 0 0 50px;
+		}
 	}
 
 	// .product-card__name
