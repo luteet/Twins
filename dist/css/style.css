@@ -2207,7 +2207,7 @@ input:focus::placeholder,textarea:focus::placeholder {
 }
 
 .textarea {
-    height: 205px;
+    height: 155px;
     resize: none
 }
 
@@ -2871,7 +2871,7 @@ body {
 }
 
 .leave-review__body {
-    max-width: 1194px;
+    max-width: 1000px;
     border: 2px solid #171717;
     padding: 55px 15px 30px
 }
@@ -2911,9 +2911,8 @@ body {
 .leave-review__rating>span {
     color: #555656;
     text-align: center;
-    font-weight: 400;
     line-height: 150%;
-    font-size: 1.125rem
+    font-size: 1rem
 }
 
 .leave-review__rating--list {
@@ -7250,13 +7249,13 @@ body {
     }
 
     .leave-review__rating>span {
-        font-size: 1.25rem
+        font-size: 1.125rem
     }
 
     .leave-review__block {
         margin-top: 44px;
         grid-template-columns: 1fr 1fr;
-        gap: 49px 29px
+        gap: 20px 29px
     }
 
     .leave-review__block label:not(.is-full) {
@@ -7737,27 +7736,22 @@ body {
     }
 
     .leave-review__body {
-        padding: 75px 75px 51px
-    }
-
-    .leave-review__rating>span {
-        font-size: 1.5rem
+        padding: 55px 35px 30px
     }
 
     .leave-review__rating--list {
-        margin-top: 20px;
-        gap: 40px
+        gap: 20px
     }
 
     .leave-review__rating--list label {
-        width: 48px;
-        height: 48px;
-        flex: 0 0 48px
+        width: 38px;
+        height: 38px;
+        flex: 0 0 38px
     }
 
     .leave-review__rating--list label svg {
-        width: 48px;
-        height: 48px
+        width: 38px;
+        height: 38px
     }
 
     .leave-review__file {
@@ -8232,8 +8226,8 @@ body {
         font-size: 2.1875rem
     }
 
-    .leave-review__rating>span {
-        font-size: 1.875rem
+    .leave-review__title.is-min {
+        font-size: 2rem
     }
 
     .leave-review__block label>span.placeholder,.leave-review__block label>span:not(.placeholder):first-child {

@@ -849,7 +849,7 @@ body {
 	// .leave-review__body
 
 	&__body {
-		max-width: 1194px;
+		max-width: 1000px;
 		&.is-min-2 {
 			max-width: 700px;
 		}
@@ -862,7 +862,7 @@ body {
 		}
 
 		@include _768 {
-			padding: 75px 75px 51px;
+			padding: 55px 35px 30px;
 		}
 	}
 
@@ -901,6 +901,9 @@ body {
 		
 		@include _992 {
 			font-size: 2.1875rem;
+			&.is-min {
+				font-size: 2rem;
+			}
 		}
 	}
 
@@ -914,20 +917,11 @@ body {
 		> span {
 			color: #555656;
 			text-align: center;
-			font-weight: 400;
 			line-height: 150%;
-			font-size: 1.125rem;
+			font-size: 1rem;
 
 			@include _550 {
-				font-size: 1.25rem;
-			}
-			
-			@include _768 {
-				font-size: 1.5rem;
-			}
-			
-			@include _992 {
-				font-size: 1.875rem;
+				font-size: 1.125rem;
 			}
 		}
 
@@ -944,8 +938,7 @@ body {
 			gap: 15px;
 
 			@include _768 {
-				margin-top: 20px;
-				gap: 40px;
+				gap: 20px;
 			}
 
 			label {
@@ -956,9 +949,9 @@ body {
 				}
 
 				@include _768 {
-					width: 48px; height: 48px; flex: 0 0 48px;
+					width: 38px; height: 38px; flex: 0 0 38px;
 					svg {
-						width: 48px; height: 48px;
+						width: 38px; height: 38px;
 					}
 				}
 
@@ -1014,7 +1007,7 @@ body {
 			margin-top: 44px;
 
 			grid-template-columns: 1fr 1fr;
-			gap: 49px 29px;
+			gap: 20px 29px;
 		}
 
 		label {
