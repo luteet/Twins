@@ -94,7 +94,6 @@
 		visibility: hidden;
 
 		display: flex;
-		justify-content: flex-end;
 
 		transition: visibility .4s ease, opacity .4s ease;
 		opacity: 0; visibility: hidden;
@@ -150,12 +149,12 @@
 			position: relative;
 			padding: var(--height-header) 0;
 			background: var(--white);
-			width: 320px; 
+			width: 300px; 
 			height: calc(var(--vh, 1svh) * 100);
 			height: 100svh;
 
 			transition: transform .4s ease;
-			transform: translate(100%,0);
+			transform: translate(-100%,0);
 
 			overflow-y: auto; overflow-x: hidden;
 
@@ -246,12 +245,14 @@
 
 		&--list {
 			display: flex;
-			flex-wrap: wrap;
-			align-items: center;
+			
+			flex-direction: column;
 
 			padding-top: 10px; padding-bottom: 15px;
 
 			@include _992 {
+				align-items: center;
+				flex-wrap: wrap;
 				align-items: stretch;
 				flex-direction: row;
 
@@ -458,14 +459,17 @@
 
 			display: flex;
 			justify-content: center;
+			align-items: center;
+
 			@include _992 {
 				display: inline-flex;
 				justify-content: stretch;
 				padding: 5px 0;
 			}
-			align-items: center;
 
 			padding: 10px 0;
+
+			color: var(--black);
 
 			svg {
 				flex: 0 0 8px;
@@ -558,10 +562,10 @@
 		}
 
 		li {
-			text-align: center;
+			
 			min-width: 50%;
 			@include _992 {
-				text-align: left;
+				text-align: start;
 				min-width: auto;
 			}
 		}
@@ -569,7 +573,6 @@
 		a {
 			
 			color: var(--text-color);
-			text-align: center;
 
 			font-size: 1.125rem;
 

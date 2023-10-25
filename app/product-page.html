@@ -115,7 +115,7 @@
 					<a href="#" class="product__to-card btn">
 						До кошика
 					</a>
-					<a href="#" class="product__buy btn is-alternative">
+					<a href="#buy-popup" class="product__buy btn is-alternative open-popup">
 						Купити в один клік
 					</a>
 				</div>
@@ -404,7 +404,6 @@
 				</form>
 			</div>
 		</div>
-	
 		<div class="leave-review popup" id="leave-answer-popup" style="display: none;">
 			<div class="leave-review__wrapper popup-wrapper">
 				<div class="leave-review__bg popup-bg popup-close"></div>
@@ -447,6 +446,36 @@
 						</label>
 						<button class="leave-review__submit btn is-min" type="submit">
 							Відповісти
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="leave-review popup" id="buy-popup" style="display: none;">
+			<div class="leave-review__wrapper popup-wrapper">
+				<div class="leave-review__bg popup-bg popup-close"></div>
+				<form method="post" class="leave-review__body popup-body is-min-2">
+					<button type="button" class="leave-review__close-btn popup-close-btn popup-close" title="Закрити попап">
+						<svg width="30" height="30" viewBox="0 0 30 30">
+							<use xlink:href="img/sprites.svg#close"></use>
+						</svg>
+					</button>
+					<h1 class="leave-review__title">
+						Купити "TWINS Аромадифузор" в 1 клік
+					</h1>
+					<div class="leave-review__block">
+						<label>
+							<input type="text" name="name" class="input hide-placeholder" placeholder="Ваше ім’я*" required>
+							<span class="placeholder">Ваше ім’я*</span>
+						</label>
+						<label>
+							<input type="text" name="phone" class="input tel-constructor-input hide-placeholder" data-tc-sample=" (xxx) xxx-xx-xx" placeholder="+38 (___)-___-__-__" data-tc-country-code="38" required>
+							<span class="placeholder">Номер телефона*</span>
+						</label>
+					</div>
+					<div class="leave-review__footer is-center">
+						<button class="leave-review__submit btn is-min" type="submit">
+							Купити
 						</button>
 					</div>
 				</form>

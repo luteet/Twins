@@ -103,6 +103,20 @@
 
 					color: #202121;
 					line-height: 133%;
+					&.is-accent {
+						color: var(--accent-2);
+					}
+
+					@media (any-hover: hover) {
+						transition: color .2s ease;
+						&:hover {
+							color: var(--accent);
+						}
+						
+						&:active {
+							color: var(--accent-active);
+						}
+					}
 				}
 			}
 		}
@@ -127,7 +141,7 @@
 		}
 
 		margin-top: 20px;
-		
+
 		@include _992 {
 			grid-column: 2;
 			justify-self: stretch;
@@ -148,9 +162,21 @@
 			@include _768 {
 				font-size: 1.625rem;	
 			}
+
 			line-height: 161.538462%;
 			font-weight: 700;
 			color: #202121;
+
+			@media (any-hover: hover) {
+				transition: color .2s ease;
+				&:hover {
+					color: var(--accent);
+				}
+				
+				&:active {
+					color: var(--accent-active);
+				}
+			}
 		}
 
 		> a {
@@ -255,6 +281,8 @@
 			display: inline-flex;
 			align-items: center;
 			justify-content: center;
+
+			color: var(--text-color);
 
 			padding: 5px 0;
 

@@ -23,7 +23,7 @@
 					<use xlink:href="img/sprites.svg#user"></use>
 				</svg>
 			</a>
-			<a href="#cart-popup" class="header__icon-link visible-on-mob open-popup" data-counter="1">
+			<a href="#cart-popup" class="header__icon-link visible-on-mob open-popup cart-count" data-counter="1">
 				<svg width="30" height="30" viewBox="0 0 35 35">
 					<use xlink:href="img/sprites.svg#cart"></use>
 				</svg>
@@ -76,7 +76,7 @@
 								</li>
 								<li>
 									<a href="#cart-popup" class="open-popup" aria-label="Корзина">
-										<i data-counter="1">
+										<i class="cart-count" data-counter="1">
 											<svg width="35" height="35" viewBox="0 0 35 35">
 												<use xlink:href="img/sprites.svg#cart"></use>
 											</svg>
@@ -531,7 +531,7 @@
 												<use xlink:href="img/sprites.svg#cart"></use>
 											</svg>
 											<span>
-												Add to card
+												В кошик
 											</span>
 										</button>
 									</div>
@@ -650,7 +650,7 @@
 												<use xlink:href="img/sprites.svg#cart"></use>
 											</svg>
 											<span>
-												Add to card
+												В кошик
 											</span>
 										</button>
 									</div>
@@ -769,7 +769,126 @@
 												<use xlink:href="img/sprites.svg#cart"></use>
 											</svg>
 											<span>
-												Add to card
+												В кошик
+											</span>
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="product-card products-grid__card" data-aos="fade-in" data-aos-delay="100">
+						<div class="product-card__body">
+							<a href="product-page.html" class="product-card__image">
+								<ul class="product-card__labels">
+									<li class="product-card__labels--item is-new">
+										New
+									</li>
+								</ul>
+								<div class="product-card__image-gallery splide">
+									<div class="splide__track">
+										<ul class="splide__list">
+											<li class="splide__slide">
+												<div class="product-card__image--body image-aspect-ratio">
+													<picture>
+														<source srcset="img/product/product-image.avif" type="image/avif">
+														<source srcset="img/product/product-image.webp" type="image/webp">
+														<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
+													</picture>
+												</div>
+											</li>
+											<li class="splide__slide">
+												<div class="product-card__image--body image-aspect-ratio">
+													<picture>
+														<source srcset="https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&q=80&w=3387&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" type="image/avif">
+														<source srcset="img/product/product-image.webp" type="image/webp">
+														<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
+													</picture>
+												</div>
+											</li>
+											<li class="splide__slide">
+												<div class="product-card__image--body image-aspect-ratio">
+													<picture>
+														<source srcset="https://images.unsplash.com/photo-1511556820780-d912e42b4980?auto=format&fit=crop&q=80&w=3387&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" type="image/avif">
+														<source srcset="img/product/product-image.webp" type="image/webp">
+														<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
+													</picture>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<!-- <div class="product-card__image--body image-aspect-ratio">
+				<picture>
+					<source srcset="img/product/product-image.avif" type="image/avif">
+					<source srcset="img/product/product-image.webp" type="image/webp">
+					<img src="img/product/product-image.jpg" alt="" width="587" height="558" loading="lazy">
+				</picture>
+			</div> -->
+							</a>
+							<div class="product-card__content">
+								<div class="product-card__rating">
+									<ul>
+										<li>
+											<svg width="16" height="16" viewBox="0 0 16 16">
+												<use xlink:href="img/sprites.svg#star"></use>
+											</svg>
+										</li>
+										<li>
+											<svg width="16" height="16" viewBox="0 0 16 16">
+												<use xlink:href="img/sprites.svg#star"></use>
+											</svg>
+										</li>
+										<li>
+											<svg width="16" height="16" viewBox="0 0 16 16">
+												<use xlink:href="img/sprites.svg#star"></use>
+											</svg>
+										</li>
+										<li>
+											<svg width="16" height="16" viewBox="0 0 16 16">
+												<use xlink:href="img/sprites.svg#star"></use>
+											</svg>
+										</li>
+										<li>
+											<svg width="16" height="16" viewBox="0 0 16 16">
+												<use xlink:href="img/sprites.svg#star"></use>
+											</svg>
+										</li>
+									</ul>
+									<span>
+										(55)
+									</span>
+								</div>
+								<div class="product-card__info">
+									<div class="product-card__info--col">
+										<h3 class="product-card__name">
+											<a href="product-page.html">TWINS Кашпо</a>
+										</h3>
+										<div class="product-card__details">
+											<p>
+												Діаметр: 87 мм..
+											</p>
+										</div>
+										<div class="product-card__price">
+											<del>907 ₴</del>
+											<ins>677 ₴</ins>
+										</div>
+									</div>
+									<div class="product-card__info--col">
+										<button class="product-card__favorite favorite-btn" type="button">
+											<svg width="24" height="24" viewBox="0 0 24 24">
+												<use xlink:href="img/sprites.svg#favorite"></use>
+											</svg>
+											<svg width="24" height="24" viewBox="0 0 24 24">
+												<use xlink:href="img/sprites.svg#favorite-active"></use>
+											</svg>
+										</button>
+										<button class="product-card__add-to-cart btn is-min-2" type="button">
+											<svg width="25" height="25" viewBox="0 0 35 35">
+												<use xlink:href="img/sprites.svg#cart"></use>
+											</svg>
+											<span>
+												В кошик
 											</span>
 										</button>
 									</div>
@@ -888,7 +1007,7 @@
 												<use xlink:href="img/sprites.svg#cart"></use>
 											</svg>
 											<span>
-												Add to card
+												В кошик
 											</span>
 										</button>
 									</div>
@@ -1007,7 +1126,7 @@
 												<use xlink:href="img/sprites.svg#cart"></use>
 											</svg>
 											<span>
-												Add to card
+												В кошик
 											</span>
 										</button>
 									</div>
@@ -1942,22 +2061,22 @@
 						</h3>
 						<ul>
 							<li>
-								<a href="#">
+								<a href="about-company.html">
 									Про компанію
 								</a>
 							</li>
 							<li>
-								<a href="#">
+								<a href="payment-and-delivery.html">
 									Оплата і Доставка
 								</a>
 							</li>
 							<li>
-								<a href="#">
+								<a href="blog.html">
 									Новини і Статті
 								</a>
 							</li>
 							<li>
-								<a href="#">
+								<a href="shares.html" class="is-accent">
 									Акції
 								</a>
 							</li>
@@ -1969,27 +2088,27 @@
 						</h3>
 						<ul>
 							<li>
-								<a href="#">
+								<a href="products.html">
 									Твердий парфум
 								</a>
 							</li>
 							<li>
-								<a href="#">
+								<a href="products.html">
 									Аромо свічки
 								</a>
 							</li>
 							<li>
-								<a href="#">
+								<a href="products.html">
 									Колекції ароматів
 								</a>
 							</li>
 							<li>
-								<a href="#">
+								<a href="products.html">
 									Аромати для дому
 								</a>
 							</li>
 							<li>
-								<a href="#">
+								<a href="products.html">
 									Косметика для тіла
 								</a>
 							</li>
@@ -2002,12 +2121,12 @@
 					</h3>
 					<ul>
 						<li>
-							<a href="#">
+							<a href="tel:0977986709">
 								(097) 798 67 09
 							</a>
 						</li>
 						<li>
-							<a href="#">
+							<a href="tel:0635761245">
 								(063) 576 12 45
 							</a>
 						</li>
@@ -2230,7 +2349,7 @@
 										<del>907 ₴</del>
 										<!-- <strong></strong> -->
 									</div>
-									<div class="cart-item__length product-length">
+									<div class="cart-item__length product-length is-min">
 										<button class="product-length__btn to-minus" type="button" title="-"></button>
 										<input type="number" name="product-length" data-price="677" value="1" min="1" class="product-length__input">
 										<button class="product-length__btn to-plus" type="button" title="+"></button>
@@ -2273,7 +2392,7 @@
 										<del>907 ₴</del>
 										<!-- <strong></strong> -->
 									</div>
-									<div class="cart-item__length product-length">
+									<div class="cart-item__length product-length is-min">
 										<button class="product-length__btn to-minus" type="button" title="-"></button>
 										<input type="number" name="product-length" data-price="677" value="1" min="1" class="product-length__input">
 										<button class="product-length__btn to-plus" type="button" title="+"></button>

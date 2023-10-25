@@ -39,7 +39,10 @@
 	// .similar-products__track
 
 	&__track {
-		margin-top: 50px;
+		margin-top: 25px;
+		@include _550 {
+			margin-top: 50px;
+		}
 	}
 
 	// .similar-products__list

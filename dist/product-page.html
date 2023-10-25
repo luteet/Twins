@@ -23,7 +23,7 @@
 					<use xlink:href="img/sprites.svg#user"></use>
 				</svg>
 			</a>
-			<a href="#cart-popup" class="header__icon-link visible-on-mob open-popup" data-counter="1">
+			<a href="#cart-popup" class="header__icon-link visible-on-mob open-popup cart-count" data-counter="1">
 				<svg width="30" height="30" viewBox="0 0 35 35">
 					<use xlink:href="img/sprites.svg#cart"></use>
 				</svg>
@@ -76,7 +76,7 @@
 								</li>
 								<li>
 									<a href="#cart-popup" class="open-popup" aria-label="Корзина">
-										<i data-counter="1">
+										<i class="cart-count" data-counter="1">
 											<svg width="35" height="35" viewBox="0 0 35 35">
 												<use xlink:href="img/sprites.svg#cart"></use>
 											</svg>
@@ -378,7 +378,7 @@
 						<a href="#" class="product__to-card btn">
 							До кошика
 						</a>
-						<a href="#" class="product__buy btn is-alternative">
+						<a href="#buy-popup" class="product__buy btn is-alternative open-popup">
 							Купити в один клік
 						</a>
 					</div>
@@ -1939,7 +1939,6 @@
 					</form>
 				</div>
 			</div>
-
 			<div class="leave-review popup" id="leave-answer-popup" style="display: none;">
 				<div class="leave-review__wrapper popup-wrapper">
 					<div class="leave-review__bg popup-bg popup-close"></div>
@@ -1987,6 +1986,36 @@
 					</form>
 				</div>
 			</div>
+			<div class="leave-review popup" id="buy-popup" style="display: none;">
+				<div class="leave-review__wrapper popup-wrapper">
+					<div class="leave-review__bg popup-bg popup-close"></div>
+					<form method="post" class="leave-review__body popup-body is-min-2">
+						<button type="button" class="leave-review__close-btn popup-close-btn popup-close" title="Закрити попап">
+							<svg width="30" height="30" viewBox="0 0 30 30">
+								<use xlink:href="img/sprites.svg#close"></use>
+							</svg>
+						</button>
+						<h1 class="leave-review__title">
+							Купити "TWINS Аромадифузор" в 1 клік
+						</h1>
+						<div class="leave-review__block">
+							<label>
+								<input type="text" name="name" class="input hide-placeholder" placeholder="Ваше ім’я*" required>
+								<span class="placeholder">Ваше ім’я*</span>
+							</label>
+							<label>
+								<input type="text" name="phone" class="input tel-constructor-input hide-placeholder" data-tc-sample=" (xxx) xxx-xx-xx" placeholder="+38 (___)-___-__-__" data-tc-country-code="38" required>
+								<span class="placeholder">Номер телефона*</span>
+							</label>
+						</div>
+						<div class="leave-review__footer is-center">
+							<button class="leave-review__submit btn is-min" type="submit">
+								Купити
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
 		</main>
 
 		<footer class="footer">
@@ -2004,22 +2033,22 @@
 						</h3>
 						<ul>
 							<li>
-								<a href="#">
+								<a href="about-company.html">
 									Про компанію
 								</a>
 							</li>
 							<li>
-								<a href="#">
+								<a href="payment-and-delivery.html">
 									Оплата і Доставка
 								</a>
 							</li>
 							<li>
-								<a href="#">
+								<a href="blog.html">
 									Новини і Статті
 								</a>
 							</li>
 							<li>
-								<a href="#">
+								<a href="shares.html" class="is-accent">
 									Акції
 								</a>
 							</li>
@@ -2031,27 +2060,27 @@
 						</h3>
 						<ul>
 							<li>
-								<a href="#">
+								<a href="products.html">
 									Твердий парфум
 								</a>
 							</li>
 							<li>
-								<a href="#">
+								<a href="products.html">
 									Аромо свічки
 								</a>
 							</li>
 							<li>
-								<a href="#">
+								<a href="products.html">
 									Колекції ароматів
 								</a>
 							</li>
 							<li>
-								<a href="#">
+								<a href="products.html">
 									Аромати для дому
 								</a>
 							</li>
 							<li>
-								<a href="#">
+								<a href="products.html">
 									Косметика для тіла
 								</a>
 							</li>
@@ -2064,12 +2093,12 @@
 					</h3>
 					<ul>
 						<li>
-							<a href="#">
+							<a href="tel:0977986709">
 								(097) 798 67 09
 							</a>
 						</li>
 						<li>
-							<a href="#">
+							<a href="tel:0635761245">
 								(063) 576 12 45
 							</a>
 						</li>
@@ -2292,7 +2321,7 @@
 										<del>907 ₴</del>
 										<!-- <strong></strong> -->
 									</div>
-									<div class="cart-item__length product-length">
+									<div class="cart-item__length product-length is-min">
 										<button class="product-length__btn to-minus" type="button" title="-"></button>
 										<input type="number" name="product-length" data-price="677" value="1" min="1" class="product-length__input">
 										<button class="product-length__btn to-plus" type="button" title="+"></button>
@@ -2335,7 +2364,7 @@
 										<del>907 ₴</del>
 										<!-- <strong></strong> -->
 									</div>
-									<div class="cart-item__length product-length">
+									<div class="cart-item__length product-length is-min">
 										<button class="product-length__btn to-minus" type="button" title="-"></button>
 										<input type="number" name="product-length" data-price="677" value="1" min="1" class="product-length__input">
 										<button class="product-length__btn to-plus" type="button" title="+"></button>

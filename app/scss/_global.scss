@@ -233,11 +233,21 @@ section {
 	&.is-min-2 {
 		display: inline-flex;
 		align-items: center;
-		padding: 12px 25px;
+		padding: 7px 5px;
+		white-space: nowrap;
+		@include _550 {
+			
+			padding: 12px 25px;
+		}
 		line-height: 95%;
 
 		svg {
-			flex: 0 0 25px; margin-right: 5px;
+			flex: 0 0 20px; margin-right: 2.5px;
+			width: 20px; height: 20px;
+			@include _550 {
+				width: 25px; height: 25px; flex: 0 0 25px;
+				margin-right: 5px;
+			}
 		}
 	}
 
@@ -279,7 +289,7 @@ section {
 
 	font-size: 1rem;
 	&.is-min-2 {
-		font-size: 0.875rem;
+		font-size: 0.75rem;
 	}
 
 	@include _550 {
@@ -484,6 +494,19 @@ section {
 	width: 105px;
 	@include _550 {
 		width: 134px;
+		&.is-min {
+			width: 105px;
+			grid-template-columns: 25px 44px 25px;
+		}
+
+		&.is-min & {
+			&__btn {
+				width: 25px; height: 25px;
+				@include _550 {
+					width: 25px; height: 25px;
+				}
+			}
+		}
 	}
 	padding: 5px 4px;
 	border: 1px solid #262626;
@@ -593,7 +616,13 @@ section {
 .favorite-btn {
 	display: grid;
 
-	width: 50px; height: 50px; flex: 0 0 50px;
+	width: 35px; height: 35px; flex: 0 0 35px;
+	svg {
+		width: 50%; height: auto;
+	}
+	@include _550 {
+		width: 50px; height: 50px; flex: 0 0 50px;
+	}
 	border: 1px solid var(--accent);
 	background: transparent;
 	color: var(--accent);

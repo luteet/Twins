@@ -79,6 +79,7 @@ body {
 		right: 15px; top: 15px;
 		line-height: 100%;
 		width: 40px; height: 40px;
+		color: var(--text-color);
 	  
 		& svg {
 		  width: 50%;
@@ -458,7 +459,7 @@ body {
 	&__body {
 		max-width: 320px;
 		@include _768 {
-			max-width: 675px;
+			max-width: 575px;
 		}
 
 		overflow-y: auto;
@@ -502,7 +503,7 @@ body {
 	&__container {
 		padding: 45px 20px 25px;
 		@include _768 {
-			padding: 57px 42px 30px;
+			padding: 40px 20px 30px;
 		}
 
 		max-height: calc(var(--svh,1vh) * 100);
@@ -518,6 +519,7 @@ body {
 	// .cart-popup__list
 
 	&__list {
+		margin-top: 15px;
 	}
 
 	// .cart-popup__item
@@ -547,7 +549,7 @@ body {
 
 	&__price {
 
-		padding: 15px 0;
+		padding: 10px 0;
 		color: #2C2C2C;
 
 		display: flex;
@@ -589,7 +591,7 @@ body {
 
 		color: #2C2C2C;
 
-		padding: 15px 0;
+		padding: 10px 0;
 
 		display: flex;
 		flex-wrap: wrap;
@@ -659,11 +661,11 @@ body {
 	// .cart-item__body
 
 	&__body {
-		padding: 20px 0;
+		padding: 15px 0;
 		
 		display: grid;
 		@include _992 {
-			grid-template-columns: 100px 1.3fr 1.3fr 1fr 50px;
+			grid-template-columns: 70px 1.3fr 1.3fr 1fr 50px;
 		}
 		align-items: center;
 
@@ -679,7 +681,7 @@ body {
 		padding: 10px 0;
 
 		@include _550 {
-			padding: 15px 0;
+			padding: 10px 0;
 		}
 
 		&:nth-child(2) {
@@ -721,13 +723,12 @@ body {
 		@include _992 {
 			margin-bottom: 0;
 		}
+		
 		margin-bottom: 10px;
+
 		img {
 			width: 70px; height: 70px;
 			object-fit: cover;
-			@include _550 {
-				width: 100px; height: 100px;
-			}
 		}
 	}
 
@@ -746,7 +747,7 @@ body {
 		}
 
 		@include _992 {
-			font-size: 1.25rem;
+			font-size: 1.125rem;
 		}
 	}
 
@@ -770,15 +771,18 @@ body {
 	&__price {
 		@include _992 {
 			text-align: center;
-			padding-bottom: 10px;
+			padding-bottom: 5px;
 		}
+
 		line-height: 120%;
 		font-size: 1rem;
+
 		@include _550 {
-			font-size: 1.125rem;
+			font-size: 1rem;
 		}
+
 		@include _992 {
-			font-size: 1.25rem;
+			font-size: 1.125rem;
 		}
 		
 		ins, strong {
@@ -845,6 +849,9 @@ body {
 
 	&__body {
 		max-width: 1194px;
+		&.is-min-2 {
+			max-width: 700px;
+		}
 		border: 2px solid #171717;
 
 		padding: 55px 15px 30px;

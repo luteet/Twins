@@ -199,7 +199,22 @@ const popup = new Popup();
 popup.init();
 
 
+const cartCount = document.querySelectorAll('.cart-count');
+
+function checkProductsLength() {
+	if(document.querySelectorAll('.cart-popup__item').length >= 1) {
+		cartCount.forEach(cartCountItem => {
+			cartCountItem.setAttribute('data-counter', document.querySelectorAll('.cart-popup__item').length);
+		})
+	} else {
+		cartCount.forEach(cartCountItem => {
+			cartCountItem.removeAttribute('data-counter');
+		})
+	}
+}
+
 function updatePrice() {
+
 	const prices = document.querySelectorAll('[data-price]'),
 	addPrices = document.querySelectorAll('[data-add-price]'),
 	resultPriceInput = document.querySelectorAll('[data-result-price-input]'),
@@ -229,6 +244,8 @@ function updatePrice() {
 	resultPriceSum.forEach(resultPriceSum => {
 		resultPriceSum.textContent = result.toLocaleString() + ' ' + resultPriceSum.dataset.resultCurrency;
 	})
+
+	checkProductsLength();
 	
 }
 
@@ -726,8 +743,8 @@ document.querySelectorAll('.similar-products__slider').forEach(sliderElement => 
 				perPage: 2,
 			},
 
-			768: {
-				perPage: 1,
+			550: {
+				gap: 5,
 			}
 		}
 
@@ -882,7 +899,7 @@ document.querySelectorAll('.products-slider__body').forEach(sliderElement => {
 	const slider = new Splide(sliderElement, {
 
 		type: "loop",
-		perPage: 3,
+		perPage: 4,
 		gap: 20,
 		speed: 700,
 		easing: "ease",
@@ -890,12 +907,15 @@ document.querySelectorAll('.products-slider__body').forEach(sliderElement => {
 		pagination: false,
 
 		breakpoints: {
+			1300: {
+				perPage: 3
+			},
 			992: {
 				perPage: 2,
 			},
 
 			550: {
-				perPage: 1,
+				gap: 5,
 			}
 		}
 
@@ -905,12 +925,36 @@ document.querySelectorAll('.products-slider__body').forEach(sliderElement => {
 
 })
 
+
+// =-=-=-=-=-=-=-=-=-=- <Get-device-type> -=-=-=-=-=-=-=-=-=-=-
+
+const getDeviceType = () => {
+
+	const ua = navigator.userAgent;
+	if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
+		return "tablet";
+	}
+
+	if (
+		/Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(
+		ua
+		)
+	) {
+		return "mobile";
+	}
+	return "desktop";
+
+};
+
+// =-=-=-=-=-=-=-=-=-=- </Get-device-type> -=-=-=-=-=-=-=-=-=-=-
+
+
 document.querySelectorAll('.product-card__image-gallery').forEach(sliderElement => {
 
 	const slider = new Splide(sliderElement, {
 
 		type: "fade",
-		
+		drag: false,
 		rewind: true,
 		speed: 700,
 		easing: "ease",
@@ -938,14 +982,18 @@ document.querySelectorAll('.product-card__image-gallery').forEach(sliderElement 
 	slider.mount();
 
 	sliderElement.addEventListener('pointerenter', function () {
-		isHovered = false;
-		startAutoplay();
+		if(getDeviceType() == "desktop") {	
+			isHovered = false;
+			startAutoplay();
+		}
 	})
 
 	sliderElement.addEventListener('pointerleave', function () {
-		isHovered = true;
-		slider.go(0)
-		clearInterval(autoplayTimeout);
+		if(getDeviceType() == "desktop") {
+			isHovered = true;
+			slider.go(0)
+			clearInterval(autoplayTimeout);
+		}
 	})
 
 })
