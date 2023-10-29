@@ -106,7 +106,7 @@
 			gap: 19px;
 		}
 
-		gap: 30px 19px;
+		gap: 19px;
 
 		
 
@@ -217,11 +217,7 @@
 
 	&__number {
 
-		margin-top: 15px;
-
-		@include _550 {
-			margin-top: 29px;
-		}
+		margin-top: 29px;
 		
 		ul {
 			counter-reset: checkout_number;

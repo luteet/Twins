@@ -7216,7 +7216,7 @@ body {
 }
 
 .checkout__nav {
-    gap: 30px 19px
+    gap: 19px
 }
 
 .checkout__nav li>span {
@@ -7254,7 +7254,7 @@ body {
 }
 
 .checkout__number {
-    margin-top: 15px
+    margin-top: 29px
 }
 
 .checkout__number ul {
@@ -8563,10 +8563,6 @@ body {
     .checkout__nav {
         display: inline-grid;
         gap: 19px
-    }
-
-    .checkout__number {
-        margin-top: 29px
     }
 
     .checkout__col .is-end {
