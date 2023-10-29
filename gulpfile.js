@@ -68,7 +68,7 @@ function browsersyncStart() {
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- <images> -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
 function images() {
-	return src(['app/img/**/*.*', '!app/img/**/*.webp', '!app/img/**/*.svg'])
+	return src(['app/img/**/*.*', '!app/img/**/*.webp', '!app/img/**/*.svg', '!app/img/favicon/*.*'])
 	.pipe(newer('dist/img'))
 	.pipe(avif({ quality: 50 }))
 
@@ -103,7 +103,7 @@ function scriptsLib() {
 		//'node_modules/gsap/dist/ScrollTrigger.min.js', // GSAP (Animation) | npm i gsap --save-dev | https://www.npmjs.com/package/gsap
 		//'node_modules/split-type/umd/index.min.js', // split text | npm i split-type --save-dev | https://www.npmjs.com/package/split-type
 		//'app/js/ScrollSmoother.min.js', // GSAP
-		//'node_modules/slim-select/dist/slimselect.min.js', // Select | npm i slim-select --save-dev | https://www.npmjs.com/package/slim-select
+		'node_modules/slim-select/dist/slimselect.min.js', // Select | npm i slim-select --save-dev | https://www.npmjs.com/package/slim-select
 		//'node_modules/sticky-js/dist/sticky.min.js' // Sticky | npm i sticky-js --save-dev | https://www.npmjs.com/package/sticky-js
 		'node_modules/nouislider/dist/nouislider.min.js', // Кастомный input[range] | npm i nouislider --save-dev | https://www.npmjs.com/package/nouislider
 		'node_modules/simplebar/dist/simplebar.min.js', // Кастомный скролбар | npm i simplebar --save-dev | https://www.npmjs.com/package/simplebar
@@ -192,7 +192,7 @@ function stylesLib() {
 		'app/css/wrunner-default-theme.css',
 		//'node_modules/@splidejs/splide/dist/css/splide-core.min.css', // Слайдер
 		//'node_modules/swiper/swiper-bundle.min.css', // Слайдер
-		//'node_modules/slim-select/dist/slimselect.css', // Select
+		'node_modules/slim-select/dist/slimselect.css', // Select
 		//'node_modules/aos/dist/aos.css', // Анимация
 		'node_modules/nouislider/dist/nouislider.css', // Кастомный input[range]
 		'node_modules/simplebar/dist/simplebar.min.css', // Кастомный скролбар

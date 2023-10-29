@@ -517,6 +517,19 @@ body.addEventListener('click', function (event) {
 	// =-=-=-=-=-=-=-=-=-=-=-=- </account-favorited> -=-=-=-=-=-=-=-=-=-=-=-=
 
 
+
+	// =-=-=-=-=-=-=-=-=-=-=-=- <checkout> -=-=-=-=-=-=-=-=-=-=-=-=
+	
+	const checkoutAddItemTarget = $(".checkout__add-item--target")
+	if(checkoutAddItemTarget) {
+	
+		checkoutAddItemTarget.classList.toggle('is-active')
+	
+	}
+	
+	// =-=-=-=-=-=-=-=-=-=-=-=- </checkout> -=-=-=-=-=-=-=-=-=-=-=-=
+
+
 })
 
 // =-=-=-=-=-=-=-=-=-=- </click events> -=-=-=-=-=-=-=-=-=-=-
@@ -1216,3 +1229,29 @@ setTimeout(() => {
 	}
 	
 },3000)
+
+document.querySelectorAll('.checkout__select--element').forEach(element => {
+	const select = new SlimSelect({
+		select: element,
+		settings: {
+			showSearch: false,
+		},
+		events: {
+			afterChange: (newVal) => {
+				Array.from(select.getData()).forEach(select => {
+					
+					if(select['value'] == newVal[0]['value']) {
+						document.querySelector(`#${select['value']}`).classList.add('is-visible');
+						//console.log(document.querySelector(`#${select['value']}`))
+					} else {
+						document.querySelector(`#${select['value']}`).classList.remove('is-visible');
+						//console.log(document.querySelector(`#${select['value']}`))
+					}
+					
+				})
+			}
+		}
+	})
+
+	//console.log(select)
+})

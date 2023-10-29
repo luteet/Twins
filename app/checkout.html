@@ -103,170 +103,47 @@
 					</label>
 				</div>
 				<div class="checkout__main" data-aos="fade-in" data-aos-delay="200">
-					<div class="checkout__block">
-						<div class="checkout__block--header">
-							<div class="checkout__block--number"></div>
-							<h2 class="checkout__block--title">
-								Контактна інформація
-							</h2>
+					<ul class="checkout__nav">
+						<li>
+							<a href="#" class="is-current">
+								<span>Новий покупець</span>
+								<span>
+									Особисті дані
+								</span>
+							</a>
+						</li>
+						<li>
+							<a href="checkout-3.html">
+								<span>Я постійний клієнт</span>
+								<span>
+									Я постійний клієнт
+								</span>
+							</a>
+						</li>
+					</ul>
+					<div class="checkout__row">
+						<div class="checkout__col">
+							<label class="label-input">
+								<span>Ім’я*</span>
+								<input type="text" name="firstname" placeholder="Напишіть Ваше ім’я" required class="input">
+							</label>
+							<label class="label-input">
+								<span>Ваше прізвище*</span>
+								<input type="text" name="lastname" placeholder="Напишіть Ваше прізвище" required class="input">
+							</label>
 						</div>
-						<div class="checkout__block--form">
-							<label>
-								<span>Ім’я</span>
-								<input type="text" class="input" name="first-name" placeholder="Напишіть Ваше ім’я" required>
+						<div class="checkout__col">
+							<label class="label-input">
+								<span>Номер телефона*</span>
+								<input type="tel" name="tel" class="input tel-constructor-input" data-tc-sample=" (xxx) xxx-xx-xx" data-tc-country-code="38" placeholder="+38 (___) - ___ - __ - __" required class="input">
 							</label>
-							<label>
-								<span>Номер телефона</span>
-								<input type="tel" class="input tel-constructor-input" data-tc-sample=" (xxx) xxx-xx-xx" data-tc-country-code="38" name="phone" placeholder="+38 (___)-___-__-__" required>
-							</label>
-							<label>
+							<label class="label-input">
 								<span>E-mail</span>
-								<input type="email" class="input" name="email" placeholder="Ваш e-mail" required>
+								<input type="email" name="email" placeholder="E-mail" class="input">
 							</label>
-						</div>
-					</div>
-					<div class="checkout__block">
-						<div class="checkout__block--header">
-							<div class="checkout__block--number"></div>
-							<h2 class="checkout__block--title">
-								Виберіть спосіб доставки
-							</h2>
-						</div>
-						<div class="checkout__block--form">
-							<div class="checkout__block--select">
-								<span>Ваше місто</span>
-								<div class="checkout__block--select-body">
-									<select name="city" required class="select">
-										<option value="" disabled selected>Оберіть місто</option>
-										<option value="city-1">Київ</option>
-										<option value="city-2">Львів</option>
-										<option value="city-3">Харків</option>
-									</select>
-									<svg width="14" height="14" viewBox="0 0 9 9">
-										<use xlink:href="img/sprites.svg#drop-down-arrow"></use>
-									</svg>
-								</div>
-							</div>
-							<ul class="checkout__block--radio-list checkout__radio-list">
-								<li>
-									<label class="checkout__radio-item">
-										<input type="radio" name="delivery" value="1" required class="checkout__radio-item--input">
-										<span class="checkout__radio-item--border"></span>
-										<span class="checkout__radio-item--element"></span>
-										<i class="checkout__radio-item--icon">
-											<img src="img/payment-delivery/payment-delivery-icon-1.svg" width="25" height="25" loading="lazy" alt="">
-										</i>
-										<span class="checkout__radio-item--info">
-											<h3>Самовивіз із магазину</h3>
-											<p>23 жовтня</p>
-										</span>
-										<b class="checkout__radio-item--price is-free">
-											Безоплатно
-										</b>
-									</label>
-								</li>
-								<li>
-									<label class="checkout__radio-item">
-										<input type="radio" name="delivery" value="1" required class="checkout__radio-item--input">
-										<span class="checkout__radio-item--border"></span>
-										<span class="checkout__radio-item--element"></span>
-										<i class="checkout__radio-item--icon">
-											<img src="img/payment-delivery/new-post-icon.svg" width="38" height="38" loading="lazy" alt="">
-										</i>
-										<span class="checkout__radio-item--info">
-											<h3>У відділення Нової Пошти</h3>
-											<p>23 жовтня</p>
-										</span>
-										<b class="checkout__radio-item--price">
-											60 ₴
-										</b>
-									</label>
-								</li>
-								<li>
-									<label class="checkout__radio-item">
-										<input type="radio" name="delivery" value="1" required class="checkout__radio-item--input">
-										<span class="checkout__radio-item--border"></span>
-										<span class="checkout__radio-item--element"></span>
-										<i class="checkout__radio-item--icon">
-											<img src="img/payment-delivery/new-post-icon.svg" width="38" height="38" loading="lazy" alt="">
-										</i>
-										<span class="checkout__radio-item--info">
-											<h3>Кур'єр Нова Пошта</h3>
-											<p>23 жовтня</p>
-										</span>
-										<b class="checkout__radio-item--price">
-											758 ₴
-										</b>
-									</label>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div class="checkout__block">
-						<div class="checkout__block--header">
-							<div class="checkout__block--number"></div>
-							<h2 class="checkout__block--title">
-								Вибір способу оплати
-							</h2>
-						</div>
-						<div class="checkout__block--form">
-							<ul class="checkout__block--radio-list checkout__radio-list">
-								<li>
-									<label class="checkout__radio-item">
-										<input type="radio" name="delivery" value="1" required class="checkout__radio-item--input">
-										<span class="checkout__radio-item--border"></span>
-										<span class="checkout__radio-item--element"></span>
-										<i class="checkout__radio-item--icon">
-											<img src="img/payment-delivery/payment-delivery-icon-5.svg" width="25" height="25" loading="lazy" alt="">
-										</i>
-										<span class="checkout__radio-item--info">
-											<h3>Оплата при отриманні</h3>
-										</span>
-									</label>
-								</li>
-								<li>
-									<label class="checkout__radio-item">
-										<input type="radio" name="delivery" value="1" required class="checkout__radio-item--input">
-										<span class="checkout__radio-item--border"></span>
-										<span class="checkout__radio-item--element"></span>
-										<i class="checkout__radio-item--icon">
-											<img src="img/payment-delivery/payment-delivery-icon-7.svg" width="25" height="25" loading="lazy" alt="">
-										</i>
-										<span class="checkout__radio-item--info">
-											<h3>Оплата онлайн</h3>
-											<p>Visa / MasterCard</p>
-										</span>
-									</label>
-								</li>
-								<li>
-									<label class="checkout__radio-item">
-										<input type="radio" name="delivery" value="1" required class="checkout__radio-item--input">
-										<span class="checkout__radio-item--border"></span>
-										<span class="checkout__radio-item--element"></span>
-										<i class="checkout__radio-item--icon">
-											<img src="img/checkout/apple-pay.svg" width="22" height="22" loading="lazy" alt="">
-										</i>
-										<span class="checkout__radio-item--info">
-											<h3>Apple Pay</h3>
-											<p>Онлайн-оплата</p>
-										</span>
-									</label>
-								</li>
-								<li>
-									<label class="checkout__radio-item">
-										<input type="radio" name="delivery" value="1" required class="checkout__radio-item--input">
-										<span class="checkout__radio-item--border"></span>
-										<span class="checkout__radio-item--element"></span>
-										<i class="checkout__radio-item--icon">
-											<img src="img/checkout/google-pay.svg" width="22" height="22" loading="lazy" alt="">
-										</i>
-										<span class="checkout__radio-item--info">
-											<h3>Google Pay</h3>
-											<p>Онлайн-оплата</p>
-										</span>
-									</label>
-								</li>
-							</ul>
+							<button class="btn is-min is-end" type="submit">
+								Далі
+							</button>
 						</div>
 					</div>
 				</div>

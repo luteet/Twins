@@ -163,6 +163,45 @@ input, textarea {
 	background: var(--accent);
 }
 
+.label-input {
+			
+	display: flex;
+	flex-direction: column;
+
+	> span:first-child {
+		color: #4C4C4C;
+		font-weight: 400;
+		line-height: 188.889%;
+
+		font-size: 1rem;
+		
+		@include _992 {
+			font-size: 1.125rem;
+		}
+	}
+
+	> span:last-child {
+		position: relative;
+		display: flex;
+
+		input {
+			width: 100%;
+			padding-right: 50px;
+		}
+
+		.search-icon {
+			position: absolute;
+			right: 21px; top: 50%;
+			transform: translate(0,-50%);
+			color: #575757;
+		}
+	}
+
+	.input {
+		width: 100%;
+	}
+}
+
 [class^="jsr"] {
 	box-sizing: border-box;
 }
