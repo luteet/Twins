@@ -7257,6 +7257,10 @@ body {
     margin-top: 29px
 }
 
+.checkout__number:first-child {
+    margin-top: 0
+}
+
 .checkout__number ul {
     counter-reset: checkout_number;
     display: flex;

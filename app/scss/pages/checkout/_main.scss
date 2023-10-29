@@ -218,6 +218,9 @@
 	&__number {
 
 		margin-top: 29px;
+		&:first-child {
+			margin-top: 0;
+		}
 		
 		ul {
 			counter-reset: checkout_number;
