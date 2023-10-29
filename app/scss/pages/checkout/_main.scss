@@ -108,7 +108,7 @@
 
 		gap: 30px 19px;
 
-		counter-reset: checkout_number;
+		
 
 		li > span {
 
@@ -138,45 +138,47 @@
 		li > a {
 			min-height: 100%;
 
-			display: flex;
-			flex-direction: column;
-
-			&.is-current span:first-child {
+			&.is-current {
 				background: #202121;
 				color: var(--white);
 				border: 1px solid #202121;
 			}
 
-			&.is-current span:last-child {
-				color: #202121;
-				&::before {
-					border: 1px solid #202121;
-					color: #202121;
+			/* &.is-current span:last-child {
+				
+			} */
+
+			&:not(.is-current) {
+				@media (any-hover: hover) {
+					&:hover {
+						background: #202121;
+						color: var(--white);
+					}
+					
+					&:active {
+						background: #202121;
+						color: var(--white);
+					}
 				}
 			}
 
-			span:first-child {
-				flex: 1 1 auto;
+			display: flex;
+			align-items: center;
+			justify-content: center;
 
-				display: flex;
-				align-items: center;
-				justify-content: center;
-
-				@include _768 {
-					padding: 19px 37px;
-				}
-
-				padding: 15px 15px;
-
-				background: transparent;
-				border: 1px solid #BABABA;
-				color: #BABABA;
-
-				transition: background .3s ease, border-color .3s ease, color .2s ease;
-
+			@include _768 {
+				padding: 19px 37px;
 			}
 
-			span:last-child {
+			padding: 15px 15px;
+
+			background: transparent;
+			border: 1px solid #BABABA;
+			color: #BABABA;
+
+			transition: background .3s ease, border-color .3s ease, color .2s ease;
+
+			/* span:last-child {
 
 				margin-top: 15px;
 
@@ -206,21 +208,61 @@
 
 				color: #BABABA;
 				
-			}
+			} */
 
 		}
 
-		a:not(.is-current) {
-			@media (any-hover: hover) {
-				&:hover span:first-child {
-					background: #202121;
-					color: var(--white);
+		
+	}
+
+	&__number {
+
+		margin-top: 15px;
+
+		@include _550 {
+			margin-top: 29px;
+		}
+		
+		ul {
+			counter-reset: checkout_number;
+
+			display: flex;
+			flex-wrap: wrap;
+			gap: 25px 19px;
+
+			li.is-current {
+				color: #202121;
+				&::before {
+					border: 1px solid #202121;
+					color: #202121;
 				}
+			}
+
+			li {
+
+				display: inline-flex;
+				align-items: center;
+
+				min-width: 211px;
 				
-				&:active span:first-child {
-					background: #202121;
-					color: var(--white);
+				&::before {
+					counter-increment: checkout_number;
+					content: counter(checkout_number);
+	
+					display: flex;
+					align-items: center;
+					justify-content: center;
+	
+					flex: 0 0 35px; width: 35px; height: 35px;
+					margin-right: 10px;
+	
+					border: 1px solid #BABABA;
+					color: #BABABA;
+					background: #FFF;
+				
 				}
+	
+				color: #BABABA;
 			}
 		}
 	}
@@ -246,9 +288,7 @@
 		align-self: self-start;
 
 		display: grid;
-		gap: 30px 0;
-
-		
+		gap: 30px 0;		
 
 		.is-end {
 			@include _550 {
