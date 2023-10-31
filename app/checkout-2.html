@@ -103,95 +103,27 @@
 					</label>
 				</div>
 				<div class="checkout__main" data-aos="fade-in" data-aos-delay="200">
-					<div class="checkout__number">
-						<ul>
-							<li class="is-current">
-								Особисті дані
-							</li>
-							<li class="is-current">
-								Доставка
-							</li>
-						</ul>
-					</div>
 					<div class="checkout__row">
 						<div class="checkout__col">
-							<label class="label-input">
-								<span>Місто*</span>
-								<span>
-									<input type="text" name="city" placeholder="Оберіть ваше місто" required class="input">
-									<svg width="20" height="20" viewBox="0 0 20 20" class="search-icon">
-										<use xlink:href="img/sprites.svg#search"></use>
-									</svg>
-								</span>
-							</label>
-							<div class="checkout__select">
-								<span>Варіанти доставки</span>
-								<div class="checkout__select--wrapper">
-									<select name="delivery-options" class="checkout__select--element change-form-block">
-										<option value="delivery-courier">Безкоштовно кур’єром (0 ₴)</option>
-										<option value="delivery-new-post">Нова Пошта (Самовивіз) (0₴)</option>
-									</select>
-								</div>
+							<div class="checkout__param">
+								<h3>Ім’я та Прізвище</h3>
+								<span>Іванна Полтавець</span>
 							</div>
-							<div class="checkout__form-block is-visible" id="delivery-courier">
-								<label class="label-input">
-									<span>Вулиця*</span>
-									<span>
-										<input type="text" name="street" placeholder="Оберіть вулицю" required class="input">
-										<svg width="20" height="20" viewBox="0 0 20 20" class="search-icon">
-											<use xlink:href="img/sprites.svg#search"></use>
-										</svg>
-									</span>
-								</label>
-								<div class="checkout__min-row">
-									<div class="checkout__min-row--col">
-										<label class="label-input">
-											<span>Будинок*</span>
-											<input type="text" name="number-house" placeholder="Номер будинка" required class="input">
-										</label>
-									</div>
-									<div class="checkout__min-row--col">
-										<label class="label-input">
-											<span>Кв*</span>
-											<input type="text" name="number-apartments" placeholder="Номер квартири" required class="input">
-										</label>
-									</div>
-								</div>
+							<div class="checkout__param">
+								<h3>E-mail</h3>
+								<span>@gmail.com</span>
 							</div>
-							<div class="checkout__form-block" id="delivery-new-post">
-								<div class="checkout__select">
-									<span>Відділення</span>
-									<div class="checkout__select--wrapper">
-										<select name="departments-new-post" required class="checkout__select--element">
-											<option value="" selected disabled>-Оберіть</option>
-											<option value="departments-1">Відделення №2, Маршала Малиновській 114, (056) 465-78-65</option>
-											<option value="departments-2">Відделення №2, Маршала Малиновській 114, (056) 465-78-65</option>
-											<option value="departments-3">Відделення №2, Маршала Малиновській 114, (056) 465-78-65</option>
-											<option value="departments-4">Відделення №2, Маршала Малиновській 114, (056) 465-78-65</option>
-											<option value="departments-5">Відделення №2, Маршала Малиновській 114, (056) 465-78-65</option>
-											<option value="departments-6">Відделення №2, Маршала Малиновській 114, (056) 465-78-65</option>
-											<option value="departments-7">Відделення №2, Маршала Малиновській 114, (056) 465-78-65</option>
-											<option value="departments-8">Відделення №2, Маршала Малиновській 114, (056) 465-78-65</option>
-										</select>
-									</div>
-								</div>
+							<div class="checkout__param">
+								<h3>Телефон</h3>
+								<span>+38 (097) 956 23 45</span><br>
+								<a href="checkout.html">Змінити контактну інформацію</a>
 							</div>
 						</div>
 						<div class="checkout__col">
-							<div class="checkout__select">
-								<span>Час доставки</span>
-								<div class="checkout__select--wrapper">
-									<select name="delivery-time" required class="checkout__select--element">
-										<option value="delivery-time-1">Пн 27 з 09:00 до 08:00</option>
-										<option value="delivery-time-2">Пн 27 з 09:00 до 08:00</option>
-										<option value="delivery-time-3">Пн 27 з 09:00 до 08:00</option>
-										<option value="delivery-time-4">Пн 27 з 09:00 до 08:00</option>
-										<option value="delivery-time-5">Пн 27 з 09:00 до 08:00</option>
-										<option value="delivery-time-6">Пн 27 з 09:00 до 08:00</option>
-										<option value="delivery-time-7">Пн 27 з 09:00 до 08:00</option>
-										<option value="delivery-time-8">Пн 27 з 09:00 до 08:00</option>
-									</select>
-								</div>
+							<div class="checkout__param">
+								<h3>Ім’я та Прізвище</h3>
+								<span>Книга адрес порожня</span><br>
+								<a href="#address-book-popup" class="open-popup">Змінити адресу</a>
 							</div>
 							<div class="checkout__select">
 								<span>Варіанти оплати</span>
@@ -259,6 +191,154 @@
 				</div>
 			</form>
 		</section>
+		<div class="address-book popup" id="address-book-popup" style="display: none;">
+			<div class="address-book__wrapper popup-wrapper">
+				<div class="address-book__bg popup-bg popup-close"></div>
+				<div class="address-book__body popup-body is-large">
+					<button type="button" class="address-book__close-btn popup-close-btn popup-close" title="Закрыть">
+						<svg width="30" height="30" viewBox="0 0 30 30">
+							<use xlink:href="img/sprites.svg#close-2"></use>
+						</svg>
+					</button>
+					<div class="address-book__container popup-container">
+						<h1 class="address-book__title">
+							Адресна книга
+						</h1>
+						<div class="address-book__block">
+							<ul class="address-book__list">
+								<!-- <li>
+									Порожній список
+								</li> -->
+								<li>
+									<label class="address-book__item">
+										<input type="radio" name="address" value="1" checked class="address-book__item--input">
+										<span class="address-book__item--element"></span>
+										<span class="address-book__item--text">
+											<b>Іван Іванович</b>
+											<p>
+												пров. Василіський, 12, 25 <br>
+												Дніпро (Дніпропетровськ), Дніпропетровська обл., Дніпровський р-н <br>
+												тел. +38 )098) 465 12 35
+											</p>
+											<a href="#add-address-book-popup" class="open-popup">Редагувати</a>
+										</span>
+									</label>
+								</li>
+								<li>
+									<label class="address-book__item">
+										<input type="radio" name="address" value="2" class="address-book__item--input">
+										<span class="address-book__item--element"></span>
+										<span class="address-book__item--text">
+											<b>Іван Іванович</b>
+											<p>
+												пров. Василіський, 12, 25 <br>
+												Дніпро (Дніпропетровськ), Дніпропетровська обл., Дніпровський р-н <br>
+												тел. +38 )098) 465 12 35
+											</p>
+											<a href="#add-address-book-popup" class="open-popup">Редагувати</a>
+										</span>
+									</label>
+								</li>
+								<li>
+									<label class="address-book__item">
+										<input type="radio" name="address" value="3" class="address-book__item--input">
+										<span class="address-book__item--element"></span>
+										<span class="address-book__item--text">
+											<b>Іван Іванович</b>
+											<p>
+												пров. Василіський, 12, 25 <br>
+												Дніпро (Дніпропетровськ), Дніпропетровська обл., Дніпровський р-н <br>
+												тел. +38 )098) 465 12 35
+											</p>
+											<a href="#add-address-book-popup" class="open-popup">Редагувати</a>
+										</span>
+									</label>
+								</li>
+							</ul>
+							<a href="#add-address-book-popup" class="address-book__add-new-link popup-close open-popup">
+								Додавання нової адреси
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="address-book popup" id="add-address-book-popup" style="display: none;">
+			<div class="address-book__wrapper popup-wrapper">
+				<div class="address-book__bg popup-bg popup-close"></div>
+				<div class="address-book__body popup-body is-large">
+					<button type="button" class="address-book__close-btn popup-close-btn popup-close" title="Закрыть">
+						<svg width="30" height="30" viewBox="0 0 30 30">
+							<use xlink:href="img/sprites.svg#close-2"></use>
+						</svg>
+					</button>
+					<div class="address-book__container popup-container">
+						<h1 class="address-book__title">
+							Адресна книга
+						</h1>
+						<form method="post" class="address-book__block">
+							<div class="address-book__add-new">
+								<label class="label-input">
+									<span>Ім’я одержувача*</span>
+									<input type="text" name="first-name" placeholder="Напишіть ім’я" required class="input">
+								</label>
+								<label class="label-input">
+									<span>Прізвище одержувача*</span>
+									<input type="text" name="last-name" placeholder="Прізвище одержувача" required class="input">
+								</label>
+								<label class="label-input">
+									<span>Номер телефона*</span>
+									<input type="tel" name="tel" placeholder="+38 (___) - ___ - __ - __" required  data-tc-sample=" (xxx) xxx-xx-xx" data-tc-country-code="38" class="input tel-constructor-input">
+								</label>
+								<label class="label-input">
+									<span>Місто*</span>
+									<span>
+										<input type="text" name="city" placeholder="Оберіть ваше місто" required class="input">
+										<svg width="20" height="20" viewBox="0 0 20 20" class="search-icon">
+											<use xlink:href="img/sprites.svg#search"></use>
+										</svg>
+									</span>
+								</label>
+								<label class="label-input">
+									<span>Вулиця*</span>
+									<span>
+										<input type="text" name="street" placeholder="Оберіть вулицю" required class="input">
+										<svg width="20" height="20" viewBox="0 0 20 20" class="search-icon">
+											<use xlink:href="img/sprites.svg#search"></use>
+										</svg>
+									</span>
+								</label>
+								<div class="address-book__add-new--row">
+									<div class="address-book__add-new--col">
+										<label class="label-input">
+											<span>Будинок*</span>
+											<input type="text" name="house" placeholder="Будинок*" required class="input">
+										</label>
+									</div>
+									<div class="address-book__add-new--col">
+										<label class="label-input">
+											<span>Кв*</span>
+											<input type="text" name="appartaments" placeholder="Квартира*" required class="input">
+										</label>
+									</div>
+									<div class="address-book__add-new--col">
+										<label class="label-input">
+											<span>Індекс</span>
+											<input type="text" name="post-index" placeholder="Індекс" required class="input">
+										</label>
+									</div>
+								</div>
+								<div class="address-book__add-new--footer">
+									<button class="btn is-min" type="submit">
+										Зберегти
+									</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
 	</main>
 
 @@include("html/_footer-none.html")
