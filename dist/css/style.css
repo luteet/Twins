@@ -9666,7 +9666,7 @@ body {
 
     .hero__product {
         flex-direction: row;
-        aspect-ratio: none
+        aspect-ratio: 10/7
     }
 
     .hero__product--vertical-title {
