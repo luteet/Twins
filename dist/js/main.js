@@ -655,7 +655,13 @@ document.querySelectorAll('.hero__product--background-marquee').forEach(sliderEl
 		autoScroll: {
 			speed: sliderElement.dataset.direction == "prev" ? 1 : -1,
 		},
-
+		breakpoints: {
+			550: {
+				autoScroll: {
+					speed: sliderElement.dataset.direction == "prev" ? 0.5 : -0.5,
+				},
+			}
+		}
 
 	});
 

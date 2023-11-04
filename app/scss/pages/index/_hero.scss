@@ -199,11 +199,13 @@
 
 		padding-left: 0px;
 		min-height: 100%;
+		aspect-ratio: 10/8;
 
 		display: flex;
 		flex-direction: column;
 		@include _992 {
 			flex-direction: row;
+			aspect-ratio: none;
 		}
 		position: relative;
 
@@ -212,7 +214,9 @@
 
 			display: flex;
 			flex-direction: column;
+			justify-content: flex-end;
 			@include _550 {
+				justify-content: flex-end;
 				flex-direction: row;
 			}
 			flex: 1 1 auto;
@@ -287,15 +291,31 @@
 				}
 				background: #BDBDBD;
 			}
+
+			
+		}
+
+		&--background-image {
+			position: absolute;
+			left: 0; top: 0;
+			width: 100%; height: 100%;
+			//z-index: -1;
+			//z-index: 1;
+			img {
+				position: absolute;
+				left: 0; top: 0;
+				width: 100%; height: 100%;
+				object-fit: cover;
+			}
 		}
 
 		// .hero__product--background-text
 
 		&--background-text {
 			position: absolute;
-			right: 0; top: 20%;
+			right: 0; top: 0;
 			
-			width: 100%; height: 80%;
+			width: 100%; height: 100%;
 			@include _992 {
 				top: 0;
 				width: 63%; height: 100%;
@@ -310,13 +330,14 @@
 			
 			overflow: hidden;
 
-			background: #F6F5F5;
+			//background: #F6F5F5;
 
 			//transform: scaleX(-1);
 		}
 
 		&--background-marquee {
-			flex: 0 1 170px; width: 170px; height: var(--height);
+			flex: 0 1 15vw; width: 15vw; 
+			height: var(--height);
 			@include _992 {
 				flex: 0 1 40%; width: 40%;
 			}
@@ -329,7 +350,7 @@
 
 				//writing-mode: vertical-rl;
 				font-family: var(--title-font);
-				font-size: 200px;
+				font-size: 20vw;
 				@include _992 {
 					font-size: min(300px,15.625vw);
 				}
@@ -365,7 +386,7 @@
 			}
 
 			align-self: center;
-			padding-top: 30px; padding-left: 30px; padding-right: 30px; padding-bottom: 30px;
+			padding-top: 0px; padding-left: 30px; padding-right: 30px; padding-bottom: 30px;
 
 			a {
 				display: flex;
