@@ -17,6 +17,69 @@
 	</div>
 </div>
 
+<div class="regular-customer popup" id="regular-customer-popup" style="display: none;">
+	<div class="regular-customer__wrapper popup-wrapper">
+		<div class="regular-customer__bg popup-bg popup-close"></div>
+		<div class="regular-customer__body popup-body">
+			<button type="button" class="regular-customer__close-btn popup-close-btn popup-close" title="Закрити">
+				<svg width="30" height="30" viewBox="0 0 30 30">
+					<use xlink:href="img/sprites.svg#close-2"></use>
+				</svg>
+			</button>
+			<div class="regular-customer__container popup-container">
+				<h2 class="regular-customer__title">
+					Оформити замовлення використовуючи аккаунт
+				</h2>
+				<form method="post" class="regular-customer__form">
+					<label class="label-input">
+						<span>E-mail*</span>
+						<input type="email" name="email-login" placeholder="Введіть ваш E-mail" required class="input">
+					</label>
+					<label class="label-input">
+						<span>Пароль*</span>
+						<input type="password" name="password" placeholder="Введіть ваш пароль" required class="input">
+					</label>
+					<div class="regular-customer__form--link">
+						<a href="#regular-customer-password-popup" class="open-popup popup-close">
+							Забули пароль?
+						</a>
+					</div>
+					<button class="btn is-min" type="submit">
+						Увійти
+					</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="regular-customer popup" id="regular-customer-password-popup" style="display: none;">
+	<div class="regular-customer__wrapper popup-wrapper">
+		<div class="regular-customer__bg popup-bg popup-close"></div>
+		<div class="regular-customer__body popup-body">
+			<button type="button" class="regular-customer__close-btn popup-close-btn popup-close" title="Закрити">
+				<svg width="30" height="30" viewBox="0 0 30 30">
+					<use xlink:href="img/sprites.svg#close-2"></use>
+				</svg>
+			</button>
+			<div class="regular-customer__container popup-container">
+				<h2 class="regular-customer__title">
+					Забули пароль
+				</h2>
+				<form method="post" class="regular-customer__form">
+					<label class="label-input">
+						<span>E-mail*</span>
+						<input type="email" name="email-login" placeholder="Введіть ваш E-mail" required class="input">
+					</label>
+					<button class="btn is-min" type="submit">
+						Скинути пароль
+					</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
 <script src="js/libs.min.js"></script>
 <script src="js/main.min.js"></script>
 

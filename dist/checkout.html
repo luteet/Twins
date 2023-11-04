@@ -144,176 +144,418 @@
 								</a>
 							</li>
 							<li>
-								<a href="checkout-2.html">
+								<a href="#regular-customer-popup" class="open-popup">
 									Я постійний клієнт
 								</a>
 							</li>
 						</ul>
-						<div class="checkout__row">
-							<div class="checkout__col">
+						<div class="checkout__block">
+							<div class="checkout__block--header">
+								<div class="checkout__block--number"></div>
+								<h2 class="checkout__block--title">
+									Контактна інформація
+								</h2>
+							</div>
+							<div class="checkout__block--form">
 								<label class="label-input">
 									<span>Ім’я*</span>
-									<input type="text" name="firstname" placeholder="Напишіть Ваше ім’я" required class="input">
+									<input type="text" name="first-name" placeholder="Напишіть Ваше ім’я" required class="input">
 								</label>
 								<label class="label-input">
-									<span>Ваше прізвище*</span>
-									<input type="text" name="lastname" placeholder="Напишіть Ваше прізвище" required class="input">
+									<span>Прізвище*</span>
+									<input type="text" name="last-name" placeholder="Напишіть Ваше прізвище" required class="input">
+								</label>
+								<label class="label-input">
+									<span>Телефон*</span>
+									<input type="tel" name="tel" placeholder="+38 (___) - ___ - __ - __" required class="input tel-constructor-input" data-tc-country-code="38" data-tc-sample=" (xxx) xxx-xx-xx">
+								</label>
+								<label class="label-input">
+									<span>Email</span>
+									<input type="email" name="email" placeholder="Напишіть Ваш E-mail" class="input">
 								</label>
 							</div>
-							<div class="checkout__col">
-								<label class="label-input">
-									<span>Номер телефона*</span>
-									<input type="tel" name="tel" class="input tel-constructor-input" data-tc-sample=" (xxx) xxx-xx-xx" data-tc-country-code="38" placeholder="+38 (___) - ___ - __ - __" required class="input">
+							<!-- <ul class="checkout__block--radio-list checkbox__radio-list">
+							<li>
+								<label class="checkout__radio-item">
+									<input type="radio" name="name" class="checkout__radio-item--input">
+									<span class="checkout__radio-item--border"></span>
+									<span class="checkout__radio-item--element"></span>
+									<span class="checkout__radio-item--icon">
+										
+									</span>
+									<span class="checkout__radio-item--info">
+										<h3>123</h3>
+										<p>123</p>
+									</span>
 								</label>
-								<label class="label-input">
-									<span>E-mail</span>
-									<input type="email" name="email" placeholder="E-mail" class="input">
-								</label>
-							</div>
+							</li>
+						</ul> -->
 						</div>
-						<div class="checkout__row">
-							<div class="checkout__col">
+						<div class="checkout__block">
+							<div class="checkout__block--header">
+								<div class="checkout__block--number"></div>
+								<h2 class="checkout__block--title">
+									Виберіть спосіб доставки
+								</h2>
+							</div>
+							<!-- <div class="checkout__block--select">
+							<div class="checkout__select">
+								<span></span>
+								<select name="city" class="checkout__select--element custom-select">
+									<option value="delivery-1"></option>
+								</select>
+							</div>
+						</div> -->
+							<div class="checkout__select">
+								<span>Варіанти доставки</span>
+								<div class="checkout__select--wrapper">
+									<select name="delivery-options" class="checkout__select--element change-form-block">
+										<option value="delivery-courier">Безкоштовно кур’єром (0 ₴)</option>
+										<option value="delivery-new-post">Нова Пошта (Самовивіз) (0₴)</option>
+									</select>
+								</div>
+							</div>
+							<div class="checkout__form-block is-visible" id="delivery-courier">
 								<label class="label-input">
-									<span>Місто*</span>
+									<span>Вулиця*</span>
 									<span>
-										<input type="text" name="city" placeholder="Оберіть ваше місто" required class="input">
+										<input type="text" name="street" placeholder="Оберіть вулицю" required class="input">
 										<svg width="20" height="20" viewBox="0 0 20 20" class="search-icon">
 											<use xlink:href="img/sprites.svg#search"></use>
 										</svg>
 									</span>
 								</label>
-								<div class="checkout__select">
-									<span>Варіанти доставки</span>
-									<div class="checkout__select--wrapper">
-										<select name="delivery-options" class="checkout__select--element change-form-block">
-											<option value="delivery-courier">Безкоштовно кур’єром (0 ₴)</option>
-											<option value="delivery-new-post">Нова Пошта (Самовивіз) (0₴)</option>
-										</select>
+								<div class="checkout__min-row">
+									<div class="checkout__min-row--col">
+										<label class="label-input">
+											<span>Будинок*</span>
+											<input type="text" name="number-house" placeholder="Номер будинка" required class="input">
+										</label>
 									</div>
-								</div>
-								<div class="checkout__form-block is-visible" id="delivery-courier">
-									<label class="label-input">
-										<span>Вулиця*</span>
-										<span>
-											<input type="text" name="street" placeholder="Оберіть вулицю" required class="input">
-											<svg width="20" height="20" viewBox="0 0 20 20" class="search-icon">
-												<use xlink:href="img/sprites.svg#search"></use>
-											</svg>
-										</span>
-									</label>
-									<div class="checkout__min-row">
-										<div class="checkout__min-row--col">
-											<label class="label-input">
-												<span>Будинок*</span>
-												<input type="text" name="number-house" placeholder="Номер будинка" required class="input">
-											</label>
-										</div>
-										<div class="checkout__min-row--col">
-											<label class="label-input">
-												<span>Кв*</span>
-												<input type="text" name="number-apartments" placeholder="Номер квартири" required class="input">
-											</label>
-										</div>
-									</div>
-								</div>
-								<div class="checkout__form-block" id="delivery-new-post">
-									<div class="checkout__select">
-										<span>Відділення</span>
-										<div class="checkout__select--wrapper">
-											<select name="departments-new-post" required class="checkout__select--element">
-												<option value="" selected disabled>-Оберіть</option>
-												<option value="departments-1">Відделення №2, Маршала Малиновській 114, (056) 465-78-65</option>
-												<option value="departments-2">Відделення №2, Маршала Малиновській 114, (056) 465-78-65</option>
-												<option value="departments-3">Відделення №2, Маршала Малиновській 114, (056) 465-78-65</option>
-												<option value="departments-4">Відделення №2, Маршала Малиновській 114, (056) 465-78-65</option>
-												<option value="departments-5">Відделення №2, Маршала Малиновській 114, (056) 465-78-65</option>
-												<option value="departments-6">Відделення №2, Маршала Малиновській 114, (056) 465-78-65</option>
-												<option value="departments-7">Відделення №2, Маршала Малиновській 114, (056) 465-78-65</option>
-												<option value="departments-8">Відделення №2, Маршала Малиновській 114, (056) 465-78-65</option>
-											</select>
-										</div>
+									<div class="checkout__min-row--col">
+										<label class="label-input">
+											<span>Кв*</span>
+											<input type="text" name="number-apartments" placeholder="Номер квартири" required class="input">
+										</label>
 									</div>
 								</div>
 							</div>
-							<div class="checkout__col">
+							<div class="checkout__form-block" id="delivery-new-post">
 								<div class="checkout__select">
-									<span>Час доставки</span>
+									<span>Відділення</span>
 									<div class="checkout__select--wrapper">
-										<select name="delivery-time" required class="checkout__select--element">
-											<option value="delivery-time-1">Пн 27 з 09:00 до 08:00</option>
-											<option value="delivery-time-2">Пн 27 з 09:00 до 08:00</option>
-											<option value="delivery-time-3">Пн 27 з 09:00 до 08:00</option>
-											<option value="delivery-time-4">Пн 27 з 09:00 до 08:00</option>
-											<option value="delivery-time-5">Пн 27 з 09:00 до 08:00</option>
-											<option value="delivery-time-6">Пн 27 з 09:00 до 08:00</option>
-											<option value="delivery-time-7">Пн 27 з 09:00 до 08:00</option>
-											<option value="delivery-time-8">Пн 27 з 09:00 до 08:00</option>
+										<select name="departments-new-post" required class="checkout__select--element">
+											<option value="" selected disabled>-Оберіть</option>
+											<option value="departments-1">Відделення №2, Маршала Малиновській 114, (056) 465-78-65</option>
+											<option value="departments-2">Відделення №2, Маршала Малиновській 114, (056) 465-78-65</option>
+											<option value="departments-3">Відделення №2, Маршала Малиновській 114, (056) 465-78-65</option>
+											<option value="departments-4">Відделення №2, Маршала Малиновській 114, (056) 465-78-65</option>
+											<option value="departments-5">Відделення №2, Маршала Малиновській 114, (056) 465-78-65</option>
+											<option value="departments-6">Відделення №2, Маршала Малиновській 114, (056) 465-78-65</option>
+											<option value="departments-7">Відделення №2, Маршала Малиновській 114, (056) 465-78-65</option>
+											<option value="departments-8">Відделення №2, Маршала Малиновській 114, (056) 465-78-65</option>
 										</select>
 									</div>
 								</div>
-								<div class="checkout__select">
-									<span>Варіанти оплати</span>
-									<div class="checkout__select--wrapper">
-										<select name="payment-options" required class="checkout__select--element">
-											<option value="payment-options-1">Готівка</option>
-											<option value="payment-options-2">Готівка 2</option>
-										</select>
-									</div>
-								</div>
-								<div class="checkout__add">
-									<div class="checkout__add-item">
-										<button class="checkout__add-item--target" type="button">
-											<i>
-												<svg width="14" height="14" viewBox="0 0 14 14">
-													<use xlink:href="img/sprites.svg#plus"></use>
-												</svg>
-											</i>
-											Додати коментар до замовлення
-										</button>
-										<div class="checkout__add-item--block">
-											<label class="label-input">
-												<textarea name="add-message" class="textarea"></textarea>
-											</label>
-										</div>
-									</div>
-									<div class="checkout__add-item">
-										<button class="checkout__add-item--target" type="button">
-											<i>
-												<svg width="14" height="14" viewBox="0 0 14 14">
-													<use xlink:href="img/sprites.svg#plus"></use>
-												</svg>
-											</i>
-											Я маю промокод чи сертифікат
-										</button>
-										<div class="checkout__add-item--block checkout__add-item--promocode">
-											<p>
-												Введіть у цьому полі код сертифіката або спеціальний промокод для отримання знижки або подарунка.
-											</p>
-											<p>
-												Ви можете вказати декілька кодів через кому. Після введения коду натисніть кнопку “Застасувати промокод”
-											</p>
-											<label class="label-input">
-												<span>Введіть промокод</span>
-												<input type="text" name="promocode" required placeholder="Введіть промокод" class="input">
-											</label>
-											<button class="btn is-min" type="button">
-												Застосувати промокод
-											</button>
-										</div>
-									</div>
-									<label class="checkout__checkbox">
-										<input type="checkbox" name="can-call" class="checkout__checkbox--input">
-										<span class="checkout__checkbox--element"></span>
-										<span class="checkout__checkbox--text">
-											Мені можна не телефонувати для підтвердження замовлення
+							</div>
+							<!-- <ul class="checkout__block--radio-list checkbox__radio-list">
+							<li>
+								<label class="checkout__radio-item">
+									<input type="radio" name="name" class="checkout__radio-item--input">
+									<span class="checkout__radio-item--border"></span>
+									<span class="checkout__radio-item--element"></span>
+									<span class="checkout__radio-item--icon">
+										
+									</span>
+									<span class="checkout__radio-item--info">
+										<h3>123</h3>
+										<p>123</p>
+									</span>
+								</label>
+							</li>
+						</ul> -->
+						</div>
+						<div class="checkout__block">
+							<div class="checkout__block--header">
+								<div class="checkout__block--number"></div>
+								<h2 class="checkout__block--title">
+									Вибір способу оплати
+								</h2>
+							</div>
+							<ul class="checkout__block--radio-list checkout__radio-list">
+								<li>
+									<label class="checkout__radio-item">
+										<input type="radio" name="payment" class="checkout__radio-item--input">
+										<span class="checkout__radio-item--border"></span>
+										<span class="checkout__radio-item--element"></span>
+										<span class="checkout__radio-item--icon">
+											<img src="img/payment-delivery/payment-delivery-icon-5.svg" width="21" height="21" loading="lazy" alt="">
+										</span>
+										<span class="checkout__radio-item--info">
+											<h3>Оплата при отриманні</h3>
 										</span>
 									</label>
+								</li>
+								<li>
+									<label class="checkout__radio-item">
+										<input type="radio" name="payment" class="checkout__radio-item--input">
+										<span class="checkout__radio-item--border"></span>
+										<span class="checkout__radio-item--element"></span>
+										<span class="checkout__radio-item--icon">
+											<img src="img/payment-delivery/payment-delivery-icon-7.svg" width="21" height="21" loading="lazy" alt="">
+										</span>
+										<span class="checkout__radio-item--info">
+											<h3>Оплата онлайн</h3>
+											<p>Visa / MasterCard</p>
+										</span>
+									</label>
+								</li>
+								<li>
+									<label class="checkout__radio-item">
+										<input type="radio" name="payment" class="checkout__radio-item--input">
+										<span class="checkout__radio-item--border"></span>
+										<span class="checkout__radio-item--element"></span>
+										<span class="checkout__radio-item--icon">
+											<img src="img/checkout/apple-pay.svg" width="21" height="21" loading="lazy" alt="">
+										</span>
+										<span class="checkout__radio-item--info">
+											<h3>Apple Pay</h3>
+											<p>Онлайн-оплата</p>
+										</span>
+									</label>
+								</li>
+								<li>
+									<label class="checkout__radio-item">
+										<input type="radio" name="payment" class="checkout__radio-item--input">
+										<span class="checkout__radio-item--border"></span>
+										<span class="checkout__radio-item--element"></span>
+										<span class="checkout__radio-item--icon">
+											<img src="img/checkout/google-pay.svg" width="20" height="22" loading="lazy" alt="">
+										</span>
+										<span class="checkout__radio-item--info">
+											<h3>Google Pay</h3>
+											<p>Онлайн-оплата</p>
+										</span>
+									</label>
+								</li>
+							</ul>
+							<div class="checkout__block--add">
+								<div class="checkout__add-item">
+									<button class="checkout__add-item--target" type="button">
+										<i>
+											<svg width="14" height="14" viewBox="0 0 14 14">
+												<use xlink:href="img/sprites.svg#plus"></use>
+											</svg>
+										</i>
+										Додати коментар до замовлення
+									</button>
+									<div class="checkout__add-item--block">
+										<label class="label-input">
+											<textarea name="add-message" class="textarea"></textarea>
+										</label>
+									</div>
 								</div>
-								<button class="btn is-min" type="submit">
-									Оформити замовлення
-								</button>
+								<div class="checkout__add-item">
+									<button class="checkout__add-item--target" type="button">
+										<i>
+											<svg width="14" height="14" viewBox="0 0 14 14">
+												<use xlink:href="img/sprites.svg#plus"></use>
+											</svg>
+										</i>
+										Я маю промокод чи сертифікат
+									</button>
+									<div class="checkout__add-item--block checkout__add-item--promocode">
+										<p>
+											Введіть у цьому полі код сертифіката або спеціальний промокод для отримання знижки або подарунка.
+										</p>
+										<p>
+											Ви можете вказати декілька кодів через кому. Після введения коду натисніть кнопку “Застасувати промокод”
+										</p>
+										<label class="label-input">
+											<span>Введіть промокод</span>
+											<input type="text" name="promocode" required placeholder="Введіть промокод" class="input">
+										</label>
+										<button class="btn is-min" type="button">
+											Застосувати промокод
+										</button>
+									</div>
+								</div>
+								<label class="checkout__checkbox">
+									<input type="checkbox" name="can-call" class="checkout__checkbox--input">
+									<span class="checkout__checkbox--element"></span>
+									<span class="checkout__checkbox--text">
+										Мені можна не телефонувати для підтвердження замовлення
+									</span>
+								</label>
 							</div>
 						</div>
+						<!-- <div class="checkout__row">
+						<div class="checkout__col">
+							<label class="label-input">
+								<span>Ім’я*</span>
+								<input type="text" name="firstname" placeholder="Напишіть Ваше ім’я" required class="input">
+							</label>
+							<label class="label-input">
+								<span>Ваше прізвище*</span>
+								<input type="text" name="lastname" placeholder="Напишіть Ваше прізвище" required class="input">
+							</label>
+						</div>
+						<div class="checkout__col">
+							<label class="label-input">
+								<span>Номер телефона*</span>
+								<input type="tel" name="tel" class="input tel-constructor-input" data-tc-sample=" (xxx) xxx-xx-xx" data-tc-country-code="38" placeholder="+38 (___) - ___ - __ - __" required class="input">
+							</label>
+							<label class="label-input">
+								<span>E-mail</span>
+								<input type="email" name="email" placeholder="E-mail" class="input">
+							</label>
+						</div>
+					</div>
+					<div class="checkout__row">
+						<div class="checkout__col">
+							<label class="label-input">
+								<span>Місто*</span>
+								<span>
+									<input type="text" name="city" placeholder="Оберіть ваше місто" required class="input">
+									<svg width="20" height="20" viewBox="0 0 20 20" class="search-icon">
+										<use xlink:href="img/sprites.svg#search"></use>
+									</svg>
+								</span>
+							</label>
+							<div class="checkout__select">
+								<span>Варіанти доставки</span>
+								<div class="checkout__select--wrapper">
+									<select name="delivery-options" class="checkout__select--element change-form-block">
+										<option value="delivery-courier">Безкоштовно кур’єром (0 ₴)</option>
+										<option value="delivery-new-post">Нова Пошта (Самовивіз) (0₴)</option>
+									</select>
+								</div>
+							</div>
+							<div class="checkout__form-block is-visible" id="delivery-courier">
+								<label class="label-input">
+									<span>Вулиця*</span>
+									<span>
+										<input type="text" name="street" placeholder="Оберіть вулицю" required class="input">
+										<svg width="20" height="20" viewBox="0 0 20 20" class="search-icon">
+											<use xlink:href="img/sprites.svg#search"></use>
+										</svg>
+									</span>
+								</label>
+								<div class="checkout__min-row">
+									<div class="checkout__min-row--col">
+										<label class="label-input">
+											<span>Будинок*</span>
+											<input type="text" name="number-house" placeholder="Номер будинка" required class="input">
+										</label>
+									</div>
+									<div class="checkout__min-row--col">
+										<label class="label-input">
+											<span>Кв*</span>
+											<input type="text" name="number-apartments" placeholder="Номер квартири" required class="input">
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="checkout__form-block" id="delivery-new-post">
+								<div class="checkout__select">
+									<span>Відділення</span>
+									<div class="checkout__select--wrapper">
+										<select name="departments-new-post" required class="checkout__select--element">
+											<option value="" selected disabled>-Оберіть</option>
+											<option value="departments-1">Відделення №2, Маршала Малиновській 114, (056) 465-78-65</option>
+											<option value="departments-2">Відделення №2, Маршала Малиновській 114, (056) 465-78-65</option>
+											<option value="departments-3">Відделення №2, Маршала Малиновській 114, (056) 465-78-65</option>
+											<option value="departments-4">Відделення №2, Маршала Малиновській 114, (056) 465-78-65</option>
+											<option value="departments-5">Відделення №2, Маршала Малиновській 114, (056) 465-78-65</option>
+											<option value="departments-6">Відделення №2, Маршала Малиновській 114, (056) 465-78-65</option>
+											<option value="departments-7">Відделення №2, Маршала Малиновській 114, (056) 465-78-65</option>
+											<option value="departments-8">Відделення №2, Маршала Малиновській 114, (056) 465-78-65</option>
+										</select>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="checkout__col">
+							<div class="checkout__select">
+								<span>Час доставки</span>
+								<div class="checkout__select--wrapper">
+									<select name="delivery-time" required class="checkout__select--element">
+										<option value="delivery-time-1">Пн 27 з 09:00 до 08:00</option>
+										<option value="delivery-time-2">Пн 27 з 09:00 до 08:00</option>
+										<option value="delivery-time-3">Пн 27 з 09:00 до 08:00</option>
+										<option value="delivery-time-4">Пн 27 з 09:00 до 08:00</option>
+										<option value="delivery-time-5">Пн 27 з 09:00 до 08:00</option>
+										<option value="delivery-time-6">Пн 27 з 09:00 до 08:00</option>
+										<option value="delivery-time-7">Пн 27 з 09:00 до 08:00</option>
+										<option value="delivery-time-8">Пн 27 з 09:00 до 08:00</option>
+									</select>
+								</div>
+							</div>
+							<div class="checkout__select">
+								<span>Варіанти оплати</span>
+								<div class="checkout__select--wrapper">
+									<select name="payment-options" required class="checkout__select--element">
+										<option value="payment-options-1">Готівка</option>
+										<option value="payment-options-2">Готівка 2</option>
+									</select>
+								</div>
+							</div>
+							<div class="checkout__add">
+								<div class="checkout__add-item">
+									<button class="checkout__add-item--target" type="button">
+										<i>
+											<svg width="14" height="14" viewBox="0 0 14 14">
+												<use xlink:href="img/sprites.svg#plus"></use>
+											</svg>
+										</i>
+										Додати коментар до замовлення
+									</button>
+									<div class="checkout__add-item--block">
+										<label class="label-input">
+											<textarea name="add-message" class="textarea"></textarea>
+										</label>
+									</div>
+								</div>
+								<div class="checkout__add-item">
+									<button class="checkout__add-item--target" type="button">
+										<i>
+											<svg width="14" height="14" viewBox="0 0 14 14">
+												<use xlink:href="img/sprites.svg#plus"></use>
+											</svg>
+										</i>
+										Я маю промокод чи сертифікат
+									</button>
+									<div class="checkout__add-item--block checkout__add-item--promocode">
+										<p>
+											Введіть у цьому полі код сертифіката або спеціальний промокод для отримання знижки або подарунка.
+										</p>
+										<p>
+											Ви можете вказати декілька кодів через кому. Після введения коду натисніть кнопку “Застасувати промокод”
+										</p>
+										<label class="label-input">
+											<span>Введіть промокод</span>
+											<input type="text" name="promocode" required placeholder="Введіть промокод" class="input">
+										</label>
+										<button class="btn is-min" type="button">
+											Застосувати промокод
+										</button>
+									</div>
+								</div>
+								<label class="checkout__checkbox">
+									<input type="checkbox" name="can-call" class="checkout__checkbox--input">
+									<span class="checkout__checkbox--element"></span>
+									<span class="checkout__checkbox--text">
+										Мені можна не телефонувати для підтвердження замовлення
+									</span>
+								</label>
+							</div>
+							<button class="btn is-min" type="submit">
+								Оформити замовлення
+							</button>
+						</div>
+					</div> -->
+
+
 					</div>
 				</form>
 			</section>
@@ -334,6 +576,69 @@
 					<a href="#" class="cookies__btn btn is-alternative is-min" type="button">
 						Privacy Policy
 					</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="regular-customer popup" id="regular-customer-popup" style="display: none;">
+			<div class="regular-customer__wrapper popup-wrapper">
+				<div class="regular-customer__bg popup-bg popup-close"></div>
+				<div class="regular-customer__body popup-body">
+					<button type="button" class="regular-customer__close-btn popup-close-btn popup-close" title="Закрити">
+						<svg width="30" height="30" viewBox="0 0 30 30">
+							<use xlink:href="img/sprites.svg#close-2"></use>
+						</svg>
+					</button>
+					<div class="regular-customer__container popup-container">
+						<h2 class="regular-customer__title">
+							Оформити замовлення використовуючи аккаунт
+						</h2>
+						<form method="post" class="regular-customer__form">
+							<label class="label-input">
+								<span>E-mail*</span>
+								<input type="email" name="email-login" placeholder="Введіть ваш E-mail" required class="input">
+							</label>
+							<label class="label-input">
+								<span>Пароль*</span>
+								<input type="password" name="password" placeholder="Введіть ваш пароль" required class="input">
+							</label>
+							<div class="regular-customer__form--link">
+								<a href="#regular-customer-password-popup" class="open-popup popup-close">
+									Забули пароль?
+								</a>
+							</div>
+							<button class="btn is-min" type="submit">
+								Увійти
+							</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="regular-customer popup" id="regular-customer-password-popup" style="display: none;">
+			<div class="regular-customer__wrapper popup-wrapper">
+				<div class="regular-customer__bg popup-bg popup-close"></div>
+				<div class="regular-customer__body popup-body">
+					<button type="button" class="regular-customer__close-btn popup-close-btn popup-close" title="Закрити">
+						<svg width="30" height="30" viewBox="0 0 30 30">
+							<use xlink:href="img/sprites.svg#close-2"></use>
+						</svg>
+					</button>
+					<div class="regular-customer__container popup-container">
+						<h2 class="regular-customer__title">
+							Забули пароль
+						</h2>
+						<form method="post" class="regular-customer__form">
+							<label class="label-input">
+								<span>E-mail*</span>
+								<input type="email" name="email-login" placeholder="Введіть ваш E-mail" required class="input">
+							</label>
+							<button class="btn is-min" type="submit">
+								Скинути пароль
+							</button>
+						</form>
+					</div>
 				</div>
 			</div>
 		</div>

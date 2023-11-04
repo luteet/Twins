@@ -103,8 +103,26 @@
 					</label>
 				</div>
 				<div class="checkout__main" data-aos="fade-in" data-aos-delay="200">
-					<div class="checkout__row">
-						<div class="checkout__col">
+					<ul class="checkout__nav">
+						<li>
+							<a href="checkout.html">
+								Новий покупець
+							</a>
+						</li>
+						<li>
+							<a href="#" class="is-current">
+								Я постійний клієнт
+							</a>
+						</li>
+					</ul>
+					<div class="checkout__block">
+						<div class="checkout__block--header">
+							<div class="checkout__block--number"></div>
+							<h2 class="checkout__block--title">
+								Контактна інформація
+							</h2>
+						</div>
+						<div class="checkout__block--form">
 							<div class="checkout__param">
 								<h3>Ім’я та Прізвище</h3>
 								<span>Іванна Полтавець</span>
@@ -119,73 +137,143 @@
 								<a href="checkout.html">Змінити контактну інформацію</a>
 							</div>
 						</div>
-						<div class="checkout__col">
+					</div>
+					<div class="checkout__block">
+						<div class="checkout__block--header">
+							<div class="checkout__block--number"></div>
+							<h2 class="checkout__block--title">
+								Виберіть спосіб доставки
+							</h2>
+						</div>
+						<div class="checkout__select">
+							<span>Варіанти доставки</span>
+							<div class="checkout__select--wrapper">
+								<select name="delivery-options" class="checkout__select--element">
+									<option value="delivery-courier">Безкоштовно кур’єром (0 ₴)</option>
+									<option value="delivery-new-post">Нова Пошта (Самовивіз) (0₴)</option>
+								</select>
+							</div>
+						</div>
+						<div class="checkout__form-block is-visible">
 							<div class="checkout__param">
 								<h3>Ім’я та Прізвище</h3>
 								<span>Книга адрес порожня</span><br>
 								<a href="#address-book-popup" class="open-popup">Змінити адресу</a>
 							</div>
-							<div class="checkout__select">
-								<span>Варіанти оплати</span>
-								<div class="checkout__select--wrapper">
-									<select name="payment-options" required class="checkout__select--element">
-										<option value="payment-options-1">Готівка</option>
-										<option value="payment-options-2">Готівка 2</option>
-									</select>
-								</div>
-							</div>
-							<div class="checkout__add">
-								<div class="checkout__add-item">
-									<button class="checkout__add-item--target" type="button">
-										<i>
-											<svg width="14" height="14" viewBox="0 0 14 14">
-												<use xlink:href="img/sprites.svg#plus"></use>
-											</svg>
-										</i>
-										Додати коментар до замовлення
-									</button>
-									<div class="checkout__add-item--block">
-										<label class="label-input">
-											<textarea name="add-message" class="textarea"></textarea>
-										</label>
-									</div>
-								</div>
-								<div class="checkout__add-item">
-									<button class="checkout__add-item--target" type="button">
-										<i>
-											<svg width="14" height="14" viewBox="0 0 14 14">
-												<use xlink:href="img/sprites.svg#plus"></use>
-											</svg>
-										</i>
-										Я маю промокод чи сертифікат
-									</button>
-									<div class="checkout__add-item--block checkout__add-item--promocode">
-										<p>
-											Введіть у цьому полі код сертифіката або спеціальний промокод для отримання знижки або подарунка.
-										</p>
-										<p>
-											Ви можете вказати декілька кодів через кому. Після введения коду натисніть кнопку “Застасувати промокод”
-										</p>
-										<label class="label-input">
-											<span>Введіть промокод</span>
-											<input type="text" name="promocode" required placeholder="Введіть промокод" class="input">
-										</label>
-										<button class="btn is-min" type="button">
-											Застосувати промокод
-										</button>
-									</div>
-								</div>
-								<label class="checkout__checkbox">
-									<input type="checkbox" name="can-call" class="checkout__checkbox--input">
-									<span class="checkout__checkbox--element"></span>
-									<span class="checkout__checkbox--text">
-										Мені можна не телефонувати для підтвердження замовлення
+						</div>
+					</div>
+					<div class="checkout__block">
+						<div class="checkout__block--header">
+							<div class="checkout__block--number"></div>
+							<h2 class="checkout__block--title">
+								Вибір способу оплати
+							</h2>
+						</div>
+						<ul class="checkout__block--radio-list checkout__radio-list">
+							<li>
+								<label class="checkout__radio-item">
+									<input type="radio" name="payment" class="checkout__radio-item--input">
+									<span class="checkout__radio-item--border"></span>
+									<span class="checkout__radio-item--element"></span>
+									<span class="checkout__radio-item--icon">
+										<img src="img/payment-delivery/payment-delivery-icon-5.svg" width="21" height="21" loading="lazy" alt="">
+									</span>
+									<span class="checkout__radio-item--info">
+										<h3>Оплата при отриманні</h3>
 									</span>
 								</label>
+							</li>
+							<li>
+								<label class="checkout__radio-item">
+									<input type="radio" name="payment" class="checkout__radio-item--input">
+									<span class="checkout__radio-item--border"></span>
+									<span class="checkout__radio-item--element"></span>
+									<span class="checkout__radio-item--icon">
+										<img src="img/payment-delivery/payment-delivery-icon-7.svg" width="21" height="21" loading="lazy" alt="">
+									</span>
+									<span class="checkout__radio-item--info">
+										<h3>Оплата онлайн</h3>
+										<p>Visa / MasterCard</p>
+									</span>
+								</label>
+							</li>
+							<li>
+								<label class="checkout__radio-item">
+									<input type="radio" name="payment" class="checkout__radio-item--input">
+									<span class="checkout__radio-item--border"></span>
+									<span class="checkout__radio-item--element"></span>
+									<span class="checkout__radio-item--icon">
+										<img src="img/checkout/apple-pay.svg" width="21" height="21" loading="lazy" alt="">
+									</span>
+									<span class="checkout__radio-item--info">
+										<h3>Apple Pay</h3>
+										<p>Онлайн-оплата</p>
+									</span>
+								</label>
+							</li>
+							<li>
+								<label class="checkout__radio-item">
+									<input type="radio" name="payment" class="checkout__radio-item--input">
+									<span class="checkout__radio-item--border"></span>
+									<span class="checkout__radio-item--element"></span>
+									<span class="checkout__radio-item--icon">
+										<img src="img/checkout/google-pay.svg" width="20" height="22" loading="lazy" alt="">
+									</span>
+									<span class="checkout__radio-item--info">
+										<h3>Google Pay</h3>
+										<p>Онлайн-оплата</p>
+									</span>
+								</label>
+							</li>
+						</ul>
+						<div class="checkout__block--add">
+							<div class="checkout__add-item">
+								<button class="checkout__add-item--target" type="button">
+									<i>
+										<svg width="14" height="14" viewBox="0 0 14 14">
+											<use xlink:href="img/sprites.svg#plus"></use>
+										</svg>
+									</i>
+									Додати коментар до замовлення
+								</button>
+								<div class="checkout__add-item--block">
+									<label class="label-input">
+										<textarea name="add-message" class="textarea"></textarea>
+									</label>
+								</div>
 							</div>
-							<button class="btn is-min" type="submit">
-								Оформити замовлення
-							</button>
+							<div class="checkout__add-item">
+								<button class="checkout__add-item--target" type="button">
+									<i>
+										<svg width="14" height="14" viewBox="0 0 14 14">
+											<use xlink:href="img/sprites.svg#plus"></use>
+										</svg>
+									</i>
+									Я маю промокод чи сертифікат
+								</button>
+								<div class="checkout__add-item--block checkout__add-item--promocode">
+									<p>
+										Введіть у цьому полі код сертифіката або спеціальний промокод для отримання знижки або подарунка.
+									</p>
+									<p>
+										Ви можете вказати декілька кодів через кому. Після введения коду натисніть кнопку “Застасувати промокод”
+									</p>
+									<label class="label-input">
+										<span>Введіть промокод</span>
+										<input type="text" name="promocode" required placeholder="Введіть промокод" class="input">
+									</label>
+									<button class="btn is-min" type="button">
+										Застосувати промокод
+									</button>
+								</div>
+							</div>
+							<label class="checkout__checkbox">
+								<input type="checkbox" name="can-call" class="checkout__checkbox--input">
+								<span class="checkout__checkbox--element"></span>
+								<span class="checkout__checkbox--text">
+									Мені можна не телефонувати для підтвердження замовлення
+								</span>
+							</label>
 						</div>
 					</div>
 				</div>
