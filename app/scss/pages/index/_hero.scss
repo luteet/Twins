@@ -398,6 +398,8 @@
 				@include _550 {
 					font-size: 1.175rem;
 				}
+
+				text-shadow: 0 5px 10px var(--accent);
 				
 				@include _768 {
 					font-size: 1.25rem;
