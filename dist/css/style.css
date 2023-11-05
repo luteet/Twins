@@ -8485,7 +8485,7 @@ body {
     }
 
     .hero__product--wrapper {
-        justify-content: flex-end;
+        justify-content: center;
         flex-direction: row
     }
 
@@ -8497,7 +8497,7 @@ body {
     .hero__product--link {
         align-self: self-end;
         padding-left: 34px;
-        margin-bottom: 30px;
+        margin-bottom: 10px;
         margin-right: 30px
     }
 
@@ -9670,7 +9670,7 @@ body {
 
     .hero__product {
         flex-direction: row;
-        aspect-ratio: 10/7
+        aspect-ratio: 10/6.2
     }
 
     .hero__product--vertical-title {

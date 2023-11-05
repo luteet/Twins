@@ -205,7 +205,7 @@
 		flex-direction: column;
 		@include _992 {
 			flex-direction: row;
-			aspect-ratio: 10/7;
+			aspect-ratio: 10/6.2;
 		}
 		position: relative;
 
@@ -216,7 +216,7 @@
 			flex-direction: column;
 			justify-content: flex-end;
 			@include _550 {
-				justify-content: flex-end;
+				justify-content: center;
 				flex-direction: row;
 			}
 			flex: 1 1 auto;
@@ -382,7 +382,7 @@
 			@include _550 {
 				align-self: self-end;
 
-				padding-left: 34px; margin-bottom: 30px; margin-right: 30px;
+				padding-left: 34px; margin-bottom: 10px; margin-right: 30px;
 			}
 
 			align-self: center;
