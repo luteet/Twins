@@ -4986,6 +4986,12 @@ body {
     display: block
 }
 
+.events__background--image:not(.none-gray) img {
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1);
+    opacity: .35
+}
+
 .events__background--image img {
     position: absolute;
     left: 50%;
@@ -4996,9 +5002,7 @@ body {
     height: 110%;
     -o-object-fit: cover;
     object-fit: cover;
-    opacity: .25;
-    -webkit-filter: grayscale(1);
-    filter: grayscale(1)
+    opacity: .35
 }
 
 .events__content {
@@ -9741,9 +9745,9 @@ body {
     }
 
     .events__background--image {
-        width: 542px;
-        height: 604px;
-        flex: 0 0 542px
+        width: 500px;
+        height: 554px;
+        flex: 0 0 500px
     }
 
     .blog-section__container {

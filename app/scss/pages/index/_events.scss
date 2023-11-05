@@ -103,10 +103,15 @@
 			}
 
 			@include _992 {
-				width: 542px; height: 604px; flex: 0 0 542px;
+				width: 500px; height: 554px; flex: 0 0 500px;
 			}
 			
 			display: block;
+
+			&:not(.none-gray) img {
+				filter: grayscale(1);
+				opacity: .35;
+			}
 
 			img {
 				position: absolute;
@@ -114,9 +119,7 @@
 				transform: translate(-50%,0);
 				width: 110%; height: 110%;
 				object-fit: cover;
-				opacity: .25;
-
-				filter: grayscale(1);
+				opacity: .35;
 			}
 		}
 	}
