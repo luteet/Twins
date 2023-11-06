@@ -68,7 +68,7 @@ function browsersyncStart() {
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- <images> -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
 function images() {
-	return src(['app/img/**/*.*', '!app/img/**/*.webp', '!app/img/**/*.svg', '!app/img/favicon/*.*'])
+	return src(['app/img/**/*.*', '!app/img/**/*.webp', '!app/img/**/*.mp4', '!app/img/**/*.svg', '!app/img/favicon/*.*'])
 	.pipe(newer('dist/img'))
 	.pipe(avif({ quality: 50 }))
 
