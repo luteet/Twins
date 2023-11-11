@@ -90,6 +90,7 @@
 			td {
 				width: 100% !important;
 				height: auto !important;
+				display: grid;
 				img[style="float: left;"] {
 					text-align: center;
 					float: none !important;
@@ -100,6 +101,7 @@
 					float: none !important;
 				}
 				@include _992 {
+					display: table-cell !important;
 					width: 50% !important;
 					img[style="float: left;"] {
 						text-align: start;

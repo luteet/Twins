@@ -6241,7 +6241,8 @@ body {
 
 .single__content tr td {
     width: 100%!important;
-    height: auto!important
+    height: auto!important;
+    display: grid
 }
 
 .single__content tr td img[style="float: left;"],.single__content tr td img[style="float: right;"] {
@@ -10027,6 +10028,7 @@ body {
     }
 
     .single__content tr td {
+        display: table-cell!important;
         width: 50%!important
     }
 
