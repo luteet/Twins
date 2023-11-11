@@ -74,10 +74,49 @@
 			}
 		}
 
+		img {
+			max-width: 100%;
+			height: auto;
+		}
+
+		tr {
+			display: flex;
+			flex-direction: column;
+			gap: 15px;
+			@include _992 {
+				display: table-row;
+			}
+
+			td {
+				width: 100% !important;
+				height: auto !important;
+				img[style="float: left;"] {
+					text-align: center;
+					float: none !important;
+				}
+
+				img[style="float: right;"] {
+					text-align: center;
+					float: none !important;
+				}
+				@include _992 {
+					width: 50% !important;
+					img[style="float: left;"] {
+						text-align: start;
+						float: left !important;
+					}
+
+					img[style="float: right;"] {
+						text-align: end;
+						float: right !important;
+					}
+				}
+			}
+		}
+
 		strong {
 			font-size: 1.25rem;
 			line-height: 130%;
-			
 		}
 
 		h2 {
