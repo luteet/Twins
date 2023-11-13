@@ -5994,6 +5994,10 @@ body {
     line-height: 130%
 }
 
+.reviews-card,.single__content .table_style1 {
+    background: #f4f4f4
+}
+
 .reviews__list {
     margin-top: 29px;
     display: grid;
@@ -6009,7 +6013,6 @@ body {
 }
 
 .reviews-card {
-    background: #f4f4f4;
     padding: 16px;
     display: grid;
     gap: 0 17px

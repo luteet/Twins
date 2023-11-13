@@ -79,6 +79,10 @@
 			height: auto;
 		}
 
+		.table_style1 {
+			background: #F4F4F4;
+		}
+
 		.table_style1 tr td {
 			&:nth-child(1) {
 				@include _992 {
