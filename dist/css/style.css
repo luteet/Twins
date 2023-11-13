@@ -6261,7 +6261,7 @@ body {
     height: auto
 }
 
-.single__content .table_style1 {
+.single__content .table_style1,.single__content .table_style2 {
     background: #f4f4f4
 }
 
