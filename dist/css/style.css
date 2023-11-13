@@ -6323,7 +6323,8 @@ body {
 .single__content tr {
     display: flex;
     flex-direction: column;
-    gap: 15px
+    gap: 15px;
+    height: auto!important
 }
 
 @media(min-width:992px) {
