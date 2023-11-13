@@ -209,6 +209,10 @@
 				}
 
 				display: grid;
+				img {
+					width: 100%;
+				}
+				
 				img[style="float: left;"] {
 					text-align: center;
 					float: none !important;

@@ -6377,6 +6377,10 @@ body {
     }
 }
 
+.single__content tr td img {
+    width: 100%
+}
+
 .single__content tr td img[style="float: left;"],.single__content tr td img[style="float: right;"] {
     text-align: center;
     float: none!important
