@@ -81,6 +81,10 @@
 
 		.table_style1, .table_style2 {
 			background: #F4F4F4;
+
+			h2 {
+				padding-top: 0;
+			}
 		}
 
 		.table_style1 tr td {
@@ -88,7 +92,7 @@
 				> * {
 					justify-self: center;
 				}
-				
+
 				@include _992 {
 					display: table-cell !important;
 					
