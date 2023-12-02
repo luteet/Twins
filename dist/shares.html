@@ -1520,8 +1520,8 @@
 				<div class="stories-popup__slider splide">
 					<div class="stories-popup__track splide__track">
 						<ul class="stories-popup__list splide__list">
-							<li class="stories-popup__slide splide__slide">
-								<div class="stories-popup__video-wrapper">
+							<li class="stories-popup__slide splide__slide" data-timeout="15000">
+								<!-- <div class="stories-popup__video-wrapper">
 									<video src="video/stories-video-example.mp4" playsinline class="stories-popup__video"></video>
 									<div class="stories-popup__video-preview">
 										<picture>
@@ -1536,6 +1536,18 @@
 											Якесь посилання для прикладу
 										</a>
 										і ще трохи тексту
+									</div>
+								</div> -->
+								<div class="stories-popup__image">
+									<div class="stories-popup__image-wrapper">
+										<div>
+											<picture>
+												<source srcset="img/video-preview.avif" type="image/avif">
+												<source srcset="img/video-preview.webp" type="image/webp">
+												<img src="img/video-preview.jpg" alt="" width="0" height="0" loading="lazy">
+											</picture>
+										</div>
+										<div class="stories-popup__image-progress"></div>
 									</div>
 								</div>
 								<div class="stories-popup__loader"></div>

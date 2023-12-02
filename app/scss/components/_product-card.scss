@@ -53,10 +53,10 @@
 
 	&__image-gallery {
 		@include _550 {
-			min-height: 100%;
+			//min-height: 100%;
 			display: grid;
 			.splide__track {
-				min-height: 100%;
+				//min-height: 100%;
 			}
 		}
 	}

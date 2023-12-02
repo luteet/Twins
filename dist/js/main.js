@@ -124,13 +124,23 @@ function Popup(arg) {
 					popup.style.display = 'none';
 
 					if(popup.classList.contains('stories-popup')) {
-						const video = popup.querySelector('.splide__slide.is-active .stories-popup__video');
+						const video = popup.querySelector('.splide__slide.is-active .stories-popup__video'),
+						image = popup.querySelector('.splide__slide.is-active .stories-popup__image');
 
-						setTimeout(() => {
-							video.pause();
-							video.classList.remove('is-playing');
-							video.currentTime = 0;
-						},200)
+						if(video) {
+							setTimeout(() => {
+								video.pause();
+								video.classList.remove('is-playing');
+								video.currentTime = 0;
+							},200)
+						} else if(image) {
+							const imageProgressBar = image.querySelector('.stories-popup__image-progress');
+							imageProgressBar.style.removeProperty('--transition');
+							imageProgressBar.style.setProperty('--progress', '0%');
+							clearInterval(imageSliderInterval);
+							clearTimeout(imageSliderTimeout);
+						}
+						
 					}
 				}
 
@@ -785,6 +795,8 @@ function playVideo(video) {
 	video.play();
 }
 
+let imageSliderTimeout, imageSliderInterval, imageProgress = 0;
+
 document.querySelectorAll('.stories-popup__slider').forEach(sliderElement => {
 
 	const slider = new Splide(sliderElement, {
@@ -813,7 +825,7 @@ document.querySelectorAll('.stories-popup__slider').forEach(sliderElement => {
 
 		slides.forEach(slide => {
 			const video = slide.querySelector('video');
-			video.muted = !video.muted;
+			if(video) video.muted = !video.muted;
 		})
 	})
 
@@ -836,7 +848,7 @@ document.querySelectorAll('.stories-popup__slider').forEach(sliderElement => {
 		
 		video.addEventListener('click', function () {
 			
-			slider.go(index);
+			//slider.go(index);
 
 			if(video.classList.contains('is-playing')) {
 				video.classList.remove('is-playing');
@@ -857,41 +869,115 @@ document.querySelectorAll('.stories-popup__slider').forEach(sliderElement => {
 		
 	})
 
+	slider.root.querySelectorAll('.stories-popup__image').forEach((image, index) => {
+		
+		const imageProgressBar = image.closest('.splide__slide').querySelector('.stories-popup__image-progress'),
+		timeout = Number(image.closest('.splide__slide').dataset.timeout);
+		
+		image.addEventListener('click', function () {
+			
+			slider.go(index);
+
+			if(image.classList.contains('is-playing')) {
+				image.classList.remove('is-playing');
+				clearInterval(imageSliderInterval);
+				clearTimeout(imageSliderTimeout);
+				
+			} else {
+				image.classList.add('is-playing');
+
+				imageSliderInterval = setInterval(() => {
+					imageProgressBar.style.setProperty('--progress', `${Math.min(100, imageProgress++)}%`);	
+					if(imageProgress >= 100) {
+						slider.go('>');
+						clearInterval(imageSliderInterval)
+					}
+				}, timeout / 125)
+			}
+		})
+
+		if(localStorage.getItem('twins-stories-muted') == "true") {
+			video.muted = true;
+			storiesPopupVolume.classList.add('is-muted');
+			storiesPopupVolume.querySelector('use').setAttribute('xlink:href', storiesPopupVolume.dataset.volumeNoneIcon);
+		}
+		
+	})
+
 	slider.on('move', function (newIndex, prevIndex, destIndex) {
 		if(slider.root.closest('.popup._active')) {
-			const video = slides[prevIndex].querySelector('.stories-popup__video');
+			const video = slides[prevIndex].querySelector('.stories-popup__video'),
+			image = slides[prevIndex].querySelector('.stories-popup__image');
 		
-			video.pause();
-			slides[prevIndex].classList.remove('is-active-video');
-			video.classList.remove('is-playing');
-			video.currentTime = 0;
+			if(video) {
+
+				video.pause();
+				slides[prevIndex].classList.remove('is-active-video');
+				video.classList.remove('is-playing');
+				video.currentTime = 0;
+
+			} else if(image) {
+
+				const imageProgressBar = image.querySelector('.stories-popup__image-progress');
+				imageProgressBar.style.removeProperty('--transition');
+				image.classList.remove('is-playing');
+				clearInterval(imageSliderInterval);
+				clearTimeout(imageSliderTimeout);
+				imageProgressBar.style.setProperty('--progress', '0%');
+
+			}
 		}
 	})
+
+	
 
 	slider.on('active', function (slide) {
 		if(slider.root.closest('.popup._active')) {
 			const video = slide.slide.querySelector('.stories-popup__video'),
+			image = slide.slide.querySelector('.stories-popup__image'),
 			loader = slide.slide.querySelector('.stories-popup__loader');
 
-			video.parentElement.style.width = video.offsetWidth + 'px';
+			if(video) {
 
-			video.addEventListener('loadeddata', function () {
-				video.parentElement.style.removeProperty('width');
-				setTimeout(() => {
-					loader.classList.remove('is-active');
+				video.parentElement.style.width = video.offsetWidth + 'px';
+
+				video.addEventListener('loadeddata', function () {
+					video.parentElement.style.removeProperty('width');
 					setTimeout(() => {
-						if(video.closest('.splide__slide.is-active')) {
-							slide.slide.classList.add('is-active-video');
-							video.classList.add('is-playing');
-							video.play();
-						}
+						loader.classList.remove('is-active');
+						setTimeout(() => {
+							if(video.closest('.splide__slide.is-active')) {
+								slide.slide.classList.add('is-active-video');
+								video.classList.add('is-playing');
+								video.play();
+							}
+						},1000)
 					},1000)
-				},1000)
-			});
+				});
 
-			loader.classList.add('is-active');
-			
-			video.load();
+				loader.classList.add('is-active');
+				
+				video.load();
+
+			} else if(image && slide.slide.dataset.timeout) {
+				const imageProgressBar = image.querySelector('.stories-popup__image-progress');
+				imageProgressBar.style.setProperty('--transition', `width 0.1s linear`);
+				setTimeout(() => {
+					
+					if(imageSliderTimeout) clearTimeout(imageSliderTimeout);
+					image.classList.add('is-playing');
+
+					imageProgress = 0;
+					imageSliderInterval = setInterval(() => {
+						imageProgressBar.style.setProperty('--progress', `${Math.min(100, imageProgress++)}%`);	
+						if(imageProgress >= 100) {
+							slider.go('>');
+							clearInterval(imageSliderInterval)
+						}
+					}, Number(slide.slide.dataset.timeout) / 125)
+
+				},0)
+			}
 		}
 	})
 
@@ -943,7 +1029,6 @@ document.querySelectorAll('.products-slider__body').forEach(sliderElement => {
 	slider.mount();
 
 })
-
 
 // =-=-=-=-=-=-=-=-=-=- <Get-device-type> -=-=-=-=-=-=-=-=-=-=-
 

@@ -27,9 +27,349 @@
 		align-items: center;
 	}
 
-	&__block.is-dark & {
+	// .events__decor-background
+
+	&__decor-background {
+
+		position: absolute;
+		left: 0; top: 0;
+		width: 100%; height: 100%;
+		//z-index: -1;
+
+		// .events__decor-background--item
+
+		&--item {
+			position: absolute;
+			img {
+				height: auto;
+			}
+		}
+	}
+
+	/* &.cristmas-mode &__block.is-dark & {
+		&__title {
+			position: relative;
+
+			
+		}
+	} */
+
+	&__block.cristmas-mode & {
+		&__title mark {
+			background: transparent;
+			color: #D70808;
+		}
+
+		&__title mark span {
+			display: inline-block;
+			position: relative;
+			margin-right: -0.5ch;
+			//letter-spacing: -1ch;
+			img {
+				position: absolute;
+				left: 0; top: 0;
+				width: 50px; height: auto;
+				@include _992 {
+					width: 90px;
+				}
+				transform: translate(-35%,-45%) rotate(-20deg) scaleX(-1);
+			}
+		}
+	}
+
+	&__block:not(.is-dark) & {
+		&__decor-background {
+
+			&--item {
+				&:nth-child(1) {
+					left: 9%; top: 5%;
+					@include _550 {
+						left: 16%; top: 4%;
+					}
+					img {
+						width: 15px;
+						@include _992 {
+							width: 28px;
+						}
+					}
+				}
+
+				&:nth-child(2) {
+					left: 13%; top: 17%;
+					@include _550 {
+						left: 8%; top: 23%;
+					}
+					img {
+						width: 6.568548vw;
+						@include _992 {
+							width: 62px;
+						}
+					}
+				}
+
+				&:nth-child(3) {
+					left: 7%; top: 47%;
+					@include _550 {
+						left: 14%; top: 50%;
+					}
+					img {
+						width: 6.568548vw;
+						@include _992 {
+							width: 62px;
+						}
+					}
+				}
+
+				&:nth-child(4) {
+					left: 21%; top: 78%;
+					@include _550 {
+						left: 4%; top: 75%;
+					}
+					img {
+						width: 6.568548vw;
+						@include _992 {
+							width: 62px;
+						}
+					}
+				}
+
+				&:nth-child(5) {
+					left: 9%; bottom: 1%;
+					@include _550 {
+						left: 17%; bottom: 5%;
+					}
+					img {
+						width: 15px;
+						@include _992 {
+							width: 28px;
+						}
+					}
+				}
+
+				&:nth-child(6) {
+					right: 9%; top: 5%;
+					@include _550 {
+						right: 16%; top: 4%;
+					}
+					img {
+						width: 15px;
+						@include _992 {
+							width: 28px;
+						}
+					}
+				}
+
+				&:nth-child(7) {
+					right: 13%; top: 17%;
+					@include _550 {
+						right: 8%; top: 23%;
+					}
+					img {
+						width: 6.568548vw;
+						@include _992 {
+							width: 62px;
+						}
+					}
+				}
+
+				&:nth-child(8) {
+					right: 7%; top: 47%;
+					@include _550 {
+						right: 14%; top: 50%;
+					}
+					img {
+						width: 6.568548vw;
+						@include _992 {
+							width: 62px;
+						}
+					}
+				}
+
+				&:nth-child(9) {
+					right: 21%; top: 78%;
+					@include _550 {
+						right: 4%; top: 75%;
+					}
+					img {
+						width: 6.568548vw;
+						@include _992 {
+							width: 62px;
+						}
+					}
+				}
+
+				&:nth-child(10) {
+					right: 9%; bottom: 1%;
+					@include _550 {
+						right: 17%; bottom: 5%;
+					}
+					img {
+						width: 15px;
+						@include _992 {
+							width: 28px;
+						}
+					}
+				}
+			}
+			
+		}
+
 		&__logo {
-			filter: invert(1);
+			position: relative;
+
+			&--decor {
+				position: absolute;
+				user-select: none; pointer-events: none;
+
+				img {
+					width: 15px;
+					@include _992 {
+						width: 28px;
+					}
+					height: auto;
+					filter: invert(1);
+				}
+
+				&:nth-child(1) {
+					left: 0; top: 50%;
+					transform: translate(-200%,50%);
+					@include _992 {
+						transform: translate(-250%,0%);
+					}
+				}
+
+				&:nth-child(2) {
+					right: 0; top: 50%;
+					transform: translate(200%,50%);
+					@include _992 {
+						transform: translate(250%,0%);
+					}
+				}
+			}
+		}
+	}
+
+	&__block.is-dark & {
+
+		&__decor-background {
+
+			&--item {
+				&:nth-child(1) {
+					left: 5%; top: 12%;
+					img {
+						width: 8.568548vw;
+						@include _992 {
+							width: 85px;
+						}
+						opacity: .5;
+					}
+				}
+
+				&:nth-child(2) {
+					left: 23%; top: 75%;
+					@include _550 {
+						left: 6%; top: 48%;
+					}
+					img {
+						width: 15px;
+						@include _992 {
+							width: 28px;
+						}
+					}
+				}
+
+				&:nth-child(3) {
+					left: 6%; bottom: 5%;
+					img {
+						width: 8.568548vw;
+						@include _992 {
+							width: 85px;
+						}
+						opacity: .5;
+					}
+				}
+
+				&:nth-child(4) {
+					right: 6%; top: 10%;
+					img {
+						width: 8.568548vw;
+						@include _992 {
+							width: 85px;
+						}
+						opacity: .5;
+					}
+				}
+
+				&:nth-child(5) {
+					right: 23%; top: 75%;
+					@include _550 {
+						right: 6%; top: 48%;
+					}
+					img {
+						width: 15px;
+						@include _992 {
+							width: 28px;
+						}
+					}
+				}
+
+				/* &:nth-child(6) {
+					right: 6%; top: 49%;
+					img {
+						width: 28px;
+					}
+				} */
+
+				&:nth-child(6) {
+					right: 6%; bottom: 5%;
+					img {
+						width: 8.568548vw;
+						@include _992 {
+							width: 85px;
+						}
+						opacity: .5;
+					}
+				}
+			}
+			
+		}
+
+		&__logo {
+			position: relative;
+
+			img {
+				filter: invert(1);
+			}
+
+			&--decor {
+				position: absolute;
+				user-select: none; pointer-events: none;
+
+				img {
+					width: 15px;
+					@include _992 {
+						width: 28px;
+					}
+					height: auto;
+					filter: none;
+				}
+
+				&:nth-child(1) {
+					left: 0; top: 50%;
+					transform: translate(-200%,50%);
+					@include _992 {
+						transform: translate(-250%,0%);
+					}
+				}
+
+				&:nth-child(2) {
+					right: 0; top: 50%;
+					transform: translate(200%,50%);
+					@include _992 {
+						transform: translate(250%,0%);
+					}
+				}
+			}
 		}
 
 		&__background {
@@ -51,11 +391,45 @@
 
 		&__background--image img {
 			bottom: 0;
-			width: 115%; height: 115%;
+			width: 125%; height: 125%;
+			filter: grayscale(1);
+			opacity: .3;
 		}
 
 		&__content {
 			color: var(--white);
+		}
+
+		&__title {
+			position: relative;
+			&--decor {
+				position: absolute;
+				user-select: none; pointer-events: none;
+
+				img {
+					width: 12.096774vw; min-width: 60px;
+					height: auto;
+					@include _992 {
+						width: 120px;
+					}
+				}
+
+				&:nth-child(1) {
+					left: 0; top: 0;
+					transform: translate(-35%,-15%) rotate(30deg) scaleX(-1);
+					@include _550 {
+						transform: translate(-65%,-15%) rotate(30deg) scaleX(-1);
+					}
+				}
+
+				&:nth-child(2) {
+					right: 0; top: 0;
+					transform: translate(35%,-15%) rotate(-30deg);
+					@include _550 {
+						transform: translate(65%,-15%) rotate(-30deg);
+					}
+				}
+			}
 		}
 
 		&__text {
@@ -74,6 +448,8 @@
 			}
 		}
 	}
+
+	
 
 	// .events__background
 
